@@ -425,6 +425,7 @@ const translations = {
         recAttireTitle: "Venue",
         recAttireDesc: "Raaga Convention • 7:00 PM",
         recCalBtn: "📅 Add to Calendar",
+        recFeatureWelcome: "Grand Welcome & Warm Blessings",
 
         // 8. Pelli
         pelliCrownBadge: "✨ Sacred Brahma Muhurtham ✨",
@@ -664,6 +665,7 @@ const translations = {
         recAttireTitle: "स्थान",
         recAttireDesc: "Raaga Convention",
         recCalBtn: "📅 कैलेंडर में जोड़ें",
+        recFeatureWelcome: "भव्य स्वागत एवं मंगल आशीष",
 
         // 8. Pelli
         pelliCrownBadge: "✨ शुभ अमृत मुहूर्त • ब्रह्म मुहूर्त ✨",
@@ -733,15 +735,17 @@ const translations = {
 
 class WeddingI18n {
     constructor() {
-        this.currentLang = 'te';
+        this.currentLang = 'en';
         this.init();
     }
 
     init() {
-        // Default to Telugu, or read from saved preference
-        const saved = localStorage.getItem('wedding_lang_pref');
+        // Default to English, or read from saved user preference
+        const saved = localStorage.getItem('wedding_lang_pref_v2');
         if (saved && (saved === 'te' || saved === 'en' || saved === 'hi')) {
             this.currentLang = saved;
+        } else {
+            this.currentLang = 'en';
         }
         this.applyLanguage(this.currentLang);
     }
@@ -749,18 +753,20 @@ class WeddingI18n {
     setLanguage(lang) {
         if (!translations[lang]) return;
         this.currentLang = lang;
+        localStorage.setItem('wedding_lang_pref_v2', lang);
         localStorage.setItem('wedding_lang_pref', lang);
         this.applyLanguage(lang);
     }
 
     get(key) {
         return (translations[this.currentLang] && translations[this.currentLang][key]) || 
+               (translations['en'] && translations['en'][key]) || 
                (translations['te'] && translations['te'][key]) || 
                key;
     }
 
     applyLanguage(lang) {
-        const dict = translations[lang] || translations['te'];
+        const dict = translations[lang] || translations['en'] || translations['te'];
         document.documentElement.lang = lang;
 
         // Update all elements with data-i18n
