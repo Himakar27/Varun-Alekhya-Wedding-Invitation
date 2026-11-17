@@ -825,7 +825,7 @@ document.addEventListener('DOMContentLoaded', () => {
             document.body.appendChild(toast);
         }
         const msg = (window.weddingI18n && window.weddingI18n.get('toastBlessingThanks')) || 
-                    "✨ మీ ఆశీస్సులు నూతన దంపతులకు చిరకాల రక్ష! ధన్యవాదాలు! ✨";
+                    "✨ Thank you for showering your heartfelt blessings on Varun & Alekhya! ✨";
         toast.textContent = msg;
         toast.classList.remove('toast-active');
         void toast.offsetWidth; // force reflow
