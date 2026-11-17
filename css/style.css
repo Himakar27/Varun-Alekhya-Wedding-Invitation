@@ -1,0 +1,6972 @@
+/* ==========================================================================
+   ✨ VARUN & ALEKHYA'S KALYANA MAHOTSAVAM - 2026 ROYAL WEDDING ARCHITECTURE
+   Next-Gen Dual Theme: Royal Sandalwood Ivory Light Theme (Default for All Daytime)
+   Velvet Midnight Sapphire & Starlit Snow Dark Theme (Strictly for Night Occasions)
+   ========================================================================== */
+
+:root {
+    /* --- 2026 ROYAL SANDALWOOD IVORY LIGHT THEME (DEFAULT) --- */
+    --theme-bg-base: #FCF9F2;
+    --theme-bg-gradient: linear-gradient(180deg, #FDFBF7 0%, #FAF5EA 50%, #F5ECDB 100%);
+    --card-bg: linear-gradient(135deg, rgba(255, 255, 255, 0.94) 0%, rgba(254, 250, 244, 0.90) 100%);
+    --card-border: rgba(217, 119, 6, 0.40);
+    --card-border-hover: rgba(180, 83, 9, 0.75);
+    --card-shadow: 0 16px 40px rgba(180, 83, 9, 0.10), 0 4px 16px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 1);
+    --card-shadow-hover: 0 22px 55px rgba(180, 83, 9, 0.20), 0 0 25px rgba(245, 158, 11, 0.15);
+
+    /* Royal Light Typography Colors */
+    --title-gradient: linear-gradient(135deg, #780016 0%, #991B1B 45%, #B45309 85%, #78350F 100%);
+    --title-text: #780016;
+    --category-tag-color: #92400E;
+    --sub-heading-color: #78350F;
+    --body-text-color: #334155;        /* Crisp high-contrast slate charcoal */
+    --secondary-text-color: #475569;   /* Muted slate for metadata */
+    --sloka-text-color: #881337;       /* Royal crimson for sacred mantras */
+
+    /* Sub-components in Light Mode */
+    --chip-bg: rgba(217, 119, 6, 0.12);
+    --chip-border: rgba(217, 119, 6, 0.32);
+    --chip-color: #854D0E;
+    --tile-bg: rgba(254, 243, 199, 0.50);
+    --tile-border: rgba(217, 119, 6, 0.25);
+    --tile-title: #780016;
+    --tile-desc: #475569;
+    --icon-bg: radial-gradient(circle, #FFFBEB 0%, #FEF3C7 100%);
+    --icon-border: #D97706;
+    --icon-shadow: 0 4px 18px rgba(217, 119, 6, 0.22);
+    --mantra-bg: rgba(254, 243, 199, 0.45);
+    --mantra-border: rgba(217, 119, 6, 0.25);
+    --knot-color: #B45309;
+
+    /* Central Spine & Traveling Flower */
+    --spine-track-bg: rgba(217, 119, 6, 0.22);
+    --spine-fill-grad: linear-gradient(180deg, #F59E0B 0%, #D97706 50%, #B45309 100%);
+    --node-bg: #FFFFFF;
+    --node-border: rgba(217, 119, 6, 0.45);
+    --node-num: #854D0E;
+    --node-active-bg: radial-gradient(circle, #FEF08A 0%, #F59E0B 100%);
+    --node-active-border: #B45309;
+    --node-active-num: #451A03;
+    --node-active-glow: 0 0 24px rgba(245, 158, 11, 0.85);
+    --branch-line: linear-gradient(90deg, transparent, rgba(217, 119, 6, 0.45));
+    --branch-active: linear-gradient(90deg, transparent, rgba(217, 119, 6, 0.95));
+
+    /* Buttons */
+    --btn-primary-bg: linear-gradient(135deg, #B45309 0%, #D97706 60%, #F59E0B 100%);
+    --btn-primary-color: #FFFFFF;
+    --btn-primary-shadow: 0 4px 18px rgba(180, 83, 9, 0.35);
+    --btn-sec-bg: rgba(255, 255, 255, 0.95);
+    --btn-sec-border: rgba(217, 119, 6, 0.45);
+    --btn-sec-color: #78350F;
+    --btn-sec-hover-bg: #FFFFFF;
+    --btn-sec-hover-border: #B45309;
+    --btn-sec-hover-color: #B45309;
+
+    /* Inputs */
+    --input-bg: rgba(255, 255, 255, 0.95);
+    --input-border: rgba(217, 119, 6, 0.35);
+    --input-color: #1E293B;
+    --input-placeholder: #94A3B8;
+
+    /* Top HUD */
+    --hud-bg: rgba(255, 253, 247, 0.92);
+    --hud-border: rgba(212, 175, 55, 0.50);
+    --hud-color: #78350F;
+    --hud-shadow: 0 8px 24px rgba(180, 83, 9, 0.12);
+
+    /* Music Bar */
+    --music-bg: rgba(255, 253, 247, 0.94);
+    --music-border: rgba(212, 175, 55, 0.50);
+    --music-color: #78350F;
+    --music-shadow: 0 10px 35px rgba(180, 83, 9, 0.18);
+    --music-select-bg: rgba(254, 243, 199, 0.90);
+    --music-select-border: rgba(217, 119, 6, 0.45);
+    --music-select-color: #78350F;
+
+    /* Global Tokens */
+    --gold-primary: #F59E0B;
+    --gold-bright: #FDE047;
+    --gold-champagne: #FDE68A;
+    --gold-deep: #B45309;
+
+    /* Typography Fonts */
+    --font-calligraphy: 'Great Vibes', 'Alex Brush', cursive;
+    --font-royal-title: 'Playfair Display', 'Cormorant Garamond', Georgia, serif;
+    --font-editorial: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    --font-ui: 'Plus Jakarta Sans', 'Montserrat', -apple-system, sans-serif;
+    --font-telugu: 'Suranna', 'Gautami', 'Mandali', serif;
+    --font-sanskrit: 'Rozha One', 'Suranna', serif;
+
+    /* Easing */
+    --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+    --ease-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ==========================================================================
+   2026 VELVET MIDNIGHT SAPPHIRE DARK THEME (STRICTLY FOR NIGHT OCCASIONS)
+   Triggered on Sangeet, Reception, and Subha Muhurtham (3:53 AM)
+   ========================================================================== */
+body[data-theme-mode="dark"] {
+    --theme-bg-base: #0A0817;
+    --theme-bg-gradient: radial-gradient(ellipse at 50% 0%, #1A1235 0%, #0D0A1C 45%, #05040A 100%);
+    --card-bg: linear-gradient(135deg, rgba(22, 16, 42, 0.90) 0%, rgba(13, 10, 28, 0.94) 100%);
+    --card-border: rgba(254, 240, 138, 0.38);
+    --card-border-hover: rgba(253, 224, 71, 0.75);
+    --card-shadow: 0 20px 55px rgba(0, 0, 0, 0.75), 0 0 25px rgba(254, 240, 138, 0.12);
+    --card-shadow-hover: 0 24px 65px rgba(0, 0, 0, 0.85), 0 0 35px rgba(253, 224, 71, 0.35);
+
+    /* Typography Colors in Dark Mode */
+    --title-gradient: linear-gradient(135deg, #FFFDF0 0%, #FDE047 40%, #F59E0B 80%, #D97706 100%);
+    --title-text: #FDE047;
+    --category-tag-color: #FDE68A;
+    --sub-heading-color: #FCE7F3;
+    --body-text-color: #E2E8F0;        /* Silvery white crisp text for night readability */
+    --secondary-text-color: #CBD5E1;
+    --sloka-text-color: #FDE68A;
+
+    /* Sub-components in Dark Mode */
+    --chip-bg: rgba(254, 240, 138, 0.14);
+    --chip-border: rgba(254, 240, 138, 0.35);
+    --chip-color: #FDE68A;
+    --tile-bg: rgba(255, 255, 255, 0.06);
+    --tile-border: rgba(254, 240, 138, 0.20);
+    --tile-title: #FDE68A;
+    --tile-desc: #CBD5E1;
+    --icon-bg: radial-gradient(circle, rgba(254, 240, 138, 0.22) 0%, rgba(15, 12, 30, 0.9) 100%);
+    --icon-border: #FDE047;
+    --icon-shadow: 0 0 22px rgba(254, 240, 138, 0.35);
+    --mantra-bg: rgba(255, 255, 255, 0.05);
+    --mantra-border: rgba(254, 240, 138, 0.25);
+    --knot-color: #FDE047;
+
+    /* Spine & Center Nodes in Dark Mode */
+    --spine-track-bg: rgba(254, 240, 138, 0.20);
+    --spine-fill-grad: linear-gradient(180deg, #FDE047 0%, #F59E0B 50%, #FFD700 100%);
+    --node-bg: #120E24;
+    --node-border: rgba(254, 240, 138, 0.40);
+    --node-num: #FDE68A;
+    --node-active-bg: radial-gradient(circle, #2E1065 0%, #0E111E 80%);
+    --node-active-border: #FDE047;
+    --node-active-num: #FFFFFF;
+    --node-active-glow: 0 0 24px rgba(253, 224, 71, 0.95);
+    --branch-line: linear-gradient(90deg, transparent, rgba(253, 224, 71, 0.45));
+    --branch-active: linear-gradient(90deg, transparent, rgba(253, 224, 71, 0.95));
+
+    /* Buttons in Dark Mode */
+    --btn-primary-bg: linear-gradient(135deg, #F59E0B 0%, #D97706 60%, #B45309 100%);
+    --btn-primary-color: #FFFFFF;
+    --btn-primary-shadow: 0 4px 18px rgba(245, 158, 11, 0.45);
+    --btn-sec-bg: rgba(255, 255, 255, 0.08);
+    --btn-sec-border: rgba(254, 240, 138, 0.35);
+    --btn-sec-color: #FDE68A;
+    --btn-sec-hover-bg: rgba(255, 255, 255, 0.15);
+    --btn-sec-hover-border: #FDE047;
+    --btn-sec-hover-color: #FFFFFF;
+
+    /* Inputs in Dark Mode */
+    --input-bg: rgba(10, 8, 20, 0.75);
+    --input-border: rgba(254, 240, 138, 0.35);
+    --input-color: #FFFDF7;
+    --input-placeholder: #94A3B8;
+
+    /* HUD in Dark Mode */
+    --hud-bg: rgba(20, 14, 34, 0.85);
+    --hud-border: rgba(254, 240, 138, 0.35);
+    --hud-color: #FDE68A;
+    --hud-shadow: 0 8px 24px rgba(0, 0, 0, 0.65);
+
+    /* Music Bar in Dark Mode */
+    --music-bg: rgba(20, 14, 34, 0.88);
+    --music-border: rgba(254, 240, 138, 0.35);
+    --music-color: #FDE68A;
+    --music-shadow: 0 10px 35px rgba(0, 0, 0, 0.75);
+    --music-select-bg: rgba(45, 25, 65, 0.85);
+    --music-select-border: rgba(254, 240, 138, 0.40);
+    --music-select-color: #FDE68A;
+}
+
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--theme-bg-base);
+    color: var(--body-text-color);
+    font-family: var(--font-ui);
+    transition: background-color 0.8s var(--ease-smooth), color 0.8s var(--ease-smooth);
+}
+
+body {
+    min-height: 100vh;
+    overflow-x: hidden;
+    position: relative;
+    user-select: none;
+    background: var(--theme-bg-gradient);
+    transition: background 0.8s var(--ease-smooth);
+}
+
+/* ==========================================================================
+   2026 LIVING ATMOSPHERE CANVAS & VOLUMETRIC CELESTIALS
+   ========================================================================== */
+#atmosphere-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* ==========================================================================
+   2026 GIANT ROTATING CELESTIAL ELEMENTS (USER AUTHENTIC SUN & MOON)
+   Positioned along screen edge (Right side for Sun, Left side for Moon)
+   with ~40-50% visible and continuous hypnotic slow rotation
+   ========================================================================== */
+
+/* Giant Fiery Sun (Right Side Edge) */
+#celestial-sun {
+    position: fixed;
+    top: 2%;
+    right: -160px;
+    width: 330px;
+    height: 330px;
+    border-radius: 50%;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(0.92);
+    transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), 
+                transform 1.2s cubic-bezier(0.4, 0, 0.2, 1), 
+                top 1.2s cubic-bezier(0.4, 0, 0.2, 1), 
+                box-shadow 1.2s cubic-bezier(0.4, 0, 0.2, 1), 
+                filter 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 
+        0 0 60px rgba(245, 158, 11, 0.90),
+        0 0 130px rgba(234, 88, 12, 0.65),
+        0 0 220px rgba(251, 191, 36, 0.40);
+    animation: sun-ambient-pulse 6s infinite alternate ease-in-out;
+}
+
+@media (min-width: 1024px) {
+    #celestial-sun {
+        width: 480px;
+        height: 480px;
+        right: -230px;
+        top: 2%;
+    }
+}
+
+#celestial-sun.celestial-active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Giant 3D Real Moon (Left Side Edge) */
+#celestial-moon {
+    position: fixed;
+    top: 2%;
+    left: -160px;
+    width: 320px;
+    height: 320px;
+    border-radius: 50%;
+    z-index: 2;
+    pointer-events: none;
+    opacity: 0;
+    transform: scale(0.92);
+    transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1), 
+                transform 1.2s cubic-bezier(0.4, 0, 0.2, 1), 
+                top 1.2s cubic-bezier(0.4, 0, 0.2, 1), 
+                box-shadow 1.2s cubic-bezier(0.4, 0, 0.2, 1), 
+                filter 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 
+        0 0 50px rgba(226, 232, 240, 0.92),
+        0 0 110px rgba(148, 163, 184, 0.60),
+        0 0 190px rgba(96, 165, 250, 0.35);
+    animation: moon-ambient-pulse 7s infinite alternate ease-in-out;
+}
+
+@media (min-width: 1024px) {
+    #celestial-moon {
+        width: 460px;
+        height: 460px;
+        left: -220px;
+        top: 2%;
+    }
+}
+
+#celestial-moon.celestial-active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+/* Circular Clip & Rotating Texture (Scaled to strictly eliminate checkerboard / borders) */
+.celestial-orb-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    overflow: hidden;
+    -webkit-mask-image: -webkit-radial-gradient(circle, white 100%, black 100%);
+}
+
+.celestial-texture-img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    object-fit: cover;
+    border-radius: 50%;
+    display: block;
+    user-select: none;
+    pointer-events: none;
+    transform-origin: center center;
+}
+
+/* Sun: 128% scale strictly pushes all outer checkerboard pixels outside the clipped circle */
+.rotating-sun {
+    width: 128%;
+    height: 128%;
+    margin-top: -64%;
+    margin-left: -64%;
+    animation: celestial-spin-cw 80s linear infinite;
+}
+
+/* Moon: 122% scale strictly pushes all outer black borders outside the clipped circle */
+.rotating-moon {
+    width: 122%;
+    height: 122%;
+    margin-top: -61%;
+    margin-left: -61%;
+    animation: celestial-spin-ccw 95s linear infinite;
+}
+
+@keyframes celestial-spin-cw {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+@keyframes celestial-spin-ccw {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(-360deg); }
+}
+
+@keyframes sun-ambient-pulse {
+    0% {
+        box-shadow: 
+            0 0 50px rgba(245, 158, 11, 0.85),
+            0 0 110px rgba(234, 88, 12, 0.55),
+            0 0 190px rgba(251, 191, 36, 0.32);
+    }
+    100% {
+        box-shadow: 
+            0 0 75px rgba(245, 158, 11, 1.0),
+            0 0 150px rgba(234, 88, 12, 0.75),
+            0 0 250px rgba(251, 191, 36, 0.48);
+    }
+}
+
+@keyframes moon-ambient-pulse {
+    0% {
+        box-shadow: 
+            0 0 40px rgba(226, 232, 240, 0.85),
+            0 0 95px rgba(148, 163, 184, 0.50),
+            0 0 160px rgba(96, 165, 250, 0.28);
+    }
+    100% {
+        box-shadow: 
+            0 0 65px rgba(226, 232, 240, 1.0),
+            0 0 135px rgba(148, 163, 184, 0.70),
+            0 0 220px rgba(96, 165, 250, 0.42);
+    }
+}
+
+/* Sunset Chromatic Dusk Aura */
+#celestial-dusk {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100vw;
+    height: 55vh;
+    background: radial-gradient(ellipse at bottom, rgba(234, 88, 12, 0.45) 0%, rgba(192, 38, 211, 0.25) 50%, transparent 85%);
+    opacity: 0;
+    transition: opacity 1.8s var(--ease-smooth);
+    z-index: 2;
+    pointer-events: none;
+}
+
+#celestial-dusk.celestial-active {
+    opacity: 1;
+}
+
+/* Sacred Particles Canvas (Akshantalu Physics) */
+#sacred-canvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10;
+    pointer-events: none;
+}
+
+/* ==========================================================================
+   2026 FLOATING GLASS TOP HUD (STORY PROGRESS BAR, AUTOPLAY & LANGUAGE)
+   ========================================================================== */
+.top-hud-nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 150;
+    display: flex;
+    flex-direction: column;
+    pointer-events: none;
+}
+
+.top-hud-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 8px 16px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.hud-left-controls,
+.hud-right-controls {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    pointer-events: auto;
+}
+
+/* Discreet Luxury Music Toggle Pill */
+.hud-sound-pill {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 6px 12px;
+    background: var(--hud-bg);
+    border: 1.5px solid var(--hud-border);
+    border-radius: 40px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: var(--hud-shadow);
+    cursor: pointer;
+    transition: all 0.3s var(--ease-spring);
+    color: var(--hud-color);
+}
+
+.hud-sound-pill:hover {
+    transform: scale(1.05);
+    border-color: rgba(217, 119, 6, 0.6);
+}
+
+.sound-icon-glyph {
+    font-size: 13px;
+    line-height: 1;
+}
+
+.sound-waves-mini {
+    display: flex;
+    align-items: flex-end;
+    gap: 2.5px;
+    height: 12px;
+}
+
+.sw-bar {
+    width: 2px;
+    height: 3px;
+    background: #D97706;
+    border-radius: 1px;
+    transition: height 0.25s ease;
+}
+
+body[data-theme-mode="dark"] .sw-bar {
+    background: #FDE047;
+}
+
+.hud-sound-pill.sound-active .sw-bar:nth-child(1) {
+    animation: sw-bounce 0.8s ease-in-out infinite alternate;
+}
+
+.hud-sound-pill.sound-active .sw-bar:nth-child(2) {
+    animation: sw-bounce 0.8s ease-in-out 0.25s infinite alternate;
+}
+
+.hud-sound-pill.sound-active .sw-bar:nth-child(3) {
+    animation: sw-bounce 0.8s ease-in-out 0.5s infinite alternate;
+}
+
+@keyframes sw-bounce {
+    0% { height: 3px; }
+    100% { height: 11px; }
+}
+
+/* Interactive Sky View Toggle Button */
+.hud-sky-btn {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 7px 14px;
+    background: var(--hud-bg);
+    border: 1.5px solid var(--hud-border);
+    border-radius: 40px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    color: var(--hud-color);
+    font-family: var(--font-ui);
+    font-size: 0.8rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s var(--ease-spring);
+    box-shadow: var(--hud-shadow);
+}
+
+.hud-sky-btn:hover {
+    transform: scale(1.04);
+    filter: brightness(1.06);
+}
+
+/* Apple-Style Segmented Language Controller */
+.language-segmented-pill {
+    display: flex;
+    background: var(--hud-bg);
+    border: 1.5px solid var(--hud-border);
+    border-radius: 40px;
+    padding: 2px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: var(--hud-shadow);
+    transition: all 0.4s ease;
+}
+
+.lang-btn {
+    border: none;
+    background: transparent;
+    color: var(--hud-color);
+    font-family: var(--font-ui), var(--font-telugu), sans-serif;
+    font-size: 0.85rem;
+    font-weight: 700;
+    width: 32px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.3s var(--ease-spring);
+    padding: 0;
+    line-height: 1;
+}
+
+.lang-btn:hover {
+    color: #B45309;
+}
+
+body[data-theme-mode="dark"] .lang-btn:hover {
+    color: #FFFFFF;
+}
+
+.lang-btn.lang-active {
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+    color: #FFFFFF;
+    box-shadow: 0 2px 10px rgba(180, 83, 9, 0.35);
+}
+
+body[data-theme-mode="dark"] .lang-btn.lang-active {
+    background: linear-gradient(135deg, #FDE047 0%, #EAB308 100%);
+    color: #0F111A;
+    box-shadow: 0 2px 10px rgba(226, 192, 118, 0.4);
+}
+
+/* ==========================================================================
+   REALISTIC WINTER NATURE LANDSCAPE & VOLUMETRIC FOG BACKDROP
+   ========================================================================== */
+.winter-nature-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.winter-nature-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 30%;
+    transform: scale(1.02);
+    filter: brightness(1.02) saturate(0.95);
+    transition: filter 1.2s cubic-bezier(0.4, 0, 0.2, 1), transform 1.2s cubic-bezier(0.4, 0, 0.2, 1), opacity 1.2s ease;
+}
+
+/* Haldi Ceremony Authentic Floral Marigold Backdrop (Replaces winter forest during Haldi) */
+.haldi-nature-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 40%;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(1.04);
+    filter: brightness(1.02) saturate(1.08) contrast(1.02);
+    transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: 1;
+}
+
+body[data-current-climate="haldi"] .haldi-nature-img {
+    opacity: 1;
+    transform: scale(1);
+}
+
+body[data-current-climate="haldi"] .winter-nature-img {
+    opacity: 0;
+}
+
+/* Mehandi Ceremony Authentic Emerald & Lantern Backdrop (Replaces winter forest during Mehandi) */
+.mehandi-nature-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 45%;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(1.04);
+    filter: brightness(1.03) saturate(1.12) contrast(1.03);
+    transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: 1;
+}
+
+body[data-current-climate="mehandi"] .mehandi-nature-img {
+    opacity: 1;
+    transform: scale(1);
+}
+
+body[data-current-climate="mehandi"] .winter-nature-img {
+    opacity: 0;
+}
+
+/* Sangeet Gala Musical Night Backdrop (Replaces winter forest during Sangeet) */
+.sangeet-nature-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 45%;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(1.04);
+    filter: brightness(1.02) saturate(1.15) contrast(1.04);
+    transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: 1;
+}
+
+body[data-current-climate="sangeet"] .sangeet-nature-img {
+    opacity: 1;
+    transform: scale(1);
+}
+
+body[data-current-climate="sangeet"] .winter-nature-img {
+    opacity: 0;
+}
+
+/* Sri Satyanarayana Swamy Vratham Sacred Puja Mandapam Backdrop (Replaces winter forest during Vratham) */
+.vratham-nature-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 32%;
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(1.04);
+    filter: brightness(1.06) saturate(1.12) contrast(1.03);
+    transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: 1;
+}
+
+body[data-current-climate="vratham"] .vratham-nature-img {
+    opacity: 1;
+    transform: scale(1);
+}
+
+body[data-current-climate="vratham"] .winter-nature-img {
+    opacity: 0;
+}
+
+/* Hide celestial sun on indoor & dedicated ceremony decor scenes so the authentic backdrop is fully visible */
+body[data-current-climate="vratham"] #celestial-sun {
+    opacity: 0 !important;
+    transform: scale(0.6) !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+}
+
+/* Natural Daylight & Nighttime Landscape Dimming by Timing */
+body[data-current-climate="sunrise"] .winter-nature-img {
+    filter: brightness(0.88) saturate(1.10) hue-rotate(345deg) contrast(0.98);
+}
+
+body[data-current-climate="morning-sun"] .winter-nature-img {
+    filter: brightness(1.02) saturate(0.98);
+}
+
+body[data-current-climate="afternoon-sun"] .winter-nature-img {
+    filter: brightness(1.14) saturate(1.04) contrast(1.06);
+}
+
+body[data-current-climate="sunset"] .winter-nature-img {
+    filter: brightness(0.76) saturate(1.28) hue-rotate(330deg) contrast(1.10);
+}
+
+body[data-current-climate="dark-night"] .winter-nature-img {
+    filter: brightness(0.22) saturate(0.85) hue-rotate(215deg) contrast(1.15);
+}
+
+body[data-current-climate="early-dawn"] .winter-nature-img {
+    filter: brightness(0.17) saturate(0.80) hue-rotate(225deg) contrast(1.18);
+}
+
+/* Volumetric Fog & Depth Mist Overlay Bands (Naturally modulated by Timing) */
+.winter-fog-band {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    transition: opacity 1.2s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+body[data-current-climate="sunrise"] .winter-fog-band {
+    opacity: 0.88;
+}
+
+body[data-current-climate="morning-sun"] .winter-fog-band {
+    opacity: 0.55;
+}
+
+body[data-current-climate="afternoon-sun"] .winter-fog-band {
+    opacity: 0.18;
+}
+
+body[data-current-climate="sunset"] .winter-fog-band {
+    opacity: 0.60;
+    filter: hue-rotate(330deg);
+}
+
+body[data-theme-mode="dark"] .winter-fog-band {
+    display: none !important;
+    opacity: 0 !important;
+}
+
+.fog-band-deep {
+    background: radial-gradient(ellipse at 50% 60%, rgba(255, 255, 255, 0.24) 0%, rgba(254, 243, 199, 0.12) 45%, transparent 75%);
+    animation: fog-sway-slow 22s infinite alternate ease-in-out;
+}
+
+.fog-band-mid {
+    background: linear-gradient(180deg, transparent 35%, rgba(255, 255, 255, 0.18) 65%, rgba(253, 248, 238, 0.35) 100%);
+    animation: fog-drift-horizontal 34s infinite linear;
+}
+
+.fog-band-near {
+    background: radial-gradient(circle at 20% 80%, rgba(255, 255, 255, 0.16) 0%, transparent 60%);
+    animation: fog-sway-slow 18s infinite alternate-reverse ease-in-out;
+}
+
+.winter-vignette-overlay {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse at center, transparent 40%, rgba(253, 248, 238, 0.35) 100%);
+    pointer-events: none;
+    transition: background 1.8s var(--ease-smooth);
+}
+
+body[data-theme-mode="dark"] .winter-vignette-overlay {
+    background: radial-gradient(ellipse at center, rgba(3, 5, 15, 0.25) 0%, rgba(2, 3, 10, 0.88) 100%);
+}
+
+@keyframes fog-sway-slow {
+    0% { transform: translateX(-2%) scale(1.0); }
+    100% { transform: translateX(2%) scale(1.04); }
+}
+
+@keyframes fog-drift-horizontal {
+    0% { transform: translateX(0); }
+    100% { transform: translateX(-40px); }
+}
+
+/* ==========================================================================
+   2026 SINGLE-SCREEN IMMERSIVE APPLICATION ARCHITECTURE
+   Fixed viewport height (100vh / 100dvh), Zero page scroll, Cinematic 3D Transitions
+   ========================================================================== */
+.single-screen-body {
+    height: 100vh !important;
+    height: 100dvh !important;
+    overflow: hidden !important;
+    position: fixed !important;
+    width: 100vw !important;
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+.app-viewport {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 56px 16px 66px; /* Room for top HUD & bottom dock */
+    z-index: 10;
+}
+
+/* Story Progress Bar (13 Segments) */
+.story-progress-bar-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    display: flex;
+    gap: 4px;
+    padding: 4px 12px 0;
+    z-index: 160;
+    pointer-events: auto;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0.20) 0%, transparent 100%);
+}
+
+.story-progress-segment {
+    flex: 1;
+    height: 3.5px;
+    background: rgba(255, 255, 255, 0.28);
+    border-radius: 4px;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+    transition: height 0.2s ease, background 0.3s ease;
+}
+
+body[data-theme-mode="dark"] .story-progress-segment {
+    background: rgba(255, 255, 255, 0.16);
+}
+
+.story-progress-segment:hover {
+    height: 6px;
+}
+
+.story-progress-fill {
+    width: 0%;
+    height: 100%;
+    background: linear-gradient(90deg, #F59E0B, #FDE047, #FFFDF0);
+    border-radius: 4px;
+    box-shadow: 0 0 8px rgba(253, 224, 71, 0.85);
+}
+
+.story-progress-segment.segment-done .story-progress-fill {
+    width: 100% !important;
+}
+
+.story-progress-segment.segment-active.progress-animating .story-progress-fill {
+    animation: fillStoryProgress 5s linear forwards;
+}
+
+.story-progress-segment.segment-paused .story-progress-fill {
+    animation-play-state: paused !important;
+}
+
+@keyframes fillStoryProgress {
+    from { width: 0%; }
+    to { width: 100%; }
+}
+
+/* Auto-Play Toggle Pill (Minimalist Icon Only) */
+.autoplay-pill {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    padding: 0;
+    background: var(--hud-bg);
+    border: 1.5px solid var(--hud-border);
+    border-radius: 50%;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    color: var(--hud-color);
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.25s var(--ease-spring);
+    box-shadow: var(--hud-shadow);
+}
+
+.autoplay-pill:hover {
+    transform: scale(1.08);
+    border-color: rgba(217, 119, 6, 0.6);
+}
+
+body[data-theme-mode="dark"] .autoplay-pill:hover {
+    border-color: rgba(254, 240, 138, 0.75);
+}
+
+.hud-play-icon {
+    line-height: 1;
+    display: inline-block;
+    transition: transform 0.2s ease;
+}
+
+.hud-scene-counter {
+    display: none;
+}
+
+/* App Centered Stage */
+.app-stage {
+    position: relative;
+    width: 100%;
+    max-width: 580px;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    perspective: 1200px;
+    box-sizing: border-box;
+    transition: max-width 0.45s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+.app-stage:has(#scene-hero.scene-active),
+.app-stage:has(#scene-muhurtham.scene-active),
+.app-stage:has(#scene-pellikoduku.scene-active),
+.app-stage:has(#scene-pellikuturu.scene-active),
+.app-stage:has(#scene-mehandi.scene-active),
+.app-stage:has(#scene-haldi.scene-active),
+.app-stage:has(#scene-sangeet.scene-active),
+.app-stage:has(#scene-reception.scene-active),
+.app-stage:has(#scene-pelli.scene-active),
+.app-stage.stage-hero-active {
+    max-width: 960px;
+}
+
+/* App Scene Transitions (Cinematic 3D Crossfades) */
+.app-scene {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transform: translate3d(0, 32px, -60px) scale(0.93);
+    filter: blur(8px);
+    transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+                transform 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+                filter 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+                visibility 0.65s;
+    z-index: 1;
+}
+
+.app-scene.scene-active {
+    opacity: 1;
+    pointer-events: auto;
+    visibility: visible;
+    transform: translate3d(0, 0, 0) scale(1);
+    filter: blur(0px);
+    z-index: 10;
+}
+
+.app-scene.scene-exit-prev {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transform: translate3d(0, -32px, -60px) scale(0.93);
+    filter: blur(8px);
+    z-index: 5;
+}
+
+.app-scene.scene-exit-next {
+    opacity: 0;
+    pointer-events: none;
+    visibility: hidden;
+    transform: translate3d(0, 32px, -60px) scale(0.93);
+    filter: blur(8px);
+    z-index: 5;
+}
+
+/* Glass Card Sizing in Single Screen Stage */
+.app-scene .luxury-glass-card {
+    max-height: calc(100dvh - 142px);
+    overflow-y: auto;
+    scrollbar-width: none;
+    width: 100%;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: clamp(16px, 2.4vh, 22px) clamp(16px, 3vw, 22px);
+}
+
+.app-scene .luxury-glass-card::-webkit-scrollbar {
+    display: none;
+}
+
+/* Floating Navigation Arrows */
+.app-nav-arrow {
+    position: fixed;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.24);
+    border: 1.5px solid rgba(255, 255, 255, 0.45);
+    color: #B45309;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    z-index: 90;
+    transition: all 0.25s var(--ease-spring);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.12);
+}
+
+body[data-theme-mode="dark"] .app-nav-arrow {
+    background: rgba(22, 16, 42, 0.78);
+    border-color: rgba(254, 240, 138, 0.32);
+    color: #FDE047;
+    box-shadow: 0 6px 22px rgba(0, 0, 0, 0.55);
+}
+
+.arrow-prev { left: 14px; }
+.arrow-next { right: 14px; }
+
+.app-nav-arrow:hover {
+    transform: translateY(-50%) scale(1.14);
+    background: rgba(254, 240, 138, 0.35);
+    border-color: rgba(245, 158, 11, 0.7);
+}
+
+@media (max-width: 768px) {
+    .app-nav-arrow {
+        display: none; /* Native touch swipe is used on phones */
+    }
+}
+
+/* Bottom Interactive Ceremony Scrubber Dock */
+.app-bottom-dock {
+    position: fixed;
+    bottom: 8px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 95;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    max-width: 98vw;
+}
+
+.dock-inner-glass {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 10px;
+    background: rgba(255, 255, 255, 0.22);
+    border: 1px solid rgba(255, 255, 255, 0.38);
+    border-radius: 999px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.16);
+    overflow-x: auto;
+    scrollbar-width: none;
+    max-width: 96vw;
+}
+
+body[data-theme-mode="dark"] .dock-inner-glass {
+    background: rgba(18, 12, 36, 0.80);
+    border-color: rgba(254, 240, 138, 0.30);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.65);
+}
+
+.dock-item {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.28s cubic-bezier(0.16, 1, 0.3, 1);
+    background: rgba(255, 255, 255, 0.16);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    color: var(--body-text-color);
+    font-size: 0.82rem;
+    flex-shrink: 0;
+}
+
+.dock-item img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    object-fit: cover;
+    object-position: center 20%;
+}
+
+.dock-item:hover {
+    transform: scale(1.15);
+    border-color: rgba(245, 158, 11, 0.6);
+}
+
+.dock-item.dock-active {
+    transform: scale(1.24);
+    background: #FDE047;
+    border-color: #F59E0B;
+    box-shadow: 0 0 16px rgba(245, 158, 11, 0.8);
+    z-index: 2;
+}
+
+/* Floating Micro Tooltip on Hover */
+.dock-item::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 40px;
+    left: 50%;
+    transform: translateX(-50%) translateY(4px);
+    padding: 3px 8px;
+    background: rgba(15, 10, 30, 0.92);
+    color: #FFFDF0;
+    border: 1px solid rgba(254, 240, 138, 0.4);
+    border-radius: 6px;
+    font-size: 0.68rem;
+    font-weight: 700;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: all 0.2s ease;
+}
+
+.dock-item:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+/* ==========================================================================
+   LIGHT THEME CARDS & TYPOGRAPHY (DEFAULT)
+   ========================================================================== */
+.luxury-glass-card {
+    background: var(--card-bg);
+    backdrop-filter: blur(16px) saturate(180%);
+    -webkit-backdrop-filter: blur(16px) saturate(180%);
+    border: 1.5px solid var(--card-border);
+    border-radius: 20px;
+    padding: 22px 20px;
+    box-shadow: var(--card-shadow);
+    transition: all 0.5s var(--ease-spring);
+    position: relative;
+    overflow: hidden;
+}
+
+.luxury-glass-card:hover {
+    transform: translateY(-3px);
+    border-color: var(--card-border-hover);
+    box-shadow: var(--card-shadow-hover);
+}
+
+/* Headings */
+.luxury-title-lg {
+    font-family: var(--font-royal-title);
+    font-size: clamp(1.3rem, 2.5vw, 1.65rem) !important;
+    font-weight: 700;
+    background: var(--title-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.25;
+    letter-spacing: 0.5px;
+}
+
+.luxury-category-tag {
+    font-family: var(--font-ui);
+    font-size: 0.74rem;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    text-transform: uppercase;
+    color: var(--category-tag-color);
+    margin-bottom: 8px;
+}
+
+.invitation-english-sub {
+    font-family: var(--font-ui);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+    color: var(--sub-heading-color);
+    margin-top: 4px;
+    text-transform: uppercase;
+}
+
+/* ==========================================================================
+   HAUTE COUTURE HERO WEDDING INVITATION & ROYAL SANCTUM ARCHITECTURE
+   ========================================================================== */
+.hero-invitation-card {
+    padding: 34px 22px 28px;
+    border: 1.5px solid rgba(217, 119, 6, 0.45);
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(254, 250, 244, 0.92) 100%);
+    box-shadow: 0 24px 60px rgba(180, 83, 9, 0.12), 0 4px 16px rgba(0, 0, 0, 0.04), inset 0 1px 0 rgba(255, 255, 255, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+body[data-theme-mode="dark"] .hero-invitation-card {
+    background: linear-gradient(135deg, rgba(22, 16, 42, 0.94) 0%, rgba(13, 10, 28, 0.96) 100%);
+    border-color: rgba(254, 240, 138, 0.4);
+    box-shadow: 0 24px 65px rgba(0, 0, 0, 0.8), 0 0 30px rgba(254, 240, 138, 0.15);
+}
+
+/* Ornate Royal Corner Filigree Brackets */
+.card-corner-bracket {
+    position: absolute;
+    width: 38px;
+    height: 38px;
+    pointer-events: none;
+    z-index: 4;
+    opacity: 0.82;
+    transition: opacity 0.35s ease, transform 0.35s ease;
+}
+
+.luxury-glass-card:hover .card-corner-bracket {
+    opacity: 1;
+}
+
+.corner-tl {
+    top: 8px;
+    left: 8px;
+}
+
+.corner-tr {
+    top: 8px;
+    right: 8px;
+    transform: scaleX(-1);
+}
+
+.corner-bl {
+    bottom: 8px;
+    left: 8px;
+    transform: scaleY(-1);
+}
+
+.corner-br {
+    bottom: 8px;
+    right: 8px;
+    transform: scale(-1, -1);
+}
+
+/* Royal Monogram & Crest */
+.royal-crest-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 8px;
+    position: relative;
+}
+
+.royal-monogram-emblem {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 8px;
+    animation: crest-float 5s ease-in-out infinite alternate;
+}
+
+@keyframes crest-float {
+    0% { transform: translateY(0); filter: drop-shadow(0 4px 12px rgba(245, 158, 11, 0.3)); }
+    100% { transform: translateY(-3px); filter: drop-shadow(0 8px 18px rgba(245, 158, 11, 0.55)); }
+}
+
+.royal-crest-svg {
+    display: block;
+}
+
+.divine-blessing-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 16px;
+    background: rgba(254, 243, 199, 0.7);
+    border: 1px solid rgba(217, 119, 6, 0.35);
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--category-tag-color);
+    letter-spacing: 1.5px;
+    box-shadow: 0 2px 8px rgba(217, 119, 6, 0.1);
+    margin-bottom: 6px;
+}
+
+body[data-theme-mode="dark"] .divine-blessing-pill {
+    background: rgba(254, 240, 138, 0.14);
+    border-color: rgba(254, 240, 138, 0.35);
+    color: #FDE68A;
+}
+
+.blessing-star {
+    color: #D97706;
+    font-size: 0.75rem;
+}
+
+body[data-theme-mode="dark"] .blessing-star {
+    color: #FDE047;
+}
+
+.royal-invitation-headline {
+    font-family: var(--font-royal-title);
+    font-size: clamp(1.85rem, 4.2vw, 2.5rem);
+    font-weight: 700;
+    background: var(--title-gradient);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    line-height: 1.25;
+    margin: 4px 0 2px;
+    letter-spacing: 0.6px;
+}
+
+.royal-english-sub {
+    font-family: var(--font-ui);
+    font-size: 0.76rem;
+    font-weight: 700;
+    letter-spacing: 2.8px;
+    color: var(--sub-heading-color);
+    text-transform: uppercase;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 4px;
+}
+
+.royal-hero-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 100%;
+    max-width: 280px;
+    margin: 14px auto 10px;
+}
+
+.royal-hero-divider::before,
+.royal-hero-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(217, 119, 6, 0.6), transparent);
+}
+
+/* ==========================================================================
+   CINEMATIC DIPTYCH SHOWCASE & ROYAL TYPOGRAPHY (CARD 1)
+   ========================================================================== */
+.hero-diptych-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+    max-width: 960px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 10;
+}
+
+@media (max-width: 860px) {
+    .hero-diptych-container {
+        flex-direction: column;
+        gap: 12px;
+        max-height: calc(100dvh - 142px);
+        overflow-y: auto;
+        scrollbar-width: none;
+    }
+}
+
+/* Left Showcase: Grand Royal Couple Arched Portrait (Occupies Open Left Space) */
+.hero-diptych-portrait-wrap {
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    animation: diptych-portrait-enter 0.85s cubic-bezier(0.25, 1, 0.5, 1);
+}
+
+@keyframes diptych-portrait-enter {
+    from {
+        opacity: 0;
+        transform: translateX(-32px) scale(0.94);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0) scale(1);
+    }
+}
+
+.hero-royal-arch-frame {
+    width: clamp(210px, 22vw, 275px);
+    height: clamp(270px, 35vh, 360px);
+    border-radius: 140px 140px 24px 24px;
+    position: relative;
+    overflow: hidden;
+    padding: 4px;
+    background: linear-gradient(145deg, #FFE082 0%, #D97706 45%, #FDE047 70%, #92400E 100%);
+    box-shadow: 
+        0 20px 48px rgba(0, 0, 0, 0.28),
+        0 0 35px rgba(245, 158, 11, 0.38),
+        inset 0 1px 3px rgba(255, 255, 255, 0.95);
+    transition: transform 0.6s var(--ease-spring), box-shadow 0.6s ease;
+}
+
+body[data-theme-mode="dark"] .hero-royal-arch-frame {
+    background: linear-gradient(145deg, #FFFDF0 0%, #FDE047 40%, #F59E0B 75%, #D97706 100%);
+    box-shadow: 
+        0 24px 55px rgba(0, 0, 0, 0.85),
+        0 0 45px rgba(254, 240, 138, 0.45),
+        inset 0 1px 3px rgba(254, 240, 138, 0.5);
+}
+
+.hero-royal-arch-frame:hover {
+    transform: translateY(-4px) scale(1.025);
+    box-shadow: 
+        0 28px 60px rgba(0, 0, 0, 0.35),
+        0 0 50px rgba(245, 158, 11, 0.55);
+}
+
+.hero-royal-arch-photo {
+    width: 100%;
+    height: 100%;
+    border-radius: 136px 136px 20px 20px;
+    object-fit: cover;
+    object-position: center 20%;
+    display: block;
+    background: radial-gradient(circle, #2A1F4D 0%, #171030 100%);
+    transition: transform 0.8s ease;
+}
+
+.hero-first-card-photo {
+    object-position: center 25% !important;
+}
+
+.muhurtham-couple-photo {
+    object-position: center 18% !important;
+}
+
+.mehandi-couple-photo {
+    object-position: center 20% !important;
+}
+
+#scene-mehandi .hero-royal-arch-frame {
+    background: linear-gradient(145deg, #A7F3D0 0%, #059669 40%, #FDE047 70%, #047857 100%);
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.28), 0 0 35px rgba(16, 185, 129, 0.35);
+}
+
+body[data-theme-mode="dark"] #scene-mehandi .hero-royal-arch-frame {
+    background: linear-gradient(145deg, #D1FAE5 0%, #10B981 40%, #FDE047 75%, #059669 100%);
+    box-shadow: 0 24px 55px rgba(0, 0, 0, 0.85), 0 0 45px rgba(16, 185, 129, 0.4);
+}
+
+.haldi-couple-photo {
+    object-position: center 25% !important;
+}
+
+#scene-haldi .hero-royal-arch-frame {
+    background: linear-gradient(145deg, #FEF08A 0%, #EAB308 40%, #F59E0B 70%, #B45309 100%);
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.28), 0 0 35px rgba(234, 179, 8, 0.45);
+}
+
+body[data-theme-mode="dark"] #scene-haldi .hero-royal-arch-frame {
+    background: linear-gradient(145deg, #FFFDF0 0%, #FDE047 40%, #F59E0B 75%, #D97706 100%);
+    box-shadow: 0 24px 55px rgba(0, 0, 0, 0.85), 0 0 45px rgba(254, 240, 138, 0.45);
+}
+
+.hero-royal-arch-frame:hover .hero-royal-arch-photo {
+    transform: scale(1.04);
+}
+
+.hero-royal-arch-filigree {
+    position: absolute;
+    inset: 8px;
+    border-radius: 132px 132px 16px 16px;
+    border: 1px dashed rgba(255, 255, 255, 0.55);
+    pointer-events: none;
+    z-index: 2;
+}
+
+body[data-theme-mode="dark"] .hero-royal-arch-filigree {
+    border-color: rgba(254, 240, 138, 0.5);
+}
+
+.hero-royal-arch-sheen {
+    position: absolute;
+    top: -50%;
+    left: -80%;
+    width: 60%;
+    height: 200%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.35), transparent);
+    transform: rotate(25deg);
+    pointer-events: none;
+    z-index: 3;
+    animation: arch-sheen-sweep 7s ease-in-out infinite;
+}
+
+.hero-portrait-caption {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    margin-top: 6px;
+    padding: 3px 12px;
+    background: rgba(255, 255, 255, 0.82);
+    border: 1px solid rgba(217, 119, 6, 0.35);
+    border-radius: 999px;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 12px rgba(180, 83, 9, 0.10);
+    max-width: 95%;
+    white-space: nowrap;
+}
+
+body[data-theme-mode="dark"] .hero-portrait-caption,
+.night-occasion-card .hero-portrait-caption {
+    background: rgba(20, 14, 36, 0.82);
+    border-color: rgba(254, 240, 138, 0.35);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.45);
+}
+
+.hero-caption-text {
+    font-family: 'Plus Jakarta Sans', 'Montserrat', -apple-system, sans-serif !important;
+    font-size: clamp(0.74rem, 1.35vw, 0.84rem) !important;
+    font-weight: 600 !important;
+    color: #B45309;
+    letter-spacing: 0.35px;
+    line-height: 1.3;
+}
+
+body[data-theme-mode="dark"] .hero-caption-text {
+    color: #FDE68A !important;
+}
+
+html[lang="te"] .hero-caption-text {
+    font-family: 'Suranna', 'Gautami', 'Mandali', serif !important;
+    font-size: clamp(0.78rem, 1.4vw, 0.88rem) !important;
+    font-weight: 600 !important;
+}
+
+.hero-caption-gem {
+    font-size: 0.48rem !important;
+    color: #D97706;
+    opacity: 0.85;
+}
+
+body[data-theme-mode="dark"] .hero-caption-gem {
+    color: #FDE047 !important;
+    opacity: 0.85;
+}
+
+body[data-theme-mode="dark"] .hero-caption-gem {
+    color: #FDE047;
+}
+
+/* Right Showcase: Luxury Glass Invitation Card */
+.hero-diptych-card {
+    flex: 1 1 380px;
+    min-width: clamp(300px, 34vw, 420px);
+    max-width: 480px;
+    margin: 0 !important;
+    padding: clamp(18px, 2.4vh, 24px) clamp(16px, 2.5vw, 22px) !important;
+    box-sizing: border-box;
+}
+
+/* Mehandi Celebration Diptych Card Enhancements */
+.card-mehandi {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 26px 22px 24px !important;
+}
+
+.mehandi-dress-badge {
+    margin-bottom: 8px;
+}
+
+.mehandi-dress-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.84rem !important;
+    padding: 5px 15px !important;
+    border-radius: 999px !important;
+    letter-spacing: 0.5px;
+}
+
+/* Grand Highlighted Mehandi Night Title */
+.mehandi-title-highlight-wrap {
+    position: relative;
+    margin: 6px 0 10px;
+    padding: 0 4px;
+}
+
+.mehandi-crest-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 4px;
+    opacity: 0.92;
+}
+
+.m-crest-line {
+    width: 38px;
+    height: 1.5px;
+    background: linear-gradient(90deg, transparent, rgba(217, 119, 6, 0.7));
+}
+
+.m-crest-line:last-child {
+    background: linear-gradient(90deg, rgba(217, 119, 6, 0.7), transparent);
+}
+
+body[data-theme-mode="dark"] .m-crest-line {
+    background: linear-gradient(90deg, transparent, rgba(254, 240, 138, 0.8));
+}
+
+body[data-theme-mode="dark"] .m-crest-line:last-child {
+    background: linear-gradient(90deg, rgba(254, 240, 138, 0.8), transparent);
+}
+
+.m-crest-gem {
+    font-size: 0.76rem;
+    color: #D97706;
+    letter-spacing: 2px;
+}
+
+body[data-theme-mode="dark"] .m-crest-gem {
+    color: #FDE047;
+}
+
+.mehandi-grand-title {
+    margin: 0;
+    font-size: clamp(1.4rem, 2.8vw, 1.85rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.25;
+    letter-spacing: 0.5px;
+    background: linear-gradient(135deg, #B45309 0%, #D97706 35%, #059669 80%, #047857 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    filter: drop-shadow(0 2px 10px rgba(245, 158, 11, 0.3));
+}
+
+body[data-theme-mode="dark"] .mehandi-grand-title {
+    background: linear-gradient(135deg, #FFFDF0 0%, #FDE047 35%, #34D399 75%, #10B981 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    filter: drop-shadow(0 3px 18px rgba(245, 158, 11, 0.45));
+}
+
+.mehandi-title-glow-bar {
+    width: 84px;
+    height: 2.5px;
+    margin: 6px auto 0;
+    background: linear-gradient(90deg, transparent, #F59E0B, #10B981, transparent);
+    border-radius: 999px;
+    box-shadow: 0 0 10px rgba(16, 185, 129, 0.6);
+}
+
+.mehandi-sub-line {
+    font-size: 0.92rem;
+    color: var(--secondary-text-color);
+    margin: 0 auto 14px;
+}
+
+body[data-theme-mode="dark"] .mehandi-sub-line {
+    color: #CBD5E1;
+}
+
+/* Day, Time & Place Highlight Container (Refined Balanced Font Size & Bespoke Badges) */
+.mehandi-event-highlights {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 420px;
+    margin: 10px auto 0;
+    padding: 11px 18px;
+    background: rgba(254, 240, 138, 0.12);
+    border: 1.5px solid rgba(16, 185, 129, 0.45);
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22), 0 0 18px rgba(16, 185, 129, 0.14);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+body[data-theme-mode="dark"] .mehandi-event-highlights {
+    background: rgba(20, 24, 38, 0.88);
+    border-color: rgba(52, 211, 153, 0.55);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.75), 0 0 25px rgba(16, 185, 129, 0.22);
+}
+
+.mehandi-hl-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.mehandi-icon-badge {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.18) 0%, rgba(217, 119, 6, 0.1) 100%);
+    border: 1.5px solid rgba(245, 158, 11, 0.55);
+    color: #D97706;
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+body[data-theme-mode="dark"] .mehandi-icon-badge {
+    background: linear-gradient(135deg, rgba(254, 240, 138, 0.18) 0%, rgba(245, 158, 11, 0.12) 100%);
+    border-color: rgba(254, 240, 138, 0.65);
+    color: #FDE047;
+    box-shadow: 0 3px 12px rgba(245, 158, 11, 0.35);
+}
+
+.mehandi-venue-badge {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.18) 0%, rgba(5, 150, 105, 0.1) 100%);
+    border-color: rgba(16, 185, 129, 0.55);
+    color: #059669;
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.2);
+}
+
+body[data-theme-mode="dark"] .mehandi-venue-badge {
+    background: linear-gradient(135deg, rgba(52, 211, 153, 0.2) 0%, rgba(16, 185, 129, 0.12) 100%);
+    border-color: rgba(52, 211, 153, 0.65);
+    color: #34D399;
+    box-shadow: 0 3px 12px rgba(16, 185, 129, 0.35);
+}
+
+.mehandi-custom-svg {
+    display: block;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
+}
+
+.mehandi-hl-text {
+    font-family: var(--font-ui);
+    font-size: clamp(0.94rem, 1.9vw, 1.08rem);
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    line-height: 1.35;
+}
+
+.mehandi-date-text {
+    color: #92400E;
+}
+
+body[data-theme-mode="dark"] .mehandi-date-text {
+    color: #FFFDF0;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.mehandi-venue-text {
+    color: #047857;
+    font-weight: 800;
+}
+
+body[data-theme-mode="dark"] .mehandi-venue-text {
+    color: #34D399;
+    text-shadow: 0 0 12px rgba(52, 211, 153, 0.5);
+}
+
+.mehandi-hl-separator {
+    color: #10B981;
+    font-size: 0.72rem;
+    opacity: 0.7;
+}
+
+body[data-theme-mode="dark"] .mehandi-hl-separator {
+    color: #6EE7B7;
+}
+
+@media (max-width: 640px) {
+    .mehandi-event-highlights {
+        padding: 9px 12px;
+        gap: 6px;
+    }
+    .mehandi-hl-text {
+        font-size: 0.92rem;
+    }
+    .mehandi-icon-badge {
+        width: 28px;
+        height: 28px;
+    }
+    .mehandi-custom-svg {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+/* Haldi Celebration Diptych Card Enhancements */
+.card-haldi {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 26px 22px 24px !important;
+}
+
+.haldi-dress-badge {
+    margin-bottom: 8px;
+}
+
+.haldi-dress-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.84rem !important;
+    padding: 5px 15px !important;
+    border-radius: 999px !important;
+    letter-spacing: 0.5px;
+}
+
+/* Grand Highlighted Haldi Ceremony Title */
+.haldi-title-highlight-wrap {
+    position: relative;
+    margin: 6px 0 10px;
+    padding: 0 4px;
+}
+
+.haldi-crest-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 4px;
+    opacity: 0.92;
+}
+
+.h-crest-line {
+    width: 38px;
+    height: 1.5px;
+    background: linear-gradient(90deg, transparent, rgba(234, 179, 8, 0.7));
+}
+
+.h-crest-line:last-child {
+    background: linear-gradient(90deg, rgba(234, 179, 8, 0.7), transparent);
+}
+
+body[data-theme-mode="dark"] .h-crest-line {
+    background: linear-gradient(90deg, transparent, rgba(254, 240, 138, 0.8));
+}
+
+body[data-theme-mode="dark"] .h-crest-line:last-child {
+    background: linear-gradient(90deg, rgba(254, 240, 138, 0.8), transparent);
+}
+
+.h-crest-gem {
+    font-size: 0.76rem;
+    color: #D97706;
+    letter-spacing: 2px;
+}
+
+body[data-theme-mode="dark"] .h-crest-gem {
+    color: #FDE047;
+}
+
+.haldi-grand-title {
+    margin: 0;
+    font-size: clamp(1.4rem, 2.8vw, 1.85rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.25;
+    letter-spacing: 0.5px;
+    background: linear-gradient(135deg, #B45309 0%, #D97706 35%, #EAB308 75%, #CA8A04 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    filter: drop-shadow(0 2px 10px rgba(234, 179, 8, 0.3));
+}
+
+body[data-theme-mode="dark"] .haldi-grand-title {
+    background: linear-gradient(135deg, #FFFDF0 0%, #FEF08A 35%, #FDE047 75%, #F59E0B 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    filter: drop-shadow(0 3px 18px rgba(245, 158, 11, 0.45));
+}
+
+.haldi-title-glow-bar {
+    width: 84px;
+    height: 2.5px;
+    margin: 6px auto 0;
+    background: linear-gradient(90deg, transparent, #F59E0B, #EAB308, transparent);
+    border-radius: 999px;
+    box-shadow: 0 0 10px rgba(234, 179, 8, 0.6);
+}
+
+.haldi-sub-line {
+    font-size: 0.92rem;
+    color: var(--secondary-text-color);
+    margin: 0 auto 14px;
+}
+
+body[data-theme-mode="dark"] .haldi-sub-line {
+    color: #CBD5E1;
+}
+
+/* Day, Time & Place Highlight Container for Haldi */
+.haldi-event-highlights {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 420px;
+    margin: 10px auto 0;
+    padding: 11px 18px;
+    background: rgba(254, 240, 138, 0.14);
+    border: 1.5px solid rgba(234, 179, 8, 0.48);
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22), 0 0 18px rgba(234, 179, 8, 0.16);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+body[data-theme-mode="dark"] .haldi-event-highlights {
+    background: rgba(20, 24, 38, 0.88);
+    border-color: rgba(254, 240, 138, 0.55);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.75), 0 0 25px rgba(234, 179, 8, 0.22);
+}
+
+.haldi-hl-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.haldi-icon-badge {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(234, 179, 8, 0.20) 0%, rgba(217, 119, 6, 0.12) 100%);
+    border: 1.5px solid rgba(234, 179, 8, 0.6);
+    color: #B45309;
+    box-shadow: 0 2px 8px rgba(234, 179, 8, 0.2);
+}
+
+body[data-theme-mode="dark"] .haldi-icon-badge {
+    background: linear-gradient(135deg, rgba(254, 240, 138, 0.22) 0%, rgba(234, 179, 8, 0.14) 100%);
+    border-color: rgba(254, 240, 138, 0.7);
+    color: #FDE047;
+    box-shadow: 0 3px 12px rgba(234, 179, 8, 0.35);
+}
+
+.haldi-venue-badge {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.20) 0%, rgba(180, 83, 9, 0.12) 100%);
+    border-color: rgba(245, 158, 11, 0.6);
+    color: #D97706;
+}
+
+body[data-theme-mode="dark"] .haldi-venue-badge {
+    background: linear-gradient(135deg, rgba(251, 191, 36, 0.22) 0%, rgba(217, 119, 6, 0.14) 100%);
+    border-color: rgba(251, 191, 36, 0.7);
+    color: #FBBF24;
+}
+
+.haldi-custom-svg {
+    display: block;
+    filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.15));
+}
+
+.haldi-hl-text {
+    font-family: var(--font-ui);
+    font-size: clamp(0.94rem, 1.9vw, 1.08rem);
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    line-height: 1.35;
+}
+
+.haldi-date-text {
+    color: #92400E;
+}
+
+body[data-theme-mode="dark"] .haldi-date-text {
+    color: #FFFDF0;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+.haldi-venue-text {
+    color: #B45309;
+    font-weight: 800;
+}
+
+body[data-theme-mode="dark"] .haldi-venue-text {
+    color: #FDE047;
+    text-shadow: 0 0 12px rgba(253, 224, 71, 0.5);
+}
+
+.haldi-hl-separator {
+    color: #F59E0B;
+    font-size: 0.72rem;
+    opacity: 0.7;
+}
+
+body[data-theme-mode="dark"] .haldi-hl-separator {
+    color: #FDE68A;
+}
+
+/* Haldi Background Atmosphere Customization */
+body[data-current-climate="haldi"] .winter-fog-band {
+    opacity: 0 !important;
+    transition: opacity 0.8s ease;
+}
+
+body[data-current-climate="haldi"] .winter-vignette-overlay {
+    background: radial-gradient(circle at 50% 30%, rgba(254, 240, 138, 0.18) 0%, rgba(245, 158, 11, 0.08) 60%, rgba(180, 83, 9, 0.22) 100%) !important;
+}
+
+/* Mehandi Background Atmosphere Customization */
+body[data-current-climate="mehandi"] .winter-fog-band {
+    opacity: 0 !important;
+    transition: opacity 0.8s ease;
+}
+
+body[data-current-climate="mehandi"] .winter-vignette-overlay {
+    background: radial-gradient(circle at 50% 30%, rgba(254, 205, 216, 0.12) 0%, rgba(251, 146, 60, 0.06) 50%, rgba(6, 78, 59, 0.22) 100%) !important;
+}
+
+/* Sangeet Background Atmosphere Customization */
+body[data-current-climate="sangeet"] .winter-fog-band {
+    opacity: 0 !important;
+    transition: opacity 0.8s ease;
+}
+
+body[data-current-climate="sangeet"] .winter-vignette-overlay {
+    background: radial-gradient(circle at 50% 35%, rgba(139, 92, 246, 0.14) 0%, rgba(236, 72, 153, 0.08) 50%, rgba(15, 23, 42, 0.35) 100%) !important;
+}
+
+/* Vratham Background Atmosphere Customization */
+body[data-current-climate="vratham"] .winter-fog-band {
+    opacity: 0 !important;
+    transition: opacity 0.8s ease;
+}
+
+body[data-current-climate="vratham"] .winter-vignette-overlay {
+    background: radial-gradient(circle at 50% 30%, rgba(254, 240, 138, 0.08) 0%, transparent 70%) !important;
+}
+
+/* ==========================================================================
+   Sri Satyanarayana Swamy Vratham Card (Centered Sacred Sanctum Presentation)
+   Featuring Lord Sri Satyanarayana Swamy Devotional Photo Arch
+   ========================================================================== */
+#scene-varatham {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+}
+
+body[data-current-climate="vratham"] .vratham-nature-img {
+    object-position: center 20% !important;
+}
+
+.card-vratham {
+    position: relative;
+    max-width: 440px !important;
+    width: 100% !important;
+    background: linear-gradient(135deg, rgba(255, 253, 248, 0.94) 0%, rgba(254, 245, 215, 0.90) 50%, rgba(255, 255, 255, 0.95) 100%) !important;
+    backdrop-filter: blur(14px) saturate(160%) !important;
+    -webkit-backdrop-filter: blur(14px) saturate(160%) !important;
+    border: 2px solid rgba(217, 119, 6, 0.60) !important;
+    border-radius: 22px !important;
+    box-shadow: 
+        0 18px 45px rgba(180, 83, 9, 0.22),
+        0 0 25px rgba(251, 191, 36, 0.35),
+        inset 0 1px 0 rgba(255, 255, 255, 0.95) !important;
+    padding: 18px 18px 16px !important;
+    margin: 0 auto !important;
+    text-align: center;
+    overflow: hidden;
+    animation: vratham-card-float 4s infinite alternate ease-in-out;
+    transition: opacity 0.45s cubic-bezier(0.25, 1, 0.5, 1), transform 0.45s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.45s ease !important;
+}
+
+@keyframes vratham-card-float {
+    0% {
+        transform: translateY(0px);
+        box-shadow: 0 16px 40px rgba(180, 83, 9, 0.18), 0 0 22px rgba(251, 191, 36, 0.28);
+    }
+    100% {
+        transform: translateY(-5px);
+        box-shadow: 0 22px 55px rgba(180, 83, 9, 0.26), 0 0 35px rgba(251, 191, 36, 0.45);
+    }
+}
+
+body[data-theme-mode="dark"] .card-vratham {
+    background: linear-gradient(135deg, rgba(28, 18, 14, 0.92) 0%, rgba(42, 24, 16, 0.88) 50%, rgba(18, 12, 10, 0.94) 100%) !important;
+    border-color: rgba(254, 240, 138, 0.65) !important;
+    box-shadow: 0 20px 55px rgba(0, 0, 0, 0.75), 0 0 30px rgba(245, 158, 11, 0.35) !important;
+}
+
+@media (max-width: 860px) {
+    #scene-varatham .card-vratham {
+        max-width: 94% !important;
+        margin: 0 auto !important;
+        padding: 15px 12px !important;
+    }
+
+    body[data-current-climate="vratham"] .vratham-nature-img {
+        object-position: center 18% !important;
+    }
+}
+
+.card-vratham.vratham-card-dimmed {
+    opacity: 0.16 !important;
+    transform: translateY(22px) scale(0.96) !important;
+    pointer-events: auto !important;
+}
+
+.card-vratham.vratham-card-dimmed:hover {
+    opacity: 0.88 !important;
+    transform: translateY(0px) scale(1) !important;
+}
+
+.vratham-top-badge {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 5px;
+    flex-wrap: wrap;
+}
+
+.vratham-view-bg-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    padding: 3px 10px;
+    border-radius: 999px;
+    background: rgba(254, 240, 138, 0.65);
+    border: 1px solid rgba(217, 119, 6, 0.40);
+    color: #78350F;
+    font-size: 0.72rem;
+    font-weight: 700;
+    cursor: pointer;
+    z-index: 10;
+    transition: all 0.25s cubic-bezier(0.25, 1, 0.5, 1);
+    box-shadow: 0 2px 6px rgba(180, 83, 9, 0.12);
+}
+
+.vratham-view-bg-btn:hover {
+    background: #FEF08A;
+    border-color: #B45309;
+    transform: scale(1.06);
+    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.28);
+}
+
+.vratham-sacred-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.82rem !important;
+    padding: 4px 14px !important;
+    border-radius: 999px !important;
+    letter-spacing: 0.5px;
+    background: rgba(254, 240, 138, 0.45) !important;
+    border: 1px solid rgba(217, 119, 6, 0.45) !important;
+    color: #78350F !important;
+    font-weight: 700;
+}
+
+.badge-sparkle {
+    color: #D97706;
+    font-size: 0.75rem;
+}
+
+/* Lord Sri Satyanarayana Swamy Divine Sacred Photo Arch */
+.vratham-swamy-photo-frame {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4px auto 6px;
+}
+
+.vratham-swamy-arch-wrap {
+    position: relative;
+    width: 90px;
+    height: 112px;
+    border-radius: 45px 45px 12px 12px;
+    padding: 2.5px;
+    background: linear-gradient(135deg, #FDE68A 0%, #D97706 50%, #92400E 100%);
+    box-shadow: 
+        0 6px 18px rgba(180, 83, 9, 0.35),
+        0 0 16px rgba(251, 191, 36, 0.45);
+    overflow: hidden;
+    transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.35s ease;
+}
+
+.card-vratham:hover .vratham-swamy-arch-wrap {
+    transform: scale(1.05);
+    box-shadow: 
+        0 8px 24px rgba(180, 83, 9, 0.45),
+        0 0 24px rgba(251, 191, 36, 0.65);
+}
+
+.vratham-swamy-arch-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    border-radius: 43px 43px 10px 10px;
+    display: block;
+}
+
+.vratham-swamy-golden-aura {
+    position: absolute;
+    inset: 0;
+    border-radius: 45px 45px 12px 12px;
+    pointer-events: none;
+    box-shadow: inset 0 0 10px rgba(254, 240, 138, 0.60);
+}
+
+/* Grand Highlighted Vratham Title */
+.vratham-title-highlight-wrap {
+    position: relative;
+    margin: 4px 0 8px;
+    padding: 0 4px;
+}
+
+.vratham-crest-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-bottom: 3px;
+    opacity: 0.95;
+}
+
+.v-crest-line {
+    width: 34px;
+    height: 1.5px;
+    background: linear-gradient(90deg, transparent, rgba(217, 119, 6, 0.8));
+}
+
+.v-crest-line:last-child {
+    background: linear-gradient(90deg, rgba(217, 119, 6, 0.8), transparent);
+}
+
+body[data-theme-mode="dark"] .v-crest-line {
+    background: linear-gradient(90deg, transparent, rgba(254, 240, 138, 0.85));
+}
+
+body[data-theme-mode="dark"] .v-crest-line:last-child {
+    background: linear-gradient(90deg, rgba(254, 240, 138, 0.85), transparent);
+}
+
+.v-crest-gem {
+    font-size: 0.80rem;
+    color: #D97706;
+    letter-spacing: 2px;
+}
+
+body[data-theme-mode="dark"] .v-crest-gem {
+    color: #FDE047;
+}
+
+.vratham-grand-title {
+    margin: 0 auto 2px;
+    font-size: clamp(1.85rem, 3.8vw, 2.35rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.22;
+    letter-spacing: 0.5px;
+    background: linear-gradient(135deg, #780016 0%, #991B1B 35%, #B45309 75%, #D97706 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    filter: drop-shadow(0 2px 8px rgba(180, 83, 9, 0.28));
+}
+
+body[data-theme-mode="dark"] .vratham-grand-title {
+    background: linear-gradient(135deg, #FFFDF0 0%, #FDE047 35%, #F59E0B 75%, #D97706 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    filter: drop-shadow(0 3px 16px rgba(251, 191, 36, 0.50));
+}
+
+.vratham-en-title {
+    font-size: 0.90rem !important;
+    font-weight: 700 !important;
+    color: #78350F !important;
+    margin: 0 auto 6px;
+    letter-spacing: 0.3px;
+}
+
+body[data-theme-mode="dark"] .vratham-en-title {
+    color: #FDE68A !important;
+}
+
+.vratham-title-glow-bar {
+    width: 86px;
+    height: 2.5px;
+    margin: 5px auto 0;
+    background: linear-gradient(90deg, transparent, #F59E0B, #EAB308, #D97706, transparent);
+    border-radius: 999px;
+    box-shadow: 0 0 10px rgba(245, 158, 11, 0.7);
+    animation: vratham-glow-pulse 2.5s infinite alternate ease-in-out;
+}
+
+@keyframes vratham-glow-pulse {
+    0% {
+        width: 65px;
+        opacity: 0.6;
+        box-shadow: 0 0 6px rgba(245, 158, 11, 0.4);
+    }
+    100% {
+        width: 105px;
+        opacity: 1;
+        box-shadow: 0 0 16px rgba(245, 158, 11, 0.9), 0 0 25px rgba(251, 191, 36, 0.6);
+    }
+}
+
+.vratham-sub-line {
+    font-size: 0.88rem !important;
+    color: #475569 !important;
+    font-weight: 600;
+    margin: 0 auto 10px;
+}
+
+body[data-theme-mode="dark"] .vratham-sub-line {
+    color: #E2E8F0 !important;
+}
+
+/* Day, Time & Place Highlight Container */
+.vratham-event-highlights {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    width: 100%;
+    max-width: 410px;
+    margin: 6px auto 0;
+    padding: 10px 16px;
+    background: rgba(254, 243, 199, 0.42);
+    border: 1.5px solid rgba(217, 119, 6, 0.50);
+    border-radius: 16px;
+    box-shadow: 0 8px 22px rgba(180, 83, 9, 0.12), inset 0 1px 0 rgba(255, 255, 255, 0.8);
+}
+
+body[data-theme-mode="dark"] .vratham-event-highlights {
+    background: rgba(20, 14, 10, 0.85);
+    border-color: rgba(254, 240, 138, 0.50);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
+}
+
+.vratham-hl-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.vratham-icon-badge {
+    width: 30px;
+    height: 30px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.22) 0%, rgba(217, 119, 6, 0.12) 100%);
+    border: 1.5px solid rgba(217, 119, 6, 0.60);
+    color: #B45309;
+    box-shadow: 0 2px 8px rgba(217, 119, 6, 0.22);
+}
+
+body[data-theme-mode="dark"] .vratham-icon-badge {
+    background: linear-gradient(135deg, rgba(254, 240, 138, 0.24) 0%, rgba(245, 158, 11, 0.16) 100%);
+    border-color: rgba(254, 240, 138, 0.70);
+    color: #FDE047;
+    box-shadow: 0 3px 12px rgba(245, 158, 11, 0.35);
+}
+
+.vratham-hl-text {
+    font-size: clamp(0.94rem, 1.9vw, 1.06rem) !important;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    color: #1E293B;
+}
+
+body[data-theme-mode="dark"] .vratham-hl-text {
+    color: #FFFFFF;
+}
+
+.vratham-date-text {
+    color: #780016;
+}
+
+body[data-theme-mode="dark"] .vratham-date-text {
+    color: #FDE047;
+}
+
+.vratham-venue-text {
+    color: #78350F;
+}
+
+body[data-theme-mode="dark"] .vratham-venue-text {
+    color: #FDE68A;
+}
+
+.vratham-hl-separator {
+    color: #D97706;
+    font-size: 0.72rem;
+    opacity: 0.7;
+}
+
+body[data-theme-mode="dark"] .vratham-hl-separator {
+    color: #FDE047;
+}
+
+.vratham-prasadam-pill {
+    margin-top: 10px !important;
+    padding: 6px 16px !important;
+    font-size: 0.86rem !important;
+    background: rgba(254, 243, 199, 0.55) !important;
+    border: 1.5px solid rgba(217, 119, 6, 0.45) !important;
+    box-shadow: 0 4px 14px rgba(180, 83, 9, 0.12) !important;
+}
+
+.vratham-pulse-icon {
+    display: inline-block;
+    animation: vratham-icon-pulse 2s infinite alternate ease-in-out;
+}
+
+@keyframes vratham-icon-pulse {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.22) rotate(6deg); }
+}
+
+@media (max-width: 640px) {
+    .haldi-event-highlights {
+        padding: 9px 12px;
+        gap: 6px;
+    }
+    .haldi-hl-text {
+        font-size: 0.92rem;
+    }
+    .haldi-icon-badge {
+        width: 28px;
+        height: 28px;
+    }
+    .haldi-custom-svg {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+/* ==========================================================================
+   Sangeet Celebration Diptych Card & Couple Frame Enhancements
+   ========================================================================== */
+.sangeet-arch-frame {
+    box-shadow: 0 16px 45px rgba(0, 0, 0, 0.45), 0 0 35px rgba(168, 85, 247, 0.35);
+    border: 2px solid rgba(216, 180, 254, 0.55);
+}
+
+.sangeet-couple-photo {
+    object-fit: cover;
+    object-position: center 25%;
+}
+
+.card-sangeet {
+    position: relative;
+    overflow: hidden;
+    text-align: center;
+    padding: 24px 22px 22px !important;
+}
+
+.sangeet-dress-badge {
+    margin-bottom: 8px;
+}
+
+.sangeet-dress-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.84rem !important;
+    padding: 5px 15px !important;
+    border-radius: 999px !important;
+    letter-spacing: 0.5px;
+}
+
+/* Grand Highlighted Sangeet Title */
+.sangeet-title-highlight-wrap {
+    position: relative;
+    margin: 6px 0 10px;
+    padding: 0 4px;
+}
+
+.sangeet-crest-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 4px;
+    opacity: 0.95;
+}
+
+.s-crest-line {
+    width: 38px;
+    height: 1.5px;
+    background: linear-gradient(90deg, transparent, rgba(168, 85, 247, 0.8));
+}
+
+.s-crest-line:last-child {
+    background: linear-gradient(90deg, rgba(168, 85, 247, 0.8), transparent);
+}
+
+body[data-theme-mode="dark"] .s-crest-line {
+    background: linear-gradient(90deg, transparent, rgba(216, 180, 254, 0.85));
+}
+
+body[data-theme-mode="dark"] .s-crest-line:last-child {
+    background: linear-gradient(90deg, rgba(216, 180, 254, 0.85), transparent);
+}
+
+.s-crest-gem {
+    font-size: 0.82rem;
+    color: #A855F7;
+    letter-spacing: 2px;
+}
+
+body[data-theme-mode="dark"] .s-crest-gem {
+    color: #FDE047;
+}
+
+.sangeet-grand-title {
+    margin: 0;
+    font-size: clamp(1.4rem, 2.8vw, 1.85rem) !important;
+    font-weight: 800 !important;
+    line-height: 1.25;
+    letter-spacing: 0.5px;
+    background: linear-gradient(135deg, #7C3AED 0%, #C026D3 40%, #D97706 80%, #B45309 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    filter: drop-shadow(0 2px 10px rgba(168, 85, 247, 0.35));
+}
+
+body[data-theme-mode="dark"] .sangeet-grand-title {
+    background: linear-gradient(135deg, #FFFFFF 0%, #E9D5FF 30%, #FDE047 70%, #F59E0B 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    filter: drop-shadow(0 3px 18px rgba(192, 132, 252, 0.55));
+}
+
+.sangeet-title-glow-bar {
+    width: 84px;
+    height: 2.5px;
+    margin: 6px auto 0;
+    background: linear-gradient(90deg, transparent, #C084FC, #FDE047, transparent);
+    border-radius: 999px;
+    box-shadow: 0 0 10px rgba(192, 132, 252, 0.7);
+}
+
+.sangeet-sub-line {
+    font-size: 0.92rem;
+    color: var(--secondary-text-color);
+    margin: 0 auto 12px;
+}
+
+body[data-theme-mode="dark"] .sangeet-sub-line {
+    color: #E2E8F0;
+}
+
+/* Day, Time & Place Highlight Container */
+.sangeet-event-highlights {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 420px;
+    margin: 8px auto 0;
+    padding: 11px 18px;
+    background: rgba(147, 51, 234, 0.08);
+    border: 1.5px solid rgba(168, 85, 247, 0.45);
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.22), 0 0 18px rgba(168, 85, 247, 0.16);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+body[data-theme-mode="dark"] .sangeet-event-highlights {
+    background: rgba(22, 15, 38, 0.88);
+    border-color: rgba(192, 132, 252, 0.55);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.75), 0 0 25px rgba(168, 85, 247, 0.28);
+}
+
+.sangeet-hl-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.sangeet-icon-badge {
+    width: 32px;
+    height: 32px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(168, 85, 247, 0.22) 0%, rgba(126, 34, 206, 0.14) 100%);
+    border: 1.5px solid rgba(168, 85, 247, 0.60);
+    color: #A855F7;
+    box-shadow: 0 2px 8px rgba(168, 85, 247, 0.25);
+}
+
+body[data-theme-mode="dark"] .sangeet-icon-badge {
+    background: linear-gradient(135deg, rgba(216, 180, 254, 0.24) 0%, rgba(168, 85, 247, 0.16) 100%);
+    border-color: rgba(216, 180, 254, 0.75);
+    color: #FDE047;
+    box-shadow: 0 3px 12px rgba(168, 85, 247, 0.40);
+}
+
+.sangeet-hl-text {
+    font-size: clamp(0.94rem, 1.9vw, 1.08rem) !important;
+    font-weight: 700;
+    letter-spacing: 0.3px;
+    color: var(--primary-text-color);
+}
+
+body[data-theme-mode="dark"] .sangeet-hl-text {
+    color: #FFFFFF;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.sangeet-date-text {
+    color: #7E22CE;
+}
+
+body[data-theme-mode="dark"] .sangeet-date-text {
+    color: #FDE047;
+}
+
+.sangeet-venue-text {
+    color: #9333EA;
+}
+
+body[data-theme-mode="dark"] .sangeet-venue-text {
+    color: #E9D5FF;
+}
+
+.sangeet-hl-separator {
+    color: #C084FC;
+    font-size: 0.72rem;
+    opacity: 0.7;
+}
+
+body[data-theme-mode="dark"] .sangeet-hl-separator {
+    color: #E9D5FF;
+}
+
+@media (max-width: 640px) {
+    .sangeet-event-highlights {
+        padding: 9px 12px;
+        gap: 6px;
+    }
+    .sangeet-hl-text {
+        font-size: 0.92rem;
+    }
+    .sangeet-icon-badge {
+        width: 28px;
+        height: 28px;
+    }
+    .sangeet-custom-svg {
+        width: 15px;
+        height: 15px;
+    }
+}
+
+@media (max-width: 860px) {
+    .hero-royal-arch-frame {
+        width: 175px;
+        height: 220px;
+        border-radius: 95px 95px 18px 18px;
+    }
+    .hero-royal-arch-photo {
+        border-radius: 91px 91px 14px 14px;
+    }
+    .hero-royal-arch-filigree {
+        border-radius: 87px 87px 11px 11px;
+    }
+}
+
+/* Grand Couple Names Centerpiece */
+.hero-cinematic-couple-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.couple-hero-grand-title {
+    font-family: var(--font-royal-title);
+    font-size: clamp(2rem, 4.5vw, 2.75rem);
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 4px 0 0;
+    background: linear-gradient(135deg, #B45309 0%, #D97706 35%, #F59E0B 70%, #78350F 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 0.6px;
+    filter: drop-shadow(0 2px 10px rgba(245, 158, 11, 0.22));
+}
+
+body[data-theme-mode="dark"] .couple-hero-grand-title {
+    background: linear-gradient(135deg, #FFFDF0 0%, #FDE047 35%, #F59E0B 75%, #D97706 100%);
+    filter: drop-shadow(0 2px 14px rgba(254, 240, 138, 0.4));
+}
+
+/* Sacred Crest Divider in Inscription */
+.quote-sacred-crest {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.sacred-crest-line {
+    width: 40px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(217, 119, 6, 0.6), transparent);
+}
+
+body[data-theme-mode="dark"] .sacred-crest-line {
+    background: linear-gradient(90deg, transparent, rgba(254, 240, 138, 0.6), transparent);
+}
+
+.sacred-crest-motif {
+    font-size: 0.85rem;
+    color: #D97706;
+    letter-spacing: 2px;
+}
+
+body[data-theme-mode="dark"] .sacred-crest-motif {
+    color: #FDE047;
+}
+
+/* Lineage Ribbon (Understated, Balanced & Symmetrical) */
+.hero-lineage-ribbon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 16px;
+    margin: 8px auto 0;
+    padding: 10px 18px;
+    background: rgba(254, 243, 199, 0.45);
+    border: 1px solid rgba(217, 119, 6, 0.28);
+    border-radius: 16px;
+    max-width: 96%;
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    box-shadow: 0 4px 16px rgba(180, 83, 9, 0.06);
+}
+
+body[data-theme-mode="dark"] .hero-lineage-ribbon {
+    background: rgba(254, 240, 138, 0.08);
+    border-color: rgba(254, 240, 138, 0.25);
+    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+}
+
+.hero-lineage-col {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    flex: 1;
+    min-width: 140px;
+}
+
+.lineage-name {
+    font-family: var(--font-royal-title);
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #92400E;
+    letter-spacing: 0.3px;
+    margin-bottom: 3px;
+    line-height: 1.25;
+}
+
+body[data-theme-mode="dark"] .lineage-name {
+    color: #FDE047;
+}
+
+.lineage-text {
+    font-size: 0.74rem;
+    font-weight: 500;
+    color: #78350F;
+    letter-spacing: 0.15px;
+    line-height: 1.42;
+}
+
+body[data-theme-mode="dark"] .lineage-text {
+    color: #CBD5E1;
+}
+
+.hero-lineage-divider {
+    color: #D97706;
+    font-size: 0.85rem;
+    opacity: 0.75;
+    align-self: center;
+    flex-shrink: 0;
+}
+
+body[data-theme-mode="dark"] .hero-lineage-divider {
+    color: #FDE047;
+    opacity: 0.85;
+}
+
+@media (max-width: 600px) {
+    .hero-lineage-ribbon {
+        flex-direction: column;
+        gap: 8px;
+        padding: 10px 14px;
+    }
+    .hero-lineage-divider {
+        margin: -2px 0;
+        font-size: 0.75rem;
+    }
+    .lineage-name {
+        font-size: 0.9rem;
+    }
+    .lineage-text {
+        font-size: 0.72rem;
+    }
+}
+
+/* Modern Lovable & Devotional Quote Card */
+.hero-quote-card {
+    background: linear-gradient(135deg, rgba(254, 243, 199, 0.55) 0%, rgba(255, 252, 245, 0.88) 100%);
+    border: 1.5px solid rgba(217, 119, 6, 0.32);
+    border-radius: 20px;
+    padding: 20px 22px 18px;
+    position: relative;
+    box-shadow: 0 8px 24px rgba(180, 83, 9, 0.09);
+    max-width: 540px;
+    margin: 14px auto 0;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    transition: all 0.3s ease;
+}
+
+body[data-theme-mode="dark"] .hero-quote-card {
+    background: linear-gradient(135deg, rgba(30, 22, 54, 0.88) 0%, rgba(18, 12, 38, 0.95) 100%);
+    border-color: rgba(254, 240, 138, 0.28);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.55);
+}
+
+.quote-sparkle-emblem {
+    font-size: 1.05rem;
+    margin-bottom: 8px;
+    letter-spacing: 4px;
+}
+
+.devotional-quote-primary {
+    font-family: var(--font-royal-title);
+    font-size: clamp(1.05rem, 2.2vw, 1.25rem);
+    font-weight: 700;
+    color: #881337;
+    line-height: 1.55;
+    letter-spacing: 0.01em;
+}
+
+body[data-theme-mode="dark"] .devotional-quote-primary {
+    color: #FDE68A;
+    text-shadow: 0 0 16px rgba(254, 240, 138, 0.35);
+}
+
+.quote-divider-mini {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    width: 60%;
+    margin: 10px auto;
+}
+
+.quote-divider-mini .q-line {
+    flex: 1;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, rgba(217, 119, 6, 0.4), transparent);
+}
+
+body[data-theme-mode="dark"] .quote-divider-mini .q-line {
+    background: linear-gradient(90deg, transparent, rgba(254, 240, 138, 0.4), transparent);
+}
+
+.quote-divider-mini .q-gem {
+    color: #D97706;
+    font-size: 0.75rem;
+}
+
+body[data-theme-mode="dark"] .quote-divider-mini .q-gem {
+    color: #FDE047;
+}
+
+.devotional-quote-sub {
+    font-family: var(--font-body);
+    font-size: clamp(0.85rem, 1.8vw, 0.94rem);
+    color: var(--secondary-text-color);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.cordial-invitation-container {
+    margin-top: 16px;
+    position: relative;
+}
+
+.cordial-gold-line {
+    width: 80px;
+    height: 1.5px;
+    background: linear-gradient(90deg, transparent, rgba(217, 119, 6, 0.6), transparent);
+    margin: 0 auto 12px;
+}
+
+.couple-invitation-lead {
+    color: var(--body-text-color);
+    font-size: 0.94rem;
+    max-width: 500px;
+    line-height: 1.65;
+    margin: 0 auto;
+}
+
+/* ==========================================================================
+   SUBHA MUHURTHAM SPOTLIGHT & COUNTDOWN
+   ========================================================================== */
+.card-crown-muhurtham {
+    position: relative;
+    padding: 22px 20px 20px;
+    background: linear-gradient(135deg, rgba(24, 16, 44, 0.95) 0%, rgba(12, 8, 26, 0.98) 100%);
+    border: 1.5px solid rgba(254, 240, 138, 0.45);
+    box-shadow: 0 20px 55px rgba(0, 0, 0, 0.75), 0 0 28px rgba(254, 240, 138, 0.16);
+    overflow: hidden;
+    text-align: center !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Highlighted Muhurtham Day & Time Banner (Clearly Readable, High Contrast & Elegant) */
+.muhurtham-datetime-highlight {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin: 10px auto 12px;
+    padding: 8px 18px;
+    background: rgba(254, 240, 138, 0.12);
+    border: 1.5px solid rgba(254, 240, 138, 0.45);
+    border-radius: 999px;
+    backdrop-filter: blur(12px);
+    flex-wrap: wrap;
+    max-width: 95%;
+}
+
+body[data-theme-mode="dark"] .muhurtham-datetime-highlight,
+.night-occasion-card .muhurtham-datetime-highlight {
+    background: rgba(22, 16, 44, 0.88);
+    border-color: rgba(254, 240, 138, 0.6);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.75), 0 0 25px rgba(254, 240, 138, 0.22);
+}
+
+.datetime-pill-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.dt-icon {
+    font-size: 1.15rem;
+    line-height: 1;
+    filter: drop-shadow(0 2px 4px rgba(0, 0, 0, 0.3));
+}
+
+.dt-text {
+    font-size: clamp(0.85rem, 1.6vw, 0.98rem);
+    font-weight: 600;
+    color: #FFFBEB;
+    letter-spacing: 0.3px;
+}
+
+.dt-date {
+    color: #FFFDF0;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.75);
+}
+
+.dt-time {
+    color: #FDE047;
+    font-weight: 800;
+    text-shadow: 0 0 12px rgba(253, 224, 71, 0.65), 0 1px 4px rgba(0, 0, 0, 0.85);
+}
+
+.datetime-pill-separator {
+    color: #F59E0B;
+    font-size: 0.8rem;
+    opacity: 0.85;
+}
+
+body[data-theme-mode="dark"] .datetime-pill-separator,
+.night-occasion-card .datetime-pill-separator {
+    color: #FDE047;
+}
+
+@media (max-width: 640px) {
+    .muhurtham-datetime-highlight {
+        gap: 8px;
+        padding: 8px 14px;
+        border-radius: 16px;
+    }
+    .dt-text {
+        font-size: 0.94rem;
+    }
+}
+
+.countdown-grid-modern {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 8px;
+    max-width: 420px;
+    margin: 18px auto 16px;
+}
+
+.countdown-box-minimal {
+    padding: 8px 12px;
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(254, 240, 138, 0.25);
+    border-radius: 12px;
+    text-align: center;
+    min-width: 58px;
+    backdrop-filter: blur(8px);
+    transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.countdown-box-minimal:hover {
+    transform: translateY(-2px);
+    border-color: rgba(253, 224, 71, 0.7);
+}
+
+.count-digit-lg {
+    font-family: var(--font-editorial);
+    font-size: clamp(1.25rem, 2.2vw, 1.55rem);
+    font-weight: 700;
+    color: #FDE047;
+    text-shadow: 0 0 12px rgba(253, 224, 71, 0.4);
+    line-height: 1.1;
+}
+
+.count-label-sub {
+    font-size: 0.68rem;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: #FDE68A;
+    margin-top: 6px;
+}
+
+.muhurtham-countdown-status {
+    font-size: 0.88rem;
+    color: var(--sub-heading-color);
+    font-weight: 600;
+}
+
+/* Action Buttons */
+.btn-action-row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+    margin-top: 18px;
+}
+
+.btn-luxury-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 11px 22px;
+    border-radius: 40px;
+    background: var(--btn-primary-bg);
+    color: var(--btn-primary-color);
+    font-family: var(--font-ui);
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-decoration: none;
+    box-shadow: var(--btn-primary-shadow);
+    cursor: pointer;
+    border: none;
+    transition: all 0.3s var(--ease-spring);
+}
+
+.btn-luxury-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 26px rgba(245, 158, 11, 0.55);
+    filter: brightness(1.08);
+}
+
+.btn-luxury-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 20px;
+    border-radius: 40px;
+    background: var(--btn-sec-bg);
+    border: 1.5px solid var(--btn-sec-border);
+    color: var(--btn-sec-color);
+    font-family: var(--font-ui);
+    font-size: 0.85rem;
+    font-weight: 700;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s var(--ease-spring);
+}
+
+.btn-luxury-secondary:hover {
+    background: var(--btn-sec-hover-bg);
+    border-color: var(--btn-sec-hover-border);
+    color: var(--btn-sec-hover-color);
+    transform: translateY(-2px);
+}
+
+/* ==========================================================================
+   THE 9 CEREMONIAL PORTALS: ALTERNATING TIMELINE WITH TRAVELING FLOWER
+   ========================================================================== */
+.ceremonies-timeline-wrapper {
+    position: relative;
+    width: 100%;
+    margin: 40px 0 90px;
+    padding: 10px 0;
+}
+
+.timeline-intro-header {
+    text-align: center;
+    margin-bottom: 60px;
+    position: relative;
+    z-index: 5;
+}
+
+.timeline-intro-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 10px;
+}
+
+.timeline-intro-divider::before,
+.timeline-intro-divider::after {
+    content: '';
+    display: inline-block;
+    width: 50px;
+    height: 1.5px;
+    background: linear-gradient(90deg, transparent, #D97706, transparent);
+}
+
+.divider-gem {
+    color: #F59E0B;
+    font-size: 0.85rem;
+}
+
+/* Central Vertical Progress Spine */
+.timeline-vertical-spine {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 140px;
+    bottom: 80px;
+    width: 4px;
+    z-index: 15;
+    pointer-events: none;
+}
+
+.spine-track-base {
+    position: absolute;
+    inset: 0;
+    background: var(--spine-track-bg);
+    border-radius: 4px;
+}
+
+.spine-track-fill {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    background: var(--spine-fill-grad);
+    border-radius: 4px;
+    box-shadow: 0 0 16px rgba(245, 158, 11, 0.85);
+    transition: height 0.08s linear;
+}
+
+/* The Traveling Center Progress Flower with Ceremony Avatars */
+.spine-traveler-flower {
+    position: absolute;
+    left: 50%;
+    top: 0%;
+    transform: translate(-50%, -50%);
+    width: 66px;
+    height: 66px;
+    z-index: 25;
+    pointer-events: none;
+    will-change: top, transform;
+    transition: top 0.08s linear;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.traveler-flower-glow {
+    position: absolute;
+    inset: -12px;
+    background: radial-gradient(circle, rgba(254, 240, 138, 0.80) 0%, rgba(234, 179, 8, 0.45) 50%, transparent 75%);
+    border-radius: 50%;
+    filter: blur(10px);
+    animation: lotus-bloom-pulse 2.2s infinite ease-in-out alternate;
+}
+
+.traveler-lotus-ring {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    animation: lotus-slow-spin 26s linear infinite;
+    filter: drop-shadow(0 0 10px rgba(234, 179, 8, 0.9));
+}
+
+.traveler-flower-svg {
+    width: 100%;
+    height: 100%;
+}
+
+.traveler-avatar-disc {
+    position: relative;
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background: radial-gradient(circle, #FFFBEB 0%, #FEF3C7 60%, #F59E0B 100%);
+    border: 2px solid #F59E0B;
+    box-shadow: 0 0 16px rgba(245, 158, 11, 0.8), inset 0 0 8px rgba(180, 83, 9, 0.35);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+    transition: background 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+body[data-theme-mode="dark"] .traveler-avatar-disc {
+    background: radial-gradient(circle, #2E1065 0%, #1A1235 60%, #F59E0B 100%);
+    border-color: #FDE047;
+    box-shadow: 0 0 22px rgba(253, 224, 71, 0.85), inset 0 0 10px rgba(245, 158, 11, 0.5);
+}
+
+.traveler-avatar-img {
+    width: 86%;
+    height: 86%;
+    object-fit: contain;
+    transition: transform 0.22s var(--ease-spring), opacity 0.16s ease;
+}
+
+.traveler-avatar-img.icon-morph {
+    transform: scale(0.65) rotate(-10deg);
+    opacity: 0.15;
+}
+
+@keyframes lotus-bloom-pulse {
+    0% { transform: scale(0.92); opacity: 0.75; }
+    100% { transform: scale(1.15); opacity: 1; }
+}
+
+@keyframes lotus-slow-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Timeline Rows */
+.timeline-row {
+    position: relative;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    scroll-margin-top: 100px;
+}
+
+/* Desktop Dual-Wing Alternating Layout (>= 860px) */
+@media (min-width: 860px) {
+    .timeline-left-row {
+        justify-content: flex-start;
+    }
+
+    .timeline-left-row .timeline-card-wrapper {
+        width: min(440px, calc(50% - 46px));
+        margin-right: auto;
+    }
+
+    .timeline-left-row .timeline-connector-branch {
+        position: absolute;
+        right: calc(50% + 2px);
+        top: 50%;
+        width: 44px;
+        height: 2px;
+        background: var(--branch-line);
+        transform: translateY(-50%);
+        transition: background 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .timeline-left-row .timeline-connector-branch.branch-active {
+        background: var(--branch-active);
+        box-shadow: 0 0 10px rgba(245, 158, 11, 0.8);
+    }
+
+    .timeline-right-row {
+        justify-content: flex-end;
+    }
+
+    .timeline-right-row .timeline-card-wrapper {
+        width: min(440px, calc(50% - 46px));
+        margin-left: auto;
+    }
+
+    .timeline-right-row .timeline-connector-branch {
+        position: absolute;
+        left: calc(50% + 2px);
+        top: 50%;
+        width: 44px;
+        height: 2px;
+        background: var(--branch-line);
+        transform: translateY(-50%);
+        transition: background 0.4s ease, box-shadow 0.4s ease;
+    }
+
+    .timeline-right-row .timeline-connector-branch.branch-active {
+        background: var(--branch-active);
+        box-shadow: 0 0 10px rgba(245, 158, 11, 0.8);
+    }
+
+    /* Central Milestone Flower Node */
+    .timeline-center-node {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 18;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 44px;
+        height: 44px;
+        border-radius: 50%;
+        background: var(--node-bg);
+        border: 2px solid var(--node-border);
+        box-shadow: 0 4px 14px rgba(0, 0, 0, 0.08);
+        transition: all 0.4s var(--ease-spring);
+    }
+
+    .node-avatar-frame {
+        width: 26px;
+        height: 26px;
+        border-radius: 50%;
+        overflow: hidden;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: rgba(255, 255, 255, 0.45);
+        transition: transform 0.3s var(--ease-spring);
+    }
+
+    body[data-theme-mode="dark"] .node-avatar-frame {
+        background: rgba(30, 20, 60, 0.65);
+    }
+
+    .node-avatar-img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .timeline-center-node .node-number {
+        font-family: var(--font-ui);
+        font-size: 0.60rem;
+        font-weight: 800;
+        color: var(--node-num);
+        line-height: 1;
+        margin-top: 1px;
+    }
+
+    .timeline-center-node.node-active {
+        border-color: var(--node-active-border);
+        background: var(--node-active-bg);
+        box-shadow: var(--node-active-glow);
+        transform: translate(-50%, -50%) scale(1.18);
+    }
+
+    .timeline-center-node.node-active .node-avatar-frame {
+        transform: scale(1.15);
+        filter: drop-shadow(0 0 6px #F59E0B);
+    }
+
+    .timeline-center-node.node-active .node-number {
+        color: var(--node-active-num);
+    }
+}
+
+/* Card Timeline Highlight when Active */
+.luxury-glass-card.card-timeline-active {
+    border-color: rgba(245, 158, 11, 0.65);
+    box-shadow: 0 20px 50px rgba(180, 83, 9, 0.18), 0 0 24px rgba(245, 158, 11, 0.25);
+}
+
+/* Mobile Responsive (< 860px) */
+@media (max-width: 859px) {
+    .timeline-vertical-spine {
+        left: 20px;
+        transform: none;
+    }
+
+    .spine-traveler-flower {
+        width: 52px;
+        height: 52px;
+    }
+
+    .traveler-avatar-disc {
+        width: 35px;
+        height: 35px;
+    }
+
+    .timeline-row {
+        padding-left: 48px;
+        width: 100%;
+        margin-bottom: 38px;
+    }
+
+    .timeline-left-row,
+    .timeline-right-row {
+        justify-content: flex-start;
+    }
+
+    .timeline-card-wrapper {
+        width: 100%;
+        max-width: 520px;
+    }
+
+    .timeline-connector-branch {
+        display: none;
+    }
+
+    .timeline-center-node {
+        position: absolute;
+        left: 20px;
+        top: 32px;
+        transform: translate(-50%, 0);
+        z-index: 18;
+        width: 36px;
+        height: 36px;
+        border-radius: 50%;
+        background: var(--node-bg);
+        border: 2px solid var(--node-border);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.4s var(--ease-spring);
+    }
+
+    .timeline-center-node .node-avatar-frame {
+        width: 20px;
+        height: 20px;
+    }
+
+    .timeline-center-node.node-active {
+        border-color: var(--node-active-border);
+        background: var(--node-active-bg);
+        box-shadow: var(--node-active-glow);
+        transform: translate(-50%, 0) scale(1.15);
+    }
+
+    .timeline-center-node .node-number { font-size: 0.56rem; color: var(--node-num); }
+}
+
+/* Card Elements */
+.portal-date-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    flex-wrap: wrap;
+    margin-bottom: 12px;
+}
+
+.portal-date-chip {
+    padding: 4px 12px;
+    border-radius: 20px;
+    background: var(--chip-bg);
+    border: 1px solid var(--chip-border);
+    font-size: 0.76rem;
+    font-weight: 700;
+    color: var(--chip-color);
+    letter-spacing: 0.5px;
+}
+
+.portal-venue-chip {
+    background: rgba(180, 83, 9, 0.08);
+    border: 1px solid rgba(180, 83, 9, 0.22);
+    color: var(--sub-heading-color);
+}
+
+.chip-dress-green {
+    background: rgba(34, 197, 94, 0.15) !important;
+    border-color: #22C55E !important;
+    color: #15803D !important;
+    font-weight: 800 !important;
+}
+
+.chip-dress-yellow {
+    background: rgba(234, 179, 8, 0.18) !important;
+    border-color: #EAB308 !important;
+    color: #A16207 !important;
+    font-weight: 800 !important;
+}
+
+.chip-dress-glam {
+    background: rgba(192, 132, 252, 0.20) !important;
+    border-color: #C084FC !important;
+    color: #7E22CE !important;
+    font-weight: 800 !important;
+}
+
+body[data-theme-mode="dark"] .chip-dress-green {
+    color: #86EFAC !important;
+}
+
+body[data-theme-mode="dark"] .chip-dress-yellow {
+    color: #FEF08A !important;
+}
+
+body[data-theme-mode="dark"] .chip-dress-glam {
+    color: #E9D5FF !important;
+}
+
+.portal-icon-modern {
+    width: 68px;
+    height: 68px;
+    margin: 0 auto 12px;
+    border-radius: 50%;
+    background: var(--icon-bg);
+    border: 2px solid var(--icon-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 8px 24px rgba(180, 83, 9, 0.14);
+    overflow: hidden;
+    transition: transform 0.35s var(--ease-spring), box-shadow 0.35s ease;
+}
+
+.portal-illustration-img {
+    width: 88%;
+    height: 88%;
+    object-fit: contain;
+    transition: transform 0.4s var(--ease-spring);
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.16));
+}
+
+.luxury-glass-card:hover .portal-illustration-img {
+    transform: scale(1.14);
+}
+
+.portal-title-en {
+    font-family: var(--font-ui);
+    font-size: 1.05rem;
+    color: var(--sub-heading-color);
+    font-weight: 700;
+    margin-top: 2px;
+}
+
+.portal-ceremony-sub {
+    font-size: 0.92rem;
+    color: var(--category-tag-color);
+    font-weight: 700;
+    margin: 4px 0 10px;
+}
+
+/* Sleek, Modern Portal Highlight Pill */
+.portal-pill-highlight {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    padding: 8px 18px;
+    margin: 14px auto 6px;
+    background: var(--tile-bg);
+    border: 1px solid var(--tile-border);
+    border-radius: 999px;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
+    transition: all 0.25s ease;
+    max-width: 90%;
+}
+
+.portal-pill-highlight:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(217, 119, 6, 0.16);
+    border-color: rgba(217, 119, 6, 0.45);
+}
+
+.highlight-chip-icon {
+    font-size: 1.15rem;
+    line-height: 1;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.highlight-chip-text {
+    font-size: 0.90rem;
+    font-weight: 700;
+    color: var(--tile-title);
+    letter-spacing: 0.01em;
+}
+
+.night-occasion-card .portal-pill-highlight {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: rgba(254, 240, 138, 0.32) !important;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.night-occasion-card .highlight-chip-text {
+    color: #FDE68A !important;
+}
+
+.portal-pill-crown {
+    background: linear-gradient(135deg, rgba(254, 240, 138, 0.22) 0%, rgba(217, 119, 6, 0.18) 100%) !important;
+    border-color: rgba(254, 240, 138, 0.48) !important;
+}
+
+.portal-pill-crown .highlight-chip-text {
+    color: var(--gold-bright) !important;
+    font-weight: 800;
+}
+
+.portal-narrative-text {
+    color: var(--body-text-color);
+    font-size: 0.94rem;
+    line-height: 1.6;
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+/* Highlights Grid (Legacy fallback) */
+.portal-highlights-grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 8px;
+    max-width: 480px;
+    margin: 14px auto 12px;
+}
+
+.highlight-glass-tile {
+    background: var(--tile-bg);
+    border: 1px solid var(--tile-border);
+    border-radius: 12px;
+    padding: 8px 12px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex: 1 1 180px;
+    max-width: 230px;
+    text-align: left;
+}
+
+.highlight-icon-em { font-size: 18px; }
+.highlight-tile-title { font-size: 0.78rem; font-weight: 800; color: var(--tile-title); }
+.highlight-tile-desc { font-size: 0.74rem; color: var(--tile-desc); margin-top: 1px; }
+
+/* ==========================================================================
+   STRICT NIGHT OCCASION CARD OVERRIDES
+   Ensures Sangeet, Reception & Subha Muhurtham are ALWAYS midnight sapphire dark
+   ========================================================================== */
+.night-occasion-card {
+    background: linear-gradient(135deg, rgba(20, 14, 38, 0.90) 0%, rgba(11, 8, 24, 0.94) 100%) !important;
+    border-color: rgba(254, 240, 138, 0.42) !important;
+    box-shadow: 0 20px 55px rgba(0, 0, 0, 0.75), 0 0 28px rgba(254, 240, 138, 0.14) !important;
+}
+
+.night-occasion-card .luxury-title-lg {
+    background: linear-gradient(135deg, #FFFDF0 0%, #FDE047 45%, #F59E0B 90%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+}
+
+.night-occasion-card .portal-title-en {
+    color: #E2D9CE !important;
+}
+
+.night-occasion-card .portal-ceremony-sub {
+    color: #FDE68A !important;
+}
+
+.night-occasion-card .portal-narrative-text {
+    color: #E2E8F0 !important;
+}
+
+.night-occasion-card .highlight-glass-tile {
+    background: rgba(255, 255, 255, 0.06) !important;
+    border-color: rgba(254, 240, 138, 0.22) !important;
+}
+
+.night-occasion-card .highlight-tile-title {
+    color: #FDE68A !important;
+}
+
+.night-occasion-card .highlight-tile-desc {
+    color: #CBD5E1 !important;
+}
+
+.night-occasion-card .portal-date-chip {
+    background: rgba(254, 240, 138, 0.15) !important;
+    border-color: rgba(254, 240, 138, 0.4) !important;
+    color: #FDE68A !important;
+}
+
+.night-occasion-card .portal-venue-chip {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: rgba(255, 255, 255, 0.2) !important;
+    color: #FFFDF7 !important;
+}
+
+.night-occasion-card .portal-icon-modern {
+    background: radial-gradient(circle, rgba(254, 240, 138, 0.22) 0%, rgba(15, 12, 30, 0.9) 100%) !important;
+    border-color: #FDE047 !important;
+    box-shadow: 0 0 22px rgba(254, 240, 138, 0.35) !important;
+}
+
+.night-occasion-card .btn-luxury-secondary {
+    background: rgba(255, 255, 255, 0.08) !important;
+    border-color: rgba(254, 240, 138, 0.35) !important;
+    color: #FDE68A !important;
+}
+
+.night-occasion-card .btn-luxury-secondary:hover {
+    background: rgba(255, 255, 255, 0.15) !important;
+    border-color: #FDE047 !important;
+    color: #FFFFFF !important;
+}
+
+/* Crown Muhurtham Spotlight */
+.card-crown-muhurtham {
+    border: 2px solid #FDE047 !important;
+    background: radial-gradient(circle at 50% 10%, rgba(88, 28, 135, 0.35) 0%, rgba(13, 10, 28, 0.95) 80%) !important;
+    box-shadow: 0 0 65px rgba(234, 179, 8, 0.35), inset 0 0 25px rgba(253, 224, 71, 0.15) !important;
+}
+
+.card-crown-muhurtham .count-digit-lg {
+    color: #FDE047 !important;
+    text-shadow: 0 0 12px rgba(253, 224, 71, 0.5) !important;
+}
+
+.card-crown-muhurtham .count-label-sub {
+    color: #FDE68A !important;
+}
+
+/* ==========================================================================
+   VENUE LOCATION & FAMILY REGARDS
+   ========================================================================== */
+.card-desc-lead {
+    color: var(--body-text-color);
+    font-size: 0.92rem;
+    max-width: 480px;
+    margin: 6px auto 16px;
+    line-height: 1.55;
+}
+
+.map-placeholder-frame {
+    width: 100%;
+    height: 190px;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid var(--card-border);
+    margin-bottom: 16px;
+}
+
+.map-placeholder-frame iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+    filter: contrast(105%);
+}
+
+/* ==========================================================================
+   SCENE 12: ORIGINAL OVERLAPPING SUN & HALF-MOON CELESTIAL BACKGROUND
+   ========================================================================== */
+#scene-family {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(12px, 2vh, 24px) 16px;
+    box-sizing: border-box;
+    width: 100%;
+    overflow: hidden;
+}
+
+.family-celestial-overlap-bg {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+}
+
+.overlap-celestial-pair {
+    position: relative;
+    width: clamp(280px, 48vh, 420px);
+    height: clamp(280px, 48vh, 420px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: celestial-pair-float 10s ease-in-out infinite alternate;
+}
+
+@keyframes celestial-pair-float {
+    0% {
+        transform: translateY(-8px) scale(1);
+    }
+    100% {
+        transform: translateY(8px) scale(1.04);
+    }
+}
+
+/* 1. Original Real Sun */
+.overlap-sun-sphere {
+    position: absolute;
+    left: 8%;
+    width: clamp(170px, 30vh, 250px);
+    height: clamp(170px, 30vh, 250px);
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 2;
+    box-shadow: 
+        0 0 50px rgba(245, 158, 11, 0.95),
+        0 0 110px rgba(234, 88, 12, 0.70),
+        0 0 190px rgba(251, 191, 36, 0.45);
+    filter: brightness(1.15) contrast(1.12);
+}
+
+.overlap-sun-texture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    animation: sun-spin-orbit 140s linear infinite;
+}
+
+.overlap-sun-flare {
+    position: absolute;
+    inset: -20%;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(254, 240, 138, 0.4) 0%, rgba(245, 158, 11, 0.2) 45%, transparent 70%);
+    pointer-events: none;
+    animation: sun-flare-pulse 4s infinite alternate ease-in-out;
+}
+
+@keyframes sun-flare-pulse {
+    from { transform: scale(0.92); opacity: 0.7; }
+    to { transform: scale(1.15); opacity: 1; }
+}
+
+/* 2. Original Real Moon Overlapping Sun as Half Moon */
+.overlap-real-moon {
+    position: absolute;
+    right: 8%;
+    width: clamp(150px, 26vh, 220px);
+    height: clamp(150px, 26vh, 220px);
+    border-radius: 50%;
+    overflow: hidden;
+    z-index: 3;
+    box-shadow: 
+        -15px 0 35px rgba(226, 232, 240, 0.85),
+        -35px 0 85px rgba(148, 163, 184, 0.55),
+        0 0 120px rgba(96, 165, 250, 0.35);
+    filter: brightness(1.18) contrast(1.08);
+}
+
+.overlap-moon-texture {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+    animation: moon-spin-orbit 180s linear infinite;
+}
+
+/* Half-Moon Terminator: Leaves left hemisphere illuminated and right hemisphere deep dark space */
+.overlap-moon-half-terminator {
+    position: absolute;
+    inset: 0;
+    border-radius: 50%;
+    background: linear-gradient(90deg, 
+        rgba(0, 0, 0, 0) 0%, 
+        rgba(0, 0, 0, 0) 42%, 
+        rgba(10, 15, 26, 0.82) 52%, 
+        rgba(5, 8, 18, 0.98) 75%, 
+        rgba(2, 4, 10, 1) 100%);
+    pointer-events: none;
+}
+
+.overlap-moon-edge-glow {
+    position: absolute;
+    inset: -15%;
+    border-radius: 50%;
+    background: radial-gradient(circle at 35% 50%, rgba(255, 255, 255, 0.4) 0%, rgba(203, 213, 225, 0.15) 50%, transparent 75%);
+    pointer-events: none;
+}
+
+/* Light Theme Compliments Card */
+.family-luxury-card {
+    position: relative;
+    top: 85px;
+    z-index: 5;
+    width: 100%;
+    max-width: 480px;
+    background: linear-gradient(155deg, rgba(255, 253, 248, 0.95) 0%, rgba(254, 248, 238, 0.93) 50%, rgba(255, 244, 228, 0.95) 100%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1.5px solid rgba(217, 119, 6, 0.45);
+    border-radius: 22px;
+    box-shadow: 
+        0 20px 50px rgba(120, 53, 15, 0.18),
+        0 0 30px rgba(245, 158, 11, 0.20),
+        inset 0 1px 0 rgba(255, 255, 255, 0.95);
+    padding: clamp(14px, 2vh, 20px) clamp(16px, 3.2vw, 26px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 6px;
+    box-sizing: border-box;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    animation: family-card-fadein 0.6s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+.family-luxury-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 
+        0 28px 70px rgba(120, 53, 15, 0.24),
+        0 0 45px rgba(245, 158, 11, 0.28),
+        inset 0 1px 0 rgba(255, 255, 255, 0.98);
+}
+
+@keyframes family-card-fadein {
+    from {
+        opacity: 0;
+        transform: translateY(16px) scale(0.96);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Ornate Golden Filigree Corners */
+.family-card-corner {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 2px solid #D97706;
+    pointer-events: none;
+    opacity: 0.75;
+}
+
+.family-card-corner.tl {
+    top: 8px;
+    left: 8px;
+    border-right: none;
+    border-bottom: none;
+    border-top-left-radius: 8px;
+}
+
+.family-card-corner.tr {
+    top: 8px;
+    right: 8px;
+    border-left: none;
+    border-bottom: none;
+    border-top-right-radius: 8px;
+}
+
+.family-card-corner.bl {
+    bottom: 8px;
+    left: 8px;
+    border-right: none;
+    border-top: none;
+    border-bottom-left-radius: 8px;
+}
+
+.family-card-corner.br {
+    bottom: 8px;
+    right: 8px;
+    border-left: none;
+    border-top: none;
+    border-bottom-right-radius: 8px;
+}
+
+.family-top-sparkle {
+    font-size: 1.3rem;
+    margin-bottom: 2px;
+    filter: drop-shadow(0 2px 6px rgba(245, 158, 11, 0.5));
+}
+
+/* Regards Calligraphy */
+.family-footer-regards {
+    font-family: var(--font-telugu), var(--font-title), serif;
+    font-size: clamp(1.3rem, 3vw, 1.7rem);
+    font-weight: 700;
+    line-height: 1.3;
+    margin: 2px 0 0;
+    color: #78350F;
+    background: linear-gradient(135deg, #78350F 0%, #B45309 60%, #92400E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.7));
+}
+
+/* Families Title */
+.family-footer-title {
+    font-family: var(--font-royal-title);
+    font-size: clamp(1.35rem, 3.2vw, 1.85rem);
+    font-weight: 800;
+    line-height: 1.35;
+    margin: 0;
+    letter-spacing: 1px;
+    color: #9A3412;
+    background: linear-gradient(135deg, #9A3412 0%, #C2410C 45%, #7C2D12 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 1px 2px rgba(180, 83, 9, 0.2));
+}
+
+/* Ornate Floral Divider */
+.family-ornate-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+    margin: 2px 0;
+}
+
+.family-ornate-divider .f-line {
+    width: clamp(35px, 9vw, 75px);
+    height: 1.5px;
+    background: linear-gradient(90deg, transparent, #D97706, transparent);
+}
+
+.family-ornate-divider .f-gem {
+    font-size: 0.85rem;
+    color: #B45309;
+    filter: drop-shadow(0 1px 3px rgba(180, 83, 9, 0.3));
+}
+
+/* Blessing & Relatives Ending Text */
+.family-footer-desc {
+    font-family: var(--font-telugu), var(--font-ui), sans-serif;
+    font-size: clamp(0.85rem, 1.8vw, 0.95rem);
+    line-height: 1.45;
+    color: #78350F;
+    margin: 0;
+    font-weight: 500;
+}
+
+@media (max-height: 640px) {
+    .family-luxury-card {
+        padding: 14px 18px;
+        gap: 8px;
+    }
+    .family-footer-regards {
+        font-size: 1.18rem;
+    }
+    .family-footer-title {
+        font-size: 1.28rem;
+    }
+    .family-footer-desc {
+        font-size: 0.88rem;
+        line-height: 1.6;
+    }
+    .overlap-sun-sphere {
+        width: 140px;
+        height: 140px;
+    }
+    .overlap-real-moon {
+        width: 125px;
+        height: 125px;
+    }
+}
+
+/* Family Compliments Screen View Toggle, Dimming & Centerpiece Title */
+.family-top-header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 8px;
+    margin-bottom: 2px;
+}
+
+.family-view-bg-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: rgba(254, 240, 138, 0.85);
+    border: 1px solid rgba(180, 83, 9, 0.4);
+    color: #78350F;
+    font-size: 0.78rem;
+    font-weight: 700;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(180, 83, 9, 0.15);
+    transition: all 0.25s ease;
+}
+
+.family-view-bg-btn:hover {
+    background: #FEF08A;
+    border-color: #B45309;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.25);
+}
+
+.family-luxury-card {
+    transition: opacity 0.5s ease, transform 0.5s ease, backdrop-filter 0.5s ease;
+}
+
+.family-luxury-card.family-card-dimmed {
+    opacity: 0.16 !important;
+    transform: translateY(22px) scale(0.96) !important;
+    pointer-events: auto !important;
+}
+
+.family-luxury-card.family-card-dimmed:hover {
+    opacity: 0.90 !important;
+    transform: translateY(0px) scale(1) !important;
+}
+
+/* Highlighted Family Lineage Centerpiece Title (Two Balanced Lines, Refined Typography) */
+.family-lineage-title-wrap {
+    width: 100%;
+    margin: 2px 0 4px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 4px;
+    box-sizing: border-box;
+}
+
+.family-lineage-highlight-title {
+    font-family: 'Marcellus', 'Playfair Display', var(--font-royal-title);
+    font-size: clamp(1.1rem, 2.4vw, 1.42rem) !important;
+    font-weight: 600;
+    line-height: 1.42;
+    margin: 0;
+    text-align: center;
+    color: #78350F;
+    background: linear-gradient(135deg, #78350F 0%, #B45309 45%, #92400E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.9));
+    letter-spacing: 0.5px;
+    text-wrap: balance;
+}
+
+body[data-theme-mode="dark"] .family-lineage-highlight-title {
+    color: #FEF08A;
+    background: linear-gradient(135deg, #FFFDF0 0%, #FDE047 50%, #F59E0B 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 10px rgba(253, 224, 71, 0.35));
+}
+
+html[lang="en"] .family-lineage-highlight-title {
+    font-family: 'Marcellus', 'Playfair Display', 'Cormorant Garamond', Georgia, serif !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.6px !important;
+}
+
+html[lang="te"] .family-lineage-highlight-title {
+    font-family: 'Suranna', 'Gautami', 'Mandali', serif !important;
+    font-weight: 700 !important;
+}
+
+/* ==========================================================================
+   2026 ROYAL FLOATING MUSIC CONTROLLER (APPLE GLASS STYLE)
+   ========================================================================== */
+.floating-music-bar-modern {
+    display: none !important;
+}
+
+.music-control-btn-modern {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    border: 1px solid rgba(254, 240, 138, 0.5);
+    background: linear-gradient(135deg, #FFFDF0 0%, #FDE047 40%, #F59E0B 100%);
+    color: #1A050D;
+    font-size: 13px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(245, 158, 11, 0.4);
+    transition: transform 0.2s var(--ease-spring);
+}
+
+.music-control-btn-modern:hover { transform: scale(1.08); }
+
+.music-meta-title {
+    font-family: var(--font-ui);
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: var(--music-color);
+    max-width: 210px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.music-spectrum-bars {
+    display: flex;
+    align-items: flex-end;
+    gap: 3px;
+    height: 16px;
+}
+
+.spec-bar {
+    width: 3px;
+    background: #D97706;
+    border-radius: 2px;
+    height: 3px;
+    transition: height 0.15s ease;
+}
+
+body[data-theme-mode="dark"] .spec-bar {
+    background: #FDE047;
+    box-shadow: 0 0 6px #FDE047;
+}
+
+.wave-active .spec-bar { animation: spec-bounce 1.1s infinite ease-in-out alternate; }
+.wave-active .spec-bar:nth-child(1) { height: 60%; animation-delay: 0.1s; }
+.wave-active .spec-bar:nth-child(2) { height: 95%; animation-delay: 0.3s; }
+.wave-active .spec-bar:nth-child(3) { height: 40%; animation-delay: 0.2s; }
+.wave-active .spec-bar:nth-child(4) { height: 80%; animation-delay: 0.4s; }
+
+@keyframes spec-bounce { 0% { height: 20%; } 100% { height: 100%; } }
+
+.music-track-selector-box {
+    display: flex;
+    align-items: center;
+}
+
+.music-track-select {
+    background: var(--music-select-bg);
+    border: 1px solid var(--music-select-border);
+    border-radius: 20px;
+    color: var(--music-select-color);
+    font-family: var(--font-ui);
+    font-size: 0.74rem;
+    font-weight: 700;
+    padding: 5px 10px;
+    cursor: pointer;
+    outline: none;
+    max-width: 170px;
+    text-overflow: ellipsis;
+    transition: all 0.3s ease;
+}
+
+.music-vol-slider-modern {
+    width: 50px;
+    accent-color: #D97706;
+    cursor: pointer;
+}
+
+body[data-theme-mode="dark"] .music-vol-slider-modern {
+    accent-color: #FDE047;
+}
+
+/* Toast Notification */
+.toast-msg {
+    position: fixed;
+    bottom: 80px;
+    left: 50%;
+    transform: translateX(-50%) translateY(20px);
+    background: rgba(30, 8, 20, 0.95);
+    color: #FFF;
+    border: 1.5px solid #FDE68A;
+    padding: 10px 24px;
+    border-radius: 30px;
+    font-weight: 700;
+    font-size: 0.85rem;
+    box-shadow: 0 10px 35px rgba(0, 0, 0, 0.85);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.toast-visible {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+
+/* ==========================================================================
+   Celestial Falling Stars Blessing Shower (నక్షత్ర వర్షం • దివ్య ఆశీర్వాదం)
+   Subha Muhurtham (Pelli) Scene 10 / Card 9
+   Graceful golden & diamond starlight particles showering blessings
+   down upon Varun & Alekhya in the royal portrait frame
+   ========================================================================== */
+.pelli-portrait-wrap {
+    position: relative !important;
+    overflow: visible !important;
+}
+
+.pelli-arch-frame {
+    background: linear-gradient(145deg, #FFFDF0 0%, #FDE047 35%, #F59E0B 70%, #78350F 100%) !important;
+    box-shadow: 
+        0 24px 60px rgba(0, 0, 0, 0.85),
+        0 0 50px rgba(254, 240, 138, 0.55),
+        inset 0 1px 3px rgba(255, 255, 255, 0.95) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.pelli-couple-photo {
+    object-position: center 20% !important;
+    filter: brightness(1.04) contrast(1.04) saturate(1.08);
+}
+
+/* Falling Stars Blessing Container inside Arch */
+.falling-stars-blessing {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 5;
+    overflow: hidden;
+}
+
+/* Individual Blessing Stars */
+.blessing-star {
+    position: absolute;
+    color: #FFFDF0;
+    font-size: 1.1rem;
+    line-height: 1;
+    text-shadow: 
+        0 0 8px #FFFFFF,
+        0 0 15px #FDE047,
+        0 0 25px #F59E0B;
+    opacity: 0;
+    animation: star-blessing-fall linear infinite;
+    will-change: transform, opacity;
+}
+
+/* Staggered positions, timings, and lateral drifts for 12 Blessing Stars */
+.blessing-star.star-1  { left: 15%; font-size: 1.1rem; animation-duration: 4.8s; animation-delay: 0.0s; --drift: 18px; }
+.blessing-star.star-2  { left: 32%; font-size: 1.35rem; animation-duration: 4.2s; animation-delay: 1.2s; --drift: -22px; color: #FEF08A; }
+.blessing-star.star-3  { left: 52%; font-size: 0.95rem; animation-duration: 5.2s; animation-delay: 0.6s; --drift: 15px; }
+.blessing-star.star-4  { left: 68%; font-size: 1.2rem; animation-duration: 4.5s; animation-delay: 2.1s; --drift: -18px; }
+.blessing-star.star-5  { left: 82%; font-size: 1.0rem; animation-duration: 4.9s; animation-delay: 1.5s; --drift: 20px; color: #FDE047; }
+.blessing-star.star-6  { left: 24%; font-size: 0.85rem; animation-duration: 5.5s; animation-delay: 2.8s; --drift: -14px; }
+.blessing-star.star-7  { left: 45%; font-size: 1.4rem; animation-duration: 4.0s; animation-delay: 3.2s; --drift: 25px; color: #FFF; }
+.blessing-star.star-8  { left: 60%; font-size: 1.15rem; animation-duration: 4.7s; animation-delay: 3.8s; --drift: -20px; }
+.blessing-star.star-9  { left: 38%; font-size: 1.05rem; animation-duration: 5.0s; animation-delay: 4.4s; --drift: 16px; color: #FEF08A; }
+.blessing-star.star-10 { left: 75%; font-size: 1.25rem; animation-duration: 4.3s; animation-delay: 5.0s; --drift: -18px; }
+.blessing-star.star-11 { left: 20%; font-size: 1.3rem; animation-duration: 4.6s; animation-delay: 2.4s; --drift: 22px; color: #FFF; }
+.blessing-star.star-12 { left: 88%; font-size: 0.9rem; animation-duration: 5.3s; animation-delay: 3.5s; --drift: -15px; }
+
+@keyframes star-blessing-fall {
+    0% {
+        top: -12%;
+        opacity: 0;
+        transform: translateX(0) rotate(0deg) scale(0.6);
+    }
+    15% {
+        opacity: 0.95;
+        transform: translateX(calc(var(--drift, 15px) * 0.3)) rotate(45deg) scale(1.15);
+    }
+    50% {
+        opacity: 1;
+        transform: translateX(var(--drift, 15px)) rotate(110deg) scale(1);
+        text-shadow: 0 0 12px #FFF, 0 0 24px #FDE047, 0 0 36px #F59E0B;
+    }
+    85% {
+        opacity: 0.85;
+        transform: translateX(calc(var(--drift, 15px) * 0.6)) rotate(160deg) scale(0.9);
+    }
+    100% {
+        top: 104%;
+        opacity: 0;
+        transform: translateX(var(--drift, 15px)) rotate(210deg) scale(0.5);
+    }
+}
+
+/* Stardust Dewdrops (Shimmering Golden Dew) */
+.stardust-drop {
+    position: absolute;
+    width: 3.5px;
+    height: 3.5px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    box-shadow: 
+        0 0 6px #FFFFFF,
+        0 0 12px #FDE047,
+        0 0 20px #F59E0B;
+    opacity: 0;
+    animation: stardust-dew-fall linear infinite;
+}
+
+.stardust-drop.sd-1 { left: 28%; animation-duration: 3.8s; animation-delay: 0.3s; width: 4px; height: 4px; }
+.stardust-drop.sd-2 { left: 48%; animation-duration: 4.5s; animation-delay: 1.8s; }
+.stardust-drop.sd-3 { left: 65%; animation-duration: 3.6s; animation-delay: 1.1s; width: 4.5px; height: 4.5px; }
+.stardust-drop.sd-4 { left: 18%; animation-duration: 4.2s; animation-delay: 2.7s; }
+.stardust-drop.sd-5 { left: 78%; animation-duration: 4.0s; animation-delay: 3.4s; width: 4px; height: 4px; }
+.stardust-drop.sd-6 { left: 56%; animation-duration: 3.9s; animation-delay: 4.1s; }
+
+@keyframes stardust-dew-fall {
+    0% {
+        top: -8%;
+        opacity: 0;
+        transform: scale(0.5);
+    }
+    20% {
+        opacity: 0.9;
+        transform: scale(1.3);
+    }
+    80% {
+        opacity: 0.8;
+    }
+    100% {
+        top: 102%;
+        opacity: 0;
+        transform: scale(0.4);
+    }
+}
+
+/* Shooting Star Blessing Streaks gliding smoothly */
+.shooting-star-streak {
+    position: absolute;
+    width: 48px;
+    height: 1.5px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.95), rgba(253, 224, 71, 0.75), transparent);
+    border-radius: 999px;
+    filter: drop-shadow(0 0 6px rgba(254, 240, 138, 0.9));
+    opacity: 0;
+    transform: rotate(38deg);
+    pointer-events: none;
+}
+
+.shooting-star-streak.streak-1 {
+    top: 5%;
+    left: 10%;
+    animation: shooting-streak-glide 6.5s infinite ease-out 1.5s;
+}
+
+.shooting-star-streak.streak-2 {
+    top: 15%;
+    left: 45%;
+    width: 56px;
+    animation: shooting-streak-glide 7.2s infinite ease-out 4.8s;
+}
+
+@keyframes shooting-streak-glide {
+    0% {
+        opacity: 0;
+        transform: translate(-30px, -30px) rotate(38deg) scaleX(0.4);
+    }
+    10% {
+        opacity: 0.95;
+        transform: translate(0, 0) rotate(38deg) scaleX(1.1);
+    }
+    25% {
+        opacity: 0.9;
+        transform: translate(65px, 65px) rotate(38deg) scaleX(1);
+    }
+    40% {
+        opacity: 0;
+        transform: translate(110px, 110px) rotate(38deg) scaleX(0.3);
+    }
+    100% {
+        opacity: 0;
+        transform: translate(110px, 110px) rotate(38deg) scaleX(0.3);
+    }
+}
+
+/* Gentle Blessing Corona Halo at Crowns (Touching Foreheads) */
+.blessing-crown-glow {
+    position: absolute;
+    top: 29%;
+    left: 54%;
+    transform: translate(-50%, -50%);
+    width: 75px;
+    height: 75px;
+    border-radius: 50%;
+    background: radial-gradient(circle, 
+        rgba(255, 255, 255, 0.45) 0%, 
+        rgba(254, 240, 138, 0.28) 35%, 
+        rgba(245, 158, 11, 0.12) 65%, 
+        transparent 80%);
+    filter: blur(6px);
+    pointer-events: none;
+    animation: blessing-crown-breathe 3.2s infinite alternate ease-in-out;
+}
+
+@keyframes blessing-crown-breathe {
+    0% {
+        transform: translate(-50%, -50%) scale(0.85);
+        opacity: 0.65;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.18);
+        opacity: 0.95;
+        filter: blur(8px) drop-shadow(0 0 14px rgba(254, 240, 138, 0.8));
+    }
+}
+
+
+/* Raaga Convention & Venue Location Architectural Backdrop */
+.venue-nature-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center bottom !important; /* Anchors the entire bottom lawn, rocks & landscaping */
+    opacity: 0;
+    pointer-events: none;
+    transform: scale(1.02);
+    filter: brightness(1.04) saturate(1.08) contrast(1.04);
+    transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1), transform 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: 1;
+}
+
+body[data-current-climate="venue"] .venue-nature-img {
+    opacity: 1;
+    transform-origin: center bottom !important;
+    animation: raaga-venue-slight-animation 22s infinite alternate ease-in-out;
+    will-change: transform, filter;
+}
+
+@keyframes raaga-venue-slight-animation {
+    0% {
+        transform: scale(1.015) translate3d(0, 0, 0);
+        filter: brightness(1.04) saturate(1.08) contrast(1.04);
+    }
+    35% {
+        transform: scale(1.038) translate3d(-0.5%, -0.25%, 0);
+        filter: brightness(1.065) saturate(1.11) contrast(1.035);
+    }
+    70% {
+        transform: scale(1.048) translate3d(0.4%, -0.4%, 0);
+        filter: brightness(1.075) saturate(1.125) contrast(1.03);
+    }
+    100% {
+        transform: scale(1.025) translate3d(0, -0.15%, 0);
+        filter: brightness(1.045) saturate(1.085) contrast(1.04);
+    }
+}
+
+/* Subtle Living Sunbeam Sheen across the Raaga Convention Sky */
+.venue-ambient-shimmer {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 2;
+    opacity: 0;
+    background: radial-gradient(ellipse 70% 40% at 70% 18%, rgba(254, 240, 138, 0.12) 0%, rgba(245, 158, 11, 0.05) 45%, transparent 75%);
+    mix-blend-mode: screen;
+    transition: opacity 1.5s ease;
+}
+
+body[data-current-climate="venue"] .venue-ambient-shimmer {
+    opacity: 1;
+    animation: venue-shimmer-drift 16s infinite alternate ease-in-out;
+}
+
+@keyframes venue-shimmer-drift {
+    0% {
+        opacity: 0.5;
+        transform: translate3d(0, 0, 0) scale(1);
+    }
+    50% {
+        opacity: 0.85;
+        transform: translate3d(-1%, 0.5%, 0) scale(1.03);
+    }
+    100% {
+        opacity: 0.6;
+        transform: translate3d(0.8%, -0.5%, 0) scale(1.015);
+    }
+}
+
+body[data-current-climate="venue"] .winter-nature-img {
+    opacity: 0 !important;
+}
+
+/* Family Blessings Compliments Screen Group Portrait Backdrop (Subtle Contrast Overlay, No Snow/Fog) */
+.family-nature-img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 25%;
+    opacity: 0;
+    pointer-events: none;
+    transform: none !important;
+    filter: brightness(0.92) contrast(1.03) !important;
+    transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1);
+    z-index: 1;
+}
+
+body[data-current-climate="sunset"] .family-nature-img {
+    opacity: 1 !important;
+    transform: none !important;
+    filter: brightness(0.92) contrast(1.03) !important;
+}
+
+/* Subtle Photographic Contrast Overlay on Family Background */
+.family-nature-overlay {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    z-index: 1;
+    opacity: 0;
+    background: linear-gradient(180deg, 
+        rgba(15, 10, 30, 0.12) 0%, 
+        rgba(15, 10, 30, 0.22) 40%, 
+        rgba(15, 10, 30, 0.48) 100%);
+    transition: opacity 1.2s ease;
+}
+
+body[data-current-climate="sunset"] .family-nature-overlay {
+    opacity: 1;
+}
+
+body[data-current-climate="sunset"] .winter-nature-img {
+    opacity: 0 !important;
+}
+
+body[data-current-climate="sunset"] .family-celestial-overlap-bg {
+    display: none !important;
+}
+
+@media (max-width: 860px) {
+    body[data-current-climate="sunset"] .family-nature-img {
+        object-position: center 18% !important;
+    }
+}
+
+/* 100% REMOVE ALL SNOW, PARTICLES, FOG, VIGNETTES, CELESTIAL EFFECTS ON SUNSET / FAMILY SCENE */
+body[data-current-climate="sunset"] #atmosphere-canvas {
+    opacity: 0 !important;
+    pointer-events: none !important;
+    visibility: hidden !important;
+}
+
+body[data-current-climate="sunset"] .winter-fog-band,
+body[data-current-climate="sunset"] .fog-band-deep,
+body[data-current-climate="sunset"] .fog-band-mid,
+body[data-current-climate="sunset"] .fog-band-near {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+body[data-current-climate="sunset"] .winter-vignette-overlay {
+    display: none !important;
+    opacity: 0 !important;
+    background: transparent !important;
+    visibility: hidden !important;
+}
+
+body[data-current-climate="sunset"] #celestial-sun,
+body[data-current-climate="sunset"] #celestial-moon,
+body[data-current-climate="sunset"] #celestial-dusk {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+/* 100% REMOVE ALL SHAPES, FOG CIRCLES, VIGNETTES, CELESTIAL ORBS & CANVAS PARTICLES ON VENUE */
+body[data-current-climate="venue"] #atmosphere-canvas {
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+body[data-current-climate="venue"] .winter-fog-band,
+body[data-current-climate="venue"] .fog-band-deep,
+body[data-current-climate="venue"] .fog-band-mid,
+body[data-current-climate="venue"] .fog-band-near {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+}
+
+body[data-current-climate="venue"] .winter-vignette-overlay {
+    display: none !important;
+    opacity: 0 !important;
+    background: transparent !important;
+    visibility: hidden !important;
+}
+
+body[data-current-climate="venue"] #celestial-sun,
+body[data-current-climate="venue"] #celestial-moon,
+body[data-current-climate="venue"] #celestial-dusk {
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}
+
+/* Card Venue Header with View Venue Toggle */
+.venue-top-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+}
+
+.venue-view-bg-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 12px;
+    border-radius: 999px;
+    background: rgba(254, 240, 138, 0.7);
+    border: 1px solid rgba(180, 83, 9, 0.35);
+    color: #78350F;
+    font-size: 0.78rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    box-shadow: 0 2px 6px rgba(180, 83, 9, 0.12);
+}
+
+.venue-view-bg-btn:hover {
+    background: #FEF08A;
+    border-color: #B45309;
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(217, 119, 6, 0.25);
+}
+
+.card-venue {
+    transition: opacity 0.5s ease, transform 0.5s ease, backdrop-filter 0.5s ease;
+    backdrop-filter: blur(16px) saturate(1.2);
+    -webkit-backdrop-filter: blur(16px) saturate(1.2);
+    background: rgba(255, 255, 255, 0.88) !important;
+}
+
+body[data-theme-mode="dark"] .card-venue {
+    background: rgba(18, 14, 34, 0.86) !important;
+}
+
+.card-venue.venue-card-dimmed {
+    opacity: 0.16 !important;
+    transform: translateY(22px) scale(0.96) !important;
+    pointer-events: auto !important;
+}
+
+.card-venue.venue-card-dimmed:hover {
+    opacity: 0.90 !important;
+    transform: translateY(0px) scale(1) !important;
+}
+
+/* Desktop layout: Card floats to the right side so Raaga building & lawn on left/center are fully visible */
+@media (min-width: 861px) {
+    #scene-venue {
+        display: flex !important;
+        align-items: center !important;
+        justify-content: flex-end !important;
+        padding-right: clamp(30px, 6vw, 90px) !important;
+        padding-bottom: 40px !important;
+    }
+
+    #scene-venue .card-venue {
+        max-width: 480px !important;
+        margin: 0 !important;
+    }
+}
+
+@media (max-width: 860px) {
+    body[data-current-climate="venue"] .venue-nature-img {
+        object-position: 55% bottom !important; /* Keeps building & bottom landscaping visible on mobile */
+        transform-origin: 55% bottom !important;
+    }
+
+    #scene-venue {
+        padding-bottom: 75px !important;
+    }
+}
+
+@media (max-height: 720px) {
+    #scene-venue .map-placeholder-frame {
+        height: 140px !important;
+    }
+}
+
+/* Venue Dual Navigation & Contact Section Styles */
+#scene-venue .card-venue {
+    max-height: calc(100dvh - 120px);
+    overflow-y: auto;
+    scrollbar-width: none;
+}
+#scene-venue .card-venue::-webkit-scrollbar {
+    display: none;
+}
+
+.venue-map-buttons-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    width: 100%;
+}
+
+@media (max-width: 480px) {
+    .venue-map-buttons-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.venue-map-btn {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 6px !important;
+    padding: 9px 12px !important;
+    font-size: 0.8rem !important;
+    font-weight: 700 !important;
+    text-decoration: none !important;
+    border-radius: 999px !important;
+    text-align: center !important;
+    box-shadow: 0 3px 10px rgba(180, 83, 9, 0.2) !important;
+    transition: transform 0.25s ease, box-shadow 0.25s ease !important;
+}
+
+.venue-home-btn {
+    background: linear-gradient(135deg, #10B981 0%, #047857 100%) !important;
+    color: #FFFFFF !important;
+    border: 1px solid rgba(167, 243, 208, 0.6) !important;
+    box-shadow: 0 3px 10px rgba(4, 120, 87, 0.25) !important;
+}
+
+.venue-home-btn:hover {
+    background: linear-gradient(135deg, #059669 0%, #065F46 100%) !important;
+    transform: translateY(-2px) scale(1.02) !important;
+    box-shadow: 0 6px 16px rgba(4, 120, 87, 0.35) !important;
+}
+
+.venue-contacts-box {
+    width: 100%;
+    margin-top: 10px;
+    padding: 10px 12px;
+    background: rgba(255, 251, 235, 0.85);
+    border: 1px solid rgba(245, 158, 11, 0.35);
+    border-radius: 16px;
+    box-sizing: border-box;
+}
+
+body[data-theme-mode="dark"] .venue-contacts-box {
+    background: rgba(30, 20, 50, 0.85);
+    border-color: rgba(253, 224, 71, 0.25);
+}
+
+.venue-contacts-header {
+    font-size: 0.8rem;
+    font-weight: 700;
+    color: #92400E;
+    text-align: center;
+    margin-bottom: 8px;
+    letter-spacing: 0.3px;
+}
+
+body[data-theme-mode="dark"] .venue-contacts-header {
+    color: #FDE68A;
+}
+
+.venue-contacts-columns {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 8px;
+    text-align: center;
+}
+
+@media (max-width: 480px) {
+    .venue-contacts-columns {
+        grid-template-columns: 1fr;
+    }
+}
+
+.contact-party-group {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.contact-party-label {
+    font-size: 0.74rem;
+    font-weight: 700;
+    color: #78350F;
+    background: rgba(254, 240, 138, 0.75);
+    padding: 2px 8px;
+    border-radius: 999px;
+    border: 1px solid rgba(217, 119, 6, 0.25);
+}
+
+body[data-theme-mode="dark"] .contact-party-label {
+    color: #FEF08A;
+    background: rgba(88, 28, 135, 0.6);
+    border-color: rgba(253, 224, 71, 0.3);
+}
+
+.contact-numbers-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 4px;
+    justify-content: center;
+}
+
+.contact-num-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    padding: 3px 8px;
+    border-radius: 8px;
+    background: #FFFFFF;
+    border: 1px solid rgba(217, 119, 6, 0.25);
+    color: #1E293B;
+    font-size: 0.76rem;
+    font-weight: 700;
+    text-decoration: none;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    transition: all 0.2s ease;
+}
+
+body[data-theme-mode="dark"] .contact-num-chip {
+    background: rgba(15, 10, 30, 0.9);
+    border-color: rgba(253, 224, 71, 0.3);
+    color: #F8FAFC;
+}
+
+.contact-num-chip:hover {
+    background: #FEF08A;
+    border-color: #B45309;
+    color: #78350F;
+    transform: translateY(-1px);
+}
+
+/* ==========================================================================
+   Pellikoduku (Groom) & Pellikuturu (Bride) Royal Showcase Styles
+   ========================================================================== */
+.pellikoduku-photo {
+    object-position: center 20% !important;
+}
+
+#scene-pellikoduku .hero-royal-arch-frame {
+    background: linear-gradient(145deg, #FEF08A 0%, #D97706 40%, #F59E0B 70%, #92400E 100%);
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.28), 0 0 35px rgba(245, 158, 11, 0.40);
+}
+
+body[data-theme-mode="dark"] #scene-pellikoduku .hero-royal-arch-frame {
+    background: linear-gradient(145deg, #FFFDF0 0%, #FDE047 40%, #F59E0B 75%, #D97706 100%);
+    box-shadow: 0 24px 55px rgba(0, 0, 0, 0.85), 0 0 45px rgba(254, 240, 138, 0.45);
+}
+
+.pellikuturu-photo {
+    object-position: center 22% !important;
+}
+
+#scene-pellikuturu .hero-royal-arch-frame {
+    background: linear-gradient(145deg, #FDE047 0%, #F43F5E 40%, #FB7185 70%, #BE123C 100%);
+    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.28), 0 0 35px rgba(244, 63, 94, 0.38);
+}
+
+body[data-theme-mode="dark"] #scene-pellikuturu .hero-royal-arch-frame {
+    background: linear-gradient(145deg, #FFFDF0 0%, #FDA4AF 40%, #FB7185 75%, #E11D48 100%);
+    box-shadow: 0 24px 55px rgba(0, 0, 0, 0.85), 0 0 45px rgba(251, 113, 133, 0.45);
+}
+
+/* Event Highlights for Pellikoduku & Pellikuturu */
+.pelli-event-highlights,
+.pellikuturu-event-highlights {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 14px;
+    padding: 10px 18px;
+    margin: 12px auto 14px;
+    border-radius: 999px;
+    width: fit-content;
+    max-width: 100%;
+    box-sizing: border-box;
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(245, 158, 11, 0.35);
+    box-shadow: 0 4px 16px rgba(180, 83, 9, 0.08);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    flex-wrap: wrap;
+}
+
+body[data-theme-mode="dark"] .pelli-event-highlights,
+body[data-theme-mode="dark"] .pellikuturu-event-highlights {
+    background: rgba(20, 24, 38, 0.88);
+    border-color: rgba(254, 240, 138, 0.45);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.75), 0 0 25px rgba(245, 158, 11, 0.22);
+}
+
+.pellikuturu-event-highlights {
+    border-color: rgba(244, 63, 94, 0.35);
+}
+
+body[data-theme-mode="dark"] .pellikuturu-event-highlights {
+    border-color: rgba(251, 113, 133, 0.45);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.75), 0 0 25px rgba(244, 63, 94, 0.22);
+}
+
+.pelli-hl-item,
+.pellikuturu-hl-item {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.pelli-icon-badge,
+.pellikuturu-icon-badge {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.18) 0%, rgba(217, 119, 6, 0.1) 100%);
+    border: 1.5px solid rgba(245, 158, 11, 0.55);
+    color: #D97706;
+}
+
+.pellikuturu-icon-badge.pellikuturu-icon-rose {
+    background: linear-gradient(135deg, rgba(244, 63, 94, 0.18) 0%, rgba(225, 29, 72, 0.1) 100%);
+    border-color: rgba(244, 63, 94, 0.55);
+    color: #E11D48;
+}
+
+.pelli-hl-text,
+.pellikuturu-hl-text {
+    font-size: 0.92rem;
+    font-weight: 700;
+    letter-spacing: 0.2px;
+}
+
+.pelli-date-text { color: #92400E; }
+.pelli-venue-text { color: #B45309; }
+.pellikuturu-date-text { color: #9F1239; }
+.pellikuturu-venue-text { color: #BE123C; }
+
+body[data-theme-mode="dark"] .pelli-date-text,
+body[data-theme-mode="dark"] .pellikuturu-date-text {
+    color: #FFFDF0;
+}
+body[data-theme-mode="dark"] .pelli-venue-text {
+    color: #FDE047;
+}
+body[data-theme-mode="dark"] .pellikuturu-venue-text {
+    color: #FDA4AF;
+}
+
+.pelli-hl-separator,
+.pellikuturu-hl-separator {
+    color: #F59E0B;
+    font-size: 0.72rem;
+    opacity: 0.7;
+}
+
+.pellikuturu-hl-separator {
+    color: #FB7185;
+}
+
+.pellikoduku-title-highlight-wrap,
+.pellikuturu-title-highlight-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 4px 0 2px;
+}
+
+.pelli-crest-ornament {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 2px;
+}
+
+.p-crest-line {
+    width: 24px;
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #F59E0B, transparent);
+}
+
+.p-crest-gem {
+    font-size: 0.8rem;
+    color: #D97706;
+}
+
+.pelli-grand-title,
+.pellikuturu-grand-title {
+    font-family: var(--font-royal-title);
+    font-size: clamp(1.6rem, 3.2vw, 2.1rem);
+    font-weight: 700;
+    margin: 0;
+    background: linear-gradient(135deg, #B45309 0%, #D97706 40%, #F59E0B 75%, #78350F 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pellikuturu-grand-title {
+    background: linear-gradient(135deg, #9F1239 0%, #E11D48 40%, #FB7185 75%, #881337 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body[data-theme-mode="dark"] .pelli-grand-title {
+    background: linear-gradient(135deg, #FFFDF0 0%, #FEF08A 40%, #F59E0B 75%, #D97706 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body[data-theme-mode="dark"] .pellikuturu-grand-title {
+    background: linear-gradient(135deg, #FFFDF0 0%, #FDA4AF 40%, #FB7185 75%, #E11D48 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.pelli-title-glow-bar,
+.pellikuturu-title-glow-bar {
+    width: 60px;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #F59E0B, transparent);
+    margin-top: 4px;
+}
+
+.pellikuturu-title-glow-bar {
+    background: linear-gradient(90deg, transparent, #FB7185, transparent);
+}
+
+.pelli-sub-line,
+.pellikuturu-sub-line {
+    font-size: 0.88rem;
+    margin: 4px 0 6px;
+    color: var(--secondary-text-color);
+}
+
+/* ==========================================================================
+   DEVOTIONAL SRI CHAKRA WEDDING LANDING PORTAL & CINEMATIC VFX
+   ========================================================================== */
+#devotional-landing-portal {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #090412;
+    transition: opacity 1.25s cubic-bezier(0.5, 0, 0.2, 1);
+    user-select: none;
+    -webkit-user-select: none;
+}
+
+#devotional-landing-portal.portal-dismissed {
+    display: none !important;
+}
+
+/* Ambient Cosmic Backdrop & Golden Rays */
+.devotional-portal-backdrop {
+    position: absolute;
+    inset: 0;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.devotional-cosmic-glow {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, #261138 0%, #130722 45%, #07020F 85%, #030007 100%);
+    opacity: 0.96;
+}
+
+.devotional-light-rays {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200vmax;
+    height: 200vmax;
+    transform: translate(-50%, -50%);
+    background: repeating-conic-gradient(
+        from 0deg,
+        rgba(254, 240, 138, 0.05) 0deg 8deg,
+        rgba(245, 158, 11, 0) 8deg 20deg,
+        rgba(253, 224, 71, 0.04) 20deg 28deg,
+        rgba(217, 119, 6, 0) 28deg 40deg
+    );
+    animation: devotional-rays-spin 48s linear infinite;
+    opacity: 0.85;
+}
+
+@keyframes devotional-rays-spin {
+    from { transform: translate(-50%, -50%) rotate(0deg); }
+    to { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Stardust Sparks */
+.devotional-stardust-field {
+    position: absolute;
+    inset: 0;
+}
+
+.stardust-spark {
+    position: absolute;
+    border-radius: 50%;
+    background: radial-gradient(circle, #FFF 0%, #FEF08A 60%, transparent 100%);
+    box-shadow: 0 0 10px #F59E0B, 0 0 20px #FEF08A;
+    opacity: 0;
+    animation: stardust-float 6s infinite ease-in-out;
+}
+
+.stardust-spark.s-1 { top: 20%; left: 18%; width: 4px; height: 4px; animation-delay: 0.2s; }
+.stardust-spark.s-2 { top: 35%; left: 82%; width: 5px; height: 5px; animation-delay: 1.5s; }
+.stardust-spark.s-3 { top: 70%; left: 22%; width: 3px; height: 3px; animation-delay: 2.8s; }
+.stardust-spark.s-4 { top: 80%; left: 75%; width: 4px; height: 4px; animation-delay: 0.9s; }
+.stardust-spark.s-5 { top: 15%; left: 70%; width: 6px; height: 6px; animation-delay: 2.1s; }
+.stardust-spark.s-6 { top: 50%; left: 12%; width: 3px; height: 3px; animation-delay: 3.5s; }
+.stardust-spark.s-7 { top: 62%; left: 88%; width: 4px; height: 4px; animation-delay: 1.1s; }
+.stardust-spark.s-8 { top: 28%; left: 30%; width: 5px; height: 5px; animation-delay: 4.2s; }
+.stardust-spark.s-9 { top: 85%; left: 45%; width: 3px; height: 3px; animation-delay: 2.6s; }
+.stardust-spark.s-10 { top: 12%; left: 40%; width: 4px; height: 4px; animation-delay: 3.8s; }
+.stardust-spark.s-11 { top: 44%; left: 86%; width: 5px; height: 5px; animation-delay: 0.7s; }
+.stardust-spark.s-12 { top: 76%; left: 32%; width: 4px; height: 4px; animation-delay: 4.9s; }
+
+@keyframes stardust-float {
+    0% { transform: translateY(15px) scale(0.6); opacity: 0; }
+    50% { transform: translateY(-20px) scale(1.3); opacity: 0.95; }
+    100% { transform: translateY(-50px) scale(0.4); opacity: 0; }
+}
+
+/* Flash on fast warp */
+.devotional-portal-flash {
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(circle at center, rgba(255, 255, 255, 1) 0%, rgba(254, 240, 138, 0.95) 30%, rgba(245, 158, 11, 0.8) 60%, transparent 95%);
+    opacity: 0;
+    transform: scale(0.6);
+    pointer-events: none;
+    z-index: 10;
+}
+
+/* Central Sanctuary Wrap */
+.devotional-sanctuary-wrap {
+    position: relative;
+    z-index: 5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100%;
+    max-width: 900px;
+    height: 100%;
+    max-height: 100dvh;
+    padding: clamp(14px, 2.5vh, 28px) 20px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* Top Header */
+.devotional-top-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.devotional-om-emblem {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    font-size: 1.15rem;
+}
+
+.om-sacred-symbol {
+    font-size: 2.1rem;
+    font-weight: 700;
+    line-height: 1;
+    background: linear-gradient(135deg, #FFFBEB 0%, #FDE047 35%, #F59E0B 70%, #D97706 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 0 12px rgba(245, 158, 11, 0.75));
+    animation: om-shimmer 3s ease-in-out infinite alternate;
+}
+
+@keyframes om-shimmer {
+    from { filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.6)); transform: scale(1); }
+    to { filter: drop-shadow(0 0 22px rgba(254, 240, 138, 0.95)) drop-shadow(0 0 35px rgba(245, 158, 11, 0.7)); transform: scale(1.04); }
+}
+
+.om-deepam {
+    font-size: 1.2rem;
+    filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.8));
+    animation: deepam-flicker 2.5s infinite alternate ease-in-out;
+}
+
+@keyframes deepam-flicker {
+    0% { transform: scale(0.96) rotate(-2deg); opacity: 0.9; }
+    50% { transform: scale(1.08) rotate(3deg); opacity: 1; }
+    100% { transform: scale(1) rotate(0deg); opacity: 0.95; }
+}
+
+.devotional-sanskrit-mantra {
+    font-family: 'Suranna', 'Gautami', 'Mandali', var(--font-telugu), serif;
+    font-size: clamp(1.08rem, 2.5vw, 1.48rem);
+    font-weight: 500;
+    line-height: 1.4;
+    letter-spacing: 1.2px;
+    color: #FEF08A;
+    background: linear-gradient(135deg, #FFFDF0 0%, #FEF08A 28%, #F59E0B 68%, #FDE047 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.85)) drop-shadow(0 0 12px rgba(245, 158, 11, 0.4));
+    transition: transform 0.4s ease, filter 0.4s ease;
+}
+
+.devotional-crest-line {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 2px;
+}
+
+.devotional-crest-line .c-line {
+    width: clamp(35px, 8vw, 70px);
+    height: 1px;
+    background: linear-gradient(90deg, transparent, #F59E0B, transparent);
+}
+
+.devotional-crest-line .c-gem {
+    font-size: 0.76rem;
+    color: #FDE047;
+}
+
+/* Centerpiece: The Animated Sacred Sri Chakra */
+.sri-chakra-container {
+    position: relative;
+    width: clamp(250px, 42vh, 380px);
+    height: clamp(250px, 42vh, 380px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border-radius: 50%;
+    outline: none;
+    margin: 6px 0;
+}
+
+/* Pulsing Ripple Rings */
+.chakra-ripple-ring {
+    position: absolute;
+    inset: -12%;
+    border-radius: 50%;
+    border: 1px solid rgba(254, 240, 138, 0.35);
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.25), inset 0 0 15px rgba(254, 240, 138, 0.15);
+    opacity: 0;
+    pointer-events: none;
+    animation: chakra-ripple 3.6s cubic-bezier(0.1, 0.7, 0.3, 1) infinite;
+}
+
+.chakra-ripple-ring.ring-2 {
+    animation-delay: 1.2s;
+}
+
+.chakra-ripple-ring.ring-3 {
+    animation-delay: 2.4s;
+}
+
+@keyframes chakra-ripple {
+    0% { transform: scale(0.85); opacity: 0; }
+    30% { opacity: 0.8; }
+    100% { transform: scale(1.35); opacity: 0; }
+}
+
+.sri-chakra-stage {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0 0 25px rgba(245, 158, 11, 0.55)) drop-shadow(0 0 55px rgba(254, 240, 138, 0.28));
+    transition: transform 0.4s ease, filter 0.4s ease;
+    transform-origin: center center;
+    will-change: transform, opacity;
+}
+
+.sri-chakra-container:hover .sri-chakra-stage {
+    filter: drop-shadow(0 0 35px rgba(245, 158, 11, 0.85)) drop-shadow(0 0 75px rgba(254, 240, 138, 0.5));
+}
+
+.sri-chakra-svg {
+    width: 100%;
+    height: 100%;
+    display: block;
+    overflow: visible;
+}
+
+/* Individual Lotus & Sacred Geometry Animations */
+.sri-chakra-svg .chakra-lotus-16 {
+    transform-origin: 300px 300px;
+    animation: chakra-lotus-16-spin 80s linear infinite;
+}
+
+.sri-chakra-svg .chakra-lotus-8 {
+    transform-origin: 300px 300px;
+    animation: chakra-lotus-8-spin 55s linear infinite;
+}
+
+.sri-chakra-svg .chakra-bhupura-group {
+    transform-origin: 300px 300px;
+    animation: chakra-bhupura-pulse 6s ease-in-out infinite alternate;
+}
+
+.sri-chakra-svg .chakra-navayoni-triangles {
+    transform-origin: 300px 300px;
+    animation: chakra-triangles-glow 4s ease-in-out infinite alternate;
+}
+
+.sri-chakra-svg .chakra-bindu-group {
+    transform-origin: 300px 300px;
+    animation: chakra-bindu-blaze 2.8s ease-in-out infinite alternate;
+}
+
+@keyframes chakra-lotus-16-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+@keyframes chakra-lotus-8-spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(-360deg); }
+}
+
+@keyframes chakra-bhupura-pulse {
+    0% { transform: scale(1); filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.3)); }
+    100% { transform: scale(1.015); filter: drop-shadow(0 0 20px rgba(254, 240, 138, 0.65)); }
+}
+
+@keyframes chakra-triangles-glow {
+    0% { filter: drop-shadow(0 0 5px rgba(245, 158, 11, 0.4)); opacity: 0.95; }
+    100% { filter: drop-shadow(0 0 22px rgba(254, 240, 138, 0.95)) drop-shadow(0 0 35px rgba(245, 158, 11, 0.65)); opacity: 1; }
+}
+
+@keyframes chakra-bindu-blaze {
+    0% { transform: scale(0.92); filter: drop-shadow(0 0 10px rgba(255, 255, 255, 0.6)); }
+    100% { transform: scale(1.18); filter: drop-shadow(0 0 25px rgba(255, 255, 255, 1)) drop-shadow(0 0 45px rgba(254, 240, 138, 0.9)); }
+}
+
+/* Heartfelt Wedding Invitation Text */
+.devotional-invitation-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 6px;
+    width: 100%;
+}
+
+.devotional-invitation-tag {
+    font-family: var(--font-royal-title);
+    font-size: clamp(0.85rem, 1.8vw, 1.05rem);
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: #FDE047;
+    background: rgba(245, 158, 11, 0.14);
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    padding: 4px 18px;
+    border-radius: 999px;
+    box-shadow: 0 2px 10px rgba(180, 83, 9, 0.2);
+}
+
+.devotional-couple-title {
+    font-family: var(--font-royal-title);
+    font-size: clamp(1.45rem, 4.2vw, 2.35rem);
+    font-weight: 700;
+    margin: 4px 0 2px;
+    line-height: 1.25;
+    background: linear-gradient(135deg, #FFFFFF 0%, #FEF08A 25%, #F59E0B 65%, #FDE047 85%, #D97706 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 12px rgba(245, 158, 11, 0.35));
+    letter-spacing: 0.5px;
+}
+
+.couple-amp {
+    font-family: 'Cinzel Decorative', serif;
+    font-size: 0.9em;
+    color: #F59E0B;
+    -webkit-text-fill-color: #F59E0B;
+}
+
+.devotional-sacred-quote {
+    font-family: var(--font-telugu), var(--font-ui);
+    font-size: clamp(0.82rem, 1.8vw, 0.96rem);
+    color: rgba(254, 249, 195, 0.85);
+    margin: 0;
+    line-height: 1.45;
+}
+
+/* Interactive Enter Button */
+.devotional-enter-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 8px;
+    padding: clamp(10px, 1.8vh, 14px) clamp(22px, 4vw, 36px);
+    border-radius: 999px;
+    background: linear-gradient(135deg, #FFE082 0%, #D97706 45%, #F59E0B 75%, #78350F 100%);
+    border: 1.5px solid rgba(255, 255, 255, 0.65);
+    color: #451A03;
+    font-family: var(--font-ui);
+    font-size: clamp(0.92rem, 2vw, 1.05rem);
+    font-weight: 800;
+    cursor: pointer;
+    box-shadow: 
+        0 8px 24px rgba(0, 0, 0, 0.4),
+        0 0 25px rgba(245, 158, 11, 0.65),
+        0 0 45px rgba(254, 240, 138, 0.35);
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+    overflow: hidden;
+}
+
+.devotional-enter-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 
+        0 12px 30px rgba(0, 0, 0, 0.5),
+        0 0 35px rgba(245, 158, 11, 0.9),
+        0 0 65px rgba(254, 240, 138, 0.6);
+}
+
+.devotional-enter-btn:active {
+    transform: scale(0.98);
+}
+
+.enter-btn-music-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 3px;
+    background: rgba(69, 26, 3, 0.25);
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 0.74rem;
+    font-weight: 700;
+    color: #78350F;
+    border: 1px solid rgba(120, 53, 15, 0.3);
+}
+
+.devotional-tap-hint {
+    font-size: 0.78rem;
+    color: rgba(254, 240, 138, 0.7);
+    margin-top: 2px;
+    letter-spacing: 0.5px;
+    animation: tap-hint-breathe 2.4s infinite alternate ease-in-out;
+}
+
+@keyframes tap-hint-breathe {
+    from { opacity: 0.55; }
+    to { opacity: 0.95; }
+}
+
+/* Simple Clean Devotional Earphone Note */
+.devotional-earphone-simple-note {
+    font-family: var(--font-ui);
+    font-size: clamp(0.72rem, 1.5vw, 0.82rem);
+    color: rgba(254, 240, 138, 0.65);
+    margin-top: 4px;
+    letter-spacing: 0.4px;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+}
+
+/* ==========================================================================
+   LIGHT THEME: INITIAL EARPHONE-TO-DEVICE PLUGGING ANIMATION MODAL
+   ========================================================================== */
+.earphone-plug-modal-overlay {
+    position: absolute;
+    inset: 0;
+    z-index: 60;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: radial-gradient(circle at center, rgba(35, 20, 10, 0.45) 0%, rgba(15, 8, 4, 0.72) 100%);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 0.45s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.45s ease, transform 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+    pointer-events: auto;
+    padding: 16px;
+    box-sizing: border-box;
+}
+
+.earphone-plug-modal-overlay.notice-dismissed {
+    opacity: 0;
+    visibility: hidden;
+    transform: scale(0.94);
+    pointer-events: none;
+}
+
+.earphone-plug-card {
+    position: relative;
+    width: 100%;
+    max-width: 360px;
+    background: linear-gradient(155deg, rgba(255, 253, 248, 0.98) 0%, rgba(254, 248, 238, 0.96) 50%, rgba(255, 244, 228, 0.98) 100%);
+    border: 1.5px solid rgba(217, 119, 6, 0.45);
+    border-radius: 22px;
+    box-shadow: 
+        0 20px 50px rgba(78, 30, 8, 0.22),
+        0 0 35px rgba(245, 158, 11, 0.2),
+        inset 0 1px 0 rgba(255, 255, 255, 0.9);
+    padding: clamp(16px, 2.8vh, 22px) clamp(16px, 3vw, 24px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 12px;
+    animation: ep-card-enter 0.5s cubic-bezier(0.16, 1, 0.3, 1) both;
+}
+
+@keyframes ep-card-enter {
+    from {
+        opacity: 0;
+        transform: translateY(18px) scale(0.92);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+/* Earphone Animation Stage */
+.earphone-anim-stage {
+    width: 100%;
+    max-width: 210px;
+    height: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0 4px 14px rgba(180, 83, 9, 0.25));
+    margin-top: 2px;
+}
+
+.earphone-plug-svg {
+    width: 100%;
+    height: auto;
+    max-height: 160px;
+    display: block;
+    overflow: visible;
+}
+
+/* 1. Jack Up-Down Plugging Motion */
+.earphone-plug-svg .ep-jack-group {
+    transform-origin: 120px 145px;
+    animation: ep-plug-motion 3.2s cubic-bezier(0.45, 0.05, 0.55, 0.95) infinite;
+}
+
+@keyframes ep-plug-motion {
+    0%, 15% {
+        transform: translateY(22px);
+    }
+    30%, 82% {
+        transform: translateY(0);
+    }
+    94%, 100% {
+        transform: translateY(22px);
+    }
+}
+
+/* 2. Connection Pulse Flash at the Audio Port */
+.earphone-plug-svg .ep-plug-pulse-ring {
+    transform-origin: 120px 129px;
+    animation: ep-port-flash 3.2s ease-out infinite;
+}
+
+@keyframes ep-port-flash {
+    0%, 28% {
+        opacity: 0;
+        transform: scale(0.2);
+    }
+    31% {
+        opacity: 1;
+        transform: scale(0.8);
+    }
+    42% {
+        opacity: 0;
+        transform: scale(2.2);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(2.2);
+    }
+}
+
+/* 3. Screen Equalizer Bars Dance (Active when connected) */
+.earphone-plug-svg .ep-equalizer-bars {
+    transform-origin: 120px 100px;
+}
+
+.earphone-plug-svg .ep-bar {
+    transform-origin: bottom;
+    animation: ep-bar-bounce 3.2s ease-in-out infinite;
+}
+
+.earphone-plug-svg .ep-bar-1 { animation-delay: 0.05s; }
+.earphone-plug-svg .ep-bar-2 { animation-delay: 0.15s; }
+.earphone-plug-svg .ep-bar-3 { animation-delay: 0.25s; }
+.earphone-plug-svg .ep-bar-4 { animation-delay: 0.10s; }
+.earphone-plug-svg .ep-bar-5 { animation-delay: 0.20s; }
+.earphone-plug-svg .ep-bar-6 { animation-delay: 0.30s; }
+.earphone-plug-svg .ep-bar-7 { animation-delay: 0.12s; }
+
+@keyframes ep-bar-bounce {
+    0%, 28% {
+        transform: scaleY(0.18);
+        opacity: 0.4;
+    }
+    34%, 80% {
+        transform: scaleY(1);
+        opacity: 1;
+    }
+    40%, 60% {
+        transform: scaleY(0.5);
+    }
+    50%, 72% {
+        transform: scaleY(1.15);
+    }
+    92%, 100% {
+        transform: scaleY(0.18);
+        opacity: 0.4;
+    }
+}
+
+/* 4. Sound Arcs radiating from earbuds */
+.earphone-plug-svg .ep-sound-arcs-left .ep-arc,
+.earphone-plug-svg .ep-sound-arcs-right .ep-arc {
+    animation: ep-arc-wave 3.2s ease-out infinite;
+}
+
+.earphone-plug-svg .ep-arc-1 { animation-delay: 0.35s; }
+.earphone-plug-svg .ep-arc-2 { animation-delay: 0.48s; }
+.earphone-plug-svg .ep-arc-3 { animation-delay: 0.62s; }
+
+@keyframes ep-arc-wave {
+    0%, 30% {
+        opacity: 0;
+        transform: scale(0.7);
+    }
+    36% {
+        opacity: 0.95;
+    }
+    60% {
+        opacity: 0.85;
+    }
+    82% {
+        opacity: 0.4;
+    }
+    90%, 100% {
+        opacity: 0;
+        transform: scale(1.1);
+    }
+}
+
+/* 5. Ambient Glow */
+.earphone-plug-svg .ep-ambient-glow {
+    animation: ep-ambient-pulse 3.2s ease-in-out infinite;
+}
+
+@keyframes ep-ambient-pulse {
+    0%, 28% {
+        opacity: 0.15;
+        transform: scale(0.9);
+    }
+    35%, 80% {
+        opacity: 0.85;
+        transform: scale(1.08);
+    }
+    92%, 100% {
+        opacity: 0.15;
+        transform: scale(0.9);
+    }
+}
+
+/* Text Content - Light Theme Rich Mahogany & Gold */
+.earphone-plug-text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.earphone-plug-title {
+    font-family: var(--font-telugu), var(--font-ui), sans-serif;
+    font-size: clamp(0.92rem, 2.2vw, 1.04rem);
+    font-weight: 700;
+    line-height: 1.35;
+    margin: 0;
+    color: #78350F;
+    background: linear-gradient(135deg, #78350F 0%, #B45309 50%, #92400E 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 1px 1px rgba(255, 255, 255, 0.7));
+}
+
+.earphone-plug-sub {
+    font-family: var(--font-telugu), var(--font-ui), sans-serif;
+    font-size: clamp(0.74rem, 1.6vw, 0.84rem);
+    color: #92400E;
+    margin: 0;
+    line-height: 1.3;
+    font-weight: 500;
+}
+
+/* OK Button - Radiant Royal Gold Pill */
+.earphone-plug-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    padding: 10px 32px;
+    min-width: 140px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 45%, #B45309 100%);
+    border: 1.5px solid rgba(255, 255, 255, 0.85);
+    color: #FFFFFF;
+    font-family: var(--font-ui), sans-serif;
+    font-size: 1rem;
+    font-weight: 800;
+    letter-spacing: 0.5px;
+    cursor: pointer;
+    box-shadow: 
+        0 6px 18px rgba(180, 83, 9, 0.35),
+        0 0 20px rgba(245, 158, 11, 0.4);
+    text-shadow: 0 1px 2px rgba(69, 26, 3, 0.5);
+    transition: transform 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.25s ease;
+    overflow: hidden;
+    margin-top: 2px;
+}
+
+.earphone-plug-btn:hover {
+    transform: scale(1.05);
+    box-shadow: 
+        0 8px 24px rgba(180, 83, 9, 0.45),
+        0 0 28px rgba(245, 158, 11, 0.65);
+}
+
+.earphone-plug-btn:active {
+    transform: scale(0.97);
+}
+
+.earphone-plug-btn .ep-btn-diya {
+    font-size: 1.05rem;
+    filter: drop-shadow(0 0 4px rgba(245, 158, 11, 0.8));
+}
+
+@media (max-height: 640px) {
+    .earphone-plug-card {
+        padding: 10px 14px;
+        gap: 8px;
+        max-width: 320px;
+    }
+    .earphone-anim-stage {
+        max-width: 170px;
+    }
+    .earphone-plug-svg {
+        max-height: 125px;
+    }
+    .earphone-plug-btn {
+        padding: 7px 24px;
+        font-size: 0.92rem;
+    }
+}
+
+/* ==========================================================================
+   GUIDED HAND CLICKING ANIMATION ON SRI CHAKRA (ACTIVATES AFTER 5 SECONDS)
+   ========================================================================== */
+.sri-chakra-hand-tap-hint {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 20;
+    pointer-events: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.8s ease;
+}
+
+.sri-chakra-hand-tap-hint.hand-hint-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.hand-tap-icon-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: hand-tap-gesture 2s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+    transform-origin: center center;
+}
+
+@keyframes hand-tap-gesture {
+    0%, 100% {
+        transform: translateY(0) scale(1);
+    }
+    20% {
+        transform: translateY(-10px) scale(1.08);
+    }
+    45% {
+        transform: translateY(6px) scale(0.88);
+    }
+    55% {
+        transform: translateY(6px) scale(0.88);
+    }
+    75% {
+        transform: translateY(-3px) scale(1.02);
+    }
+}
+
+.hand-tap-svg {
+    display: block;
+    overflow: visible;
+}
+
+.hand-touch-spark {
+    transform-origin: 36px 14px;
+    animation: touch-spark-burst 2s ease-out infinite;
+}
+
+@keyframes touch-spark-burst {
+    0%, 42% {
+        opacity: 0;
+        transform: scale(0.3);
+    }
+    48% {
+        opacity: 1;
+        transform: scale(1.1);
+    }
+    68% {
+        opacity: 0;
+        transform: scale(2.8);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(2.8);
+    }
+}
+
+.hand-tap-beacon-pulse {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(254, 240, 138, 0.6) 0%, rgba(245, 158, 11, 0.2) 50%, transparent 75%);
+    animation: hand-beacon-pulse 2s ease-out infinite;
+    pointer-events: none;
+}
+
+@keyframes hand-beacon-pulse {
+    0%, 40% {
+        opacity: 0;
+        transform: scale(0.4);
+    }
+    50% {
+        opacity: 0.9;
+        transform: scale(1);
+    }
+    75% {
+        opacity: 0;
+        transform: scale(2.2);
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+.hand-tap-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 5px 16px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, rgba(28, 18, 10, 0.88) 0%, rgba(15, 10, 6, 0.94) 100%);
+    border: 1px solid rgba(245, 158, 11, 0.65);
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6), 0 0 15px rgba(245, 158, 11, 0.35);
+    color: #FEF08A;
+    font-family: var(--font-telugu), var(--font-ui), sans-serif;
+    font-size: clamp(0.78rem, 1.8vw, 0.88rem);
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    white-space: nowrap;
+    animation: tap-badge-glow 2s infinite alternate ease-in-out;
+}
+
+@keyframes tap-badge-glow {
+    from {
+        box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6), 0 0 12px rgba(245, 158, 11, 0.3);
+        transform: scale(0.98);
+    }
+    to {
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.7), 0 0 22px rgba(254, 240, 138, 0.7);
+        transform: scale(1.03);
+    }
+}
+
+.tap-badge-spark {
+    color: #FDE047;
+    font-size: 0.75rem;
+}
+
+/* ==========================================================================
+   WARP ACTION: FAST ROTATE & HYPER-ZOOM INTO APPLICATION FLOW
+   ========================================================================== */
+#devotional-landing-portal.portal-fast-zooming {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1.35s cubic-bezier(0.6, 0, 0.2, 1);
+}
+
+#devotional-landing-portal.portal-fast-zooming .sri-chakra-stage {
+    transform-origin: center center;
+    animation: chakra-hyper-warp 1.35s cubic-bezier(0.7, 0, 0.15, 1) forwards !important;
+}
+
+@keyframes chakra-hyper-warp {
+    0% {
+        transform: scale(1) rotate(0deg);
+        opacity: 1;
+        filter: drop-shadow(0 0 30px rgba(245, 158, 11, 0.6));
+    }
+    30% {
+        transform: scale(1.18) rotate(240deg);
+        opacity: 1;
+        filter: drop-shadow(0 0 70px rgba(254, 240, 138, 0.95)) drop-shadow(0 0 140px rgba(245, 158, 11, 0.85));
+    }
+    70% {
+        transform: scale(8) rotate(960deg);
+        opacity: 0.9;
+        filter: drop-shadow(0 0 150px rgba(255, 255, 255, 1));
+    }
+    100% {
+        transform: scale(28) rotate(1440deg);
+        opacity: 0;
+        filter: brightness(2.5) drop-shadow(0 0 220px rgba(255, 255, 255, 1));
+    }
+}
+
+#devotional-landing-portal.portal-fast-zooming .devotional-portal-flash {
+    opacity: 1;
+    transform: scale(1.8);
+    transition: opacity 0.5s cubic-bezier(0.2, 0.8, 0.2, 1), transform 0.9s cubic-bezier(0.2, 0.8, 0.2, 1);
+}
+
+#devotional-landing-portal.portal-fast-zooming .devotional-top-header,
+#devotional-landing-portal.portal-fast-zooming .devotional-invitation-text {
+    opacity: 0;
+    transform: scale(0.92) translateY(24px);
+    filter: blur(4px);
+    transition: opacity 0.55s ease, transform 0.55s ease, filter 0.55s ease;
+}
+
+/* HUD Reopen Sri Chakra Button */
+.sri-chakra-pill {
+    background: rgba(245, 158, 11, 0.15) !important;
+    border: 1px solid rgba(245, 158, 11, 0.45) !important;
+    padding: 4px 10px !important;
+    gap: 4px;
+}
+
+.sri-chakra-pill:hover {
+    background: rgba(245, 158, 11, 0.3) !important;
+    transform: scale(1.05);
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+    .sri-chakra-container {
+        width: clamp(230px, 36vh, 280px);
+        height: clamp(230px, 36vh, 280px);
+        margin: 4px 0;
+    }
+    .devotional-couple-title {
+        font-size: clamp(1.35rem, 5.5vw, 1.75rem);
+    }
+    .devotional-enter-btn {
+        padding: 9px 20px;
+        font-size: 0.92rem;
+    }
+    .devotional-sanctuary-wrap {
+        padding: 12px 14px;
+    }
+}
+
+@media (max-height: 680px) {
+    .sri-chakra-container {
+        width: clamp(190px, 32vh, 240px);
+        height: clamp(190px, 32vh, 240px);
+    }
+    .devotional-sanctuary-wrap {
+        padding: 8px 12px;
+    }
+    .devotional-couple-title {
+        font-size: 1.35rem;
+    }
+    .devotional-enter-btn {
+        margin-top: 4px;
+        padding: 8px 18px;
+    }
+}
+
+/* ==========================================================================
+   ANIMATED SACRED DIYA LAMPS BESIDE ॐ & HIGHLIGHTED WEDDING INVITATION
+   ========================================================================== */
+.animated-sacred-diya {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    filter: drop-shadow(0 0 10px rgba(245, 158, 11, 0.75)) drop-shadow(0 0 20px rgba(254, 240, 138, 0.45));
+    transition: transform 0.3s ease;
+}
+
+.animated-sacred-diya.diya-left {
+    transform: scaleX(1);
+}
+
+.animated-sacred-diya.diya-right {
+    transform: scaleX(-1); /* Perfectly mirrored symmetric diya */
+}
+
+.diya-svg {
+    display: block;
+    overflow: visible;
+}
+
+.diya-flame-wrapper {
+    transform-origin: 27px 22px;
+    animation: diya-flame-flicker 1.6s infinite ease-in-out;
+}
+
+.diya-right .diya-flame-wrapper {
+    animation-delay: -0.85s; /* Phase offset for lifelike organic rhythm */
+}
+
+@keyframes diya-flame-flicker {
+    0% {
+        transform: scale(1) rotate(0deg);
+        filter: drop-shadow(0 0 6px #F59E0B) brightness(1);
+    }
+    25% {
+        transform: scale(1.08, 0.94) rotate(-3.5deg);
+        filter: drop-shadow(0 0 12px #FEF08A) brightness(1.15);
+    }
+    50% {
+        transform: scale(0.96, 1.06) rotate(2.5deg);
+        filter: drop-shadow(0 0 8px #F59E0B) brightness(1.05);
+    }
+    75% {
+        transform: scale(1.05, 0.98) rotate(-1.5deg);
+        filter: drop-shadow(0 0 14px #FDE047) brightness(1.2);
+    }
+    100% {
+        transform: scale(1) rotate(0deg);
+        filter: drop-shadow(0 0 6px #F59E0B) brightness(1);
+    }
+}
+
+.diya-flame-inner {
+    animation: diya-inner-pulse 1.2s infinite alternate ease-in-out;
+}
+
+@keyframes diya-inner-pulse {
+    from { opacity: 0.85; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1.1); }
+}
+
+/* Highlighted Royal Wedding Invitation Title */
+.devotional-invitation-highlight-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 3px;
+    margin: 4px 0 2px;
+    width: 100%;
+}
+
+.inv-crest-flourish {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 2px;
+}
+
+.inv-crest-line {
+    width: clamp(35px, 8vw, 65px);
+    height: 1.5px;
+    background: linear-gradient(90deg, transparent, #F59E0B, transparent);
+}
+
+.inv-crest-gem {
+    font-size: 0.82rem;
+    color: #FDE047;
+    filter: drop-shadow(0 0 8px rgba(245, 158, 11, 0.8));
+}
+
+.devotional-grand-invitation-title {
+    font-family: var(--font-royal-title);
+    font-size: clamp(1.35rem, 3.6vw, 2.25rem);
+    font-weight: 700;
+    letter-spacing: 1.6px;
+    line-height: 1.35;
+    margin: 4px 0 2px;
+    text-align: center;
+    background: linear-gradient(135deg, #FFFFFF 0%, #FFFBEB 22%, #FEF08A 48%, #F59E0B 78%, #D97706 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 16px rgba(245, 158, 11, 0.75)) drop-shadow(0 0 30px rgba(254, 240, 138, 0.5));
+    animation: invitation-title-glow 3s infinite alternate ease-in-out;
+    cursor: pointer;
+    transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.devotional-grand-invitation-title:hover {
+    transform: scale(1.02);
+    filter: drop-shadow(0 2px 22px rgba(245, 158, 11, 0.95)) drop-shadow(0 0 40px rgba(254, 240, 138, 0.75));
+}
+
+.devotional-invitation-text {
+    cursor: pointer;
+}
+
+@keyframes invitation-title-glow {
+    from {
+        filter: drop-shadow(0 2px 12px rgba(245, 158, 11, 0.5)) drop-shadow(0 0 20px rgba(254, 240, 138, 0.3));
+    }
+    to {
+        filter: drop-shadow(0 2px 18px rgba(245, 158, 11, 0.9)) drop-shadow(0 0 35px rgba(254, 240, 138, 0.65));
+    }
+}
+
+.devotional-invitation-sub-badge {
+    display: inline-block;
+    font-family: var(--font-royal-title);
+    font-size: clamp(0.72rem, 1.5vw, 0.88rem);
+    letter-spacing: 3px;
+    font-weight: 700;
+    color: #FDE047;
+    background: rgba(245, 158, 11, 0.16);
+    border: 1px solid rgba(245, 158, 11, 0.45);
+    padding: 3px 16px;
+    border-radius: 999px;
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.25);
+    margin-top: 2px;
+}
+
+.inv-glow-underline {
+    width: clamp(90px, 20vw, 160px);
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #FDE047, #F59E0B, #FDE047, transparent);
+    box-shadow: 0 0 10px rgba(245, 158, 11, 0.7);
+    margin-top: 4px;
+}
+
+/* ==========================================================================
+   SUBHA MUHURTHAM (SCENE 10) STREAMLINED HIGHLIGHTS (DAY, TIME & VENUE)
+   ========================================================================== */
+.pelli-simple-title {
+    margin: 8px 0 12px;
+    font-size: clamp(1.4rem, 2.6vw, 1.85rem) !important;
+}
+
+.pelli-simple-highlights {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 12px auto 4px;
+    width: 100%;
+    max-width: 380px;
+}
+
+.pelli-highlight-row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 10px 18px;
+    background: rgba(254, 240, 138, 0.08);
+    border: 1px solid rgba(245, 158, 11, 0.4);
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    text-align: center !important;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.25);
+}
+
+.pelli-highlight-row:hover {
+    background: rgba(254, 240, 138, 0.14);
+    border-color: rgba(254, 240, 138, 0.7);
+    transform: translateY(-1.5px);
+    box-shadow: 0 6px 18px rgba(245, 158, 11, 0.25);
+}
+
+.pelli-time-row {
+    background: rgba(245, 158, 11, 0.14);
+    border-color: rgba(254, 240, 138, 0.65);
+    box-shadow: 0 0 18px rgba(245, 158, 11, 0.2);
+}
+
+.pelli-hl-icon {
+    font-size: 1.35rem;
+    line-height: 1;
+    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.45));
+    flex-shrink: 0;
+}
+
+.pelli-hl-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2px;
+}
+
+.pelli-hl-label {
+    font-size: 0.72rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(254, 240, 138, 0.8);
+}
+
+.pelli-hl-val {
+    font-size: clamp(0.94rem, 1.8vw, 1.08rem);
+    font-weight: 700;
+    color: #FFFFFF;
+    letter-spacing: 0.3px;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
+}
+
+.pelli-time-row .pelli-hl-val {
+    color: #FEF08A;
+    font-weight: 800;
+    text-shadow: 0 0 12px rgba(254, 240, 138, 0.6);
+}
+
+
+/* ==========================================================================
+   GRAND RECEPTION SHOWCASE & LUXURY CARD
+   ========================================================================== */
+.reception-arch-frame {
+    background: linear-gradient(145deg, #FDE047 0%, #D97706 35%, #9333EA 70%, #4C1D95 100%) !important;
+    box-shadow: 0 24px 60px rgba(0, 0, 0, 0.75), 0 0 45px rgba(217, 119, 6, 0.45) !important;
+    border: 2px solid rgba(254, 240, 138, 0.55);
+}
+
+.card-reception {
+    background: linear-gradient(135deg, rgba(26, 16, 48, 0.94) 0%, rgba(15, 10, 30, 0.96) 100%) !important;
+    border: 1.5px solid rgba(254, 240, 138, 0.45) !important;
+    box-shadow: 0 24px 65px rgba(0, 0, 0, 0.8), 0 0 35px rgba(245, 158, 11, 0.25) !important;
+    text-align: center;
+    position: relative;
+    overflow-y: auto;
+    overflow-x: hidden;
+    scrollbar-width: none;
+    max-height: calc(100dvh - 142px);
+    flex: 1 1 380px !important;
+    min-width: clamp(300px, 34vw, 420px) !important;
+    max-width: 480px !important;
+    padding: clamp(18px, 2.4vh, 24px) clamp(16px, 2.5vw, 22px) !important;
+    box-sizing: border-box;
+}
+
+.card-reception::-webkit-scrollbar {
+    display: none;
+}
+
+.reception-crown-badge {
+    margin-bottom: 6px;
+    display: flex;
+    justify-content: center;
+}
+
+.reception-badge-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.82rem !important;
+    padding: 5px 15px !important;
+    border-radius: 999px !important;
+    letter-spacing: 0.5px;
+}
+
+.reception-title-highlight-wrap {
+    position: relative;
+    margin: 4px 0 8px;
+    padding: 0 4px;
+}
+
+.reception-crest-ornament {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 3px;
+}
+
+.reception-grand-title {
+    font-family: var(--font-royal-title);
+    font-size: clamp(1.4rem, 2.8vw, 1.85rem) !important;
+    font-weight: 700;
+    line-height: 1.25;
+    margin: 4px 0 0;
+    background: linear-gradient(135deg, #FFFDF0 0%, #FDE047 35%, #F59E0B 75%, #D97706 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    letter-spacing: 0.5px;
+    filter: drop-shadow(0 2px 12px rgba(254, 240, 138, 0.4));
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+    white-space: normal !important;
+    text-wrap: balance;
+    text-align: center;
+    width: 100%;
+}
+
+.reception-title-glow-bar {
+    width: 90px;
+    height: 2px;
+    margin: 6px auto 0;
+    background: linear-gradient(90deg, transparent, #FDE047, transparent);
+    box-shadow: 0 0 10px #FDE047;
+}
+
+.reception-sub-line {
+    font-size: 0.88rem;
+    color: #E2E8F0;
+    margin: 4px auto 10px;
+}
+
+.reception-event-highlights {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 420px;
+    margin: 8px auto 0;
+    padding: 10px 18px;
+    background: rgba(22, 15, 38, 0.88);
+    border: 1.5px solid rgba(245, 158, 11, 0.45);
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 18px rgba(245, 158, 11, 0.16);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.reception-hl-item {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    width: 100%;
+}
+
+.reception-icon-badge {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(254, 240, 138, 0.22) 0%, rgba(245, 158, 11, 0.15) 100%);
+    border: 1.5px solid rgba(254, 240, 138, 0.65);
+    color: #FDE047;
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.3);
+}
+
+.reception-hl-text {
+    font-size: clamp(0.85rem, 1.6vw, 0.95rem);
+    font-weight: 600;
+    color: #FFFFFF;
+    letter-spacing: 0.2px;
+}
+
+.reception-hl-separator {
+    color: #FDE047;
+    font-size: 0.72rem;
+    opacity: 0.75;
+    line-height: 1;
+}
+
+.reception-celebration-pill {
+    margin-top: 10px !important;
+    padding: 7px 18px !important;
+    font-size: 0.84rem !important;
+}
+
+.reception-couple-photo {
+    object-position: 62% 20% !important;
+}
+
+/* ==========================================================================
+   FAMILY COMPLIMENTS SCREEN & SHOWER BLESSINGS
+   ========================================================================== */
+.family-lineage-emblem {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 4px 16px;
+    background: linear-gradient(135deg, rgba(254, 243, 199, 0.75) 0%, rgba(253, 230, 138, 0.5) 100%);
+    border: 1px solid rgba(217, 119, 6, 0.35);
+    border-radius: 999px;
+    margin-bottom: 2px;
+}
+
+body[data-theme-mode="dark"] .family-lineage-emblem {
+    background: rgba(254, 240, 138, 0.12);
+    border-color: rgba(254, 240, 138, 0.3);
+}
+
+.family-emblem-gem {
+    color: #D97706;
+    font-size: 0.65rem;
+}
+
+body[data-theme-mode="dark"] .family-emblem-gem {
+    color: #FDE047;
+}
+
+.family-emblem-text {
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: #78350F;
+    letter-spacing: 0.3px;
+}
+
+body[data-theme-mode="dark"] .family-emblem-text {
+    color: #FEF08A;
+}
+
+.family-sacred-shloka {
+    font-family: var(--font-royal-title);
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: #B45309;
+    letter-spacing: 0.5px;
+    font-style: italic;
+    margin: -2px 0 2px;
+}
+
+body[data-theme-mode="dark"] .family-sacred-shloka {
+    color: #FDE047;
+}
+
+.family-blessing-btn-wrap {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 4px;
+    max-width: 100%;
+}
+
+.family-blessing-btn {
+    margin-top: 0 !important;
+    padding: 9px clamp(12px, 3.5vw, 20px);
+    background: linear-gradient(135deg, #B45309 0%, #D97706 45%, #F59E0B 100%);
+    color: #FFFFFF;
+    font-family: var(--font-royal-title);
+    font-size: clamp(0.74rem, 2.6vw, 0.88rem);
+    font-weight: 700;
+    border: 1.5px solid rgba(255, 255, 255, 0.7);
+    border-radius: 999px;
+    cursor: pointer;
+    box-shadow: 0 8px 24px rgba(217, 119, 6, 0.35);
+    transition: transform 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.3);
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 480px) {
+    .family-blessing-btn-wrap {
+        width: 100%;
+        max-width: 100%;
+        display: flex;
+        justify-content: center;
+    }
+
+    .family-blessing-btn {
+        font-size: clamp(0.68rem, 2.7vw, 0.80rem);
+        padding: 8px clamp(10px, 3vw, 16px);
+        white-space: nowrap !important;
+        word-break: keep-all !important;
+        letter-spacing: -0.15px;
+        gap: 5px;
+        max-width: 100%;
+    }
+
+    .shower-hand-click-hint {
+        right: 4px;
+    }
+
+    .shower-hand-svg {
+        width: 38px;
+        height: 38px;
+    }
+}
+
+/* Guided Clicking Hand Icon on Shower Blessings Button */
+.shower-hand-click-hint {
+    position: absolute;
+    right: 12px;
+    top: 50%;
+    transform: translateY(-20%);
+    pointer-events: auto;
+    cursor: pointer;
+    z-index: 15;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s cubic-bezier(0.16, 1, 0.3, 1), visibility 0.5s ease;
+}
+
+.shower-hand-click-hint.shower-hand-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.shower-hand-beacon {
+    position: absolute;
+    top: 2px;
+    left: 14px;
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: radial-gradient(circle, rgba(254, 240, 138, 0.8) 0%, rgba(245, 158, 11, 0.35) 50%, transparent 75%);
+    animation: hand-beacon-pulse 1.8s ease-out infinite;
+    pointer-events: none;
+}
+
+.shower-hand-icon {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: hand-tap-gesture 1.8s cubic-bezier(0.25, 0.1, 0.25, 1) infinite;
+    transform-origin: 36px 14px;
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.35));
+}
+
+.family-blessing-btn:hover {
+    transform: scale(1.04) translateY(-2px);
+    box-shadow: 0 12px 32px rgba(217, 119, 6, 0.55);
+    background: linear-gradient(135deg, #92400E 0%, #B45309 45%, #D97706 100%);
+}
+
+.family-blessing-btn:active {
+    transform: scale(0.97);
+}
+
+/* Floating Shower Blessings Petals */
+.floating-blessing-petal {
+    position: fixed;
+    top: -30px;
+    z-index: 99999;
+    pointer-events: none;
+    user-select: none;
+    animation: blessing-petal-fall linear forwards;
+    filter: drop-shadow(0 2px 8px rgba(245, 158, 11, 0.45));
+}
+
+@keyframes blessing-petal-fall {
+    0% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+        opacity: 1;
+    }
+    85% {
+        opacity: 0.95;
+    }
+    100% {
+        transform: translate3d(var(--tx), 105vh, 0) rotate(var(--rot));
+        opacity: 0;
+    }
+}
+
+/* Blessing Toast Popup */
+.blessing-toast-popup {
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    transform: translateX(-50%) translateY(30px);
+    background: linear-gradient(135deg, rgba(255, 253, 245, 0.96) 0%, rgba(254, 243, 199, 0.98) 100%);
+    border: 2px solid rgba(217, 119, 6, 0.65);
+    border-radius: 999px;
+    padding: 12px 28px;
+    font-family: var(--font-royal-title);
+    font-size: 0.94rem;
+    font-weight: 700;
+    color: #92400E;
+    box-shadow: 0 16px 48px rgba(180, 83, 9, 0.35), 0 0 25px rgba(245, 158, 11, 0.35);
+    z-index: 100000;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.4s ease, transform 0.4s var(--ease-spring);
+    text-align: center;
+    max-width: 90vw;
+}
+
+body[data-theme-mode="dark"] .blessing-toast-popup {
+    background: linear-gradient(135deg, rgba(26, 16, 48, 0.97) 0%, rgba(15, 10, 30, 0.98) 100%);
+    border-color: rgba(254, 240, 138, 0.7);
+    color: #FEF08A;
+    box-shadow: 0 16px 48px rgba(0, 0, 0, 0.75), 0 0 25px rgba(254, 240, 138, 0.4);
+}
+
+.blessing-toast-popup.toast-active {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+}
+
+.reception-couple-photo {
+    object-position: 62% 20% !important;
+}
+
+
+/* Square Type Card for Reception */
+.card-reception-square {
+    max-width: 500px !important;
+    margin: 0 auto !important;
+    text-align: center;
+    padding: clamp(22px, 3vh, 32px) clamp(18px, 3vw, 28px) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.reception-square-photo-wrap {
+    width: clamp(150px, 28vw, 195px);
+    height: clamp(150px, 28vw, 195px);
+    border-radius: 50%;
+    margin: 6px auto 14px;
+    padding: 3.5px;
+    background: linear-gradient(135deg, #FFFDF0 0%, #FDE047 35%, #F59E0B 70%, #D97706 100%);
+    box-shadow: 0 14px 35px rgba(0, 0, 0, 0.7), 0 0 25px rgba(245, 158, 11, 0.35);
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reception-square-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: 62% 20%;
+    border-radius: 50%;
+    transition: transform 0.4s ease;
+}
+
+.reception-square-photo-wrap:hover .reception-square-photo {
+    transform: scale(1.06);
+}
+
+/* Language Typography Rules: Clean modern sans-serif for English, authentic Suranna for Telugu */
+/* English Royal Typography: Keep Playfair Display / Cormorant Garamond serif for grand ceremony headings across ALL screens */
+html[lang="en"] .luxury-title-lg,
+html[lang="en"] .couple-hero-grand-title,
+html[lang="en"] .reception-grand-title,
+html[lang="en"] .sangeet-grand-title,
+html[lang="en"] .venue-main-title,
+html[lang="en"] h1,
+html[lang="en"] h2 {
+    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+}
+
+/* Clean Modern Sans-Serif for Subtitles, Chips, Cards, Badges, Regards & Captions in English */
+html[lang="en"] .portal-title-en,
+html[lang="en"] .portal-ceremony-sub,
+html[lang="en"] .card-desc-lead,
+html[lang="en"] .family-footer-title,
+html[lang="en"] .family-footer-regards,
+html[lang="en"] .hero-caption-text,
+html[lang="en"] .dt-text,
+html[lang="en"] .sangeet-hl-text,
+html[lang="en"] .reception-hl-text,
+html[lang="en"] .highlight-chip-text {
+    font-family: 'Plus Jakarta Sans', 'Montserrat', -apple-system, sans-serif !important;
+}
+
+html[lang="te"] .luxury-title-lg,
+html[lang="te"] .couple-hero-grand-title,
+html[lang="te"] .family-footer-title,
+html[lang="te"] .family-footer-regards {
+    font-family: 'Suranna', 'Gautami', 'Mandali', serif !important;
+}
+
+/* ==========================================================================
+   CENTER ALIGNMENT ENHANCEMENTS FOR CEREMONY CARDS
+   (Sacred Muhurtham, Pellikoduku, Pellikuturu, and Subha Muhurtham)
+   ========================================================================== */
+#scene-muhurtham .card-crown-muhurtham {
+    text-align: center !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#scene-muhurtham .card-crown-muhurtham *,
+#scene-muhurtham .luxury-title-lg,
+#scene-muhurtham .muhurtham-datetime-highlight,
+#scene-muhurtham .muhurtham-countdown-status {
+    text-align: center !important;
+}
+
+.card-pellikoduku,
+.card-pellikuturu {
+    text-align: center !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-pellikoduku .pelli-grand-title,
+.card-pellikuturu .pellikuturu-grand-title,
+.card-pellikoduku .portal-title-en,
+.card-pellikuturu .portal-title-en,
+.card-pellikoduku .pelli-sub-line,
+.card-pellikuturu .pellikuturu-sub-line,
+.card-pellikoduku .portal-pill-highlight,
+.card-pellikuturu .portal-pill-highlight {
+    text-align: center !important;
+    width: 100%;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.card-pellikoduku .pelli-event-highlights,
+.card-pellikuturu .pellikuturu-event-highlights {
+    justify-content: center !important;
+    text-align: center !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+}
+
+.card-pellikoduku .pelli-hl-item,
+.card-pellikuturu .pellikuturu-hl-item {
+    justify-content: center !important;
+    text-align: center !important;
+}
+
+#scene-pelli .card-crown-muhurtham {
+    text-align: center !important;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#scene-pelli .pelli-simple-title,
+#scene-pelli .portal-crown-date,
+#scene-pelli .pelli-simple-highlights,
+#scene-pelli .pelli-highlight-row,
+#scene-pelli .pelli-hl-content {
+    text-align: center !important;
+    justify-content: center !important;
+    align-items: center !important;
+}
