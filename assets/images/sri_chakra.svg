@@ -1,0 +1,116 @@
+<svg viewBox="0 0 600 600" width="100%" height="100%" class="sri-chakra-svg" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+        <!-- Radiant Royal Gold Metallic Gradient -->
+        <linearGradient id="scGoldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" stop-color="#FFFBEB"/>
+            <stop offset="18%" stop-color="#FEF08A"/>
+            <stop offset="38%" stop-color="#F59E0B"/>
+            <stop offset="65%" stop-color="#D97706"/>
+            <stop offset="85%" stop-color="#FDE047"/>
+            <stop offset="100%" stop-color="#78350F"/>
+        </linearGradient>
+        <linearGradient id="scGoldShine" x1="100%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" stop-color="#FEF9C3"/>
+            <stop offset="45%" stop-color="#F59E0B"/>
+            <stop offset="70%" stop-color="#FDE047"/>
+            <stop offset="100%" stop-color="#92400E"/>
+        </linearGradient>
+        <radialGradient id="scBinduGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="#FFFFFF"/>
+            <stop offset="30%" stop-color="#FEF08A"/>
+            <stop offset="60%" stop-color="#F59E0B"/>
+            <stop offset="100%" stop-color="rgba(245, 158, 11, 0)"/>
+        </radialGradient>
+        <radialGradient id="scBackdropGlow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stop-color="rgba(254, 240, 138, 0.45)"/>
+            <stop offset="35%" stop-color="rgba(245, 158, 11, 0.22)"/>
+            <stop offset="70%" stop-color="rgba(180, 83, 9, 0.08)"/>
+            <stop offset="100%" stop-color="rgba(0, 0, 0, 0)"/>
+        </radialGradient>
+        <filter id="scDropGlow" x="-20%" y="-20%" width="140%" height="140%">
+            <feGaussianBlur stdDeviation="3" result="blur"/>
+            <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+        </filter>
+        <filter id="scIncandescentBloom" x="-40%" y="-40%" width="180%" height="180%">
+            <feGaussianBlur stdDeviation="7" result="blur2"/>
+            <feMerge>
+                <feMergeNode in="blur2"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+    </defs>
+    <!-- Background Divine Aura Glow -->
+    <circle cx="300" cy="300" r="280" fill="url(#scBackdropGlow)" class="chakra-ambient-aura" />
+    
+<g class="chakra-bhupura-group" stroke="url(#scGoldGrad)" fill="none">
+<path d="M 40.0,40.0 L 255.0,40.0 L 255.0,24.0 L 345.0,24.0 L 345.0,40.0 L 560.0,40.0 L 560.0,255.0 L 576.0,255.0 L 576.0,345.0 L 560.0,345.0 L 560.0,560.0 L 345.0,560.0 L 345.0,576.0 L 255.0,576.0 L 255.0,560.0 L 40.0,560.0 L 40.0,345.0 L 24.0,345.0 L 24.0,255.0 L 40.0,255.0 Z" stroke-width="2.2" opacity="0.95"/>
+<path d="M 54.0,54.0 L 262.0,54.0 L 262.0,41.0 L 338.0,41.0 L 338.0,54.0 L 546.0,54.0 L 546.0,262.0 L 559.0,262.0 L 559.0,338.0 L 546.0,338.0 L 546.0,546.0 L 338.0,546.0 L 338.0,559.0 L 262.0,559.0 L 262.0,546.0 L 54.0,546.0 L 54.0,338.0 L 41.0,338.0 L 41.0,262.0 L 54.0,262.0 Z" stroke-width="1.6" opacity="0.85"/>
+<path d="M 67.0,67.0 L 269.0,67.0 L 269.0,57.0 L 331.0,57.0 L 331.0,67.0 L 533.0,67.0 L 533.0,269.0 L 543.0,269.0 L 543.0,331.0 L 533.0,331.0 L 533.0,533.0 L 331.0,533.0 L 331.0,543.0 L 269.0,543.0 L 269.0,533.0 L 67.0,533.0 L 67.0,331.0 L 57.0,331.0 L 57.0,269.0 L 67.0,269.0 Z" stroke-width="2" opacity="0.9"/>
+</g>
+<g class="chakra-rings-group" stroke="url(#scGoldGrad)" fill="none">
+<circle cx="300" cy="300" r="216" stroke-width="2.5" />
+<circle cx="300" cy="300" r="208" stroke-width="1.2" stroke-dasharray="2,4" opacity="0.75" />
+<circle cx="300" cy="300" r="202" stroke-width="1.8" />
+</g>
+<g class="chakra-lotus-16" fill="rgba(245, 158, 11, 0.08)" stroke="url(#scGoldShine)" stroke-width="1.5">
+<path d="M 462.00,300.00 Q 491.57,311.30 498.12,339.41 Q 481.31,362.87 449.67,361.99 Z" />
+<path d="M 449.67,361.99 Q 472.66,383.75 467.96,412.23 Q 443.45,427.47 414.55,414.55 Z" />
+<path d="M 414.55,414.55 Q 427.47,443.45 412.23,467.96 Q 383.75,472.66 361.99,449.67 Z" />
+<path d="M 361.99,449.67 Q 362.87,481.31 339.41,498.12 Q 311.30,491.57 300.00,462.00 Z" />
+<path d="M 300.00,462.00 Q 288.70,491.57 260.59,498.12 Q 237.13,481.31 238.01,449.67 Z" />
+<path d="M 238.01,449.67 Q 216.25,472.66 187.77,467.96 Q 172.53,443.45 185.45,414.55 Z" />
+<path d="M 185.45,414.55 Q 156.55,427.47 132.04,412.23 Q 127.34,383.75 150.33,361.99 Z" />
+<path d="M 150.33,361.99 Q 118.69,362.87 101.88,339.41 Q 108.43,311.30 138.00,300.00 Z" />
+<path d="M 138.00,300.00 Q 108.43,288.70 101.88,260.59 Q 118.69,237.13 150.33,238.01 Z" />
+<path d="M 150.33,238.01 Q 127.34,216.25 132.04,187.77 Q 156.55,172.53 185.45,185.45 Z" />
+<path d="M 185.45,185.45 Q 172.53,156.55 187.77,132.04 Q 216.25,127.34 238.01,150.33 Z" />
+<path d="M 238.01,150.33 Q 237.13,118.69 260.59,101.88 Q 288.70,108.43 300.00,138.00 Z" />
+<path d="M 300.00,138.00 Q 311.30,108.43 339.41,101.88 Q 362.87,118.69 361.99,150.33 Z" />
+<path d="M 361.99,150.33 Q 383.75,127.34 412.23,132.04 Q 427.47,156.55 414.55,185.45 Z" />
+<path d="M 414.55,185.45 Q 443.45,172.53 467.96,187.77 Q 472.66,216.25 449.67,238.01 Z" />
+<path d="M 449.67,238.01 Q 481.31,237.13 498.12,260.59 Q 491.57,288.70 462.00,300.00 Z" />
+</g>
+<g class="chakra-intermediate-ring" stroke="url(#scGoldGrad)" fill="none">
+<circle cx="300" cy="300" r="162" stroke-width="1.8" />
+<circle cx="300" cy="300" r="156" stroke-width="1.2" stroke-dasharray="2,3" opacity="0.7" />
+<circle cx="300" cy="300" r="150" stroke-width="1.5" />
+</g>
+<g class="chakra-lotus-8" fill="rgba(254, 240, 138, 0.12)" stroke="url(#scGoldGrad)" stroke-width="1.8">
+<path d="M 405.32,343.63 Q 424.23,372.81 406.07,406.07 Q 372.81,424.23 343.63,405.32 Z" />
+<line x1="380.61" y1="380.61" x2="406.07" y2="406.07" stroke="url(#scGoldShine)" stroke-width="1" opacity="0.6"/>
+<path d="M 343.63,405.32 Q 336.36,439.33 300.00,450.00 Q 263.64,439.33 256.37,405.32 Z" />
+<line x1="300.00" y1="414.00" x2="300.00" y2="450.00" stroke="url(#scGoldShine)" stroke-width="1" opacity="0.6"/>
+<path d="M 256.37,405.32 Q 227.19,424.23 193.93,406.07 Q 175.77,372.81 194.68,343.63 Z" />
+<line x1="219.39" y1="380.61" x2="193.93" y2="406.07" stroke="url(#scGoldShine)" stroke-width="1" opacity="0.6"/>
+<path d="M 194.68,343.63 Q 160.67,336.36 150.00,300.00 Q 160.67,263.64 194.68,256.37 Z" />
+<line x1="186.00" y1="300.00" x2="150.00" y2="300.00" stroke="url(#scGoldShine)" stroke-width="1" opacity="0.6"/>
+<path d="M 194.68,256.37 Q 175.77,227.19 193.93,193.93 Q 227.19,175.77 256.37,194.68 Z" />
+<line x1="219.39" y1="219.39" x2="193.93" y2="193.93" stroke="url(#scGoldShine)" stroke-width="1" opacity="0.6"/>
+<path d="M 256.37,194.68 Q 263.64,160.67 300.00,150.00 Q 336.36,160.67 343.63,194.68 Z" />
+<line x1="300.00" y1="186.00" x2="300.00" y2="150.00" stroke="url(#scGoldShine)" stroke-width="1" opacity="0.6"/>
+<path d="M 343.63,194.68 Q 372.81,175.77 406.07,193.93 Q 424.23,227.19 405.32,256.37 Z" />
+<line x1="380.61" y1="219.39" x2="406.07" y2="193.93" stroke="url(#scGoldShine)" stroke-width="1" opacity="0.6"/>
+<path d="M 405.32,256.37 Q 439.33,263.64 450.00,300.00 Q 439.33,336.36 405.32,343.63 Z" />
+<line x1="414.00" y1="300.00" x2="450.00" y2="300.00" stroke="url(#scGoldShine)" stroke-width="1" opacity="0.6"/>
+</g>
+<circle cx="300" cy="300" r="114" stroke="url(#scGoldGrad)" stroke-width="2.2" fill="none" />
+<circle cx="300" cy="300" r="110" stroke="url(#scGoldGrad)" stroke-width="1" stroke-dasharray="2,3" fill="none" opacity="0.6" />
+<g class="chakra-navayoni-triangles" fill="rgba(245, 158, 11, 0.05)" stroke="url(#scGoldGrad)" stroke-width="1.8">
+<polygon points="300,396 196,224 404,224" stroke-width="2.2" fill="rgba(245, 158, 11, 0.04)" filter="url(#scDropGlow)"/>
+<polygon points="300,204 196,376 404,376" stroke-width="2.2" fill="rgba(245, 158, 11, 0.04)" filter="url(#scDropGlow)"/>
+<polygon points="300,372 212,248 388,248" stroke-width="1.6" fill="rgba(245, 158, 11, 0.04)" filter="url(#scDropGlow)"/>
+<polygon points="300,228 212,352 388,352" stroke-width="1.6" fill="rgba(245, 158, 11, 0.04)" filter="url(#scDropGlow)"/>
+<polygon points="300,348 232,268 368,268" stroke-width="1.6" fill="rgba(245, 158, 11, 0.04)" filter="url(#scDropGlow)"/>
+<polygon points="300,252 232,332 368,332" stroke-width="1.6" fill="rgba(245, 158, 11, 0.04)" filter="url(#scDropGlow)"/>
+<polygon points="300,332 250,280 350,280" stroke-width="1.6" fill="rgba(245, 158, 11, 0.04)" filter="url(#scDropGlow)"/>
+<polygon points="300,268 250,320 350,320" stroke-width="1.6" fill="rgba(245, 158, 11, 0.04)" filter="url(#scDropGlow)"/>
+<polygon points="300,316 272,292 328,292" stroke-width="2.2" fill="rgba(254, 240, 138, 0.16)" filter="url(#scDropGlow)"/>
+</g>
+<g class="chakra-bindu-group">
+<circle cx="300" cy="300" r="18" fill="url(#scBinduGlow)" opacity="0.85" filter="url(#scIncandescentBloom)"/>
+<circle cx="300" cy="300" r="8" fill="url(#scBinduGlow)" />
+<circle cx="300" cy="300" r="4.5" fill="#FFFFFF" stroke="#FEF08A" stroke-width="1.2" />
+<line x1="290" y1="300" x2="310" y2="300" stroke="#FFFFFF" stroke-width="1.2" opacity="0.9" />
+<line x1="300" y1="290" x2="300" y2="310" stroke="#FFFFFF" stroke-width="1.2" opacity="0.9" />
+</g>
+</svg>
