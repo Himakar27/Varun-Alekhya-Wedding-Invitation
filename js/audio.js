@@ -623,7 +623,7 @@ class RoyalWeddingSoundEngine {
         const muteBtn = document.getElementById('music-mute-btn');
         const waveBars = document.getElementById('music-wave-bars');
 
-        const lang = (window.weddingI18n && window.weddingI18n.currentLang) || 'te';
+        const lang = (window.weddingI18n && window.weddingI18n.currentLang) || 'en';
         const track = this.tracks[this.currentTrackId] || this.tracks.morning;
 
         if (titleEl) {
