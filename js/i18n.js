@@ -19,7 +19,7 @@ const translations = {
 
         // Devotional Sri Chakra Landing Portal
         landingMantra: "|| శ్రీరస్తు • శుభమస్తు • అవిఘ్నమస్తు ||",
-        landingTitle: "Varun &amp; Alekkhya's Wedding Invitation",
+        landingTitle: "Varun &amp; Alekhya's Wedding Invitation",
         landingTapHint: "✦ శ్రీ చక్రాన్ని స్పర్శించి ప్రారంభించండి ✦",
         earphoneSimpleNote: "🎧 ఉత్తమ శ్రవణానుభవం కోసం ఇయర్‌ఫోన్స్ ఉపయోగించండి",
         earphonePlugTitle: "🎧 ఉత్తమ అనుభవం కోసం ఇయర్‌ఫోన్స్ ప్లగ్ చేయండి",
@@ -276,7 +276,7 @@ const translations = {
         skyViewBtn: "Sky View",
 
         landingMantra: "|| Sri Rastu • Shubhamastu • Avighnamastu ||",
-        landingTitle: "Varun &amp; Alekkhya's Wedding Invitation",
+        landingTitle: "Varun &amp; Alekhya's Wedding Invitation",
         landingTapHint: "✦ Tap Sri Chakra to Begin ✦",
         earphoneSimpleNote: "🎧 Use earphones for better audio experience",
         earphonePlugTitle: "🎧 Please plug in earphones for best audio experience",
@@ -516,7 +516,7 @@ const translations = {
         skyViewBtn: "आकाश दर्शन",
 
         landingMantra: "|| श्रीरस्तु • शुभमस्तु • अविघ्नमस्तु ||",
-        landingTitle: "Varun &amp; Alekkhya's Wedding Invitation",
+        landingTitle: "Varun &amp; Alekhya's Wedding Invitation",
         landingTapHint: "✦ श्री चक्र को स्पर्श करके शुभारंभ करें ✦",
         earphoneSimpleNote: "🎧 सर्वोत्तम ऑडियो अनुभव के लिए इयरफ़ोन का उपयोग करें",
         earphonePlugTitle: "🎧 सर्वोत्तम ऑडियो अनुभव के लिए इयरफ़ोन लगाएं",
