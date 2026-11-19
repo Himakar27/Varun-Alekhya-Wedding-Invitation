@@ -975,12 +975,11 @@ body[data-theme-mode="dark"] .autoplay-pill:hover {
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
-    transform: translate3d(0, 32px, -60px) scale(0.93);
-    filter: blur(8px);
-    transition: opacity 0.65s cubic-bezier(0.16, 1, 0.3, 1),
-                transform 0.65s cubic-bezier(0.16, 1, 0.3, 1),
-                filter 0.65s cubic-bezier(0.16, 1, 0.3, 1),
+    transform: translate3d(0, 16px, 0) scale(0.985);
+    transition: opacity 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+                transform 0.65s cubic-bezier(0.22, 1, 0.36, 1),
                 visibility 0.65s;
+    will-change: opacity, transform;
     z-index: 1;
 }
 
@@ -989,7 +988,6 @@ body[data-theme-mode="dark"] .autoplay-pill:hover {
     pointer-events: auto;
     visibility: visible;
     transform: translate3d(0, 0, 0) scale(1);
-    filter: blur(0px);
     z-index: 10;
 }
 
@@ -997,8 +995,7 @@ body[data-theme-mode="dark"] .autoplay-pill:hover {
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
-    transform: translate3d(0, -32px, -60px) scale(0.93);
-    filter: blur(8px);
+    transform: translate3d(0, -16px, 0) scale(0.985);
     z-index: 5;
 }
 
@@ -1006,8 +1003,7 @@ body[data-theme-mode="dark"] .autoplay-pill:hover {
     opacity: 0;
     pointer-events: none;
     visibility: hidden;
-    transform: translate3d(0, 32px, -60px) scale(0.93);
-    filter: blur(8px);
+    transform: translate3d(0, 16px, 0) scale(0.985);
     z-index: 5;
 }
 
@@ -1398,10 +1394,13 @@ body[data-theme-mode="dark"] .blessing-star {
 @media (max-width: 860px) {
     .hero-diptych-container {
         flex-direction: column;
-        gap: 12px;
-        max-height: calc(100dvh - 142px);
+        gap: 10px;
+        max-height: calc(100dvh - 128px);
         overflow-y: auto;
         scrollbar-width: none;
+        justify-content: center;
+        align-items: center;
+        margin: auto;
     }
 }
 
@@ -1592,6 +1591,11 @@ body[data-theme-mode="dark"] .hero-caption-gem {
 
 /* Right Showcase: Luxury Glass Invitation Card */
 .hero-diptych-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
     flex: 1 1 380px;
     min-width: clamp(300px, 34vw, 420px);
     max-width: 480px;
@@ -2211,13 +2215,14 @@ body[data-theme-mode="dark"] .card-vratham {
 .vratham-view-bg-btn {
     display: inline-flex;
     align-items: center;
-    gap: 4px;
-    padding: 3px 10px;
+    gap: 5px;
+    padding: 4px 12px;
     border-radius: 999px;
-    background: rgba(254, 240, 138, 0.65);
-    border: 1px solid rgba(217, 119, 6, 0.40);
+    background: rgba(254, 240, 138, 0.85);
+    border: 1px solid rgba(180, 83, 9, 0.38);
     color: #78350F;
-    font-size: 0.72rem;
+    font-family: var(--font-ui);
+    font-size: 0.78rem;
     font-weight: 700;
     cursor: pointer;
     z-index: 10;
@@ -2261,8 +2266,8 @@ body[data-theme-mode="dark"] .card-vratham {
 
 .vratham-swamy-arch-wrap {
     position: relative;
-    width: 90px;
-    height: 102px;
+    width: 76px;
+    height: 96px;
     border-radius: 38px 38px 10px 10px;
     padding: 2.5px;
     background: linear-gradient(135deg, #FDE68A 0%, #D97706 50%, #92400E 100%);
@@ -2343,7 +2348,7 @@ body[data-theme-mode="dark"] .v-crest-gem {
 
 .vratham-grand-title {
     margin: 0 auto 1px;
-    font-size: clamp(1.35rem, 2.8vw, 2.1rem) !important;
+    font-size: clamp(1.35rem, 2.8vw, 1.65rem) !important;
     font-weight: 800 !important;
     line-height: 1.2;
     letter-spacing: 0.5px;
@@ -2412,7 +2417,7 @@ body[data-theme-mode="dark"] .vratham-sub-line {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    gap: 0px;
+    gap: 5px;
     width: 100%;
     max-width: 380px;
     margin: 4px auto 0;
@@ -2760,15 +2765,15 @@ body[data-theme-mode="dark"] .sangeet-hl-separator {
 
 @media (max-width: 860px) {
     .hero-royal-arch-frame {
-        width: 175px;
-        height: 220px;
-        border-radius: 95px 95px 18px 18px;
+        width: clamp(110px, 24vw, 138px);
+        height: clamp(130px, 17vh, 155px);
+        border-radius: 70px 70px 14px 14px;
     }
     .hero-royal-arch-photo {
-        border-radius: 91px 91px 14px 14px;
+        border-radius: 66px 66px 12px 12px;
     }
     .hero-royal-arch-filigree {
-        border-radius: 87px 87px 11px 11px;
+        border-radius: 62px 62px 9px 9px;
     }
 }
 
@@ -4745,7 +4750,12 @@ body[data-current-climate="sunset"] .family-celestial-overlap-bg {
 
 @media (max-width: 860px) {
     body[data-current-climate="sunset"] .family-nature-img {
-        object-position: center 18% !important;
+        object-position: center 22% !important;
+    }
+    #scene-family .family-luxury-card {
+        top: clamp(18px, 4.5vh, 38px) !important;
+        margin: 0 auto !important;
+        max-width: min(450px, 94%) !important;
     }
 }
 
@@ -6438,11 +6448,116 @@ body[data-theme-mode="dark"] .pellikuturu-grand-title {
     box-shadow: 0 0 18px rgba(245, 158, 11, 0.2);
 }
 
-.pelli-hl-icon {
-    font-size: 1.35rem;
-    line-height: 1;
-    filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.45));
+.card-crown-muhurtham.night-occasion-card .pelli-event-highlights {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    width: 100%;
+    max-width: 420px;
+    margin: 8px auto 0;
+    padding: 10px 18px;
+    background: rgba(22, 15, 38, 0.88);
+    border: 1.5px solid rgba(245, 158, 11, 0.45);
+    border-radius: 18px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 18px rgba(245, 158, 11, 0.16);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+}
+
+.dress-code-muhurtham {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.22) 0%, rgba(217, 119, 6, 0.15) 100%);
+    border: 1px solid rgba(254, 240, 138, 0.6);
+    color: #FEF08A;
+    box-shadow: 0 0 12px rgba(245, 158, 11, 0.25);
+}
+
+.muhurtham-icon-badge {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.22) 0%, rgba(217, 119, 6, 0.12) 100%);
+    border: 1.5px solid rgba(245, 158, 11, 0.6);
+    color: #FDE047;
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.25);
     flex-shrink: 0;
+    margin-right: 6px;
+}
+
+/* Venue Section Bespoke Vector SVGs & Icon Badges */
+.venue-inline-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background: rgba(245, 158, 11, 0.18);
+    border: 1px solid rgba(217, 119, 6, 0.45);
+    color: #D97706;
+    margin-right: 5px;
+    vertical-align: middle;
+    flex-shrink: 0;
+}
+
+.venue-inline-icon.venue-home-icon {
+    background: rgba(16, 185, 129, 0.18);
+    border-color: rgba(5, 150, 105, 0.45);
+    color: #059669;
+}
+
+body[data-theme-mode="dark"] .venue-inline-icon {
+    background: rgba(254, 240, 138, 0.20);
+    border-color: rgba(254, 240, 138, 0.65);
+    color: #FDE047;
+}
+
+.venue-btn-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.contacts-svg-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 6px;
+    color: #B45309;
+    vertical-align: middle;
+}
+
+body[data-theme-mode="dark"] .contacts-svg-icon {
+    color: #FDE047;
+}
+
+.contact-party-gem {
+    font-size: 0.72rem;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+
+.pelli-hl-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    line-height: 1;
+    flex-shrink: 0;
+}
+
+.pelli-custom-svg {
+    display: inline-block;
+    vertical-align: middle;
+    filter: drop-shadow(0 2px 6px rgba(245, 158, 11, 0.45));
 }
 
 .pelli-hl-content {
@@ -6701,7 +6816,7 @@ body[data-theme-mode="dark"] .family-sacred-shloka {
     padding: 9px clamp(12px, 3.5vw, 20px);
     background: linear-gradient(135deg, #B45309 0%, #D97706 45%, #F59E0B 100%);
     color: #FFFFFF;
-    font-family: var(--font-royal-title);
+    font-family: var(--font-ui), var(--font-telugu), sans-serif;
     font-size: clamp(0.74rem, 2.6vw, 0.88rem);
     font-weight: 700;
     border: 1.5px solid rgba(255, 255, 255, 0.7);
@@ -6904,40 +7019,259 @@ body[data-theme-mode="dark"] .blessing-toast-popup {
     transform: scale(1.06);
 }
 
-/* Language Typography Rules: Clean modern sans-serif for English, authentic Suranna for Telugu */
-/* English Royal Typography: Keep Playfair Display / Cormorant Garamond serif for grand ceremony headings across ALL screens */
+/* ==========================================================================
+   UNIFIED LANGUAGE TYPOGRAPHY SYSTEM (ENGLISH, TELUGU, HINDI)
+   Harmonizes font families, weights, line heights, and wrapping across all 12 scenes
+   ========================================================================== */
+
+/* 1. ENGLISH (en) */
+/* Royal Classical Serif for Grand Ceremony Headings */
 html[lang="en"] .luxury-title-lg,
 html[lang="en"] .couple-hero-grand-title,
-html[lang="en"] .reception-grand-title,
+html[lang="en"] .varun-groom-grand-name,
+html[lang="en"] .alekhya-bride-grand-name,
+html[lang="en"] .pelli-grand-title,
+html[lang="en"] .pellikuturu-grand-title,
+html[lang="en"] .mehandi-grand-title,
+html[lang="en"] .haldi-grand-title,
 html[lang="en"] .sangeet-grand-title,
+html[lang="en"] .reception-grand-title,
+html[lang="en"] .pelli-simple-title,
+html[lang="en"] .vratham-grand-title,
 html[lang="en"] .venue-main-title,
+html[lang="en"] .family-lineage-highlight-title,
 html[lang="en"] h1,
-html[lang="en"] h2 {
+html[lang="en"] h2,
+html[lang="en"] h3 {
     font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif !important;
     word-break: keep-all !important;
     overflow-wrap: normal !important;
     hyphens: none !important;
 }
 
-/* Clean Modern Sans-Serif for Subtitles, Chips, Cards, Badges, Regards & Captions in English */
+/* Modern Clean Sans-Serif for Subtitles, Chips, Cards, Badges, Regards & Captions */
 html[lang="en"] .portal-title-en,
 html[lang="en"] .portal-ceremony-sub,
+html[lang="en"] .invitation-english-sub,
+html[lang="en"] .pelli-sub-line,
+html[lang="en"] .pellikuturu-sub-line,
+html[lang="en"] .mehandi-sub-line,
+html[lang="en"] .haldi-sub-line,
+html[lang="en"] .sangeet-sub-line,
+html[lang="en"] .reception-sub-line,
+html[lang="en"] .vratham-sub-line,
+html[lang="en"] .vratham-en-title,
 html[lang="en"] .card-desc-lead,
+html[lang="en"] .venue-address-desc,
+html[lang="en"] .family-footer-desc,
 html[lang="en"] .family-footer-title,
 html[lang="en"] .family-footer-regards,
 html[lang="en"] .hero-caption-text,
+html[lang="en"] .hero-names-subtitle,
 html[lang="en"] .dt-text,
+html[lang="en"] .pelli-hl-text,
+html[lang="en"] .pellikuturu-hl-text,
+html[lang="en"] .mehandi-hl-text,
+html[lang="en"] .haldi-hl-text,
 html[lang="en"] .sangeet-hl-text,
 html[lang="en"] .reception-hl-text,
-html[lang="en"] .highlight-chip-text {
+html[lang="en"] .vratham-hl-text,
+html[lang="en"] .highlight-chip-text,
+html[lang="en"] .pelli-date-text,
+html[lang="en"] .pellikuturu-date-text,
+html[lang="en"] .mehandi-date-text,
+html[lang="en"] .haldi-date-text,
+html[lang="en"] .sangeet-date-text,
+html[lang="en"] .reception-date-text,
+html[lang="en"] .vratham-date-text,
+html[lang="en"] .pelli-venue-text,
+html[lang="en"] .pellikuturu-venue-text,
+html[lang="en"] .mehandi-venue-text,
+html[lang="en"] .haldi-venue-text,
+html[lang="en"] .sangeet-venue-text,
+html[lang="en"] .reception-venue-text,
+html[lang="en"] .vratham-venue-text,
+html[lang="en"] .vratham-view-bg-btn,
+html[lang="en"] .venue-view-bg-btn,
+html[lang="en"] .family-view-bg-btn,
+html[lang="en"] .venue-map-btn,
+html[lang="en"] .family-blessing-btn,
+html[lang="en"] p,
+html[lang="en"] button,
+html[lang="en"] a {
     font-family: 'Plus Jakarta Sans', 'Montserrat', -apple-system, sans-serif !important;
 }
 
+/* Sacred Vedic Slokas in English (Transliterated Sanskrit) */
+html[lang="en"] .pelli-sacred-sloka,
+html[lang="en"] .pellikuturu-sacred-sloka,
+html[lang="en"] .family-sacred-shloka,
+html[lang="en"] .sacred-mantra-quote,
+html[lang="en"] .sacred-sloka {
+    font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif !important;
+    font-style: italic !important;
+}
+
+/* 2. TELUGU (te) */
+/* Authentic Suranna & Classical Telugu Calligraphy across ALL Headings */
 html[lang="te"] .luxury-title-lg,
 html[lang="te"] .couple-hero-grand-title,
+html[lang="te"] .varun-groom-grand-name,
+html[lang="te"] .alekhya-bride-grand-name,
+html[lang="te"] .pelli-grand-title,
+html[lang="te"] .pellikuturu-grand-title,
+html[lang="te"] .mehandi-grand-title,
+html[lang="te"] .haldi-grand-title,
+html[lang="te"] .sangeet-grand-title,
+html[lang="te"] .reception-grand-title,
+html[lang="te"] .pelli-simple-title,
+html[lang="te"] .vratham-grand-title,
+html[lang="te"] .venue-main-title,
+html[lang="te"] .family-lineage-highlight-title,
 html[lang="te"] .family-footer-title,
-html[lang="te"] .family-footer-regards {
+html[lang="te"] .family-footer-regards,
+html[lang="te"] h1,
+html[lang="te"] h2,
+html[lang="te"] h3 {
     font-family: 'Suranna', 'Gautami', 'Mandali', serif !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+}
+
+/* Telugu Authentic Typography for Subtitles, Leads, Chips, and Buttons */
+html[lang="te"] .portal-title-en,
+html[lang="te"] .portal-ceremony-sub,
+html[lang="te"] .invitation-english-sub,
+html[lang="te"] .pelli-sub-line,
+html[lang="te"] .pellikuturu-sub-line,
+html[lang="te"] .mehandi-sub-line,
+html[lang="te"] .haldi-sub-line,
+html[lang="te"] .sangeet-sub-line,
+html[lang="te"] .reception-sub-line,
+html[lang="te"] .vratham-sub-line,
+html[lang="te"] .vratham-en-title,
+html[lang="te"] .card-desc-lead,
+html[lang="te"] .venue-address-desc,
+html[lang="te"] .family-footer-desc,
+html[lang="te"] .hero-caption-text,
+html[lang="te"] .hero-names-subtitle,
+html[lang="te"] .dt-text,
+html[lang="te"] .pelli-hl-text,
+html[lang="te"] .pellikuturu-hl-text,
+html[lang="te"] .mehandi-hl-text,
+html[lang="te"] .haldi-hl-text,
+html[lang="te"] .sangeet-hl-text,
+html[lang="te"] .reception-hl-text,
+html[lang="te"] .vratham-hl-text,
+html[lang="te"] .highlight-chip-text,
+html[lang="te"] .pelli-date-text,
+html[lang="te"] .pellikuturu-date-text,
+html[lang="te"] .mehandi-date-text,
+html[lang="te"] .haldi-date-text,
+html[lang="te"] .sangeet-date-text,
+html[lang="te"] .reception-date-text,
+html[lang="te"] .vratham-date-text,
+html[lang="te"] .pelli-venue-text,
+html[lang="te"] .pellikuturu-venue-text,
+html[lang="te"] .mehandi-venue-text,
+html[lang="te"] .haldi-venue-text,
+html[lang="te"] .sangeet-venue-text,
+html[lang="te"] .reception-venue-text,
+html[lang="te"] .vratham-venue-text,
+html[lang="te"] .vratham-view-bg-btn,
+html[lang="te"] .venue-view-bg-btn,
+html[lang="te"] .family-view-bg-btn,
+html[lang="te"] .venue-map-btn,
+html[lang="te"] .family-blessing-btn,
+html[lang="te"] .pelli-sacred-sloka,
+html[lang="te"] .pellikuturu-sacred-sloka,
+html[lang="te"] .family-sacred-shloka,
+html[lang="te"] p,
+html[lang="te"] button,
+html[lang="te"] a {
+    font-family: 'Suranna', 'Gautami', 'Mandali', serif !important;
+}
+
+/* 3. HINDI (hi) */
+/* Rozha One & Royal Calligraphy for Hindi Headings & Shlokas */
+html[lang="hi"] .luxury-title-lg,
+html[lang="hi"] .couple-hero-grand-title,
+html[lang="hi"] .varun-groom-grand-name,
+html[lang="hi"] .alekhya-bride-grand-name,
+html[lang="hi"] .pelli-grand-title,
+html[lang="hi"] .pellikuturu-grand-title,
+html[lang="hi"] .mehandi-grand-title,
+html[lang="hi"] .haldi-grand-title,
+html[lang="hi"] .sangeet-grand-title,
+html[lang="hi"] .reception-grand-title,
+html[lang="hi"] .pelli-simple-title,
+html[lang="hi"] .vratham-grand-title,
+html[lang="hi"] .venue-main-title,
+html[lang="hi"] .family-lineage-highlight-title,
+html[lang="hi"] .family-footer-title,
+html[lang="hi"] .family-footer-regards,
+html[lang="hi"] .pelli-sacred-sloka,
+html[lang="hi"] .pellikuturu-sacred-sloka,
+html[lang="hi"] .family-sacred-shloka,
+html[lang="hi"] h1,
+html[lang="hi"] h2,
+html[lang="hi"] h3 {
+    font-family: 'Rozha One', 'Cinzel', 'Playfair Display', serif !important;
+    word-break: keep-all !important;
+    overflow-wrap: normal !important;
+    hyphens: none !important;
+}
+
+/* Clean Modern Typography for Hindi Subtitles, Chips, and Buttons */
+html[lang="hi"] .portal-title-en,
+html[lang="hi"] .portal-ceremony-sub,
+html[lang="hi"] .invitation-english-sub,
+html[lang="hi"] .pelli-sub-line,
+html[lang="hi"] .pellikuturu-sub-line,
+html[lang="hi"] .mehandi-sub-line,
+html[lang="hi"] .haldi-sub-line,
+html[lang="hi"] .sangeet-sub-line,
+html[lang="hi"] .reception-sub-line,
+html[lang="hi"] .vratham-sub-line,
+html[lang="hi"] .vratham-en-title,
+html[lang="hi"] .card-desc-lead,
+html[lang="hi"] .venue-address-desc,
+html[lang="hi"] .family-footer-desc,
+html[lang="hi"] .hero-caption-text,
+html[lang="hi"] .hero-names-subtitle,
+html[lang="hi"] .dt-text,
+html[lang="hi"] .pelli-hl-text,
+html[lang="hi"] .pellikuturu-hl-text,
+html[lang="hi"] .mehandi-hl-text,
+html[lang="hi"] .haldi-hl-text,
+html[lang="hi"] .sangeet-hl-text,
+html[lang="hi"] .reception-hl-text,
+html[lang="hi"] .vratham-hl-text,
+html[lang="hi"] .highlight-chip-text,
+html[lang="hi"] .pelli-date-text,
+html[lang="hi"] .pellikuturu-date-text,
+html[lang="hi"] .mehandi-date-text,
+html[lang="hi"] .haldi-date-text,
+html[lang="hi"] .sangeet-date-text,
+html[lang="hi"] .reception-date-text,
+html[lang="hi"] .vratham-date-text,
+html[lang="hi"] .pelli-venue-text,
+html[lang="hi"] .pellikuturu-venue-text,
+html[lang="hi"] .mehandi-venue-text,
+html[lang="hi"] .haldi-venue-text,
+html[lang="hi"] .sangeet-venue-text,
+html[lang="hi"] .reception-venue-text,
+html[lang="hi"] .vratham-venue-text,
+html[lang="hi"] .vratham-view-bg-btn,
+html[lang="hi"] .venue-view-bg-btn,
+html[lang="hi"] .family-view-bg-btn,
+html[lang="hi"] .venue-map-btn,
+html[lang="hi"] .family-blessing-btn,
+html[lang="hi"] p,
+html[lang="hi"] button,
+html[lang="hi"] a {
+    font-family: 'Plus Jakarta Sans', -apple-system, sans-serif !important;
 }
 
 /* ==========================================================================
@@ -7012,4 +7346,658 @@ html[lang="te"] .family-footer-regards {
     text-align: center !important;
     justify-content: center !important;
     align-items: center !important;
+}
+
+
+/* Universal Top-Right Language Selector Bar (Sri Chakra & Initial Screen) */
+.devotional-top-right-lang-wrap {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    z-index: 100010;
+    pointer-events: auto;
+}
+
+.devotional-top-right-lang-wrap .language-segmented-pill {
+    background: rgba(22, 14, 38, 0.85);
+    border: 1.5px solid rgba(254, 240, 138, 0.45);
+    border-radius: 40px;
+    padding: 2px;
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.55), 0 0 15px rgba(245, 158, 11, 0.25);
+    display: flex;
+}
+
+.devotional-top-right-lang-wrap .lang-btn {
+    border: none;
+    background: transparent;
+    color: rgba(254, 240, 138, 0.85);
+    font-family: var(--font-ui), var(--font-telugu), sans-serif;
+    font-size: 0.82rem;
+    font-weight: 700;
+    width: 34px;
+    height: 30px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+    padding: 0;
+    line-height: 1;
+}
+
+.devotional-top-right-lang-wrap .lang-btn:hover {
+    color: #FFFDF0;
+    background: rgba(245, 158, 11, 0.25);
+}
+
+.devotional-top-right-lang-wrap .lang-btn.lang-active {
+    background: linear-gradient(135deg, #F59E0B 0%, #D97706 100%);
+    color: #1A0E2A;
+    font-weight: 800;
+    border-color: #FEF08A;
+    box-shadow: 0 0 14px rgba(245, 158, 11, 0.65);
+}
+
+/* Mobile HUD & Controls Spacing */
+@media (max-width: 600px) {
+    .devotional-top-right-lang-wrap {
+        top: 8px;
+        right: 10px;
+    }
+    .top-hud-bar {
+        padding: 6px 10px 0 !important;
+    }
+    .hud-right-controls {
+        gap: 6px !important;
+    }
+    .hud-right-controls .lang-btn {
+        width: 30px;
+        height: 28px;
+        font-size: 0.78rem;
+    }
+}
+
+/* ==========================================================================
+   SLIDES 3 & 4: HIGH-CONTRAST ROYAL LETTERING & CEREMONY BADGES
+   ========================================================================== */
+
+/* Varun (Groom) Grand Title - High Contrast Royal Amber & Bronze */
+.varun-groom-grand-name {
+    font-size: clamp(2.0rem, 3.8vw, 2.75rem) !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.04em !important;
+    background: linear-gradient(135deg, #78350F 0%, #B45309 35%, #D97706 70%, #92400E 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    filter: drop-shadow(0 2px 8px rgba(180, 83, 9, 0.28)) !important;
+    margin: 4px auto 6px !important;
+}
+
+body[data-theme-mode="dark"] .varun-groom-grand-name {
+    background: linear-gradient(135deg, #FFFDF0 0%, #FEF08A 30%, #F59E0B 75%, #D97706 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    filter: drop-shadow(0 2px 14px rgba(254, 240, 138, 0.5)) !important;
+}
+
+/* Alekhya (Bride) Grand Title - High Contrast Royal Ruby & Rose */
+.alekhya-bride-grand-name {
+    font-size: clamp(2.0rem, 3.8vw, 2.75rem) !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.04em !important;
+    background: linear-gradient(135deg, #881337 0%, #BE123C 35%, #E11D48 70%, #9F1239 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    filter: drop-shadow(0 2px 8px rgba(190, 18, 60, 0.28)) !important;
+    margin: 4px auto 6px !important;
+}
+
+body[data-theme-mode="dark"] .alekhya-bride-grand-name {
+    background: linear-gradient(135deg, #FFF1F2 0%, #FECDD3 30%, #FB7185 70%, #E11D48 100%) !important;
+    -webkit-background-clip: text !important;
+    -webkit-text-fill-color: transparent !important;
+    filter: drop-shadow(0 2px 14px rgba(251, 113, 133, 0.5)) !important;
+}
+
+/* Prominent Ceremony Highlighting Badges for Pellikoduku & Pellikuturu */
+.card-pellikoduku .portal-title-en {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: linear-gradient(135deg, rgba(254, 243, 199, 0.98) 0%, rgba(253, 230, 138, 0.92) 50%, rgba(245, 158, 11, 0.28) 100%) !important;
+    border: 2px solid rgba(217, 119, 6, 0.7) !important;
+    border-radius: 999px !important;
+    color: #78350F !important;
+    font-family: var(--font-royal-title) !important;
+    font-size: clamp(1.02rem, 2.3vw, 1.20rem) !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+    padding: 7px 24px !important;
+    margin: 6px auto 10px !important;
+    box-shadow: 0 4px 18px rgba(180, 83, 9, 0.20), 0 0 14px rgba(245, 158, 11, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.95) !important;
+}
+
+body[data-theme-mode="dark"] .card-pellikoduku .portal-title-en {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.32) 0%, rgba(217, 119, 6, 0.42) 100%) !important;
+    border-color: rgba(254, 240, 138, 0.75) !important;
+    color: #FFFDF0 !important;
+    box-shadow: 0 4px 22px rgba(0, 0, 0, 0.65), 0 0 18px rgba(245, 158, 11, 0.45) !important;
+}
+
+.card-pellikuturu .portal-title-en {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    background: linear-gradient(135deg, rgba(255, 228, 230, 0.98) 0%, rgba(254, 205, 211, 0.90) 50%, rgba(244, 63, 94, 0.28) 100%) !important;
+    border: 2px solid rgba(225, 29, 72, 0.65) !important;
+    border-radius: 999px !important;
+    color: #881337 !important;
+    font-family: var(--font-royal-title) !important;
+    font-size: clamp(1.02rem, 2.3vw, 1.20rem) !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.06em !important;
+    text-transform: uppercase !important;
+    padding: 7px 24px !important;
+    margin: 6px auto 10px !important;
+    box-shadow: 0 4px 18px rgba(225, 29, 72, 0.20), 0 0 14px rgba(244, 63, 94, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.95) !important;
+}
+
+body[data-theme-mode="dark"] .card-pellikuturu .portal-title-en {
+    background: linear-gradient(135deg, rgba(225, 29, 72, 0.32) 0%, rgba(159, 18, 57, 0.42) 100%) !important;
+    border-color: rgba(254, 205, 211, 0.75) !important;
+    color: #FFFDF0 !important;
+    box-shadow: 0 4px 22px rgba(0, 0, 0, 0.65), 0 0 18px rgba(225, 29, 72, 0.45) !important;
+}
+
+/* Universal Non-Breaking Date & Time Layout on Cards */
+.pelli-date-text,
+.pellikuturu-date-text,
+.sangeet-date-text,
+.mehandi-date-text,
+.haldi-date-text,
+.reception-date-text,
+.vratham-date-text,
+.pelli-venue-text,
+.pellikuturu-venue-text,
+.sangeet-venue-text,
+.mehandi-venue-text,
+.haldi-venue-text,
+.reception-venue-text,
+.vratham-venue-text {
+    white-space: nowrap !important;
+    display: inline-block !important;
+}
+
+.pelli-datetime-item,
+.pellikuturu-datetime-item,
+.sangeet-datetime-item,
+.mehandi-datetime-item,
+.haldi-datetime-item,
+.reception-datetime-item,
+.vratham-datetime-item,
+.pelli-venue-item,
+.pellikuturu-venue-item,
+.sangeet-venue-item,
+.mehandi-venue-item,
+.haldi-venue-item,
+.reception-venue-item,
+.vratham-venue-item {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    flex-wrap: nowrap !important;
+    white-space: nowrap !important;
+    gap: 6px !important;
+}
+
+.pelli-sacred-sloka,
+.pellikuturu-sacred-sloka {
+    font-style: italic;
+    font-family: var(--font-royal-title);
+    font-size: clamp(0.78rem, 1.4vw, 0.92rem);
+    line-height: 1.5;
+    color: #D97706;
+    margin: 6px auto;
+    max-width: 440px;
+    text-align: center;
+}
+
+body[data-theme-mode="dark"] .pelli-sacred-sloka,
+body[data-theme-mode="dark"] .pellikuturu-sacred-sloka {
+    color: #FEF08A;
+    text-shadow: 0 0 8px rgba(254, 240, 138, 0.3);
+}
+
+/* Slide 1 "Two Souls, One Eternal Destiny" */
+.destiny-highlight {
+    display: block;
+    margin-top: 3px;
+    font-size: 1.02em;
+    color: #D97706;
+    letter-spacing: 0.02em;
+}
+
+body[data-theme-mode="dark"] .destiny-highlight {
+    color: #FEF08A;
+    text-shadow: 0 0 10px rgba(254, 240, 138, 0.35);
+}
+
+/* ==========================================================================
+   MOBILE RESPONSIVE ARCHITECTURE: NO SCROLL ON SLIDE 1 & VERTICAL CENTERING
+   ========================================================================== */
+@media (max-width: 860px) {
+    /* Slide 1 (Hero): Zero Scroll Mobile Fitting */
+    #scene-hero .hero-diptych-container {
+        flex-direction: column !important;
+        gap: 4px !important;
+        max-height: calc(100dvh - 128px) !important;
+        overflow: hidden !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: auto !important;
+    }
+
+    #scene-hero .hero-royal-arch-frame {
+        width: clamp(105px, 22vw, 125px) !important;
+        height: clamp(120px, 16vh, 145px) !important;
+        border-radius: 65px 65px 12px 12px !important;
+    }
+
+    #scene-hero .hero-royal-arch-photo {
+        border-radius: 61px 61px 10px 10px !important;
+    }
+
+    #scene-hero .hero-royal-arch-filigree {
+        border-radius: 58px 58px 9px 9px !important;
+    }
+
+    #scene-hero .hero-portrait-caption,
+    #scene-hero .diptych-portrait-caption {
+        padding: 2px 10px !important;
+        font-size: 0.72rem !important;
+        margin-top: 2px !important;
+    }
+
+    #scene-hero .hero-invitation-card {
+        padding: clamp(8px, 1.2vh, 12px) clamp(10px, 2.8vw, 16px) !important;
+        max-height: none !important;
+        overflow: hidden !important;
+        max-width: min(440px, 94%) !important;
+    }
+
+    #scene-hero .hero-cinematic-couple-wrap {
+        margin: 0 0 2px !important;
+    }
+
+    #scene-hero .couple-hero-grand-title {
+        font-size: clamp(1.30rem, 3.8vw, 1.55rem) !important;
+        margin: 0 0 2px !important;
+    }
+
+    #scene-hero .hero-lineage-ribbon {
+        margin: 2px auto 0 !important;
+        padding: 4px 8px !important;
+        gap: 2px !important;
+        max-width: 100% !important;
+    }
+
+    #scene-hero .lineage-name {
+        font-size: 0.82rem !important;
+        margin-bottom: 1px !important;
+    }
+
+    #scene-hero .lineage-text {
+        font-size: 0.66rem !important;
+        line-height: 1.25 !important;
+    }
+
+    #scene-hero .hero-lineage-divider {
+        font-size: 0.65rem !important;
+        margin: 1px 0 !important;
+    }
+
+    #scene-hero .hero-quote-card {
+        margin: 4px auto 0 !important;
+        padding: clamp(4px, 1vh, 8px) 10px !important;
+        max-width: 100% !important;
+    }
+
+    #scene-hero .quote-sacred-crest {
+        margin-bottom: 2px !important;
+        gap: 8px !important;
+    }
+
+    #scene-hero .sacred-crest-line {
+        width: 25px !important;
+    }
+
+    #scene-hero .devotional-quote-primary {
+        font-size: clamp(0.85rem, 2vw, 0.95rem) !important;
+        line-height: 1.3 !important;
+    }
+
+    #scene-hero .quote-divider-mini {
+        margin: 2px auto !important;
+    }
+
+    #scene-hero .devotional-quote-sub {
+        font-size: clamp(0.68rem, 1.5vw, 0.75rem) !important;
+        line-height: 1.3 !important;
+        margin: 0 !important;
+    }
+
+    /* General Event Cards: Centering Image & Info Card Vertically in Viewport */
+    .hero-diptych-container {
+        flex-direction: column !important;
+        gap: clamp(6px, 1.2vh, 12px) !important;
+        max-height: calc(100dvh - 128px) !important;
+        justify-content: center !important;
+        align-items: center !important;
+        margin: auto !important;
+        overflow-y: auto !important;
+        scrollbar-width: none !important;
+    }
+
+    .hero-royal-arch-frame {
+        width: clamp(110px, 24vw, 138px) !important;
+        height: clamp(130px, 17vh, 155px) !important;
+        border-radius: 70px 70px 14px 14px !important;
+    }
+
+    .hero-royal-arch-photo {
+        border-radius: 66px 66px 12px 12px !important;
+    }
+
+    .hero-royal-arch-filigree {
+        border-radius: 62px 62px 9px 9px !important;
+    }
+
+    .diptych-portrait-caption,
+    .hero-portrait-caption {
+        padding: 2px 12px !important;
+        font-size: 0.72rem !important;
+        margin-top: 3px !important;
+    }
+
+    /* Vertical Centering INSIDE Info Cards (Mehandi, Haldi, Sangeet, Reception, Muhurtham, etc.) */
+    .hero-diptych-card,
+    .card-mehandi,
+    .card-haldi,
+    .card-sangeet,
+    .card-reception,
+    .card-pellikoduku,
+    .card-pellikuturu,
+    .card-crown-muhurtham,
+    .card-reception-square {
+        display: flex !important;
+        flex-direction: column !important;
+        justify-content: center !important;
+        align-items: center !important;
+        text-align: center !important;
+        flex: 0 1 auto !important;
+        width: 100% !important;
+        max-width: min(440px, 94%) !important;
+        min-width: 0 !important;
+        padding: clamp(12px, 1.8vh, 18px) clamp(12px, 3vw, 20px) !important;
+        box-sizing: border-box !important;
+    }
+
+    /* Balanced Vertical Rhythm inside Event Info Cards */
+    .mehandi-dress-badge,
+    .haldi-dress-badge,
+    .sangeet-dress-badge,
+    .reception-crown-badge {
+        margin-bottom: clamp(4px, 0.8vh, 8px) !important;
+    }
+
+    .mehandi-title-highlight-wrap,
+    .haldi-title-highlight-wrap,
+    .sangeet-title-highlight-wrap,
+    .reception-title-highlight-wrap,
+    .pellikoduku-title-highlight-wrap,
+    .pellikuturu-title-highlight-wrap {
+        margin: clamp(2px, 0.5vh, 6px) 0 clamp(4px, 0.8vh, 8px) !important;
+    }
+
+    .mehandi-sub-line,
+    .haldi-sub-line,
+    .sangeet-sub-line,
+    .reception-sub-line,
+    .portal-ceremony-sub {
+        margin: 0 0 clamp(6px, 1vh, 10px) !important;
+    }
+
+    .mehandi-event-highlights,
+    .haldi-event-highlights,
+    .sangeet-event-highlights,
+    .reception-event-highlights,
+    .pelli-event-highlights,
+    .pellikuturu-event-highlights,
+    .vratham-event-highlights {
+        margin-top: 0 !important;
+        padding: 6px 10px !important;
+        gap: 4px !important;
+        max-width: 98% !important;
+        width: auto !important;
+    }
+
+    .pelli-hl-text,
+    .pellikuturu-hl-text,
+    .sangeet-hl-text,
+    .mehandi-hl-text,
+    .haldi-hl-text,
+    .reception-hl-text,
+    .vratham-hl-text,
+    .pelli-date-text,
+    .pellikuturu-date-text,
+    .sangeet-date-text,
+    .mehandi-date-text,
+    .haldi-date-text,
+    .reception-date-text,
+    .vratham-date-text,
+    .pelli-venue-text,
+    .pellikuturu-venue-text,
+    .sangeet-venue-text,
+    .mehandi-venue-text,
+    .haldi-venue-text,
+    .reception-venue-text,
+    .vratham-venue-text {
+        font-size: clamp(0.72rem, 2.4vw, 0.84rem) !important;
+        white-space: nowrap !important;
+        letter-spacing: 0.1px !important;
+    }
+
+    .pelli-icon-badge,
+    .pellikuturu-icon-badge,
+    .sangeet-icon-badge,
+    .mehandi-icon-badge,
+    .haldi-icon-badge,
+    .reception-icon-badge,
+    .vratham-icon-badge,
+    .muhurtham-icon-badge,
+    .pelli-hl-icon,
+    .dt-icon-svg {
+        width: 24px !important;
+        height: 24px !important;
+        min-width: 24px !important;
+    }
+
+    .pelli-icon-badge svg,
+    .pellikuturu-icon-badge svg,
+    .sangeet-icon-badge svg,
+    .mehandi-icon-badge svg,
+    .haldi-icon-badge svg,
+    .reception-icon-badge svg,
+    .vratham-icon-badge svg,
+    .muhurtham-icon-badge svg,
+    .pelli-custom-svg,
+    .pellikuturu-custom-svg,
+    .sangeet-custom-svg,
+    .mehandi-custom-svg,
+    .haldi-custom-svg,
+    .reception-custom-svg,
+    .vratham-custom-svg,
+    .muhurtham-custom-svg,
+    .muhurtham-svg-icon {
+        width: 14px !important;
+        height: 14px !important;
+    }
+}
+
+/* ==========================================================================
+   UNIFIED DESKTOP ICON BADGES (28px) & SVGS (16px) ACROSS ALL CEREMONIES
+   ========================================================================== */
+.pelli-icon-badge,
+.pellikuturu-icon-badge,
+.sangeet-icon-badge,
+.mehandi-icon-badge,
+.haldi-icon-badge,
+.reception-icon-badge,
+.vratham-icon-badge,
+.muhurtham-icon-badge,
+.pelli-hl-icon,
+.dt-icon-svg {
+    width: 28px !important;
+    height: 28px !important;
+    min-width: 28px !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    border-radius: 50% !important;
+    flex-shrink: 0 !important;
+}
+
+.pelli-icon-badge svg,
+.pellikuturu-icon-badge svg,
+.sangeet-icon-badge svg,
+.mehandi-icon-badge svg,
+.haldi-icon-badge svg,
+.reception-icon-badge svg,
+.vratham-icon-badge svg,
+.muhurtham-icon-badge svg,
+.pelli-custom-svg,
+.pellikuturu-custom-svg,
+.sangeet-custom-svg,
+.mehandi-custom-svg,
+.haldi-custom-svg,
+.reception-custom-svg,
+.vratham-custom-svg,
+.muhurtham-custom-svg,
+.muhurtham-svg-icon {
+    width: 16px !important;
+    height: 16px !important;
+    display: inline-block !important;
+    vertical-align: middle !important;
+}
+
+/* Slide 11: Keep Junction on single line */
+.no-wrap-text {
+    white-space: nowrap !important;
+    display: inline-block;
+}
+
+/* Venue & Family & Vratham Minimize / Expand Toggle */
+.card-vratham.vratham-card-minimized {
+    animation: none !important;
+    position: absolute !important;
+    bottom: clamp(14px, 2.8vh, 24px) !important;
+    left: 50% !important;
+    transform: translateX(-50%) !important;
+    width: min(440px, 92%) !important;
+    max-height: 58px !important;
+    padding: 10px 16px !important;
+    margin: 0 !important;
+    opacity: 0.98 !important;
+    overflow: hidden !important;
+    cursor: pointer !important;
+    box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.6) !important;
+    transition: all 0.45s cubic-bezier(0.22, 1, 0.36, 1) !important;
+    border-color: rgba(245, 158, 11, 0.8) !important;
+    z-index: 20 !important;
+}
+
+.card-vratham.vratham-card-minimized .card-corner-bracket,
+.card-vratham.vratham-card-minimized .vratham-swamy-photo-frame,
+.card-vratham.vratham-card-minimized .vratham-title-highlight-wrap,
+.card-vratham.vratham-card-minimized .vratham-sub-line,
+.card-vratham.vratham-card-minimized .vratham-event-highlights,
+.card-vratham.vratham-card-minimized .portal-pill-highlight,
+.card-vratham.vratham-card-minimized .vratham-prasadam-pill {
+    display: none !important;
+}
+
+.card-vratham.vratham-card-minimized .vratham-top-badge {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: nowrap !important;
+    margin: 0 !important;
+    width: 100% !important;
+}
+
+@media (max-width: 860px) {
+    .card-vratham.vratham-card-minimized .vratham-sacred-pill {
+        font-size: 0.72rem !important;
+        padding: 3px 8px !important;
+    }
+    .card-vratham.vratham-card-minimized .vratham-view-bg-btn {
+        font-size: 0.72rem !important;
+        padding: 3px 8px !important;
+        white-space: nowrap;
+    }
+}
+
+.card-venue.venue-card-minimized {
+    transform: translateY(calc(100% - 66px)) !important;
+    opacity: 0.96 !important;
+    max-height: 66px !important;
+    overflow: hidden !important;
+    cursor: pointer;
+    box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.6) !important;
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1) !important;
+    border-color: rgba(245, 158, 11, 0.8) !important;
+}
+
+.card-venue.venue-card-minimized .venue-main-title,
+.card-venue.venue-card-minimized .map-placeholder-frame,
+.card-venue.venue-card-minimized .venue-map-buttons-grid,
+.card-venue.venue-card-minimized .venue-contacts-box,
+.card-venue.venue-card-minimized .venue-address-desc {
+    display: none !important;
+}
+
+.family-luxury-card.family-card-minimized {
+    transform: translateY(calc(100% - 62px)) !important;
+    opacity: 0.96 !important;
+    max-height: 62px !important;
+    overflow: hidden !important;
+    cursor: pointer;
+    box-shadow: 0 -8px 30px rgba(0, 0, 0, 0.6) !important;
+    transition: all 0.5s cubic-bezier(0.22, 1, 0.36, 1) !important;
+    border-color: rgba(245, 158, 11, 0.8) !important;
+}
+
+.family-luxury-card.family-card-minimized .family-lineage-title-wrap,
+.family-luxury-card.family-card-minimized .family-sacred-shloka,
+.family-luxury-card.family-card-minimized .family-ornate-separator,
+.family-luxury-card.family-card-minimized .family-footer-desc,
+.family-luxury-card.family-card-minimized .family-blessing-btn {
+    display: none !important;
+}
+
+/* Custom SVG Icons on Slide 2 Muhurtham */
+.dt-icon-svg {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 6px;
+    vertical-align: middle;
+}
+
+.muhurtham-svg-icon {
+    filter: drop-shadow(0 2px 6px rgba(245, 158, 11, 0.4));
 }
