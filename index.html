@@ -24,6 +24,15 @@
          CINEMATIC DEVOTIONAL SRI CHAKRA WEDDING LANDING PORTAL
          ========================================================================== -->
     <div id="devotional-landing-portal" class="landing-portal-active" role="dialog" aria-modal="true" aria-label="Heartfelt Wedding Invitation & Sri Chakra Entrance">
+        <!-- Top Right Language Selector for Sri Chakra & Initial Screen -->
+        <div class="devotional-top-right-lang-wrap" role="group" aria-label="Select Language">
+            <div class="language-segmented-pill">
+                <button type="button" class="lang-btn" data-lang="te" onclick="if(window.setWeddingLanguage){event.stopPropagation();window.setWeddingLanguage('te');}else if(window.weddingI18n){event.stopPropagation();window.weddingI18n.setLanguage('te');}" title="తెలుగు (Telugu)" data-i18n-title="langTeluguTitle" aria-label="Telugu">తె</button>
+                <button type="button" class="lang-btn lang-active" data-lang="en" onclick="if(window.setWeddingLanguage){event.stopPropagation();window.setWeddingLanguage('en');}else if(window.weddingI18n){event.stopPropagation();window.weddingI18n.setLanguage('en');}" title="English" data-i18n-title="langEnglishTitle" aria-label="English">EN</button>
+                <button type="button" class="lang-btn" data-lang="hi" onclick="if(window.setWeddingLanguage){event.stopPropagation();window.setWeddingLanguage('hi');}else if(window.weddingI18n){event.stopPropagation();window.weddingI18n.setLanguage('hi');}" title="हिन्दी (Hindi)" data-i18n-title="langHindiTitle" aria-label="Hindi">हि</button>
+            </div>
+        </div>
+
         <!-- Ambient Divine Cosmic Background with Golden Rays & Stardust -->
         <div class="devotional-portal-backdrop" aria-hidden="true">
             <div class="devotional-cosmic-glow"></div>
@@ -122,7 +131,7 @@
                     </div>
                 </div>
                 <div class="devotional-sanskrit-mantra" data-i18n="landingMantra">
-                    || శ్రీరస్తు • శుభమస్తు • అవిఘ్నమస్తు ||
+                    || Sri Rastu • Shubhamastu • Avighnamastu ||
                 </div>
                 <div class="devotional-crest-line" aria-hidden="true">
                     <span class="c-line"></span>
@@ -132,7 +141,7 @@
             </header>
 
             <!-- Centerpiece: The Animated Sacred Sri Chakra -->
-            <div class="sri-chakra-container" id="sri-chakra-trigger" title="శ్రీ చక్రాన్ని స్పర్శించి ప్రవేశించండి • Tap to Enter" role="button" tabindex="0" aria-label="Tap Sri Chakra to Enter Wedding Invitation">
+            <div class="sri-chakra-container" id="sri-chakra-trigger" title="Tap to Enter Sri Chakra Portal" data-i18n-title="sriChakraTriggerTitle" role="button" tabindex="0" aria-label="Tap Sri Chakra to Enter Wedding Invitation">
                 <!-- Outer Pulsing Energy Rings -->
                 <div class="chakra-ripple-ring ring-1" aria-hidden="true"></div>
                 <div class="chakra-ripple-ring ring-2" aria-hidden="true"></div>
@@ -291,7 +300,9 @@
                     </div>
                     <div class="hand-tap-badge">
                         <span class="tap-badge-spark">✦</span>
-                        <span class="tap-badge-text" data-i18n="sriChakraTapHint">స్పర్శించండి • Tap to Enter</span>
+                        <span class="tap-badge-text" data-i18n="sriChakraTapHint">
+                    Tap Sri Chakra to Enter
+                </span>
                         <span class="tap-badge-spark">✦</span>
                     </div>
                 </div>
@@ -308,15 +319,15 @@
 
                     <!-- Clean Grand Title: Just Varun & Alekhya's Wedding Invitation -->
                     <h1 class="devotional-grand-invitation-title" data-i18n="landingTitle">
-                        Varun &amp; Alekhya's Wedding Invitation
-                    </h1>
+                    Varun &amp; Alekhya's Wedding Invitation
+                </h1>
 
                     <div class="inv-glow-underline" aria-hidden="true"></div>
                 </div>
 
                 <!-- Sacred Tap Hint -->
-                <div class="devotional-tap-hint" data-i18n="landingTapHint">
-                    ✦ శ్రీ చక్రాన్ని స్పర్శించి ప్రారంభించండి ✦
+                <div class="devotional-tap-hint" data-i18n="landingTapHint" style="display: none;">
+                    ✦ Tap Sri Chakra to Begin ✦
                 </div>
 
 
@@ -453,13 +464,19 @@
 
                 <!-- Clean, Focused 1-Line Recommendation -->
                 <div class="earphone-plug-text">
-                    <h3 class="earphone-plug-title" data-i18n="earphonePlugTitle">🎧 ఉత్తమ అనుభవం కోసం ఇయర్‌ఫోన్స్ ప్లగ్ చేయండి</h3>
-                    <p class="earphone-plug-sub" data-i18n="earphonePlugSub">శ్రీ చక్ర దివ్య గానమును ఆస్వాదించండి</p>
+                    <h3 class="earphone-plug-title" data-i18n="earphonePlugTitle">
+                    🎧 Please plug in earphones for best audio experience
+                </h3>
+                    <p class="earphone-plug-sub" data-i18n="earphonePlugSub">
+                    Immerse in the sacred celestial music of Sri Chakra
+                </p>
                 </div>
 
                 <!-- OK Button -->
-                <button type="button" class="earphone-plug-btn" id="earphone-ok-btn" aria-label="OK">
-                    <span class="ep-btn-label" data-i18n="earphoneOkBtn">OK</span>
+                <button type="button" class="earphone-plug-btn" id="earphone-ok-btn" aria-label="Continue">
+                    <span class="ep-btn-label" data-i18n="earphoneOkBtn">
+                    Continue
+                </span>
                 </button>
             </div>
         </div>
@@ -511,22 +528,24 @@
         <div class="story-progress-bar-container" id="story-progress-bar-container" aria-label="Ceremony Story Progress"></div>
 
         <div class="top-hud-bar">
-            <!-- Left Controls: Auto-Play Toggle (Minimalist Icon Only) -->
+            <!-- Left Controls: Auto-Play Toggle & Sri Chakra Button -->
             <div class="hud-left-controls">
-                <button id="app-autoplay-toggle" class="app-hud-pill autoplay-pill" title="Toggle Auto-Slide (5s)" aria-label="Toggle Auto-Slide">
+                <button type="button" id="app-autoplay-toggle" class="app-hud-pill autoplay-pill" title="Toggle Auto-Slide (5s)" data-i18n-title="autoplayToggleTitle" aria-label="Toggle Auto-Slide">
                     <span class="hud-play-icon" id="hud-play-icon">⏸</span>
                     <span class="hud-play-text" id="hud-play-text" style="display: none;"></span>
                     <span class="hud-scene-counter" id="hud-scene-counter" style="display: none;"></span>
                 </button>
-                <button id="hud-sri-chakra-btn" class="app-hud-pill sri-chakra-pill" data-i18n-title="hudChakraTitle" title="శ్రీ చక్ర దర్శనం • View Sri Chakra" aria-label="View Sri Chakra">
+                <button type="button" id="hud-sri-chakra-btn" class="app-hud-pill sri-chakra-pill" data-i18n-title="hudChakraTitle" title="View Sri Chakra" aria-label="View Sri Chakra">
                     <span class="hud-chakra-icon">☸️</span>
-                    <span class="hud-chakra-text" data-i18n="hudChakraText" style="font-size: 0.76rem; font-weight: 700; color: #F59E0B; margin-left: 4px;">శ్రీ చక్రం</span>
+                    <span class="hud-chakra-text" data-i18n="hudChakraText" style="font-size: 0.76rem; font-weight: 700; color: #F59E0B; margin-left: 4px;">
+                    Sri Chakra
+                </span>
                 </button>
             </div>
 
-            <!-- Right Controls: Audio Sound Toggle & Language Switcher (Single Letter) -->
+            <!-- Right Controls: Audio Sound Toggle & Universal Top-Right Language Switcher -->
             <div class="hud-right-controls">
-                <button id="hud-sound-toggle" class="hud-sound-pill" title="Toggle Wedding Music (Mute/Unmute)" aria-label="Toggle Wedding Music">
+                <button type="button" id="hud-sound-toggle" class="hud-sound-pill" title="Toggle Wedding Music (Play/Pause)" data-i18n-title="soundToggleTitle" aria-label="Toggle Wedding Music">
                     <span class="sound-icon-glyph">🎵</span>
                     <span class="sound-waves-mini">
                         <span class="sw-bar"></span>
@@ -536,9 +555,9 @@
                 </button>
 
                 <div class="language-segmented-pill" role="group" aria-label="Language Selector">
-                    <button class="lang-btn" data-lang="te" title="తెలుగు (Telugu)" aria-label="Telugu">తె</button>
-                    <button class="lang-btn lang-active" data-lang="en" title="English" aria-label="English">E</button>
-                    <button class="lang-btn" data-lang="hi" title="हिन्दी (Hindi)" aria-label="Hindi">हि</button>
+                    <button type="button" class="lang-btn" data-lang="te" onclick="if(window.setWeddingLanguage){event.stopPropagation();window.setWeddingLanguage('te');}else if(window.weddingI18n){event.stopPropagation();window.weddingI18n.setLanguage('te');}" title="తెలుగు (Telugu)" data-i18n-title="langTeluguTitle" aria-label="Telugu">తె</button>
+                    <button type="button" class="lang-btn lang-active" data-lang="en" onclick="if(window.setWeddingLanguage){event.stopPropagation();window.setWeddingLanguage('en');}else if(window.weddingI18n){event.stopPropagation();window.weddingI18n.setLanguage('en');}" title="English" data-i18n-title="langEnglishTitle" aria-label="English">EN</button>
+                    <button type="button" class="lang-btn" data-lang="hi" onclick="if(window.setWeddingLanguage){event.stopPropagation();window.setWeddingLanguage('hi');}else if(window.weddingI18n){event.stopPropagation();window.weddingI18n.setLanguage('hi');}" title="हिन्दी (Hindi)" data-i18n-title="langHindiTitle" aria-label="Hindi">हि</button>
                 </div>
             </div>
         </div>
@@ -595,12 +614,12 @@
         </svg>
 
         <!-- Lateral Floating Navigation Arrows (Desktop / Tablet) -->
-        <button id="app-nav-prev" class="app-nav-arrow arrow-prev" aria-label="Previous Scene (Left Arrow)" title="Previous (Left Arrow)">
+        <button id="app-nav-prev" class="app-nav-arrow arrow-prev" aria-label="Previous Scene (Left Arrow)" title="Previous (Left Arrow)" data-i18n-title="navPrevTitle">
             <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="15 18 9 12 15 6"></polyline>
             </svg>
         </button>
-        <button id="app-nav-next" class="app-nav-arrow arrow-next" aria-label="Next Scene (Right Arrow)" title="Next (Right Arrow)">
+        <button id="app-nav-next" class="app-nav-arrow arrow-next" aria-label="Next Scene (Right Arrow)" title="Next (Right Arrow)" data-i18n-title="navNextTitle">
             <svg viewBox="0 0 24 24" width="22" height="22" stroke="currentColor" fill="none" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
                 <polyline points="9 18 15 12 9 6"></polyline>
             </svg>
@@ -621,7 +640,9 @@
                         </div>
                         <div class="hero-portrait-caption">
                             <span class="hero-caption-gem">✦</span>
-                            <span class="hero-caption-text" data-i18n="archCaption">రెండు మనసులు • ఒక్కటే ప్రాణం</span>
+                            <span class="hero-caption-text" data-i18n="archCaption">
+                    Two Souls • One Destiny
+                </span>
                             <span class="hero-caption-gem">✦</span>
                         </div>
                     </div>
@@ -663,41 +684,51 @@
                         </div>
 
                         <!-- Grand Couple Centerpiece (Single Regal Title, No Duplicate) -->
-                        <div class="hero-cinematic-couple-wrap" style="position: relative; z-index: 2; margin: 18px 0 16px;">
-                            <h1 class="couple-hero-grand-title" data-i18n="heroCoupleNames">వరుణ్ &amp; ఆలేఖ్య</h1>
+                        <div class="hero-cinematic-couple-wrap">
+                            <h1 class="couple-hero-grand-title" data-i18n="heroCoupleNames">
+                    Varun &amp; Alekhya
+                </h1>
 
                             <!-- Lineage Ribbon (Symmetrical & Elegant) -->
-                            <div class="hero-lineage-ribbon" style="margin-top: 14px;">
+                            <div class="hero-lineage-ribbon">
                                 <div class="hero-lineage-col groom-side">
-                                    <span class="lineage-name" data-i18n="groomCeremonialName">వరుణ్</span>
-                                    <span class="lineage-text" data-i18n="groomParents">(శ్రీమతి అరుణ &amp; కీ॥శే॥ పెద్దిరెడ్డి వి. ఎ. ఆర్. సిహెచ్. మూర్తి గార్ల జ్యేష్ఠ కుమారుడు)</span>
+                                    <span class="lineage-name" data-i18n="groomCeremonialName">
+                    Varun
+                </span>
+                                    <span class="lineage-text" data-i18n="groomParents">
+                    (Elder son of Smt. Aruna & Sri PVARC Murthy (Late))
+                </span>
                                 </div>
                                 <span class="hero-lineage-divider">✦</span>
                                 <div class="hero-lineage-col bride-side">
-                                    <span class="lineage-name" data-i18n="brideCeremonialName">ఆలేఖ్య</span>
-                                    <span class="lineage-text" data-i18n="brideParents">(శ్రీ అల్లాడ సుదర్శన్ &amp; శ్రీమతి రత్న కుమారి గార్ల కుమార్తె)</span>
+                                    <span class="lineage-name" data-i18n="brideCeremonialName">
+                    Alekhya
+                </span>
+                                    <span class="lineage-text" data-i18n="brideParents">
+                    (Daughter of Sri Allada Sudarshan & Smt. Ratna Kumari)
+                </span>
                                 </div>
                             </div>
                         </div>
 
                         <!-- Sacred Matrimonial Inscription (Deep, Soulful & Meaningful) -->
-                        <div class="hero-quote-card" style="padding: 18px 22px; margin-top: 14px; position: relative; z-index: 2;">
+                        <div class="hero-quote-card">
                             <div class="quote-sacred-crest">
                                 <span class="sacred-crest-line"></span>
                                 <span class="sacred-crest-motif">✦ ౦ ✦</span>
                                 <span class="sacred-crest-line"></span>
                             </div>
-                            <div class="devotional-quote-primary" style="font-size: clamp(1.04rem, 2.2vh, 1.25rem); line-height: 1.5; font-family: var(--font-royal-title); font-weight: 600;" data-i18n="quotePrimary">
-                                "స్వర్గంలో లిఖించబడిన బంధం — రెండు దేహాలు, ఒక్కటే ప్రాణం..."
-                            </div>
-                            <div class="quote-divider-mini" style="margin: 8px auto;">
+                            <div class="devotional-quote-primary" data-i18n="quotePrimary">
+                    Written in Heaven<br><span class="destiny-highlight">Two Souls, One Eternal Destiny</span>
+                </div>
+                            <div class="quote-divider-mini">
                                 <span class="q-line"></span>
                                 <span class="q-gem">✦</span>
                                 <span class="q-line"></span>
                             </div>
-                            <p class="devotional-quote-sub" style="font-size: 0.88rem; margin: 0; line-height: 1.55; color: var(--secondary-text-color);" data-i18n="quoteSub">
-                                రెండు హృదయాలు ఒక్కటై, ఏడడుగులతో మొదలవుతున్న శాశ్వత ప్రేమ మరియు అనురాగ ప్రయాణం.
-                            </p>
+                            <p class="devotional-quote-sub" data-i18n="quoteSub">
+                    Where two souls unite into one sacred destiny, embarking on a timeless journey of endless love and devotion.
+                </p>
                         </div>
                     </div>
                 </div>
@@ -715,7 +746,9 @@
                         </div>
                         <div class="hero-portrait-caption">
                             <span class="hero-caption-gem">✦</span>
-                            <span class="hero-caption-text" data-i18n="muhurthamCaption">శాశ్వత బంధం</span>
+                            <span class="hero-caption-text" data-i18n="muhurthamCaption">
+                    Bound for Eternity
+                </span>
                             <span class="hero-caption-gem">✦</span>
                         </div>
                     </div>
@@ -756,21 +789,42 @@
                             </svg>
                         </div>
 
-                        <span class="portal-date-chip" data-i18n="muhurthamBadge">
-                            ✨ బ్రహ్మ ముహూర్తం ✨
-                        </span>
-                        <h2 class="luxury-title-lg" style="margin-top: 8px;" data-i18n="muhurthamTitle">సుముహూర్తం</h2>
+                        <h2 class="luxury-title-lg" style="margin-top: 8px;" data-i18n="muhurthamTitle">
+                    Muhurtham
+                </h2>
 
                         <!-- Highlighted Day & Time (Crisp, High-Contrast & Clearly Readable) -->
                         <div class="muhurtham-datetime-highlight">
                             <div class="datetime-pill-item date-pill-item">
-                                <span class="dt-icon" aria-hidden="true">📅</span>
-                                <span class="dt-text dt-date" data-i18n="muhurthamDateOnly">20 డిసెంబర్, ఆదివారం</span>
+                                <div class="pelli-icon-badge muhurtham-icon-badge" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" class="pelli-custom-svg">
+                                        <rect x="3" y="4" width="18" height="17" rx="3.5" stroke="currentColor" stroke-width="1.8" fill="rgba(245, 158, 11, 0.14)"/>
+                                        <line x1="3" y1="9" x2="21" y2="9" stroke="currentColor" stroke-width="1.6"/>
+                                        <path d="M8 2 L8 5 M16 2 L16 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <circle cx="8" cy="13" r="1.2" fill="currentColor"/>
+                                        <circle cx="12" cy="13" r="1.2" fill="currentColor"/>
+                                        <circle cx="16" cy="13" r="1.2" fill="currentColor"/>
+                                        <circle cx="8" cy="17" r="1.2" fill="currentColor"/>
+                                        <circle cx="12" cy="17" r="1.2" fill="currentColor"/>
+                                        <circle cx="16" cy="17" r="1.2" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                                <span class="dt-text dt-date" data-i18n="muhurthamDateOnly">
+                                    Sunday, 20th December
+                                </span>
                             </div>
                             <div class="datetime-pill-separator" aria-hidden="true">✦</div>
                             <div class="datetime-pill-item time-pill-item">
-                                <span class="dt-icon" aria-hidden="true">⏰</span>
-                                <span class="dt-text dt-time" data-i18n="muhurthamTimeOnly">వేకువజామున 3:53 AM</span>
+                                <div class="pelli-icon-badge muhurtham-icon-badge" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" class="pelli-custom-svg">
+                                        <circle cx="12" cy="12" r="9" stroke="currentColor" stroke-width="1.8" fill="rgba(245, 158, 11, 0.14)"/>
+                                        <polyline points="12,7 12,12 15.5,14" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <circle cx="12" cy="12" r="1.5" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                                <span class="dt-text dt-time" data-i18n="muhurthamTimeOnly">
+                                    Early Dawn 3:53 AM
+                                </span>
                             </div>
                         </div>
 
@@ -778,25 +832,33 @@
                         <div class="countdown-grid-modern">
                             <div class="countdown-box-minimal">
                                 <div class="count-digit-lg" id="count-days">--</div>
-                                <div class="count-label-sub" data-i18n="daysLabel">రోజులు</div>
+                                <div class="count-label-sub" data-i18n="daysLabel">
+                    Days
+                </div>
                             </div>
                             <div class="countdown-box-minimal">
                                 <div class="count-digit-lg" id="count-hours">--</div>
-                                <div class="count-label-sub" data-i18n="hoursLabel">గంటలు</div>
+                                <div class="count-label-sub" data-i18n="hoursLabel">
+                    Hours
+                </div>
                             </div>
                             <div class="countdown-box-minimal">
                                 <div class="count-digit-lg" id="count-minutes">--</div>
-                                <div class="count-label-sub" data-i18n="minsLabel">నిమిషాలు</div>
+                                <div class="count-label-sub" data-i18n="minsLabel">
+                    Minutes
+                </div>
                             </div>
                             <div class="countdown-box-minimal">
                                 <div class="count-digit-lg" id="count-seconds">--</div>
-                                <div class="count-label-sub" data-i18n="secsLabel">సెకన్లు</div>
+                                <div class="count-label-sub" data-i18n="secsLabel">
+                    Seconds
+                </div>
                             </div>
                         </div>
 
                         <div id="muhurtham-status" class="muhurtham-countdown-status" data-i18n="countdownText">
-                            రెండు హృదయాలు ఒక్కటయ్యే పవిత్ర క్షణాల లెక్కింపు
-                        </div>
+                    Counting down to our forever...
+                </div>
                     </div>
                 </div>
             </section>
@@ -813,7 +875,9 @@
                         </div>
                         <div class="hero-portrait-caption">
                             <span class="hero-caption-gem">✦</span>
-                            <span class="hero-caption-text" data-i18n="pelliKodukuCaption">వరుడు • వరుణ్</span>
+                            <span class="hero-caption-text" data-i18n="pelliKodukuCaption">
+                    Groom • Varun
+                </span>
                             <span class="hero-caption-gem">✦</span>
                         </div>
                     </div>
@@ -861,12 +925,18 @@
                                 <span class="p-crest-gem">✦ 🌿 ✦</span>
                                 <span class="p-crest-line"></span>
                             </div>
-                            <h2 class="luxury-title-lg pelli-grand-title" data-i18n="pelliTitleTe">పెళ్ళికొడుకు</h2>
+                            <h2 class="luxury-title-lg pelli-grand-title varun-groom-grand-name" data-i18n="pelliTitleTe">
+                    Varun
+                </h2>
                             <div class="pelli-title-glow-bar" aria-hidden="true"></div>
                         </div>
 
-                        <h3 class="portal-title-en" data-i18n="pelliTitleEn">Pellikoduku Ceremony</h3>
-                        <div class="portal-ceremony-sub pelli-sub-line" data-i18n="pelliSub">మంగళ స్నానం &amp; నలుగు వేడుక</div>
+                        <h3 class="portal-title-en" data-i18n="pelliTitleEn">
+                    Pellikoduku
+                </h3>
+                        <div class="portal-ceremony-sub pelli-sub-line pelli-sacred-sloka" data-i18n="pelliSub">
+                    Mangalam Bhagavan Vishnuh Mangalam Garudadhwajah<br>Mangalam Pundarikaksho Mangalaya Tano Harih
+                </div>
 
                         <!-- Highlighted Day, Time & Place with Bespoke SVG Badges -->
                         <div class="pelli-event-highlights">
@@ -884,7 +954,9 @@
                                         <circle cx="16" cy="17" r="1.2" fill="currentColor"/>
                                     </svg>
                                 </div>
-                                <span class="pelli-hl-text pelli-date-text" data-i18n="pelliDate">16 డిసెంబర్ · ఉదయం 9:00 AM</span>
+                                <span class="pelli-hl-text pelli-date-text" data-i18n="pelliDate">
+                    16th December · Morning 9:00 AM
+                </span>
                             </div>
 
                             <div class="pelli-hl-separator" aria-hidden="true">✦</div>
@@ -897,14 +969,18 @@
                                         <path d="M9.5 20.5 V13.5 C9.5 12.7 10.2 12 11 12 H13 C13.8 12 14.5 12.7 14.5 13.5 V20.5" stroke="currentColor" stroke-width="1.6"/>
                                     </svg>
                                 </div>
-                                <span class="pelli-hl-text pelli-venue-text" data-i18n="pelliVenue">🏠 Home (గృహం)</span>
+                                <span class="pelli-hl-text pelli-venue-text" data-i18n="pelliVenue">
+                    Our residency
+                </span>
                             </div>
                         </div>
 
                         <!-- Sacred Highlight Pill -->
                         <div class="portal-pill-highlight">
                             <span class="highlight-chip-icon">🌿</span>
-                            <span class="highlight-chip-text" data-i18n="pelliFocusDesc">నలుగు స్నానం &amp; పెద్దల దీవెనలు</span>
+                            <span class="highlight-chip-text" data-i18n="pelliFocusDesc">
+                    ✦ Sacred Vedic Blessings ✦
+                </span>
                         </div>
                     </div>
                 </div>
@@ -922,7 +998,9 @@
                         </div>
                         <div class="hero-portrait-caption">
                             <span class="hero-caption-gem">✦</span>
-                            <span class="hero-caption-text" data-i18n="pellikuturuCaption">వధువు • ఆలేఖ్య</span>
+                            <span class="hero-caption-text" data-i18n="pellikuturuCaption">
+                    Bride • Alekhya
+                </span>
                             <span class="hero-caption-gem">✦</span>
                         </div>
                     </div>
@@ -970,12 +1048,18 @@
                                 <span class="p-crest-gem">✦ 🌸 ✦</span>
                                 <span class="p-crest-line"></span>
                             </div>
-                            <h2 class="luxury-title-lg pellikuturu-grand-title" data-i18n="pellikuturuTitleTe">పెళ్ళికూతురు</h2>
+                            <h2 class="luxury-title-lg pellikuturu-grand-title alekhya-bride-grand-name" data-i18n="pellikuturuTitleTe">
+                    Alekhya
+                </h2>
                             <div class="pellikuturu-title-glow-bar" aria-hidden="true"></div>
                         </div>
 
-                        <h3 class="portal-title-en" data-i18n="pellikuturuTitleEn">Pellikuturu Ceremony</h3>
-                        <div class="portal-ceremony-sub pellikuturu-sub-line" data-i18n="pellikuturuSub">మంగళ గౌరీ పూజ &amp; కన్యా సంస్కారము</div>
+                        <h3 class="portal-title-en" data-i18n="pellikuturuTitleEn">
+                    Pellikuturu
+                </h3>
+                        <div class="portal-ceremony-sub pellikuturu-sub-line pellikuturu-sacred-sloka" data-i18n="pellikuturuSub">
+                    Sarva Mangala Mangalye Shive Sarvartha Sadhike<br>Sharanye Tryambake Gauri Narayani Namostute
+                </div>
 
                         <!-- Highlighted Day, Time & Place with Bespoke SVG Badges -->
                         <div class="pellikuturu-event-highlights">
@@ -993,7 +1077,9 @@
                                         <circle cx="16" cy="17" r="1.2" fill="currentColor"/>
                                     </svg>
                                 </div>
-                                <span class="pellikuturu-hl-text pellikuturu-date-text" data-i18n="pellikuturuDate">17 డిసెంబర్ · ఉదయం 11:15 AM</span>
+                                <span class="pellikuturu-hl-text pellikuturu-date-text" data-i18n="pellikuturuDate">
+                    17th December · Morning 11:15 AM
+                </span>
                             </div>
 
                             <div class="pellikuturu-hl-separator" aria-hidden="true">✦</div>
@@ -1001,25 +1087,23 @@
                             <div class="pellikuturu-hl-item pellikuturu-venue-item">
                                 <div class="pellikuturu-icon-badge pellikuturu-venue-badge" aria-hidden="true">
                                     <svg viewBox="0 0 24 24" width="18" height="18" fill="none" class="pellikuturu-custom-svg">
-                                        <path d="M12 2 L12 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-                                        <path d="M4 8.5 L12 4.5 L20 8.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
-                                        <line x1="3" y1="9.5" x2="21" y2="9.5" stroke="currentColor" stroke-width="1.5"/>
-                                        <line x1="6" y1="9.5" x2="6" y2="17.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-                                        <line x1="10" y1="9.5" x2="10" y2="17.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-                                        <line x1="14" y1="9.5" x2="14" y2="17.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-                                        <line x1="18" y1="9.5" x2="18" y2="17.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
-                                        <line x1="4.5" y1="17.5" x2="19.5" y2="17.5" stroke="currentColor" stroke-width="1.5"/>
-                                        <line x1="2.5" y1="20" x2="21.5" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                                        <path d="M3 10.5 L12 3 L21 10.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M5 9.5 V19 C5 19.8 5.7 20.5 6.5 20.5 H17.5 C18.3 20.5 19 19.8 19 19 V9.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                                        <path d="M9.5 20.5 V13.5 C9.5 12.7 10.2 12 11 12 H13 C13.8 12 14.5 12.7 14.5 13.5 V20.5" stroke="currentColor" stroke-width="1.6"/>
                                     </svg>
                                 </div>
-                                <span class="pellikuturu-hl-text pellikuturu-venue-text" data-i18n="pellikuturuVenue">🏛️ Raaga Convention</span>
+                                <span class="pellikuturu-hl-text pellikuturu-venue-text" data-i18n="pellikuturuVenue">
+                    Our residency
+                </span>
                             </div>
                         </div>
 
                         <!-- Sacred Highlight Pill -->
                         <div class="portal-pill-highlight">
                             <span class="highlight-chip-icon">🌸</span>
-                            <span class="highlight-chip-text" data-i18n="pellikuturuFocusDesc">కన్యా సంస్కారం &amp; గౌరీ పూజ</span>
+                            <span class="highlight-chip-text" data-i18n="pellikuturuFocusDesc">
+                    ✦ Sacred Gowri Pooja & Blessings ✦
+                </span>
                         </div>
                     </div>
                 </div>
@@ -1037,7 +1121,9 @@
                         </div>
                         <div class="hero-portrait-caption">
                             <span class="hero-caption-gem">✦</span>
-                            <span class="hero-caption-text" data-i18n="mehandiCaption">ప్రేమ రంగుల గోరింటాకు</span>
+                            <span class="hero-caption-text" data-i18n="mehandiCaption">
+                    Colors of Mehandi • Deep Love
+                </span>
                             <span class="hero-caption-gem">✦</span>
                         </div>
                     </div>
@@ -1080,7 +1166,9 @@
 
                         <!-- Single Festive Green Dress Code Badge (Only One, No Duplicate) -->
                         <div class="mehandi-dress-badge">
-                            <span class="portal-date-chip chip-dress-green mehandi-dress-pill" data-i18n="mehandiDressCode">👗 Dress Code: Green</span>
+                            <span class="portal-date-chip chip-dress-green mehandi-dress-pill" data-i18n="mehandiDressCode">
+                    👗 Dress Code: Green
+                </span>
                         </div>
 
                         <!-- Grand Highlighted Title (Royally Crowned & Illuminated) -->
@@ -1090,11 +1178,15 @@
                                 <span class="m-crest-gem">✦ 🍃 ✦</span>
                                 <span class="m-crest-line"></span>
                             </div>
-                            <h2 class="luxury-title-lg mehandi-grand-title" data-i18n="mehandiTitleTe">గోరింటాకు సంబరం</h2>
+                            <h2 class="luxury-title-lg mehandi-grand-title" data-i18n="mehandiTitleTe">
+                    Mehandi
+                </h2>
                             <div class="mehandi-title-glow-bar" aria-hidden="true"></div>
                         </div>
 
-                        <div class="portal-ceremony-sub mehandi-sub-line" data-i18n="mehandiSub">గోరింటాకు డిజైన్లు &amp; సంగీత వేడుక</div>
+                        <div class="portal-ceremony-sub mehandi-sub-line" data-i18n="mehandiSub">
+                    Mehandi Designs & Musical Celebrations
+                </div>
 
                         <!-- Highlighted Day, Time & Place (Attractive SVG Badges & Balanced Font Size) -->
                         <div class="mehandi-event-highlights">
@@ -1112,7 +1204,9 @@
                                         <circle cx="16" cy="17" r="1.2" fill="currentColor"/>
                                     </svg>
                                 </div>
-                                <span class="mehandi-hl-text mehandi-date-text" data-i18n="mehandiDate">17 డిసెంబర్ · సాయంత్రం 5:00 PM</span>
+                                <span class="mehandi-hl-text mehandi-date-text" data-i18n="mehandiDate">
+                    17th December · Evening 5:00 PM
+                </span>
                             </div>
 
                             <div class="mehandi-hl-separator" aria-hidden="true">✦</div>
@@ -1131,7 +1225,9 @@
                                         <line x1="2.5" y1="20" x2="21.5" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
                                     </svg>
                                 </div>
-                                <span class="mehandi-hl-text mehandi-venue-text" data-i18n="mehandiVenue">Raaga Convention</span>
+                                <span class="mehandi-hl-text mehandi-venue-text" data-i18n="mehandiVenue">
+                    Raaga Convention
+                </span>
                             </div>
                         </div>
                     </div>
@@ -1150,7 +1246,9 @@
                         </div>
                         <div class="hero-portrait-caption">
                             <span class="hero-caption-gem">✦</span>
-                            <span class="hero-caption-text" data-i18n="haldiCaption">పసుపు వెలుగులు • అమూల్య క్షణాలు</span>
+                            <span class="hero-caption-text" data-i18n="haldiCaption">
+                    Golden Haldi • Auspicious Joy
+                </span>
                             <span class="hero-caption-gem">✦</span>
                         </div>
                     </div>
@@ -1193,7 +1291,9 @@
 
                         <!-- Single Festive Yellow Dress Code Badge -->
                         <div class="haldi-dress-badge">
-                            <span class="portal-date-chip chip-dress-yellow haldi-dress-pill" data-i18n="haldiDressCode">🥻 Dress Code: Yellow</span>
+                            <span class="portal-date-chip chip-dress-yellow haldi-dress-pill" data-i18n="haldiDressCode">
+                    🥻 Dress Code: Yellow
+                </span>
                         </div>
 
                         <!-- Grand Highlighted Title (Royally Crowned & Illuminated) -->
@@ -1203,11 +1303,15 @@
                                 <span class="h-crest-gem">✦ 🌻 ✦</span>
                                 <span class="h-crest-line"></span>
                             </div>
-                            <h2 class="luxury-title-lg haldi-grand-title" data-i18n="haldiTitleTe">పసుపు ఉత్సవం</h2>
+                            <h2 class="luxury-title-lg haldi-grand-title" data-i18n="haldiTitleTe">
+                    Haldi Ceremony
+                </h2>
                             <div class="haldi-title-glow-bar" aria-hidden="true"></div>
                         </div>
 
-                        <div class="portal-ceremony-sub haldi-sub-line" data-i18n="haldiSub">పసుపు వెలుగులు &amp; ఆనందోత్సాహాలు</div>
+                        <div class="portal-ceremony-sub haldi-sub-line" data-i18n="haldiSub">
+                    Golden Hues & Joyful Splashes
+                </div>
 
                         <!-- Highlighted Day, Time & Place with Bespoke SVG Badges -->
                         <div class="haldi-event-highlights">
@@ -1225,7 +1329,9 @@
                                         <circle cx="16" cy="17" r="1.2" fill="currentColor"/>
                                     </svg>
                                 </div>
-                                <span class="haldi-hl-text haldi-date-text" data-i18n="haldiDate">18 డిసెంబర్ · ఉదయం 9:30 AM</span>
+                                <span class="haldi-hl-text haldi-date-text" data-i18n="haldiDate">
+                    18th December · Morning 9:30 AM
+                </span>
                             </div>
 
                             <div class="haldi-hl-separator" aria-hidden="true">✦</div>
@@ -1244,7 +1350,9 @@
                                         <line x1="2.5" y1="20" x2="21.5" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
                                     </svg>
                                 </div>
-                                <span class="haldi-hl-text haldi-venue-text" data-i18n="haldiVenue">Raaga Convention</span>
+                                <span class="haldi-hl-text haldi-venue-text" data-i18n="haldiVenue">
+                    Raaga Convention
+                </span>
                             </div>
                         </div>
                     </div>
@@ -1263,7 +1371,9 @@
                         </div>
                         <div class="hero-portrait-caption">
                             <span class="hero-caption-gem">✦</span>
-                            <span class="hero-caption-text" data-i18n="sangeetCaption">సంగీత తరంగాలు • మధుర బంధం</span>
+                            <span class="hero-caption-text" data-i18n="sangeetCaption">
+                    Rhythm of Love • Sweet Harmony
+                </span>
                             <span class="hero-caption-gem">✦</span>
                         </div>
                     </div>
@@ -1306,7 +1416,9 @@
 
                         <!-- Glamorous Dress Code Badge -->
                         <div class="sangeet-dress-badge">
-                            <span class="portal-date-chip chip-dress-glam sangeet-dress-pill" data-i18n="sangeetDressCode">🥻 Dress Code: Shimmer &amp; Glam</span>
+                            <span class="portal-date-chip chip-dress-glam sangeet-dress-pill" data-i18n="sangeetDressCode">
+                    🥻 Dress Code: Shimmer & Glam
+                </span>
                         </div>
 
                         <!-- Grand Highlighted Title (Royally Crowned & Illuminated) -->
@@ -1316,11 +1428,15 @@
                                 <span class="s-crest-gem">✦ 🎵 ✨ ✦</span>
                                 <span class="s-crest-line"></span>
                             </div>
-                            <h2 class="luxury-title-lg sangeet-grand-title" data-i18n="sangeetTitleTe">సంగీత సంధ్య</h2>
+                            <h2 class="luxury-title-lg sangeet-grand-title" data-i18n="sangeetTitleTe">
+                    Sangeet Gala
+                </h2>
                             <div class="sangeet-title-glow-bar" aria-hidden="true"></div>
                         </div>
 
-                        <div class="portal-ceremony-sub sangeet-sub-line" data-i18n="sangeetSub">నృత్యాలు, సంగీతం &amp; విందు</div>
+                        <div class="portal-ceremony-sub sangeet-sub-line" data-i18n="sangeetSub">
+                    Dance Performances, DJ & Royal Feast
+                </div>
 
                         <!-- Highlighted Day, Time & Place (Attractive SVG Badges & Balanced Font Size) -->
                         <div class="sangeet-event-highlights">
@@ -1338,7 +1454,9 @@
                                         <circle cx="16" cy="17" r="1.2" fill="currentColor"/>
                                     </svg>
                                 </div>
-                                <span class="sangeet-hl-text sangeet-date-text" data-i18n="sangeetDate">18 డిసెంబర్ · సాయంత్రం 7:00 PM</span>
+                                <span class="sangeet-hl-text sangeet-date-text" data-i18n="sangeetDate">
+                    18th December · Evening 7:00 PM
+                </span>
                             </div>
 
                             <div class="sangeet-hl-separator" aria-hidden="true">✦</div>
@@ -1357,14 +1475,10 @@
                                         <line x1="2.5" y1="20" x2="21.5" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
                                     </svg>
                                 </div>
-                                <span class="sangeet-hl-text sangeet-venue-text" data-i18n="sangeetVenue">Raaga Convention</span>
+                                <span class="sangeet-hl-text sangeet-venue-text" data-i18n="sangeetVenue">
+                    Raaga Convention
+                </span>
                             </div>
-                        </div>
-
-                        <!-- Celebration Highlight Pill -->
-                        <div class="portal-pill-highlight sangeet-celebration-pill" style="margin-top: 10px;">
-                            <span class="highlight-chip-icon">💃</span>
-                            <span class="highlight-chip-text" data-i18n="sangeetFocusDesc">నృత్య ప్రదర్శనలు &amp; డీజే సంబరం</span>
                         </div>
                     </div>
                 </div>
@@ -1382,7 +1496,9 @@
                         </div>
                         <div class="hero-portrait-caption">
                             <span class="hero-caption-gem">✦</span>
-                            <span class="hero-caption-text" data-i18n="recCaption">రాచరిక స్వాగతం • మధుర కలయిక</span>
+                            <span class="hero-caption-text" data-i18n="recCaption">
+                    Royal Welcome • Celebration of Love
+                </span>
                             <span class="hero-caption-gem">✦</span>
                         </div>
                     </div>
@@ -1425,7 +1541,9 @@
 
                         <!-- Royal Reception Gala Badge -->
                         <div class="reception-crown-badge">
-                            <span class="portal-date-chip chip-dress-glam reception-badge-pill" data-i18n="recBadge">✨ గ్రాండ్ రిసెప్షన్ సంబరం ✨</span>
+                            <span class="portal-date-chip chip-dress-glam reception-badge-pill" data-i18n="recBadge">
+                    ✨ Grand Gala Evening ✨
+                </span>
                         </div>
 
                         <!-- Grand Highlighted Title (Royally Crowned & Illuminated) -->
@@ -1435,11 +1553,15 @@
                                 <span class="s-crest-gem">✦ 👑 🥂 ✦</span>
                                 <span class="s-crest-line"></span>
                             </div>
-                            <h2 class="luxury-title-lg reception-grand-title" data-i18n="recTitleTe">ఆదర సత్కారం</h2>
+                            <h2 class="luxury-title-lg reception-grand-title" data-i18n="recTitleTe">
+                    Grand Reception
+                </h2>
                             <div class="reception-title-glow-bar" aria-hidden="true"></div>
                         </div>
 
-                        <div class="portal-ceremony-sub reception-sub-line" data-i18n="recSub">దంపతులకు ఘన స్వాగతం &amp; విందు</div>
+                        <div class="portal-ceremony-sub reception-sub-line" data-i18n="recSub">
+                    Welcoming the Couple & Royal Feast
+                </div>
 
                         <!-- Highlighted Day, Time & Place (Clean Horizontal Highlights Row) -->
                         <div class="reception-event-highlights">
@@ -1457,7 +1579,9 @@
                                         <circle cx="16" cy="17" r="1.2" fill="currentColor"/>
                                     </svg>
                                 </div>
-                                <span class="reception-hl-text reception-date-text" data-i18n="recDate">19 డిసెంబర్ · సాయంత్రం 7:00 PM</span>
+                                <span class="reception-hl-text reception-date-text" data-i18n="recDate">
+                    19th December · Evening 7:00 PM
+                </span>
                             </div>
 
                             <div class="reception-hl-separator" aria-hidden="true">✦</div>
@@ -1476,14 +1600,18 @@
                                         <line x1="2.5" y1="20" x2="21.5" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
                                     </svg>
                                 </div>
-                                <span class="reception-hl-text reception-venue-text" data-i18n="recVenue">Raaga Convention</span>
+                                <span class="reception-hl-text reception-venue-text" data-i18n="recVenue">
+                    Raaga Convention
+                </span>
                             </div>
                         </div>
 
                         <!-- Celebration Highlight Pill -->
                         <div class="portal-pill-highlight reception-celebration-pill" style="margin-top: 10px;">
                             <span class="highlight-chip-icon">🍽️</span>
-                            <span class="highlight-chip-text" data-i18n="recFocusDesc">శుభాకాంక్షలు &amp; మహారాజ విందు</span>
+                            <span class="highlight-chip-text" data-i18n="recFocusDesc">
+                    Warm Greetings & Grand Royal Feast
+                </span>
                         </div>
                     </div>
                 </div>
@@ -1535,7 +1663,9 @@
                         <!-- Sacred Caption -->
                         <div class="hero-portrait-caption">
                             <span class="hero-caption-gem">✦</span>
-                            <span class="hero-caption-text" data-i18n="pelliCaption">అమృత ముహూర్తం • బ్రహ్మ ముహూర్తం 3:53 AM</span>
+                            <span class="hero-caption-text" data-i18n="pelliCaption">
+                    Muhurtham • 3:53 AM
+                </span>
                             <span class="hero-caption-gem">✦</span>
                         </div>
                     </div>
@@ -1576,34 +1706,79 @@
                             </svg>
                         </div>
 
-                        <!-- Simple Regal Title -->
-                        <h2 class="luxury-title-lg pelli-simple-title" data-i18n="pelliCrownTitleTe">కళ్యాణ సుముహూర్తం</h2>
+                        <!-- Sacred Muhurtham Royal Top Badge -->
+                        <div class="portal-ceremony-sub pelli-crown-badge">
+                            <span class="dress-code-badge dress-code-muhurtham" data-i18n="pelliCrownBadge">
+                                ✦ Sacred Muhurtham ✦
+                            </span>
+                        </div>
 
-                        <!-- Highlighted Day, Time & Venue (Simple & Elegant) -->
-                        <div class="pelli-simple-highlights">
-                            <div class="pelli-highlight-row pelli-day-row">
-                                <span class="pelli-hl-icon" aria-hidden="true">📅</span>
-                                <div class="pelli-hl-content">
-                                    <span class="pelli-hl-label" data-i18n="pelliDayLabel">తేదీ &amp; వారం</span>
-                                    <span class="pelli-hl-val" data-i18n="pelliDayVal">20 డిసెంబర్, ఆదివారం</span>
+                        <!-- Grand Highlighted Title Wrap -->
+                        <div class="pelli-title-highlight-wrap">
+                            <div class="pelli-crest-ornament" aria-hidden="true">
+                                <span class="p-crest-line"></span>
+                                <span class="p-crest-gem">✦ 👑 ✦</span>
+                                <span class="p-crest-line"></span>
+                            </div>
+                            <h2 class="luxury-title-lg pelli-grand-title pelli-simple-title" data-i18n="pelliCrownTitleTe">
+                                Subha Muhurtham
+                            </h2>
+                            <div class="pelli-title-glow-bar" aria-hidden="true"></div>
+                        </div>
+
+                        <div class="portal-ceremony-sub pelli-sub-line" data-i18n="pelliCrownSub">
+                            Divine Kalyana Mahotsavam & Sacred Jeelakarra Bellam
+                        </div>
+
+                        <!-- Highlighted Day, Time & Place with Exact Same Pill Container as All Other Screens -->
+                        <div class="pelli-event-highlights">
+                            <div class="pelli-hl-item pelli-datetime-item">
+                                <div class="pelli-icon-badge" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" class="pelli-custom-svg">
+                                        <rect x="3" y="4" width="18" height="17" rx="3.5" stroke="currentColor" stroke-width="1.8" fill="rgba(245, 158, 11, 0.14)"/>
+                                        <line x1="3" y1="9" x2="21" y2="9" stroke="currentColor" stroke-width="1.6"/>
+                                        <path d="M8 2 L8 5 M16 2 L16 5" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+                                        <circle cx="8" cy="13" r="1.2" fill="currentColor"/>
+                                        <circle cx="12" cy="13" r="1.2" fill="currentColor"/>
+                                        <circle cx="16" cy="13" r="1.2" fill="currentColor"/>
+                                        <circle cx="8" cy="17" r="1.2" fill="currentColor"/>
+                                        <circle cx="12" cy="17" r="1.2" fill="currentColor"/>
+                                        <circle cx="16" cy="17" r="1.2" fill="currentColor"/>
+                                    </svg>
                                 </div>
+                                <span class="pelli-hl-text pelli-date-text" data-i18n="pelliDayVal">
+                                    Sunday, 20th December · Early Dawn 3:53 AM
+                                </span>
                             </div>
 
-                            <div class="pelli-highlight-row pelli-time-row">
-                                <span class="pelli-hl-icon" aria-hidden="true">⏰</span>
-                                <div class="pelli-hl-content">
-                                    <span class="pelli-hl-label" data-i18n="pelliTimeLabel">సుముహూర్తం</span>
-                                    <span class="pelli-hl-val" data-i18n="pelliTimeVal">వేకువజామున 3:53 AM</span>
-                                </div>
-                            </div>
+                            <div class="pelli-hl-separator" aria-hidden="true">✦</div>
 
-                            <div class="pelli-highlight-row pelli-venue-row">
-                                <span class="pelli-hl-icon" aria-hidden="true">🏛️</span>
-                                <div class="pelli-hl-content">
-                                    <span class="pelli-hl-label" data-i18n="pelliVenueLabel">కళ్యాణ వేదిక</span>
-                                    <span class="pelli-hl-val" data-i18n="pelliVenueVal">Raaga Convention</span>
+                            <div class="pelli-hl-item pelli-venue-item">
+                                <div class="pelli-icon-badge pelli-venue-badge" aria-hidden="true">
+                                    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" class="pelli-custom-svg">
+                                        <path d="M12 2 L12 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                                        <path d="M4 8.5 L12 4.5 L20 8.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <line x1="3" y1="9.5" x2="21" y2="9.5" stroke="currentColor" stroke-width="1.5"/>
+                                        <line x1="6" y1="9.5" x2="6" y2="17.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                                        <line x1="10" y1="9.5" x2="10" y2="17.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                                        <line x1="14" y1="9.5" x2="14" y2="17.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                                        <line x1="18" y1="9.5" x2="18" y2="17.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                                        <line x1="4.5" y1="17.5" x2="19.5" y2="17.5" stroke="currentColor" stroke-width="1.5"/>
+                                        <line x1="2.5" y1="20" x2="21.5" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                                    </svg>
                                 </div>
+                                <span class="pelli-hl-text pelli-venue-text" data-i18n="pelliVenueVal">
+                                    Raaga Convention
+                                </span>
                             </div>
+                        </div>
+
+                        <!-- Sacred Highlight Focus Pill -->
+                        <div class="portal-pill-highlight">
+                            <span class="highlight-chip-icon">👑</span>
+                            <span class="highlight-chip-text" data-i18n="pelliFocusDesc">
+                                ✦ Sumuhurtham • Kalyana Mahotsavam ✦
+                            </span>
                         </div>
                     </div>
                 </div>
@@ -1648,10 +1823,14 @@
 
                     <!-- Sacred Category Pill & Mandapam Darshanam Toggle -->
                     <div class="vratham-top-badge">
-                        <span class="portal-date-chip chip-dress-yellow vratham-sacred-pill" data-i18n="vrathamSacredBadge">✨ దివ్య పూజా మహోత్సవం ✨</span>
-                        <button type="button" class="vratham-view-bg-btn" id="vratham-view-bg-btn" title="Toggle Mandapam View" aria-label="Toggle Mandapam Backdrop View">
+                        <span class="portal-date-chip chip-dress-yellow vratham-sacred-pill" data-i18n="vrathamSacredBadge">
+                    ✨ Divine Sacred Vratham ✨
+                </span>
+                        <button type="button" class="vratham-view-bg-btn" id="vratham-view-bg-btn" title="Toggle Mandapam View" data-i18n-title="vrathamViewTitle" aria-label="Toggle Mandapam Backdrop View">
                             <span class="btn-icon">👁️</span>
-                            <span class="btn-text" data-i18n="varViewBackdrop">దర్శనం</span>
+                            <span class="btn-text" data-i18n="varViewBackdrop">
+                    View Mandapam
+                </span>
                         </button>
                     </div>
 
@@ -1670,12 +1849,14 @@
                             <span class="v-crest-gem">✦ 🥥 🪔 ✦</span>
                             <span class="v-crest-line"></span>
                         </div>
-                        <h2 class="luxury-title-lg vratham-grand-title" data-i18n="varTitleTe">సత్యనారాయణ స్వామి వ్రతం</h2>
-                        <h3 class="portal-title-en vratham-en-title" data-i18n="varTitleEn">Sri Satyanarayana Swamy Varatham</h3>
+                        <h2 class="luxury-title-lg vratham-grand-title" data-i18n="varTitleTe">
+                    Satyanarayana Vratham
+                </h2>
+                        <h3 class="portal-title-en vratham-en-title" data-i18n="varTitleEn">
+                    Sri Satyanarayana Swamy Pooja
+                </h3>
                         <div class="vratham-title-glow-bar" aria-hidden="true"></div>
                     </div>
-
-                    <div class="portal-ceremony-sub vratham-sub-line" data-i18n="varSub">కృతజ్ఞతా పూర్వక దివ్య పూజ</div>
 
                     <!-- Highlighted Day, Time & Place with Bespoke SVG Badges -->
                     <div class="vratham-event-highlights">
@@ -1693,7 +1874,9 @@
                                     <circle cx="16" cy="17" r="1.2" fill="currentColor"/>
                                 </svg>
                             </div>
-                            <span class="vratham-hl-text vratham-date-text" data-i18n="varDate">20 డిసెంబర్ · ఉదయం 10:00 AM</span>
+                            <span class="vratham-hl-text vratham-date-text" data-i18n="varDate">
+                    20th December · Morning 10:00 AM
+                </span>
                         </div>
 
                         <div class="vratham-hl-separator" aria-hidden="true">✦</div>
@@ -1706,14 +1889,18 @@
                                     <path d="M9.5 20.5 V13.5 C9.5 12.7 10.2 12 11 12 H13 C13.8 12 14.5 12.7 14.5 13.5 V20.5" stroke="currentColor" stroke-width="1.6"/>
                                 </svg>
                             </div>
-                            <span class="vratham-hl-text vratham-venue-text" data-i18n="varVenue">Home (గృహం)</span>
+                            <span class="vratham-hl-text vratham-venue-text" data-i18n="varVenue">
+                    Our residency
+                </span>
                         </div>
                     </div>
 
                     <!-- Sacred Katha & Prasadam Highlight Pill -->
                     <div class="portal-pill-highlight vratham-prasadam-pill">
                         <span class="highlight-chip-icon vratham-pulse-icon">🥥</span>
-                        <span class="highlight-chip-text" data-i18n="varFocusDesc">కథా శ్రవణం &amp; మహా ప్రసాదం</span>
+                        <span class="highlight-chip-text" data-i18n="varFocusDesc">
+                    Katha Sravanam & Mahaprasadam
+                </span>
                     </div>
                 </div>
             </section>
@@ -1723,16 +1910,34 @@
                 <div class="luxury-glass-card card-venue">
                     <!-- Venue Header Pill & Building View Toggle -->
                     <div class="venue-top-header">
-                        <div class="luxury-category-tag" data-i18n="venueSub">కళ్యాణ వేదికలు</div>
-                        <button type="button" class="venue-view-bg-btn" id="venue-view-bg-btn" title="Toggle Raaga Convention View" aria-label="Toggle Raaga Convention View">
-                            <span class="btn-icon">🏛️</span>
-                            <span class="btn-text" data-i18n="venueViewBtn">భవన దర్శనం</span>
+                        <div class="luxury-category-tag" data-i18n="venueSub">
+                    Wedding Venues
+                </div>
+                        <button type="button" class="venue-view-bg-btn" id="venue-view-bg-btn" title="Toggle Raaga Convention View" data-i18n-title="venueViewTitle" aria-label="Toggle Raaga Convention View">
+                            <span class="btn-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="14" height="14" fill="none" class="venue-custom-svg">
+                                    <path d="M12 2 L12 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                                    <path d="M4 8.5 L12 4.5 L20 8.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <line x1="3" y1="9.5" x2="21" y2="9.5" stroke="currentColor" stroke-width="1.5"/>
+                                    <line x1="6" y1="9.5" x2="6" y2="17.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                                    <line x1="10" y1="9.5" x2="10" y2="17.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                                    <line x1="14" y1="9.5" x2="14" y2="17.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                                    <line x1="18" y1="9.5" x2="18" y2="17.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                                    <line x1="4.5" y1="17.5" x2="19.5" y2="17.5" stroke="currentColor" stroke-width="1.5"/>
+                                    <line x1="2.5" y1="20" x2="21.5" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                                </svg>
+                            </span>
+                            <span class="btn-text" data-i18n="venueViewBtn">
+                                View Venue
+                            </span>
                         </button>
                     </div>
 
-                    <h2 class="luxury-title-lg venue-main-title" style="font-size: clamp(1.2rem, 2.2vw, 1.48rem); margin: 2px auto;" data-i18n="venueTitle">Raaga Convention & Home</h2>
-                    <p class="card-desc-lead venue-address-desc" style="font-size: 0.80rem; margin: 4px auto; line-height: 1.35;" data-i18n="venueAddress">
-                        🏛️ ప్రధాన వేదిక: Raaga Convention, Main Highway Junction<br>🏠 గృహం: Home Residence, Private Family Suite
+                    <h2 class="luxury-title-lg venue-main-title" style="font-size: clamp(1.2rem, 2.2vw, 1.48rem); margin: 2px auto;" data-i18n="venueTitle">
+                        Raaga Convention & Residency
+                    </h2>
+                    <p class="card-desc-lead venue-address-desc" style="font-size: 0.80rem; margin: 4px auto; line-height: 1.45;" data-i18n="venueAddress">
+                        <span class="venue-address-line"><span class="venue-inline-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" class="venue-custom-svg"><path d="M12 2 L12 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M4 8.5 L12 4.5 L20 8.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><line x1="3" y1="9.5" x2="21" y2="9.5" stroke="currentColor" stroke-width="1.5"/><line x1="6" y1="9.5" x2="6" y2="17.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><line x1="10" y1="9.5" x2="10" y2="17.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><line x1="14" y1="9.5" x2="14" y2="17.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><line x1="18" y1="9.5" x2="18" y2="17.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><line x1="4.5" y1="17.5" x2="19.5" y2="17.5" stroke="currentColor" stroke-width="1.5"/><line x1="2.5" y1="20" x2="21.5" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg></span> Main Venue: Raaga Convention, <span class="no-wrap-text">Main Highway Junction</span></span><br><span class="venue-address-line"><span class="venue-inline-icon venue-home-icon" aria-hidden="true"><svg viewBox="0 0 24 24" width="13" height="13" fill="none" class="venue-custom-svg"><path d="M3 10.5 L12 3 L21 10.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/><path d="M5 9.5 V19 C5 19.8 5.7 20.5 6.5 20.5 H17.5 C18.3 20.5 19 19.8 19 19 V9.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/><path d="M9.5 20.5 V13.5 C9.5 12.7 10.2 12 11 12 H13 C13.8 12 14.5 12.7 14.5 13.5 V20.5" stroke="currentColor" stroke-width="1.6"/></svg></span> Residence: Our residency, Private Family Suite</span>
                     </p>
 
                     <div class="map-placeholder-frame" style="height: 125px; margin: 6px 0;">
@@ -1744,42 +1949,91 @@
                     </div>
 
                     <div class="venue-map-buttons-grid" style="margin-top: 6px;">
-                        <a class="btn-luxury-primary venue-map-btn" href="https://maps.app.goo.gl/aPeFnfecdPrnsw4h6" rel="noopener noreferrer" target="_blank" data-i18n="btnOpenMapsRaaga">
-                            🏛️ రాగా కన్వెన్షన్ మ్యాప్
+                        <a class="btn-luxury-primary venue-map-btn" href="https://maps.app.goo.gl/aPeFnfecdPrnsw4h6" rel="noopener noreferrer" target="_blank">
+                            <span class="venue-btn-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" class="venue-custom-svg">
+                                    <path d="M12 2 L12 4.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                                    <path d="M4 8.5 L12 4.5 L20 8.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <line x1="3" y1="9.5" x2="21" y2="9.5" stroke="currentColor" stroke-width="1.5"/>
+                                    <line x1="6" y1="9.5" x2="6" y2="17.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                                    <line x1="10" y1="9.5" x2="10" y2="17.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                                    <line x1="14" y1="9.5" x2="14" y2="17.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                                    <line x1="18" y1="9.5" x2="18" y2="17.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                                    <line x1="4.5" y1="17.5" x2="19.5" y2="17.5" stroke="currentColor" stroke-width="1.5"/>
+                                    <line x1="2.5" y1="20" x2="21.5" y2="20" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+                                </svg>
+                            </span>
+                            <span data-i18n="btnOpenMapsRaaga">Raaga Convention Google Maps</span>
                         </a>
-                        <a class="btn-luxury-primary venue-map-btn venue-home-btn" href="https://maps.app.goo.gl/vJqZWPSxs1DDdMQy7" rel="noopener noreferrer" target="_blank" data-i18n="btnOpenMapsHome">
-                            🏠 నివాస గృహం (Home) మ్యాప్
+                        <a class="btn-luxury-primary venue-map-btn venue-home-btn" href="https://maps.app.goo.gl/vJqZWPSxs1DDdMQy7" rel="noopener noreferrer" target="_blank">
+                            <span class="venue-btn-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" class="venue-custom-svg">
+                                    <path d="M3 10.5 L12 3 L21 10.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M5 9.5 V19 C5 19.8 5.7 20.5 6.5 20.5 H17.5 C18.3 20.5 19 19.8 19 19 V9.5" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/>
+                                    <path d="M9.5 20.5 V13.5 C9.5 12.7 10.2 12 11 12 H13 C13.8 12 14.5 12.7 14.5 13.5 V20.5" stroke="currentColor" stroke-width="1.6"/>
+                                </svg>
+                            </span>
+                            <span data-i18n="btnOpenMapsHome">Our residency Google Maps</span>
                         </a>
                     </div>
 
                     <!-- Contact Details Box -->
                     <div class="venue-contacts-box">
                         <div class="venue-contacts-header">
-                            <span class="contacts-title-text" data-i18n="venueContactsTitle">📞 సంప్రదించవలసిన ఫోన్ నంబర్లు • Contact Details</span>
+                            <span class="contacts-svg-icon" aria-hidden="true">
+                                <svg viewBox="0 0 24 24" width="15" height="15" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </span>
+                            <span class="contacts-title-text" data-i18n="venueContactsTitle">
+                                Contact Numbers & Coordination
+                            </span>
                         </div>
                         <div class="venue-contacts-columns">
                             <div class="contact-party-group bride-group">
-                                <span class="contact-party-label" data-i18n="contactBrideBadge">👰 వధువు తరపున • Bride Side</span>
+                                <span class="contact-party-label bride-party-label">
+                                    <span class="contact-party-gem" aria-hidden="true">✦ 🌸 ✦</span>
+                                    <span data-i18n="contactBrideBadge">Bride Family Side</span>
+                                </span>
                                 <div class="contact-numbers-row">
-                                    <a href="tel:9849057118" class="contact-num-chip" title="Call Bride's Family">
-                                        <span class="call-icon">📞</span>
+                                    <a href="tel:9849057118" class="contact-num-chip" title="Call Bride's Family" data-i18n-title="callBrideTitle">
+                                        <span class="call-icon" aria-hidden="true">
+                                            <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                            </svg>
+                                        </span>
                                         <span class="num-text">9849057118</span>
                                     </a>
-                                    <a href="tel:9866006005" class="contact-num-chip" title="Call Bride's Family">
-                                        <span class="call-icon">📞</span>
+                                    <a href="tel:9866006005" class="contact-num-chip" title="Call Bride's Family" data-i18n-title="callBrideTitle">
+                                        <span class="call-icon" aria-hidden="true">
+                                            <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                            </svg>
+                                        </span>
                                         <span class="num-text">9866006005</span>
                                     </a>
                                 </div>
                             </div>
                             <div class="contact-party-group groom-group">
-                                <span class="contact-party-label" data-i18n="contactGroomBadge">🤵 వరుని తరపున • Groom Side</span>
+                                <span class="contact-party-label groom-party-label">
+                                    <span class="contact-party-gem" aria-hidden="true">✦ 👑 ✦</span>
+                                    <span data-i18n="contactGroomBadge">Groom Family Side</span>
+                                </span>
                                 <div class="contact-numbers-row">
-                                    <a href="tel:9652412390" class="contact-num-chip" title="Call Groom's Family">
-                                        <span class="call-icon">📞</span>
+                                    <a href="tel:9652412390" class="contact-num-chip" title="Call Groom's Family" data-i18n-title="callGroomTitle">
+                                        <span class="call-icon" aria-hidden="true">
+                                            <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                            </svg>
+                                        </span>
                                         <span class="num-text">9652412390</span>
                                     </a>
-                                    <a href="tel:8897847684" class="contact-num-chip" title="Call Groom's Family">
-                                        <span class="call-icon">📞</span>
+                                    <a href="tel:8897847684" class="contact-num-chip" title="Call Groom's Family" data-i18n-title="callGroomTitle">
+                                        <span class="call-icon" aria-hidden="true">
+                                            <svg viewBox="0 0 24 24" width="11" height="11" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                            </svg>
+                                        </span>
                                         <span class="num-text">8897847684</span>
                                     </a>
                                 </div>
@@ -1819,23 +2073,25 @@
 
                     <!-- Top Header: Family Portrait View Toggle -->
                     <div class="family-top-header">
-                        <button type="button" class="family-view-bg-btn" id="family-view-bg-btn" title="Toggle Family Portrait View" aria-label="Toggle Family Portrait View">
+                        <button type="button" class="family-view-bg-btn" id="family-view-bg-btn" title="Toggle Family Portrait View" data-i18n-title="familyViewTitle" aria-label="Toggle Family Portrait View">
                             <span class="btn-icon">👨‍👩‍👧‍👦</span>
-                            <span class="btn-text" data-i18n="familyViewBtn">కుటుంబ దర్శనం</span>
+                            <span class="btn-text" data-i18n="familyViewBtn">
+                    View Family Photo
+                </span>
                         </button>
                     </div>
 
                     <!-- Highlighted Family Lineage Centerpiece Title (Balanced Two Lines) -->
                     <div class="family-lineage-title-wrap">
                         <h2 class="family-lineage-highlight-title" data-i18n="familyLineage">
-                            పెద్దిరెడ్డి &amp; అల్లాడ కుటుంబాల<br>ఆత్మీయ ఆహ్వానం
-                        </h2>
+                    Peddireddi & Allada Families<br>Warmly Welcome You
+                </h2>
                     </div>
 
                     <!-- Sacred Sanskrit Shloka -->
                     <div class="family-sacred-shloka" data-i18n="familyShloka">
-                        సర్వే జనాః సుఖినో భవంతు • కల్యాణమస్తు
-                    </div>
+                    May all beings be happy • May there be eternal auspiciousness
+                </div>
 
                     <!-- Ornate Floral Divider (No Diya Icons) -->
                     <div class="family-ornate-divider" aria-hidden="true">
@@ -1846,14 +2102,14 @@
 
                     <!-- Relatives Description -->
                     <p class="family-footer-desc" data-i18n="familyEnding">
-                        మరియు బంధుమిత్రులు.
-                    </p>
+                    Along with near & dear relatives and friends.
+                </p>
 
                     <!-- Interactive Shower Blessings Button -->
                     <div class="family-blessing-btn-wrap">
                         <button class="family-blessing-btn" id="btn-shower-blessings" type="button" aria-label="Shower Blessings on the Couple" data-i18n="btnShowerBlessings">
-                            🌸 ఆశీస్సులు అందజేయండి • Shower Blessings 🌸
-                        </button>
+                    🌸 Shower Blessings on the Couple 🌸
+                </button>
                         <!-- Guided Clicking Hand Icon (Appears after 3 seconds) -->
                         <div class="shower-hand-click-hint" id="shower-hand-click-hint" aria-hidden="true">
                             <div class="shower-hand-beacon"></div>
@@ -1899,26 +2155,7 @@
     <!-- Master Audio (Ambient Wedding Theme) -->
     <audio id="wedding-master-audio" src="assets/audio/seetha_kalyanam_wedding_theme.mp3" preload="auto" loop></audio>
     <!-- Sacred Sri Chakra Gayatri Mantra Audio (Landing Portal) -->
-    <audio id="chakra-landing-audio" src="assets/audio/gayatri_mantra_chakra.mp3" preload="auto" loop autoplay playsinline></audio>
-    <script>
-        // High-Priority Earliest Ignition for Gayatri Mantra
-        (function() {
-            try {
-                var el = document.getElementById('chakra-landing-audio');
-                if (el) {
-                    el.volume = 0.75;
-                    var p = el.play();
-                    if (p !== undefined) {
-                        p.catch(function() {
-                            // If unmuted playback is blocked on initial parse, start muted so stream is active
-                            el.muted = true;
-                            el.play().catch(function() {});
-                        });
-                    }
-                }
-            } catch(e) {}
-        })();
-    </script>
+    <audio id="chakra-landing-audio" src="assets/audio/gayatri_mantra_chakra.mp3" preload="auto" playsinline></audio>
 
     <!-- Scripts (Ordered for Robust Execution) -->
     <script src="js/i18n.js"></script>
