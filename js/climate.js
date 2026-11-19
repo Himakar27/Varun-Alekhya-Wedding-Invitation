@@ -473,6 +473,10 @@ class NextGenAtmosphereEngine {
         if (this.currentMood === 'venue') {
             return;
         }
+        // Pure photograph presentation on desktop for sunset family scene; eliminate all canvas overlays, lighting washes and snow
+        if (this.currentMood === 'sunset' && window.innerWidth > 860) {
+            return;
+        }
 
         const c = this.currentColors;
         const topRgba = `rgba(${Math.round(c.top[0])}, ${Math.round(c.top[1])}, ${Math.round(c.top[2])}, ${c.top[3].toFixed(2)})`;
@@ -637,10 +641,10 @@ class NextGenAtmosphereEngine {
             }
         }
 
-        // 5. Authentic Natural Winter Snowfall (Active only during daylight winter climates; Disabled in Night Theme, Haldi, Mehandi, Sangeet, Vratham, Venue and Sunset Family screen)
+        // 5. Authentic Natural Winter Snowfall (Active during daylight winter climates & Sunset Family Screen; Disabled in Haldi, Mehandi, Sangeet, Vratham, Venue)
         const daylightSnowFactor = Math.max(0, 1 - this.nightAlpha);
 
-        if (this.currentMood !== 'haldi' && this.currentMood !== 'mehandi' && this.currentMood !== 'sangeet' && this.currentMood !== 'vratham' && this.currentMood !== 'venue' && this.currentMood !== 'sunset' && daylightSnowFactor > 0.02) {
+        if (this.currentMood !== 'haldi' && this.currentMood !== 'mehandi' && this.currentMood !== 'sangeet' && this.currentMood !== 'vratham' && this.currentMood !== 'venue' && daylightSnowFactor > 0.02) {
             const wind = Math.sin(this.time * 0.4) * 0.3;
 
             for (const flake of this.snowflakes) {
