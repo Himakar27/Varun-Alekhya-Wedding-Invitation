@@ -1701,7 +1701,7 @@ body[data-theme-mode="dark"] .mehandi-grand-title {
 .mehandi-sub-line {
     font-size: 0.92rem;
     color: var(--secondary-text-color);
-    margin: 0 auto 14px;
+    margin: 0 auto 12px;
 }
 
 body[data-theme-mode="dark"] .mehandi-sub-line {
@@ -1733,15 +1733,30 @@ body[data-theme-mode="dark"] .mehandi-event-highlights {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.75), 0 0 25px rgba(16, 185, 129, 0.22);
 }
 
-.mehandi-hl-item {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
+.mehandi-hl-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
 }
 
-.mehandi-icon-badge {
+.mehandi-hl-item,
+.mehandi-hl-group .mehandi-hl-item,
+.mehandi-hl-group .mehandi-datetime-item,
+.mehandi-hl-group .mehandi-dress-item,
+.mehandi-hl-group .mehandi-venue-item {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    gap: 12px !important;
+    width: 100% !important;
+}
+
+.mehandi-icon-badge, .mehandi-venue-badge {
     width: 32px;
     height: 32px;
     flex-shrink: 0;
@@ -1749,10 +1764,10 @@ body[data-theme-mode="dark"] .mehandi-event-highlights {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, rgba(245, 158, 11, 0.18) 0%, rgba(217, 119, 6, 0.1) 100%);
-    border: 1.5px solid rgba(245, 158, 11, 0.55);
-    color: #D97706;
-    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.2);
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.20) 0%, rgba(5, 150, 105, 0.12) 100%);
+    border-color: rgba(16, 185, 129, 0.60);
+    color: #059669;
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.25);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
@@ -1763,12 +1778,26 @@ body[data-theme-mode="dark"] .mehandi-icon-badge {
     box-shadow: 0 3px 12px rgba(245, 158, 11, 0.35);
 }
 
-.mehandi-venue-badge {
+/* .mehandi-dress-icon-badge {
+    background: linear-gradient(135deg, rgba(16, 185, 129, 0.20) 0%, rgba(5, 150, 105, 0.12) 100%);
+    border-color: rgba(16, 185, 129, 0.60);
+    color: #059669;
+    box-shadow: 0 2px 8px rgba(16, 185, 129, 0.25);
+} */
+
+body[data-theme-mode="dark"] .mehandi-dress-icon-badge {
+    background: linear-gradient(135deg, rgba(52, 211, 153, 0.22) 0%, rgba(16, 185, 129, 0.14) 100%);
+    border-color: rgba(52, 211, 153, 0.75);
+    color: #34D399;
+    box-shadow: 0 3px 12px rgba(16, 185, 129, 0.40);
+}
+
+/* .mehandi-venue-badge {
     background: linear-gradient(135deg, rgba(16, 185, 129, 0.18) 0%, rgba(5, 150, 105, 0.1) 100%);
     border-color: rgba(16, 185, 129, 0.55);
     color: #059669;
     box-shadow: 0 2px 8px rgba(16, 185, 129, 0.2);
-}
+} */
 
 body[data-theme-mode="dark"] .mehandi-venue-badge {
     background: linear-gradient(135deg, rgba(52, 211, 153, 0.2) 0%, rgba(16, 185, 129, 0.12) 100%);
@@ -1783,26 +1812,37 @@ body[data-theme-mode="dark"] .mehandi-venue-badge {
 }
 
 .mehandi-hl-text {
-    font-family: var(--font-ui);
-    font-size: clamp(0.94rem, 1.9vw, 1.08rem);
+    font-size: clamp(0.94rem, 1.9vw, 1.08rem) !important;
     font-weight: 700;
     letter-spacing: 0.3px;
-    line-height: 1.35;
+    color: var(--primary-text-color);
 }
 
-.mehandi-date-text {
-    color: #92400E;
+body[data-theme-mode="dark"] .mehandi-hl-text {
+    color: #FFFFFF;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+.mehandi-date-text, .mehandi-dress-text,.mehandi-venue-text {
+    color: #047857;
 }
 
 body[data-theme-mode="dark"] .mehandi-date-text {
-    color: #FFFDF0;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    color: #FDE047;
 }
 
-.mehandi-venue-text {
+/* .mehandi-dress-text {
+    color: #047857;
+} */
+
+body[data-theme-mode="dark"] .mehandi-dress-text {
+    color: #6EE7B7;
+}
+
+/* .mehandi-venue-text {
     color: #047857;
     font-weight: 800;
-}
+} */
 
 body[data-theme-mode="dark"] .mehandi-venue-text {
     color: #34D399;
@@ -1810,9 +1850,13 @@ body[data-theme-mode="dark"] .mehandi-venue-text {
 }
 
 .mehandi-hl-separator {
+    width: 100%;
+    text-align: center;
     color: #10B981;
-    font-size: 0.72rem;
-    opacity: 0.7;
+    font-size: 0.68rem;
+    opacity: 0.65;
+    line-height: 1;
+    margin: 1px 0;
 }
 
 body[data-theme-mode="dark"] .mehandi-hl-separator {
@@ -1822,10 +1866,17 @@ body[data-theme-mode="dark"] .mehandi-hl-separator {
 @media (max-width: 640px) {
     .mehandi-event-highlights {
         padding: 9px 12px;
-        gap: 6px;
+        gap: 0;
+    }
+    .mehandi-hl-group {
+        gap: 5px;
+    }
+    .mehandi-hl-item {
+        gap: 10px;
     }
     .mehandi-hl-text {
-        font-size: 0.92rem;
+        font-size: clamp(0.84rem, 2.3vw, 0.94rem) !important;
+        white-space: nowrap;
     }
     .mehandi-icon-badge {
         width: 28px;
@@ -1834,6 +1885,24 @@ body[data-theme-mode="dark"] .mehandi-hl-separator {
     .mehandi-custom-svg {
         width: 15px;
         height: 15px;
+    }
+}
+
+@media (max-width: 360px) {
+    .mehandi-hl-text {
+        font-size: 0.78rem !important;
+        letter-spacing: 0px !important;
+    }
+    .mehandi-hl-item {
+        gap: 8px !important;
+    }
+    .mehandi-icon-badge {
+        width: 25px !important;
+        height: 25px !important;
+    }
+    .mehandi-custom-svg {
+        width: 13px !important;
+        height: 13px !important;
     }
 }
 
@@ -1934,7 +2003,7 @@ body[data-theme-mode="dark"] .haldi-grand-title {
 .haldi-sub-line {
     font-size: 0.92rem;
     color: var(--secondary-text-color);
-    margin: 0 auto 14px;
+    margin: 0 auto 12px;
 }
 
 body[data-theme-mode="dark"] .haldi-sub-line {
@@ -1966,12 +2035,27 @@ body[data-theme-mode="dark"] .haldi-event-highlights {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.75), 0 0 25px rgba(234, 179, 8, 0.22);
 }
 
-.haldi-hl-item {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
+.haldi-hl-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.haldi-hl-item,
+.haldi-hl-group .haldi-hl-item,
+.haldi-hl-group .haldi-datetime-item,
+.haldi-hl-group .haldi-dress-item,
+.haldi-hl-group .haldi-venue-item {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    gap: 12px !important;
+    width: 100% !important;
 }
 
 .haldi-icon-badge {
@@ -1986,6 +2070,7 @@ body[data-theme-mode="dark"] .haldi-event-highlights {
     border: 1.5px solid rgba(234, 179, 8, 0.6);
     color: #B45309;
     box-shadow: 0 2px 8px rgba(234, 179, 8, 0.2);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 body[data-theme-mode="dark"] .haldi-icon-badge {
@@ -1993,6 +2078,20 @@ body[data-theme-mode="dark"] .haldi-icon-badge {
     border-color: rgba(254, 240, 138, 0.7);
     color: #FDE047;
     box-shadow: 0 3px 12px rgba(234, 179, 8, 0.35);
+}
+
+.haldi-dress-icon-badge {
+    background: linear-gradient(135deg, rgba(245, 158, 11, 0.22) 0%, rgba(217, 119, 6, 0.14) 100%);
+    border-color: rgba(245, 158, 11, 0.65);
+    color: #D97706;
+    box-shadow: 0 2px 8px rgba(245, 158, 11, 0.25);
+}
+
+body[data-theme-mode="dark"] .haldi-dress-icon-badge {
+    background: linear-gradient(135deg, rgba(254, 240, 138, 0.22) 0%, rgba(245, 158, 11, 0.14) 100%);
+    border-color: rgba(254, 240, 138, 0.75);
+    color: #FDE047;
+    box-shadow: 0 3px 12px rgba(245, 158, 11, 0.40);
 }
 
 .haldi-venue-badge {
@@ -2013,11 +2112,15 @@ body[data-theme-mode="dark"] .haldi-venue-badge {
 }
 
 .haldi-hl-text {
-    font-family: var(--font-ui);
-    font-size: clamp(0.94rem, 1.9vw, 1.08rem);
+    font-size: clamp(0.94rem, 1.9vw, 1.08rem) !important;
     font-weight: 700;
     letter-spacing: 0.3px;
-    line-height: 1.35;
+    color: var(--primary-text-color);
+}
+
+body[data-theme-mode="dark"] .haldi-hl-text {
+    color: #FFFFFF;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
 }
 
 .haldi-date-text {
@@ -2025,8 +2128,15 @@ body[data-theme-mode="dark"] .haldi-venue-badge {
 }
 
 body[data-theme-mode="dark"] .haldi-date-text {
-    color: #FFFDF0;
-    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.8);
+    color: #FDE047;
+}
+
+.haldi-dress-text {
+    color: #B45309;
+}
+
+body[data-theme-mode="dark"] .haldi-dress-text {
+    color: #FDE047;
 }
 
 .haldi-venue-text {
@@ -2040,9 +2150,13 @@ body[data-theme-mode="dark"] .haldi-venue-text {
 }
 
 .haldi-hl-separator {
+    width: 100%;
+    text-align: center;
     color: #F59E0B;
-    font-size: 0.72rem;
-    opacity: 0.7;
+    font-size: 0.68rem;
+    opacity: 0.65;
+    line-height: 1;
+    margin: 1px 0;
 }
 
 body[data-theme-mode="dark"] .haldi-hl-separator {
@@ -2483,7 +2597,7 @@ body[data-theme-mode="dark"] .vratham-date-text {
 }
 
 .vratham-venue-text {
-    color: #78350F;
+    color: #780016;
 }
 
 body[data-theme-mode="dark"] .vratham-venue-text {
@@ -2522,10 +2636,17 @@ body[data-theme-mode="dark"] .vratham-hl-separator {
 @media (max-width: 640px) {
     .haldi-event-highlights {
         padding: 9px 12px;
-        gap: 6px;
+        gap: 0;
+    }
+    .haldi-hl-group {
+        gap: 5px;
+    }
+    .haldi-hl-item {
+        gap: 10px;
     }
     .haldi-hl-text {
-        font-size: 0.92rem;
+        font-size: clamp(0.84rem, 2.3vw, 0.94rem) !important;
+        white-space: nowrap;
     }
     .haldi-icon-badge {
         width: 28px;
@@ -2534,6 +2655,24 @@ body[data-theme-mode="dark"] .vratham-hl-separator {
     .haldi-custom-svg {
         width: 15px;
         height: 15px;
+    }
+}
+
+@media (max-width: 360px) {
+    .haldi-hl-text {
+        font-size: 0.78rem !important;
+        letter-spacing: 0px !important;
+    }
+    .haldi-hl-item {
+        gap: 8px !important;
+    }
+    .haldi-icon-badge {
+        width: 25px !important;
+        height: 25px !important;
+    }
+    .haldi-custom-svg {
+        width: 13px !important;
+        height: 13px !important;
     }
 }
 
@@ -2558,7 +2697,8 @@ body[data-theme-mode="dark"] .vratham-hl-separator {
 }
 
 .sangeet-dress-badge {
-    margin-bottom: 8px;
+    margin-top: 10px;
+    margin-bottom: 0;
 }
 
 .sangeet-dress-pill {
@@ -2678,12 +2818,27 @@ body[data-theme-mode="dark"] .sangeet-event-highlights {
     box-shadow: 0 10px 30px rgba(0, 0, 0, 0.75), 0 0 25px rgba(168, 85, 247, 0.28);
 }
 
-.sangeet-hl-item {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    width: 100%;
+.sangeet-hl-group {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 7px;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+.sangeet-hl-item,
+.sangeet-hl-group .sangeet-hl-item,
+.sangeet-hl-group .sangeet-datetime-item,
+.sangeet-hl-group .sangeet-dress-item,
+.sangeet-hl-group .sangeet-venue-item {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    gap: 12px !important;
+    width: 100% !important;
 }
 
 .sangeet-icon-badge {
@@ -2724,7 +2879,15 @@ body[data-theme-mode="dark"] .sangeet-hl-text {
 }
 
 body[data-theme-mode="dark"] .sangeet-date-text {
-    color: #FDE047;
+    color: #E9D5FF;
+}
+
+.sangeet-dress-text {
+    color: #A855F7;
+}
+
+body[data-theme-mode="dark"] .sangeet-dress-text {
+    color: #E9D5FF;
 }
 
 .sangeet-venue-text {
@@ -2736,9 +2899,13 @@ body[data-theme-mode="dark"] .sangeet-venue-text {
 }
 
 .sangeet-hl-separator {
+    width: 100%;
+    text-align: center;
     color: #C084FC;
-    font-size: 0.72rem;
-    opacity: 0.7;
+    font-size: 0.68rem;
+    opacity: 0.65;
+    line-height: 1;
+    margin: 1px 0;
 }
 
 body[data-theme-mode="dark"] .sangeet-hl-separator {
@@ -2748,10 +2915,17 @@ body[data-theme-mode="dark"] .sangeet-hl-separator {
 @media (max-width: 640px) {
     .sangeet-event-highlights {
         padding: 9px 12px;
-        gap: 6px;
+        gap: 0;
+    }
+    .sangeet-hl-group {
+        gap: 5px;
+    }
+    .sangeet-hl-item {
+        gap: 10px;
     }
     .sangeet-hl-text {
-        font-size: 0.92rem;
+        font-size: clamp(0.84rem, 2.3vw, 0.94rem) !important;
+        white-space: nowrap;
     }
     .sangeet-icon-badge {
         width: 28px;
@@ -2760,6 +2934,24 @@ body[data-theme-mode="dark"] .sangeet-hl-separator {
     .sangeet-custom-svg {
         width: 15px;
         height: 15px;
+    }
+}
+
+@media (max-width: 360px) {
+    .sangeet-hl-text {
+        font-size: 0.78rem !important;
+        letter-spacing: 0px !important;
+    }
+    .sangeet-hl-item {
+        gap: 8px !important;
+    }
+    .sangeet-icon-badge {
+        width: 25px !important;
+        height: 25px !important;
+    }
+    .sangeet-custom-svg {
+        width: 13px !important;
+        height: 13px !important;
     }
 }
 
@@ -2832,27 +3024,27 @@ body[data-theme-mode="dark"] .sacred-crest-motif {
     color: #FDE047;
 }
 
-/* Lineage Ribbon (Understated, Balanced & Symmetrical) */
+/* Lineage Ribbon (Understated, Clean & Regal - No Box/Border/Shadow) */
 .hero-lineage-ribbon {
     display: flex;
     align-items: center;
     justify-content: center;
     gap: 16px;
-    margin: 8px auto 0;
-    padding: 10px 18px;
-    background: rgba(254, 243, 199, 0.45);
-    border: 1px solid rgba(217, 119, 6, 0.28);
-    border-radius: 16px;
+    margin: 4px auto 0;
+    padding: 4px 8px;
+    background: transparent !important;
+    border: none !important;
+    border-radius: 0 !important;
     max-width: 96%;
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    box-shadow: 0 4px 16px rgba(180, 83, 9, 0.06);
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+    box-shadow: none !important;
 }
 
 body[data-theme-mode="dark"] .hero-lineage-ribbon {
-    background: rgba(254, 240, 138, 0.08);
-    border-color: rgba(254, 240, 138, 0.25);
-    box-shadow: 0 4px 18px rgba(0, 0, 0, 0.3);
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
 }
 
 .hero-lineage-col {
@@ -2906,11 +3098,14 @@ body[data-theme-mode="dark"] .hero-lineage-divider {
 @media (max-width: 600px) {
     .hero-lineage-ribbon {
         flex-direction: column;
-        gap: 8px;
-        padding: 10px 14px;
+        gap: 6px;
+        padding: 2px 4px;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
     }
     .hero-lineage-divider {
-        margin: -2px 0;
+        margin: 0;
         font-size: 0.75rem;
     }
     .lineage-name {
@@ -3035,33 +3230,37 @@ body[data-theme-mode="dark"] .quote-divider-mini .q-gem {
     justify-content: center;
 }
 
-/* Highlighted Muhurtham Day & Time Banner (Clearly Readable, High Contrast & Elegant) */
+/* Highlighted Muhurtham Day & Time Banner (Clean Left-Aligned Column) */
 .muhurtham-datetime-highlight {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    margin: 10px auto 12px;
-    padding: 8px 18px;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    margin: 8px auto 12px !important;
+    padding: 9px 18px !important;
     background: rgba(254, 240, 138, 0.12);
     border: 1.5px solid rgba(254, 240, 138, 0.45);
-    border-radius: 999px;
+    border-radius: 14px !important;
     backdrop-filter: blur(12px);
-    flex-wrap: wrap;
-    max-width: 95%;
+    width: fit-content !important;
+    max-width: 95% !important;
 }
 
 body[data-theme-mode="dark"] .muhurtham-datetime-highlight,
 .night-occasion-card .muhurtham-datetime-highlight {
     background: rgba(22, 16, 44, 0.88);
     border-color: rgba(254, 240, 138, 0.6);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.75), 0 0 25px rgba(254, 240, 138, 0.22);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
 }
 
 .datetime-pill-item {
-    display: inline-flex;
-    align-items: center;
-    gap: 8px;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    gap: 10px !important;
+    width: 100% !important;
 }
 
 .dt-icon {
@@ -3075,58 +3274,52 @@ body[data-theme-mode="dark"] .muhurtham-datetime-highlight,
     font-weight: 600;
     color: #FFFBEB;
     letter-spacing: 0.3px;
+    white-space: nowrap !important;
+    text-align: left !important;
 }
 
-.dt-date {
+.dt-date, .dt-time {
     color: #FFFDF0;
     text-shadow: 0 1px 4px rgba(0, 0, 0, 0.75);
 }
 
-.dt-time {
-    color: #FDE047;
-    font-weight: 800;
-    text-shadow: 0 0 12px rgba(253, 224, 71, 0.65), 0 1px 4px rgba(0, 0, 0, 0.85);
-}
-
 .datetime-pill-separator {
-    color: #F59E0B;
-    font-size: 0.8rem;
-    opacity: 0.85;
-}
-
-body[data-theme-mode="dark"] .datetime-pill-separator,
-.night-occasion-card .datetime-pill-separator {
-    color: #FDE047;
+    display: none !important;
 }
 
 @media (max-width: 640px) {
     .muhurtham-datetime-highlight {
-        gap: 8px;
-        padding: 8px 14px;
-        border-radius: 16px;
+        gap: 6px !important;
+        padding: 8px 14px !important;
+        border-radius: 14px !important;
+    }
+    .datetime-pill-item {
+        gap: 8px !important;
     }
     .dt-text {
-        font-size: 0.94rem;
+        font-size: 0.88rem !important;
     }
 }
 
 .countdown-grid-modern {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
-    gap: 8px;
-    max-width: 420px;
-    margin: 18px auto 16px;
+    gap: 6px;
+    max-width: 380px;
+    width: 100%;
+    margin: 14px auto 12px;
 }
 
 .countdown-box-minimal {
-    padding: 8px 12px;
+    padding: 6px 4px !important;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(254, 240, 138, 0.25);
-    border-radius: 12px;
+    border-radius: 10px;
     text-align: center;
-    min-width: 58px;
+    min-width: 0 !important;
     backdrop-filter: blur(8px);
     transition: transform 0.25s ease, border-color 0.25s ease;
+    overflow: hidden !important;
 }
 
 .countdown-box-minimal:hover {
@@ -3136,7 +3329,7 @@ body[data-theme-mode="dark"] .datetime-pill-separator,
 
 .count-digit-lg {
     font-family: var(--font-editorial);
-    font-size: clamp(1.25rem, 2.2vw, 1.55rem);
+    font-size: clamp(1.1rem, 3.2vw, 1.35rem) !important;
     font-weight: 700;
     color: #FDE047;
     text-shadow: 0 0 12px rgba(253, 224, 71, 0.4);
@@ -3144,12 +3337,13 @@ body[data-theme-mode="dark"] .datetime-pill-separator,
 }
 
 .count-label-sub {
-    font-size: 0.68rem;
+    font-size: clamp(0.55rem, 1.8vw, 0.62rem) !important;
     font-weight: 700;
-    letter-spacing: 1.2px;
+    letter-spacing: 0.4px !important;
     text-transform: uppercase;
     color: #FDE68A;
-    margin-top: 6px;
+    margin-top: 3px !important;
+    white-space: nowrap !important;
 }
 
 .muhurtham-countdown-status {
@@ -3679,18 +3873,20 @@ body[data-theme-mode="dark"] .chip-dress-glam {
 
 /* Sleek, Modern Portal Highlight Pill */
 .portal-pill-highlight {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    padding: 8px 18px;
-    margin: 14px auto 6px;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    gap: 8px !important;
+    padding: clamp(5px, 1vh, 8px) clamp(12px, 3vw, 18px) !important;
+    margin: 8px auto 4px !important;
     background: var(--tile-bg);
     border: 1px solid var(--tile-border);
-    border-radius: 999px;
+    border-radius: 999px !important;
     box-shadow: 0 4px 14px rgba(0, 0, 0, 0.05);
     transition: all 0.25s ease;
-    max-width: 90%;
+    max-width: 95% !important;
+    width: fit-content !important;
+    white-space: nowrap !important;
 }
 
 .portal-pill-highlight:hover {
@@ -3700,18 +3896,23 @@ body[data-theme-mode="dark"] .chip-dress-glam {
 }
 
 .highlight-chip-icon {
-    font-size: 1.15rem;
+    font-size: 1.05rem;
     line-height: 1;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    flex-shrink: 0;
 }
 
 .highlight-chip-text {
-    font-size: 0.90rem;
-    font-weight: 700;
+    font-size: clamp(0.72rem, 2.3vw, 0.86rem) !important;
+    font-weight: 700 !important;
     color: var(--tile-title);
-    letter-spacing: 0.01em;
+    letter-spacing: 0.015em !important;
+    white-space: nowrap !important;
+    display: inline-block !important;
+    text-align: center !important;
+    line-height: 1.25 !important;
 }
 
 .night-occasion-card .portal-pill-highlight {
@@ -4011,6 +4212,23 @@ body[data-theme-mode="dark"] .chip-dress-glam {
     pointer-events: none;
 }
 
+/* Family Showcase Presentation (Container for Portrait & Overlapping Card) */
+.family-showcase-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    max-width: 480px;
+    margin: auto;
+    position: relative;
+    z-index: 5;
+}
+
+.family-portrait-frame {
+    display: none; /* Hidden on desktop; desktop uses cinematic full-screen backdrop */
+}
+
 /* Light Theme Compliments Card */
 .family-luxury-card {
     position: relative;
@@ -4253,7 +4471,7 @@ body[data-theme-mode="dark"] .chip-dress-glam {
 
 .family-lineage-highlight-title {
     font-family: 'Marcellus', 'Playfair Display', var(--font-royal-title);
-    font-size: clamp(1.1rem, 2.4vw, 1.42rem) !important;
+    font-size: clamp(1rem, 2.4vw, 1.42rem) !important;
     font-weight: 600;
     line-height: 1.42;
     margin: 0;
@@ -4700,7 +4918,7 @@ body[data-current-climate="venue"] .winter-nature-img {
     opacity: 0 !important;
 }
 
-/* Family Blessings Compliments Screen Group Portrait Backdrop (Subtle Contrast Overlay, No Snow/Fog) */
+/* Family Blessings Compliments Screen Group Portrait Backdrop (100% Original Photo, No Overlay, No Animation) */
 .family-nature-img {
     position: absolute;
     inset: 0;
@@ -4711,7 +4929,8 @@ body[data-current-climate="venue"] .winter-nature-img {
     opacity: 0;
     pointer-events: none;
     transform: none !important;
-    filter: brightness(0.92) contrast(1.03) !important;
+    filter: none !important;
+    animation: none !important;
     transition: opacity 1.2s cubic-bezier(0.25, 1, 0.5, 1);
     z-index: 1;
 }
@@ -4719,25 +4938,17 @@ body[data-current-climate="venue"] .winter-nature-img {
 body[data-current-climate="sunset"] .family-nature-img {
     opacity: 1 !important;
     transform: none !important;
-    filter: brightness(0.92) contrast(1.03) !important;
+    filter: none !important;
+    animation: none !important;
 }
 
-/* Subtle Photographic Contrast Overlay on Family Background */
-.family-nature-overlay {
-    position: absolute;
-    inset: 0;
-    pointer-events: none;
-    z-index: 1;
-    opacity: 0;
-    background: linear-gradient(180deg, 
-        rgba(15, 10, 30, 0.12) 0%, 
-        rgba(15, 10, 30, 0.22) 40%, 
-        rgba(15, 10, 30, 0.48) 100%);
-    transition: opacity 1.2s ease;
-}
-
+/* Zero Overlay on Family Background on Desktop - Pure Original Image */
+.family-nature-overlay,
 body[data-current-climate="sunset"] .family-nature-overlay {
-    opacity: 1;
+    display: none !important;
+    opacity: 0 !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
 }
 
 body[data-current-climate="sunset"] .winter-nature-img {
@@ -4749,21 +4960,123 @@ body[data-current-climate="sunset"] .family-celestial-overlap-bg {
 }
 
 @media (max-width: 860px) {
+    /* Sunset / Family Screen Background on Mobile (Rich Ambient Sunset Twilight) */
     body[data-current-climate="sunset"] .family-nature-img {
-        object-position: center 22% !important;
+        display: none !important; /* The complete crisp photo is featured in .family-portrait-frame */
     }
+
+    body[data-current-climate="sunset"] .winter-nature-img {
+        opacity: 0.50 !important;
+        filter: brightness(0.70) saturate(1.20) hue-rotate(330deg) blur(2px) !important;
+    }
+
+    body[data-current-climate="sunset"] #winter-nature-backdrop {
+        background: radial-gradient(ellipse at 50% 35%, rgba(95, 40, 75, 0.88) 0%, rgba(38, 18, 52, 0.96) 55%, #100615 100%) !important;
+    }
+
+    /* Family Showcase Container Vertically Centered with Both Photo and Card */
+    .family-showcase-container {
+        display: flex !important;
+        flex-direction: column !important;
+        align-items: center !important;
+        justify-content: center !important;
+        width: 100% !important;
+        max-width: min(430px, 92vw) !important;
+        max-height: calc(100dvh - 128px) !important;
+        margin: auto !important;
+        overflow-y: auto !important;
+        scrollbar-width: none !important;
+        position: relative !important;
+        z-index: 10 !important;
+    }
+
+    .family-showcase-container::-webkit-scrollbar {
+        display: none !important;
+    }
+
+    /* Complete Family Photo Frame on Mobile (100% Uncropped, Everyone Visible) */
+    .family-portrait-frame {
+        display: block !important;
+        position: relative !important;
+        width: 100% !important;
+        border-radius: 18px !important;
+        overflow: hidden !important;
+        box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45), 0 0 25px rgba(245, 158, 11, 0.28) !important;
+        border: 2px solid rgba(254, 240, 138, 0.75) !important;
+        background: #FAF5EA !important;
+        flex-shrink: 0 !important;
+        z-index: 1 !important;
+        line-height: 0 !important;
+    }
+
+    .family-portrait-img {
+        display: block !important;
+        width: 100% !important;
+        height: auto !important;
+        aspect-ratio: 9504 / 6336 !important;
+        object-fit: cover !important;
+        object-position: center center !important;
+    }
+
+    .family-portrait-filigree {
+        position: absolute !important;
+        inset: 4px !important;
+        border: 1px solid rgba(255, 255, 255, 0.65) !important;
+        border-radius: 14px !important;
+        pointer-events: none !important;
+    }
+
+    /* Info Card Gently Overlapping the Bottom of the Family Photo */
     #scene-family .family-luxury-card {
-        top: clamp(18px, 4.5vh, 38px) !important;
-        margin: 0 auto !important;
-        max-width: min(450px, 94%) !important;
+        top: 0 !important;
+        margin-top: -38px !important;
+        margin-bottom: 0 !important;
+        position: relative !important;
+        z-index: 5 !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        box-sizing: border-box !important;
+        padding: clamp(10px, 1.6vh, 16px) clamp(12px, 3vw, 18px) !important;
+        border-radius: 20px !important;
+        box-shadow: 0 16px 45px rgba(120, 53, 15, 0.20), 0 0 25px rgba(245, 158, 11, 0.22), inset 0 1px 0 rgba(255, 255, 255, 0.95) !important;
+    }
+
+    /* Remove 'View Family Photo' button completely in mobile views */
+    .family-top-header,
+    .family-view-bg-btn {
+        display: none !important;
+    }
+
+    /* Minimize animation when user taps 'View Family Photo' */
+    .family-luxury-card.family-card-minimized {
+        transform: translateY(calc(100% - 56px)) !important;
+        opacity: 0.96 !important;
+        max-height: 56px !important;
+        margin-top: -38px !important;
+    }
+
+    /* Living Natural Snowfall Animation Active on Sunset Family Scene on Mobile (Fills Top & Bottom Margins) */
+    body[data-current-climate="sunset"] #atmosphere-canvas {
+        opacity: 1 !important;
+        pointer-events: none !important;
+        visibility: visible !important;
+        z-index: 2 !important;
     }
 }
 
-/* 100% REMOVE ALL SNOW, PARTICLES, FOG, VIGNETTES, CELESTIAL EFFECTS ON SUNSET / FAMILY SCENE */
-body[data-current-climate="sunset"] #atmosphere-canvas {
-    opacity: 0 !important;
-    pointer-events: none !important;
-    visibility: hidden !important;
+/* Desktop View: Zero Animation and Zero Overlay on Family Scene - Show Pure Original Image */
+@media (min-width: 861px) {
+    body[data-current-climate="sunset"] #atmosphere-canvas,
+    body[data-current-climate="sunset"] #sacred-canvas {
+        display: none !important;
+        opacity: 0 !important;
+        visibility: hidden !important;
+        pointer-events: none !important;
+    }
+
+    body[data-current-climate="sunset"] .winter-nature-backdrop {
+        animation: none !important;
+    }
 }
 
 body[data-current-climate="sunset"] .winter-fog-band,
@@ -4780,6 +5093,28 @@ body[data-current-climate="sunset"] .winter-vignette-overlay {
     opacity: 0 !important;
     background: transparent !important;
     visibility: hidden !important;
+}
+
+/* 100% REMOVE DARK VIGNETTES ON MORNING-SUN & AFTERNOON-SUN (PELLIKODUKU & PELLIKUTURU) */
+body[data-current-climate="morning-sun"] .winter-vignette-overlay,
+body[data-current-climate="afternoon-sun"] .winter-vignette-overlay {
+    display: none !important;
+    opacity: 0 !important;
+    background: transparent !important;
+    visibility: hidden !important;
+}
+
+body[data-current-climate="morning-sun"] .winter-fog-band,
+body[data-current-climate="afternoon-sun"] .winter-fog-band {
+    opacity: 0.12 !important;
+}
+
+body[data-current-climate="morning-sun"] .winter-nature-img {
+    filter: brightness(1.18) saturate(1.08) contrast(0.92) !important;
+}
+
+body[data-current-climate="afternoon-sun"] .winter-nature-img {
+    filter: brightness(1.22) saturate(1.10) contrast(0.94) !important;
 }
 
 body[data-current-climate="sunset"] #celestial-sun,
@@ -4998,9 +5333,10 @@ body[data-theme-mode="dark"] .venue-contacts-header {
 
 .venue-contacts-columns {
     display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 6px !important;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 10px !important;
     text-align: center;
+    align-items: start;
 }
 
 @media (max-width: 330px) {
@@ -5013,7 +5349,8 @@ body[data-theme-mode="dark"] .venue-contacts-header {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 3px !important;
+    gap: 4px !important;
+    width: 100%;
 }
 
 .contact-party-label {
@@ -5021,9 +5358,10 @@ body[data-theme-mode="dark"] .venue-contacts-header {
     font-weight: 700;
     color: #78350F;
     background: rgba(254, 240, 138, 0.75);
-    padding: 1px 7px !important;
+    padding: 1px 9px !important;
     border-radius: 999px;
     border: 1px solid rgba(217, 119, 6, 0.25);
+    white-space: nowrap;
 }
 
 body[data-theme-mode="dark"] .contact-party-label {
@@ -5034,16 +5372,21 @@ body[data-theme-mode="dark"] .contact-party-label {
 
 .contact-numbers-row {
     display: flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
     gap: 4px;
-    justify-content: center;
+    width: 100%;
 }
 
 .contact-num-chip {
     display: inline-flex;
     align-items: center;
-    gap: 3px;
-    padding: 2px 7px !important;
+    justify-content: center;
+    gap: 4px;
+    width: 100%;
+    max-width: 135px;
+    box-sizing: border-box;
+    padding: 2.5px 8px !important;
     border-radius: 7px;
     background: #FFFFFF;
     border: 1px solid rgba(217, 119, 6, 0.25);
@@ -5053,6 +5396,7 @@ body[data-theme-mode="dark"] .contact-party-label {
     text-decoration: none;
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
     transition: all 0.2s ease;
+    white-space: nowrap;
 }
 
 body[data-theme-mode="dark"] .contact-num-chip {
@@ -5073,30 +5417,42 @@ body[data-theme-mode="dark"] .contact-num-chip {
    ========================================================================== */
 .pellikoduku-photo {
     object-position: center 20% !important;
+    background-color: #FAF5EA !important;
 }
 
 #scene-pellikoduku .hero-royal-arch-frame {
     background: linear-gradient(145deg, #FEF08A 0%, #D97706 40%, #F59E0B 70%, #92400E 100%);
-    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.28), 0 0 35px rgba(245, 158, 11, 0.40);
+    box-shadow: 0 14px 36px rgba(245, 158, 11, 0.32), 0 0 25px rgba(254, 240, 138, 0.40);
+    background-color: #FAF5EA !important;
 }
 
 body[data-theme-mode="dark"] #scene-pellikoduku .hero-royal-arch-frame {
     background: linear-gradient(145deg, #FFFDF0 0%, #FDE047 40%, #F59E0B 75%, #D97706 100%);
-    box-shadow: 0 24px 55px rgba(0, 0, 0, 0.85), 0 0 45px rgba(254, 240, 138, 0.45);
+    box-shadow: 0 18px 45px rgba(245, 158, 11, 0.40), 0 0 35px rgba(254, 240, 138, 0.45);
+    background-color: #FAF5EA !important;
 }
 
 .pellikuturu-photo {
     object-position: center 22% !important;
+    background-color: #FAF5EA !important;
 }
 
 #scene-pellikuturu .hero-royal-arch-frame {
     background: linear-gradient(145deg, #FDE047 0%, #F43F5E 40%, #FB7185 70%, #BE123C 100%);
-    box-shadow: 0 20px 48px rgba(0, 0, 0, 0.28), 0 0 35px rgba(244, 63, 94, 0.38);
+    box-shadow: 0 14px 36px rgba(244, 63, 94, 0.30), 0 0 25px rgba(254, 205, 211, 0.38);
+    background-color: #FAF5EA !important;
 }
 
 body[data-theme-mode="dark"] #scene-pellikuturu .hero-royal-arch-frame {
     background: linear-gradient(145deg, #FFFDF0 0%, #FDA4AF 40%, #FB7185 75%, #E11D48 100%);
-    box-shadow: 0 24px 55px rgba(0, 0, 0, 0.85), 0 0 45px rgba(251, 113, 133, 0.45);
+    box-shadow: 0 18px 45px rgba(244, 63, 94, 0.40), 0 0 35px rgba(251, 113, 133, 0.45);
+    background-color: #FAF5EA !important;
+}
+
+.card-pellikoduku,
+.card-pellikuturu {
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.96) 0%, rgba(254, 250, 244, 0.94) 100%) !important;
+    box-shadow: 0 14px 36px rgba(217, 119, 6, 0.12), 0 4px 12px rgba(180, 83, 9, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.95) !important;
 }
 
 /* Event Highlights for Pellikoduku & Pellikuturu */
@@ -5108,7 +5464,7 @@ body[data-theme-mode="dark"] #scene-pellikuturu .hero-royal-arch-frame {
     gap: 14px;
     padding: 10px 18px;
     margin: 12px auto 14px;
-    border-radius: 999px;
+    border-radius: 15px;
     width: fit-content;
     max-width: 100%;
     box-sizing: border-box;
@@ -5143,8 +5499,7 @@ body[data-theme-mode="dark"] .pellikuturu-event-highlights {
     gap: 8px;
 }
 
-.pelli-icon-badge,
-.pellikuturu-icon-badge {
+.pelli-icon-badge {
     width: 28px;
     height: 28px;
     flex-shrink: 0;
@@ -5155,6 +5510,19 @@ body[data-theme-mode="dark"] .pellikuturu-event-highlights {
     background: linear-gradient(135deg, rgba(245, 158, 11, 0.18) 0%, rgba(217, 119, 6, 0.1) 100%);
     border: 1.5px solid rgba(245, 158, 11, 0.55);
     color: #D97706;
+}
+
+.pellikuturu-icon-badge {
+    width: 28px;
+    height: 28px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, rgba(244, 63, 94, 0.18) 0%, rgba(225, 29, 72, 0.1) 100%);
+    border-color: rgba(244, 63, 94, 0.55);
+    color: #E11D48;
 }
 
 .pellikuturu-icon-badge.pellikuturu-icon-rose {
@@ -5252,16 +5620,27 @@ body[data-theme-mode="dark"] .pellikuturu-grand-title {
     -webkit-text-fill-color: transparent;
 }
 
+.pelli-title-highlight-wrap {
+    text-align: center !important;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+    margin: 4px auto 8px !important;
+    width: 100% !important;
+}
+
 .pelli-title-glow-bar,
 .pellikuturu-title-glow-bar {
-    width: 60px;
-    height: 2px;
-    background: linear-gradient(90deg, transparent, #F59E0B, transparent);
-    margin-top: 4px;
+    width: 68px !important;
+    height: 2px !important;
+    background: linear-gradient(90deg, transparent, #F59E0B, transparent) !important;
+    margin: 4px auto 6px !important;
+    display: block !important;
 }
 
 .pellikuturu-title-glow-bar {
-    background: linear-gradient(90deg, transparent, #FB7185, transparent);
+    background: linear-gradient(90deg, transparent, #FB7185, transparent) !important;
 }
 
 .pelli-sub-line,
@@ -6408,8 +6787,9 @@ body[data-theme-mode="dark"] .pellikuturu-grand-title {
    SUBHA MUHURTHAM (SCENE 10) STREAMLINED HIGHLIGHTS (DAY, TIME & VENUE)
    ========================================================================== */
 .pelli-simple-title {
-    margin: 12px 0 16px;
-    font-size: clamp(1.48rem, 2.8vw, 1.95rem) !important;
+    margin: 4px auto 4px !important;
+    font-size: clamp(1.6rem, 3.2vw, 2.2rem) !important;
+    text-align: center !important;
 }
 
 .pelli-simple-highlights {
@@ -6448,22 +6828,36 @@ body[data-theme-mode="dark"] .pellikuturu-grand-title {
     box-shadow: 0 0 18px rgba(245, 158, 11, 0.2);
 }
 
-.card-crown-muhurtham.night-occasion-card .pelli-event-highlights {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 8px;
-    width: 100%;
-    max-width: 420px;
-    margin: 8px auto 0;
-    padding: 10px 18px;
-    background: rgba(22, 15, 38, 0.88);
-    border: 1.5px solid rgba(245, 158, 11, 0.45);
-    border-radius: 18px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.35), 0 0 18px rgba(245, 158, 11, 0.16);
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
+/* Muhurtham Ceremony Highlights (Identical Pattern to Grand Reception) */
+#scene-pelli .reception-event-highlights {
+    width: 100% !important;
+    max-width: 420px !important;
+    margin: 8px auto 0 !important;
+}
+
+#scene-pelli .reception-hl-item {
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    text-align: left !important;
+    flex-wrap: nowrap !important;
+    white-space: nowrap !important;
+    gap: 6px !important;
+    width: 100% !important;
+}
+
+#scene-pelli .reception-hl-text {
+    font-size: clamp(0.85rem, 1.6vw, 0.95rem) !important;
+    font-weight: 600 !important;
+    color: #FFFFFF !important;
+    letter-spacing: 0.2px !important;
+    white-space: nowrap !important;
+    text-align: left !important;
+    display: inline-block !important;
+}
+
+body[data-theme-mode="dark"] #scene-pelli .reception-hl-text {
+    color: #FFFFFF !important;
 }
 
 .dress-code-muhurtham {
@@ -7030,6 +7424,10 @@ html[lang="en"] .luxury-title-lg,
 html[lang="en"] .couple-hero-grand-title,
 html[lang="en"] .varun-groom-grand-name,
 html[lang="en"] .alekhya-bride-grand-name,
+html[lang="en"] .pelli-person-name,
+html[lang="en"] .pellikuturu-person-name,
+html[lang="en"] .varun-person-name,
+html[lang="en"] .alekhya-person-name,
 html[lang="en"] .pelli-grand-title,
 html[lang="en"] .pellikuturu-grand-title,
 html[lang="en"] .mehandi-grand-title,
@@ -7104,7 +7502,14 @@ html[lang="en"] a {
 
 /* Sacred Vedic Slokas in English (Transliterated Sanskrit) */
 html[lang="en"] .pelli-sacred-sloka,
-html[lang="en"] .pellikuturu-sacred-sloka,
+html[lang="en"] .pellikuturu-sacred-sloka {
+    font-family: 'Plus Jakarta Sans', 'Montserrat', -apple-system, sans-serif !important;
+    font-style: normal !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.025em !important;
+    line-height: 1.55 !important;
+}
+
 html[lang="en"] .family-sacred-shloka,
 html[lang="en"] .sacred-mantra-quote,
 html[lang="en"] .sacred-sloka {
@@ -7118,6 +7523,10 @@ html[lang="te"] .luxury-title-lg,
 html[lang="te"] .couple-hero-grand-title,
 html[lang="te"] .varun-groom-grand-name,
 html[lang="te"] .alekhya-bride-grand-name,
+html[lang="te"] .pelli-person-name,
+html[lang="te"] .pellikuturu-person-name,
+html[lang="te"] .varun-person-name,
+html[lang="te"] .alekhya-person-name,
 html[lang="te"] .pelli-grand-title,
 html[lang="te"] .pellikuturu-grand-title,
 html[lang="te"] .mehandi-grand-title,
@@ -7199,6 +7608,10 @@ html[lang="hi"] .luxury-title-lg,
 html[lang="hi"] .couple-hero-grand-title,
 html[lang="hi"] .varun-groom-grand-name,
 html[lang="hi"] .alekhya-bride-grand-name,
+html[lang="hi"] .pelli-person-name,
+html[lang="hi"] .pellikuturu-person-name,
+html[lang="hi"] .varun-person-name,
+html[lang="hi"] .alekhya-person-name,
 html[lang="hi"] .pelli-grand-title,
 html[lang="hi"] .pellikuturu-grand-title,
 html[lang="hi"] .mehandi-grand-title,
@@ -7286,11 +7699,24 @@ html[lang="hi"] a {
     justify-content: center;
 }
 
-#scene-muhurtham .card-crown-muhurtham *,
-#scene-muhurtham .luxury-title-lg,
-#scene-muhurtham .muhurtham-datetime-highlight,
+#scene-muhurtham .card-crown-muhurtham,
 #scene-muhurtham .muhurtham-countdown-status {
     text-align: center !important;
+}
+
+#scene-muhurtham .luxury-title-lg,
+.muhurtham-spotlight-title {
+    font-size: clamp(1.8rem, 4.2vw, 2.4rem) !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.5px !important;
+    line-height: 1.2 !important;
+    margin: 4px auto 8px !important;
+    text-align: center !important;
+}
+
+#scene-muhurtham .datetime-pill-item,
+#scene-muhurtham .dt-text {
+    text-align: left !important;
 }
 
 .card-pellikoduku,
@@ -7304,12 +7730,8 @@ html[lang="hi"] a {
 
 .card-pellikoduku .pelli-grand-title,
 .card-pellikuturu .pellikuturu-grand-title,
-.card-pellikoduku .portal-title-en,
-.card-pellikuturu .portal-title-en,
 .card-pellikoduku .pelli-sub-line,
-.card-pellikuturu .pellikuturu-sub-line,
-.card-pellikoduku .portal-pill-highlight,
-.card-pellikuturu .portal-pill-highlight {
+.card-pellikuturu .pellikuturu-sub-line {
     text-align: center !important;
     width: 100%;
     margin-left: auto !important;
@@ -7318,7 +7740,7 @@ html[lang="hi"] a {
 
 .card-pellikoduku .pelli-event-highlights,
 .card-pellikuturu .pellikuturu-event-highlights {
-    justify-content: center !important;
+    justify-content: flex-start !important;
     text-align: center !important;
     margin-left: auto !important;
     margin-right: auto !important;
@@ -7424,16 +7846,79 @@ html[lang="hi"] a {
    SLIDES 3 & 4: HIGH-CONTRAST ROYAL LETTERING & CEREMONY BADGES
    ========================================================================== */
 
-/* Varun (Groom) Grand Title - High Contrast Royal Amber & Bronze */
-.varun-groom-grand-name {
-    font-size: clamp(2.0rem, 3.8vw, 2.75rem) !important;
-    font-weight: 800 !important;
+/* Person Names (VARUN & ALEKHYA) Overlapping Bottom of Arch Photo with Bold White Outline & Drop Shadow */
+.arch-overlap-person-name {
+    position: relative;
+    z-index: 10;
+    margin-top: -22px !important;
+    margin-bottom: 8px !important;
+    font-family: 'Playfair Display', 'Cinzel', 'Cormorant Garamond', Georgia, serif;
+    font-weight: 900 !important;
+    line-height: 1.05 !important;
+    text-align: center !important;
+    display: inline-block !important;
+    text-transform: uppercase !important;
+    white-space: nowrap !important;
+    word-break: keep-all !important;
+    -webkit-text-stroke: 2.2px #FFFFFF !important;
+    paint-order: stroke fill !important;
+    filter: drop-shadow(0 4px 10px rgba(180, 83, 9, 0.40)) drop-shadow(0 2px 4px rgba(120, 53, 15, 0.30)) !important;
+}
+
+.arch-overlap-person-name.varun-person-name {
+    color: #853A14 !important;
+    font-size: clamp(2.35rem, 6.2vw, 3.25rem) !important;
+    letter-spacing: 0.06em !important;
+}
+
+.arch-overlap-person-name.alekhya-person-name {
+    color: #9F1239 !important;
+    font-size: clamp(2.05rem, 5.2vw, 2.85rem) !important;
     letter-spacing: 0.04em !important;
+}
+
+.arch-overlap-person-name.hero-couple-overlap-name {
+    color: #853A14 !important;
+    font-size: clamp(1.85rem, 5.0vw, 2.65rem) !important;
+    letter-spacing: 0.04em !important;
+    white-space: nowrap !important;
+}
+
+body[data-theme-mode="dark"] .arch-overlap-person-name.varun-person-name {
+    color: #D97706 !important;
+    -webkit-text-stroke: 2.2px #FFFFFF !important;
+    filter: drop-shadow(0 4px 10px rgba(217, 119, 6, 0.50)) drop-shadow(0 2px 4px rgba(180, 83, 9, 0.35)) !important;
+}
+
+body[data-theme-mode="dark"] .arch-overlap-person-name.alekhya-person-name {
+    color: #BE123C !important;
+    -webkit-text-stroke: 2.2px #FFFFFF !important;
+    filter: drop-shadow(0 4px 10px rgba(225, 29, 72, 0.50)) drop-shadow(0 2px 4px rgba(159, 18, 57, 0.35)) !important;
+}
+
+body[data-theme-mode="dark"] .arch-overlap-person-name.hero-couple-overlap-name {
+    color: #FEF08A !important;
+    -webkit-text-stroke: 2.2px #FFFFFF !important;
+    filter: drop-shadow(0 4px 10px rgba(217, 119, 6, 0.50)) drop-shadow(0 2px 4px rgba(180, 83, 9, 0.35)) !important;
+}
+
+/* Blessing Pills placed in-between Title and Event Highlights */
+.card-pellikoduku .portal-pill-highlight,
+.card-pellikuturu .portal-pill-highlight {
+    margin: 6px auto 10px !important;
+}
+
+/* Occasion Grand Titles (Pellikoduku & Pellikuturu) - BIGGER Font Because That Is the Occasion */
+.varun-groom-grand-name {
+    font-size: clamp(2.45rem, 5.0vw, 3.35rem) !important;
+    font-weight: 800 !important;
+    letter-spacing: 0.03em !important;
+    line-height: 1.15 !important;
     background: linear-gradient(135deg, #78350F 0%, #B45309 35%, #D97706 70%, #92400E 100%) !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
     filter: drop-shadow(0 2px 8px rgba(180, 83, 9, 0.28)) !important;
-    margin: 4px auto 6px !important;
+    margin: 0 auto 4px !important;
 }
 
 body[data-theme-mode="dark"] .varun-groom-grand-name {
@@ -7443,16 +7928,16 @@ body[data-theme-mode="dark"] .varun-groom-grand-name {
     filter: drop-shadow(0 2px 14px rgba(254, 240, 138, 0.5)) !important;
 }
 
-/* Alekhya (Bride) Grand Title - High Contrast Royal Ruby & Rose */
 .alekhya-bride-grand-name {
-    font-size: clamp(2.0rem, 3.8vw, 2.75rem) !important;
+    font-size: clamp(2.45rem, 5.0vw, 3.35rem) !important;
     font-weight: 800 !important;
-    letter-spacing: 0.04em !important;
+    letter-spacing: 0.03em !important;
+    line-height: 1.15 !important;
     background: linear-gradient(135deg, #881337 0%, #BE123C 35%, #E11D48 70%, #9F1239 100%) !important;
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
     filter: drop-shadow(0 2px 8px rgba(190, 18, 60, 0.28)) !important;
-    margin: 4px auto 6px !important;
+    margin: 0 auto 4px !important;
 }
 
 body[data-theme-mode="dark"] .alekhya-bride-grand-name {
@@ -7460,57 +7945,6 @@ body[data-theme-mode="dark"] .alekhya-bride-grand-name {
     -webkit-background-clip: text !important;
     -webkit-text-fill-color: transparent !important;
     filter: drop-shadow(0 2px 14px rgba(251, 113, 133, 0.5)) !important;
-}
-
-/* Prominent Ceremony Highlighting Badges for Pellikoduku & Pellikuturu */
-.card-pellikoduku .portal-title-en {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    background: linear-gradient(135deg, rgba(254, 243, 199, 0.98) 0%, rgba(253, 230, 138, 0.92) 50%, rgba(245, 158, 11, 0.28) 100%) !important;
-    border: 2px solid rgba(217, 119, 6, 0.7) !important;
-    border-radius: 999px !important;
-    color: #78350F !important;
-    font-family: var(--font-royal-title) !important;
-    font-size: clamp(1.02rem, 2.3vw, 1.20rem) !important;
-    font-weight: 800 !important;
-    letter-spacing: 0.06em !important;
-    text-transform: uppercase !important;
-    padding: 7px 24px !important;
-    margin: 6px auto 10px !important;
-    box-shadow: 0 4px 18px rgba(180, 83, 9, 0.20), 0 0 14px rgba(245, 158, 11, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.95) !important;
-}
-
-body[data-theme-mode="dark"] .card-pellikoduku .portal-title-en {
-    background: linear-gradient(135deg, rgba(245, 158, 11, 0.32) 0%, rgba(217, 119, 6, 0.42) 100%) !important;
-    border-color: rgba(254, 240, 138, 0.75) !important;
-    color: #FFFDF0 !important;
-    box-shadow: 0 4px 22px rgba(0, 0, 0, 0.65), 0 0 18px rgba(245, 158, 11, 0.45) !important;
-}
-
-.card-pellikuturu .portal-title-en {
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    background: linear-gradient(135deg, rgba(255, 228, 230, 0.98) 0%, rgba(254, 205, 211, 0.90) 50%, rgba(244, 63, 94, 0.28) 100%) !important;
-    border: 2px solid rgba(225, 29, 72, 0.65) !important;
-    border-radius: 999px !important;
-    color: #881337 !important;
-    font-family: var(--font-royal-title) !important;
-    font-size: clamp(1.02rem, 2.3vw, 1.20rem) !important;
-    font-weight: 800 !important;
-    letter-spacing: 0.06em !important;
-    text-transform: uppercase !important;
-    padding: 7px 24px !important;
-    margin: 6px auto 10px !important;
-    box-shadow: 0 4px 18px rgba(225, 29, 72, 0.20), 0 0 14px rgba(244, 63, 94, 0.25), inset 0 1px 0 rgba(255, 255, 255, 0.95) !important;
-}
-
-body[data-theme-mode="dark"] .card-pellikuturu .portal-title-en {
-    background: linear-gradient(135deg, rgba(225, 29, 72, 0.32) 0%, rgba(159, 18, 57, 0.42) 100%) !important;
-    border-color: rgba(254, 205, 211, 0.75) !important;
-    color: #FFFDF0 !important;
-    box-shadow: 0 4px 22px rgba(0, 0, 0, 0.65), 0 0 18px rgba(225, 29, 72, 0.45) !important;
 }
 
 /* Universal Non-Breaking Date & Time Layout on Cards */
@@ -7534,21 +7968,15 @@ body[data-theme-mode="dark"] .card-pellikuturu .portal-title-en {
 
 .pelli-datetime-item,
 .pellikuturu-datetime-item,
-.sangeet-datetime-item,
-.mehandi-datetime-item,
-.haldi-datetime-item,
 .reception-datetime-item,
 .vratham-datetime-item,
 .pelli-venue-item,
 .pellikuturu-venue-item,
-.sangeet-venue-item,
-.mehandi-venue-item,
-.haldi-venue-item,
 .reception-venue-item,
 .vratham-venue-item {
     display: inline-flex !important;
     align-items: center !important;
-    justify-content: center !important;
+    justify-content: flex-start !important;
     flex-wrap: nowrap !important;
     white-space: nowrap !important;
     gap: 6px !important;
@@ -7556,20 +7984,22 @@ body[data-theme-mode="dark"] .card-pellikuturu .portal-title-en {
 
 .pelli-sacred-sloka,
 .pellikuturu-sacred-sloka {
-    font-style: italic;
-    font-family: var(--font-royal-title);
-    font-size: clamp(0.78rem, 1.4vw, 0.92rem);
-    line-height: 1.5;
-    color: #D97706;
-    margin: 6px auto;
-    max-width: 440px;
-    text-align: center;
+    font-style: normal !important;
+    font-family: var(--font-ui) !important;
+    font-size: clamp(0.78rem, 1.4vw, 0.88rem) !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.025em !important;
+    line-height: 1.55 !important;
+    color: #92400E !important;
+    margin: 6px auto !important;
+    max-width: 440px !important;
+    text-align: center !important;
 }
 
 body[data-theme-mode="dark"] .pelli-sacred-sloka,
 body[data-theme-mode="dark"] .pellikuturu-sacred-sloka {
-    color: #FEF08A;
-    text-shadow: 0 0 8px rgba(254, 240, 138, 0.3);
+    color: #FEF08A !important;
+    text-shadow: 0 0 8px rgba(254, 240, 138, 0.35) !important;
 }
 
 /* Slide 1 "Two Souls, One Eternal Destiny" */
@@ -7590,43 +8020,91 @@ body[data-theme-mode="dark"] .destiny-highlight {
    MOBILE RESPONSIVE ARCHITECTURE: NO SCROLL ON SLIDE 1 & VERTICAL CENTERING
    ========================================================================== */
 @media (max-width: 860px) {
-    /* Slide 1 (Hero): Zero Scroll Mobile Fitting */
+    /* Slide 1 (Hero): Balanced Royal Arch & Clean Lineage */
     #scene-hero .hero-diptych-container {
         flex-direction: column !important;
-        gap: 4px !important;
+        gap: clamp(4px, 1vh, 8px) !important;
         max-height: calc(100dvh - 128px) !important;
-        overflow: hidden !important;
+        overflow-y: auto !important;
+        scrollbar-width: none !important;
         justify-content: center !important;
         align-items: center !important;
         margin: auto !important;
     }
 
     #scene-hero .hero-royal-arch-frame {
-        width: clamp(105px, 22vw, 125px) !important;
-        height: clamp(120px, 16vh, 145px) !important;
-        border-radius: 65px 65px 12px 12px !important;
+        width: clamp(160px, 38vw, 185px) !important;
+        height: clamp(200px, 26vh, 230px) !important;
+        border-radius: 95px 95px 18px 18px !important;
+        box-shadow: 0 10px 24px rgba(245, 158, 11, 0.35), 0 0 16px rgba(254, 240, 138, 0.35) !important;
+        background-color: #FAF5EA !important;
     }
 
     #scene-hero .hero-royal-arch-photo {
-        border-radius: 61px 61px 10px 10px !important;
+        border-radius: 91px 91px 16px 16px !important;
     }
 
     #scene-hero .hero-royal-arch-filigree {
-        border-radius: 58px 58px 9px 9px !important;
+        border-radius: 87px 87px 13px 13px !important;
     }
 
-    #scene-hero .hero-portrait-caption,
-    #scene-hero .diptych-portrait-caption {
-        padding: 2px 10px !important;
-        font-size: 0.72rem !important;
-        margin-top: 2px !important;
+    /* Slide 1 (Hero): Beautified Couple Names & Royal Mobile Invitation Card */
+    #scene-hero .arch-overlap-person-name.hero-couple-overlap-name {
+        display: inline-flex !important;
+        align-items: center !important;
+        justify-content: center !important;
+        gap: 8px !important;
+        background: linear-gradient(135deg, rgba(255, 253, 248, 0.96) 0%, rgba(254, 243, 199, 0.95) 50%, rgba(255, 247, 237, 0.96) 100%) !important;
+        border: 1.5px solid rgba(217, 119, 6, 0.65) !important;
+        border-radius: 999px !important;
+        box-shadow: 
+            0 6px 20px rgba(180, 83, 9, 0.22),
+            0 0 16px rgba(254, 240, 138, 0.45),
+            inset 0 1px 0 rgba(255, 255, 255, 0.95) !important;
+        padding: 5px 20px 6px !important;
+        margin-top: -24px !important;
+        margin-bottom: 8px !important;
+        text-transform: none !important;
+        font-family: 'Playfair Display', 'Cinzel', serif !important;
+        font-size: clamp(1.20rem, 4.5vw, 1.55rem) !important;
+        font-weight: 800 !important;
+        letter-spacing: 0.025em !important;
+        color: #853A14 !important;
+        -webkit-text-stroke: 0 !important;
+        paint-order: normal !important;
+        text-shadow: 0 1px 1px rgba(255, 255, 255, 0.8) !important;
+        filter: drop-shadow(0 4px 12px rgba(180, 83, 9, 0.20)) !important;
+        z-index: 12 !important;
+        white-space: nowrap !important;
+        max-width: 92% !important;
+    }
+
+    #scene-hero .arch-overlap-person-name.hero-couple-overlap-name::before,
+    #scene-hero .arch-overlap-person-name.hero-couple-overlap-name::after {
+        content: "✦";
+        font-size: 0.65em;
+        color: #D97706;
+        opacity: 0.85;
+    }
+
+    body[data-theme-mode="dark"] #scene-hero .arch-overlap-person-name.hero-couple-overlap-name {
+        background: linear-gradient(135deg, rgba(30, 20, 50, 0.95) 0%, rgba(20, 12, 35, 0.95) 100%) !important;
+        border-color: rgba(245, 158, 11, 0.70) !important;
+        color: #FEF08A !important;
+        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.6), 0 0 16px rgba(245, 158, 11, 0.35) !important;
+        text-shadow: 0 0 10px rgba(245, 158, 11, 0.5) !important;
+        -webkit-text-stroke: 0 !important;
     }
 
     #scene-hero .hero-invitation-card {
-        padding: clamp(8px, 1.2vh, 12px) clamp(10px, 2.8vw, 16px) !important;
+        padding: clamp(10px, 1.6vh, 16px) clamp(14px, 3.5vw, 20px) !important;
         max-height: none !important;
         overflow: hidden !important;
         max-width: min(440px, 94%) !important;
+        border: 1.5px solid rgba(217, 119, 6, 0.38) !important;
+        border-radius: 20px !important;
+        box-shadow: 0 12px 35px rgba(120, 53, 15, 0.14), 0 0 20px rgba(245, 158, 11, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.95) !important;
+        background: linear-gradient(155deg, rgba(255, 253, 248, 0.96) 0%, rgba(254, 248, 238, 0.94) 50%, rgba(255, 244, 228, 0.96) 100%) !important;
     }
 
     #scene-hero .hero-cinematic-couple-wrap {
@@ -7634,36 +8112,53 @@ body[data-theme-mode="dark"] .destiny-highlight {
     }
 
     #scene-hero .couple-hero-grand-title {
-        font-size: clamp(1.30rem, 3.8vw, 1.55rem) !important;
-        margin: 0 0 2px !important;
+        display: none !important;
     }
 
     #scene-hero .hero-lineage-ribbon {
-        margin: 2px auto 0 !important;
-        padding: 4px 8px !important;
-        gap: 2px !important;
+        margin: 2px auto 6px !important;
+        padding: 0 !important;
+        gap: 5px !important;
         max-width: 100% !important;
+        background: transparent !important;
+        border: none !important;
+        box-shadow: none !important;
+        backdrop-filter: none !important;
+        -webkit-backdrop-filter: none !important;
     }
 
     #scene-hero .lineage-name {
-        font-size: 0.82rem !important;
-        margin-bottom: 1px !important;
+        font-family: 'Playfair Display', 'Cinzel', serif !important;
+        font-size: clamp(0.92rem, 2.6vw, 1.02rem) !important;
+        font-weight: 800 !important;
+        color: #853A14 !important;
+        letter-spacing: 0.04em !important;
+        margin-bottom: 2px !important;
     }
 
     #scene-hero .lineage-text {
-        font-size: 0.66rem !important;
-        line-height: 1.25 !important;
+        font-size: clamp(0.68rem, 2.2vw, 0.74rem) !important;
+        color: #78350F !important;
+        font-weight: 500 !important;
+        line-height: 1.35 !important;
+        letter-spacing: 0.01em !important;
     }
 
     #scene-hero .hero-lineage-divider {
-        font-size: 0.65rem !important;
-        margin: 1px 0 !important;
+        font-size: 0.70rem !important;
+        color: #D97706 !important;
+        margin: 3px 0 !important;
+        opacity: 0.90 !important;
     }
 
     #scene-hero .hero-quote-card {
-        margin: 4px auto 0 !important;
-        padding: clamp(4px, 1vh, 8px) 10px !important;
+        margin: 8px auto 0 !important;
+        padding: clamp(6px, 1.2vh, 10px) 14px !important;
         max-width: 100% !important;
+        background: linear-gradient(135deg, rgba(254, 243, 199, 0.65) 0%, rgba(255, 252, 245, 0.92) 100%) !important;
+        border: 1px solid rgba(217, 119, 6, 0.32) !important;
+        border-radius: 14px !important;
+        box-shadow: 0 4px 14px rgba(180, 83, 9, 0.08) !important;
     }
 
     #scene-hero .quote-sacred-crest {
@@ -7676,8 +8171,17 @@ body[data-theme-mode="dark"] .destiny-highlight {
     }
 
     #scene-hero .devotional-quote-primary {
-        font-size: clamp(0.85rem, 2vw, 0.95rem) !important;
-        line-height: 1.3 !important;
+        font-family: 'Playfair Display', 'Cormorant Garamond', Georgia, serif !important;
+        font-size: clamp(0.85rem, 2.4vw, 0.95rem) !important;
+        font-weight: 700 !important;
+        color: #853A14 !important;
+        line-height: 1.35 !important;
+    }
+
+    #scene-hero .destiny-highlight {
+        color: #B45309 !important;
+        font-weight: 600 !important;
+        font-size: 0.92em !important;
     }
 
     #scene-hero .quote-divider-mini {
@@ -7703,17 +8207,42 @@ body[data-theme-mode="dark"] .destiny-highlight {
     }
 
     .hero-royal-arch-frame {
-        width: clamp(110px, 24vw, 138px) !important;
-        height: clamp(130px, 17vh, 155px) !important;
-        border-radius: 70px 70px 14px 14px !important;
+        width: clamp(160px, 38vw, 185px) !important;
+        height: clamp(200px, 26vh, 230px) !important;
+        border-radius: 95px 95px 18px 18px !important;
+        box-shadow: 0 10px 24px rgba(245, 158, 11, 0.35), 0 0 16px rgba(254, 240, 138, 0.35) !important;
+        background-color: #FAF5EA !important;
+    }
+
+    .card-crown-muhurtham {
+        box-shadow: 0 8px 24px rgba(0, 0, 0, 0.7) !important;
+    }
+
+    .hero-diptych-card {
+        box-shadow: 0 8px 24px rgba(180, 83, 9, 0.12), 0 2px 6px rgba(0, 0, 0, 0.04) !important;
+    }
+
+    .card-pellikoduku,
+    .card-pellikuturu {
+        box-shadow: 0 8px 24px rgba(217, 119, 6, 0.14), 0 2px 8px rgba(180, 83, 9, 0.06), inset 0 1px 0 rgba(255, 255, 255, 0.95) !important;
+    }
+
+    #scene-pellikoduku .hero-royal-arch-frame {
+        box-shadow: 0 10px 24px rgba(245, 158, 11, 0.35), 0 0 16px rgba(254, 240, 138, 0.35) !important;
+        background-color: #FAF5EA !important;
+    }
+
+    #scene-pellikuturu .hero-royal-arch-frame {
+        box-shadow: 0 10px 24px rgba(244, 63, 94, 0.30), 0 0 16px rgba(254, 205, 211, 0.35) !important;
+        background-color: #FAF5EA !important;
     }
 
     .hero-royal-arch-photo {
-        border-radius: 66px 66px 12px 12px !important;
+        border-radius: 91px 91px 16px 16px !important;
     }
 
     .hero-royal-arch-filigree {
-        border-radius: 62px 62px 9px 9px !important;
+        border-radius: 87px 87px 13px 13px !important;
     }
 
     .diptych-portrait-caption,
@@ -7749,7 +8278,6 @@ body[data-theme-mode="dark"] .destiny-highlight {
     /* Balanced Vertical Rhythm inside Event Info Cards */
     .mehandi-dress-badge,
     .haldi-dress-badge,
-    .sangeet-dress-badge,
     .reception-crown-badge {
         margin-bottom: clamp(4px, 0.8vh, 8px) !important;
     }
@@ -7761,6 +8289,33 @@ body[data-theme-mode="dark"] .destiny-highlight {
     .pellikoduku-title-highlight-wrap,
     .pellikuturu-title-highlight-wrap {
         margin: clamp(2px, 0.5vh, 6px) 0 clamp(4px, 0.8vh, 8px) !important;
+    }
+
+    .arch-overlap-person-name {
+        margin-top: -18px !important;
+        margin-bottom: 6px !important;
+        -webkit-text-stroke: 1.8px #FFFFFF !important;
+    }
+
+    .arch-overlap-person-name.varun-person-name {
+        font-size: clamp(2.05rem, 7.8vw, 2.65rem) !important;
+        letter-spacing: 0.05em !important;
+    }
+
+    .arch-overlap-person-name.alekhya-person-name {
+        font-size: clamp(1.75rem, 6.4vw, 2.25rem) !important;
+        letter-spacing: 0.035em !important;
+    }
+
+    .card-pellikoduku .portal-pill-highlight,
+    .card-pellikuturu .portal-pill-highlight {
+        margin: 4px auto 8px !important;
+    }
+
+    .varun-groom-grand-name,
+    .alekhya-bride-grand-name {
+        font-size: clamp(2.20rem, 5.8vw, 2.75rem) !important;
+        margin: 0 auto 3px !important;
     }
 
     .mehandi-sub-line,
@@ -7809,6 +8364,25 @@ body[data-theme-mode="dark"] .destiny-highlight {
         font-size: clamp(0.72rem, 2.4vw, 0.84rem) !important;
         white-space: nowrap !important;
         letter-spacing: 0.1px !important;
+    }
+
+    .portal-pill-highlight {
+        padding: 5px 12px !important;
+        margin: 6px auto 2px !important;
+        gap: 6px !important;
+        max-width: 96% !important;
+        width: fit-content !important;
+        white-space: nowrap !important;
+    }
+
+    .highlight-chip-text {
+        font-size: clamp(0.68rem, 2.2vw, 0.80rem) !important;
+        white-space: nowrap !important;
+        letter-spacing: 0.01em !important;
+    }
+
+    .highlight-chip-icon {
+        font-size: 0.90rem !important;
     }
 
     .pelli-icon-badge,
@@ -7933,7 +8507,7 @@ body[data-theme-mode="dark"] .destiny-highlight {
 .card-vratham.vratham-card-minimized .vratham-top-badge {
     display: flex !important;
     align-items: center !important;
-    justify-content: space-between !important;
+    justify-content: center !important;
     flex-wrap: nowrap !important;
     margin: 0 !important;
     width: 100% !important;
