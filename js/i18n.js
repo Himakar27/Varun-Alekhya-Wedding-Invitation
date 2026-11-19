@@ -19,15 +19,18 @@ const translations = {
 
         // Devotional Sri Chakra Landing Portal
         landingMantra: "|| శ్రీరస్తు • శుభమస్తు • అవిఘ్నమస్తు ||",
-        landingTitle: "Varun &amp; Alekhya's Wedding Invitation",
+        landingTitle: "వరుణ్ &amp; ఆలేఖ్యల వివాహ ఆహ్వాన పత్రిక",
         landingTapHint: "✦ శ్రీ చక్రాన్ని స్పర్శించి ప్రారంభించండి ✦",
         earphoneSimpleNote: "🎧 ఉత్తమ శ్రవణానుభవం కోసం ఇయర్‌ఫోన్స్ ఉపయోగించండి",
         earphonePlugTitle: "🎧 ఉత్తమ అనుభవం కోసం ఇయర్‌ఫోన్స్ ప్లగ్ చేయండి",
         earphonePlugSub: "శ్రీ చక్ర దివ్య గానమును ఆస్వాదించండి",
-        earphoneOkBtn: "OK",
+        earphoneOkBtn: "కొనసాగించండి",
         sriChakraTapHint: "స్పర్శించండి • Tap to Enter",
         hudChakraText: "శ్రీ చక్రం",
-        hudChakraTitle: "శ్రీ చక్ర దర్శనం • View Sri Chakra",
+        hudChakraTitle: "శ్రీ చక్ర దర్శనం",
+        langTeluguTitle: "తెలుగు (ప్రస్తుత భాష)",
+        langEnglishTitle: "ఇంగ్లీష్ భాషకు మార్చండి (English)",
+        langHindiTitle: "హిందీ భాషకు మార్చండి (हिन्दी)",
         familyVedicBadge: "✨ యావత్ చంద్ర దివాకరౌ • ETERNAL BLESSINGS ✨",
 
         // Top HUD Climates
@@ -36,17 +39,18 @@ const translations = {
         hudAfternoonSun: "🌤️ మధ్యాహ్న సూర్యుడు • Afternoon Sun",
         hudSunset: "🌇 సంధ్యా వేళ • Sunset (5:00 PM)",
         hudDarkNight: "🌙 నిశీధ రాత్రి, చంద్రుడు & నక్షత్రాలు • Starlit Midnight",
-        hudEarlyDawn: "🌌 బ్రహ్మ ముహూర్తం • Sacred Dawn (3:53 AM)",
+        hudEarlyDawn: "🌌 సుముహూర్తం • Sacred Dawn (3:53 AM)",
         hudHaldi: "🌻 పసుపు వెలుగులు & పసుపు జల్లులు • Auspicious Haldi",
         hudMehandi: "🍃 గోరింటాకు సంధ్య & దీపాల వెలుగులు • Mehandi",
         hudSangeet: "🎵 సంగీత సంధ్య & నృత్య తరంగాలు • Sangeet Gala Night",
         hudVratham: "🥥 సత్యనారాయణ స్వామి దివ్య వ్రతం • Divine Puja",
+        hudVenue: "🏛️ కళ్యాణ వేదిక & గృహం • Wedding Venues",
         skyViewBtn: "ఆకాశ దర్శనం",
 
         // Invocation & Modern Lovable Devotional Quote
         invocSub: "శ్రీ లక్ష్మీ వేంకటేశ్వర ప్రసన్నః",
         invocTitle: "కళ్యాణ మహోత్సవ ఆహ్వానం",
-        quotePrimary: "స్వర్గంలో లిఖించబడిన బంధం — రెండు దేహాలు, ఒక్కటే ప్రాణం...",
+        quotePrimary: "స్వర్గంలో లిఖించబడిన బంధం<br><span class=\"destiny-highlight\">రెండు మనసులు • ఒక్కటే ప్రాణం</span>",
         quoteSub: "రెండు హృదయాలు ఒక్కటై, ఏడడుగులతో మొదలవుతున్న శాశ్వత ప్రేమ మరియు అనురాగ ప్రయాణం.",
         archCaption: "రెండు మనసులు • ఒక్కటే ప్రాణం",
 
@@ -57,7 +61,7 @@ const translations = {
         groomCeremonialName: "వరుణ్",
         groomRole: "వరుడు",
         groomName: "వరుణ్",
-        groomParents: "(శ్రీమతి అరుణ & కీ॥శే॥ పెద్దిరెడ్డి వి. ఎ. ఆర్. సిహెచ్. మూర్తి గార్ల జ్యేష్ఠ కుమారుడు)",
+        groomParents: "(శ్రీమతి అరుణ & కీ॥శే॥ పి.వి.ఎ.ఆర్.సి. మూర్తి గార్ల జ్యేష్ఠ కుమారుడు)",
         knotText: "పరిణయం",
         brideCeremonialName: "ఆలేఖ్య",
         brideRole: "వధువు",
@@ -66,9 +70,9 @@ const translations = {
         coupleDesc: "మా వివాహ వేడుకకు మిమ్మల్ని, మీ కుటుంబాన్ని మనసారా ఆహ్వానిస్తున్నాము.",
 
         // Muhurtham Spotlight
-        muhurthamBadge: "✨ బ్రహ్మ ముహూర్తం ✨",
+        muhurthamBadge: "",
         muhurthamCaption: "శాశ్వత బంధం",
-        muhurthamTitle: "సుముహూర్తం",
+        muhurthamTitle: "ముహూర్తం",
         muhurthamDateOnly: "20 డిసెంబర్, ఆదివారం",
         muhurthamTimeOnly: "వేకువజామున 3:53 AM",
         muhurthamDate: "20 డిసెంబర్ (ఆదివారం) — వేకువజామున 3:53 AM",
@@ -88,27 +92,27 @@ const translations = {
         // 1. Pellikoduku
         pelliKodukuCaption: "వరుడు • వరుణ్",
         pelliDate: "16 డిసెంబర్ · ఉదయం 9:00 AM",
-        pelliTitleTe: "పెళ్ళికొడుకు",
-        pelliTitleEn: "Pellikoduku Ceremony",
-        pelliVenue: "🏠 Home (గృహం)",
-        pelliSub: "మంగళ స్నానం & నలుగు వేడుక",
+        pelliTitleTe: "వరుణ్",
+        pelliTitleEn: "పెళ్ళికొడుకు",
+        pelliVenue: "మా నివాసంలో",
+        pelliSub: "మంగళం భగవాన్ విష్ణుః మంగళం గరుడధ్వజః<br>మంగళం పుండరీకాక్షో మంగళాయ తనో హరిః",
         pelliDesc: "నలుగు స్నానం & పెద్దల మంగళాశీర్వాదాలు",
         pelliFocusTitle: "విశేషం",
-        pelliFocusDesc: "నలుగు స్నానం & పెద్దల దీవెనలు",
+        pelliFocusDesc: "✦ పవిత్ర ఆశీర్వాదములు ✦",
         pelliAttireTitle: "వేదిక",
-        pelliAttireDesc: "Home • 9:00 AM",
+        pelliAttireDesc: "మా నివాసంలో • 9:00 AM",
         pelliCalBtn: "📅 క్యాలెండర్‌కు జోడించండి",
 
         // 2. Pellikuturu
         pellikuturuCaption: "వధువు • ఆలేఖ్య",
         pellikuturuDate: "17 డిసెంబర్ · ఉదయం 11:15 AM",
-        pellikuturuTitleTe: "పెళ్ళికూతురు",
-        pellikuturuTitleEn: "Pellikuturu Ceremony",
-        pellikuturuVenue: "🏛️ Raaga Convention",
-        pellikuturuSub: "మంగళ గౌరీ పూజ & కన్యా సంస్కారము",
+        pellikuturuTitleTe: "ఆలేఖ్య",
+        pellikuturuTitleEn: "పెళ్ళికూతురు",
+        pellikuturuVenue: "మా నివాసంలో",
+        pellikuturuSub: "సర్వమంగళ మాంగల్యే శివే సర్వార్థ సాధికే<br>శరణ్యే త్ర్యంబకే గౌరి నారాయణి నమోస్తుతే",
         pellikuturuDesc: "వధువుకు మంగళ గౌరీ పూజ & దివ్య దీవెనలు",
         pellikuturuFocusTitle: "విశేషం",
-        pellikuturuFocusDesc: "కన్యా సంస్కారం & గౌరీ పూజ",
+        pellikuturuFocusDesc: "✦ పవిత్ర గౌరీ పూజ & దీవెనలు ✦",
         pellikuturuAttireTitle: "వేదిక",
         pellikuturuAttireDesc: "Raaga Convention • 11:15 AM",
         pellikuturuCalBtn: "📅 క్యాలెండర్‌కు జోడించండి",
@@ -162,13 +166,13 @@ const translations = {
         kalaDate: "19 డిసెంబర్ · ఉదయం 7:00 AM",
         kalaTitleTe: "కాళ్ళగోరులు",
         kalaTitleEn: "Kalagorulu Ceremony",
-        kalaVenue: "🏠 Home (గృహం)",
+        kalaVenue: "మా నివాసంలో",
         kalaSub: "సూర్యోదయ వేళ సాంప్రదాయ మంగళ కార్యము",
         kalaDesc: "సూర్యోదయ వేళ మంగళ శుద్ధి & సాంప్రదాయ ఆచారాలు",
         kalaFocusTitle: "విశేషం",
         kalaFocusDesc: "మంగళ శుద్ధి & కుటుంబ ఆచారాలు",
         kalaAttireTitle: "వేదిక",
-        kalaAttireDesc: "Home • Morning 7:00 AM",
+        kalaAttireDesc: "మా నివాసంలో • Morning 7:00 AM",
         kalaCalBtn: "📅 క్యాలెండర్‌కు జోడించండి",
 
         // 7. Reception
@@ -188,28 +192,30 @@ const translations = {
         recCalBtn: "📅 క్యాలెండర్‌కు జోడించండి",
 
         // 8. Pelli
-        pelliCrownBadge: "✨ అమృత ముహూర్తం • బ్రహ్మ ముహూర్తం ✨",
+        pelliCrownBadge: "✨ సుముహూర్తం ✨",
         pelliCrownTitleTe: "కళ్యాణ సుముహూర్తం",
+        pelliCrownSub: "దివ్య కళ్యాణ మహోత్సవం & జీలకర్ర బెల్లం సమర్పణ",
         pelliDayLabel: "తేదీ & వారం",
-        pelliDayVal: "20 డిసెంబర్, ఆదివారం",
+        pelliDayVal: "20 డిసెంబర్, ఆదివారం · వేకువజామున 3:53 AM",
         pelliTimeLabel: "సుముహూర్తం",
         pelliTimeVal: "వేకువజామున 3:53 AM",
         pelliVenueLabel: "కళ్యాణ వేదిక",
         pelliVenueVal: "Raaga Convention",
-        pelliCaption: "అమృత ముహూర్తం • బ్రహ్మ ముహూర్తం 3:53 AM",
+        pelliFocusDesc: "✦ సుముహూర్తం • కళ్యాణ మహోత్సవం ✦",
+        pelliCaption: "ముహూర్తం • 3:53 AM",
 
         // 9. Varatham
         vrathamSacredBadge: "✨ దివ్య పూజా మహోత్సవం ✨",
         varDate: "20 డిసెంబర్ · ఉదయం 10:00 AM",
         varTitleTe: "సత్యనారాయణ స్వామి వ్రతం",
         varTitleEn: "Sri Satyanarayana Swamy Varatham",
-        varVenue: "Home (గృహం)",
-        varSub: "కృతజ్ఞతా పూర్వక దివ్య పూజ",
+        varVenue: "మా నివాసంలో",
+        varSub: "",
         varDesc: "దాంపత్య ఆయురారోగ్యాలకై శ్రీ సత్యనారాయణ స్వామి పూజ",
         varFocusTitle: "విశేషం",
         varFocusDesc: "కథా శ్రవణం & మహా ప్రసాదం",
         varAttireTitle: "వేదిక",
-        varAttireDesc: "Home • Morning 10:00 AM",
+        varAttireDesc: "మా నివాసంలో • Morning 10:00 AM",
         varCalBtn: "📅 క్యాలెండర్‌కు జోడించండి",
         varViewBackdrop: "దర్శనం",
 
@@ -222,15 +228,15 @@ const translations = {
 
         // Venue Section
         venueSub: "కళ్యాణ వేదికలు",
-        venueTitle: "Raaga Convention & Home",
-        venueAddress: "🏛️ ప్రధాన వేదిక: Raaga Convention, Main Highway Junction<br>🏠 గృహం: Home Residence, Private Family Suite",
+        venueTitle: "Raaga Convention & నివాస గృహం",
+        venueAddress: "<span class=\"venue-address-line\"><span class=\"venue-inline-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" width=\"13\" height=\"13\" fill=\"none\" class=\"venue-custom-svg\"><path d=\"M12 2 L12 4.5\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><path d=\"M4 8.5 L12 4.5 L20 8.5\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><line x1=\"3\" y1=\"9.5\" x2=\"21\" y2=\"9.5\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"6\" y1=\"9.5\" x2=\"6\" y2=\"17.5\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><line x1=\"10\" y1=\"9.5\" x2=\"10\" y2=\"17.5\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><line x1=\"14\" y1=\"9.5\" x2=\"14\" y2=\"17.5\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><line x1=\"18\" y1=\"9.5\" x2=\"18\" y2=\"17.5\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><line x1=\"4.5\" y1=\"17.5\" x2=\"19.5\" y2=\"17.5\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"2.5\" y1=\"20\" x2=\"21.5\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\"/></svg></span> ప్రధాన వేదిక: Raaga Convention, <span class=\"no-wrap-text\">Main Highway Junction</span></span><br><span class=\"venue-address-line\"><span class=\"venue-inline-icon venue-home-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" width=\"13\" height=\"13\" fill=\"none\" class=\"venue-custom-svg\"><path d=\"M3 10.5 L12 3 L21 10.5\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M5 9.5 V19 C5 19.8 5.7 20.5 6.5 20.5 H17.5 C18.3 20.5 19 19.8 19 19 V9.5\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><path d=\"M9.5 20.5 V13.5 C9.5 12.7 10.2 12 11 12 H13 C13.8 12 14.5 12.7 14.5 13.5 V20.5\" stroke=\"currentColor\" stroke-width=\"1.6\"/></svg></span> నివాసం: మా నివాసంలో, Private Family Suite</span>",
         venueViewBtn: "భవన దర్శనం",
-        btnOpenMaps: "🗺️ గూగుల్ మ్యాప్స్‌లో చూడండి (Raaga Convention)",
-        btnOpenMapsRaaga: "🏛️ రాగా కన్వెన్షన్ మ్యాప్",
-        btnOpenMapsHome: "🏠 నివాస గృహం (Home) మ్యాప్",
-        venueContactsTitle: "📞 సంప్రదించవలసిన ఫోన్ నంబర్లు • Contact Details",
-        contactBrideBadge: "👰 వధువు తరపున • Bride Side",
-        contactGroomBadge: "🤵 వరుని తరపున • Groom Side",
+        btnOpenMaps: "గూగుల్ మ్యాప్స్‌లో చూడండి (Raaga Convention)",
+        btnOpenMapsRaaga: "రాగా కన్వెన్షన్ గూగుల్ మ్యాప్స్",
+        btnOpenMapsHome: "మా నివాస గృహం గూగుల్ మ్యాప్స్",
+        venueContactsTitle: "సంప్రదించవలసిన ఫోన్ నంబర్లు • Contact Details",
+        contactBrideBadge: "వధువు కుటుంబం • Bride Side",
+        contactGroomBadge: "వరుడి కుటుంబం • Groom Side",
         familyViewBtn: "కుటుంబ దర్శనం",
         btnCopyAddress: "📋 చిరునామా కాపీ చేయండి",
 
@@ -249,8 +255,21 @@ const translations = {
         familyShloka: "సర్వే జనాః సుఖినో భవంతు • కల్యాణమస్తు",
         familyEnding: "మరియు బంధుమిత్రులు.",
         btnShowerBlessings: "🌸 ఆశీస్సులు అందజేయండి • Shower Blessings 🌸",
-        toastBlessingThanks: "✨ మీ ఆశీస్సులు నూతన దంపతులకు చిరకాల రక్ష! ధన్యవాదాలు! ✨"
-    },
+        toastBlessingThanks: "✨ మీ ఆశీస్సులు నూతన దంపతులకు చిరకాల రక్ష! ధన్యవాదాలు! ✨",
+        sriChakraTriggerTitle: "ప్రవేశించడానికి శ్రీ చక్రాన్ని స్పర్శించండి",
+        autoplayToggleTitle: "ఆటో-స్లైడ్ ప్రారంభించు / నిలిపివేయి",
+        soundToggleTitle: "వివాహ సంగీతం ప్లే / పాజ్",
+        navPrevTitle: "మునుపటి దృశ్యం (ఎడమ బాణం)",
+        navNextTitle: "తదుపరి దృశ్యం (కుడి బాణం)",
+        vrathamViewTitle: "మండపం నేపథ్య దర్శనం",
+        varViewBackdropExpand: "వివరాలు చూపించు",
+        venueViewTitle: "రాగా కన్వెన్షన్ దర్శనం",
+        venueViewBtnExpand: "వివరాలు చూపించు",
+        familyViewTitle: "కుటుంబ చిత్ర దర్శనం",
+        familyViewBtnExpand: "వివరాలు చూపించు",
+        callBrideTitle: "వధువు కుటుంబానికి కాల్ చేయండి",
+        callGroomTitle: "వరుని కుటుంబానికి కాల్ చేయండి",
+},
 
     en: {
         doorStart: "Auspicious Beginning",
@@ -268,11 +287,12 @@ const translations = {
         hudAfternoonSun: "🌤️ Afternoon Sun • 11:15 AM",
         hudSunset: "🌇 Winter Sunset • 5:00 PM",
         hudDarkNight: "🌙 Starlit Midnight & Moon",
-        hudEarlyDawn: "🌌 Sacred Dawn • Brahma Muhurtham 3:53 AM",
+        hudEarlyDawn: "🌌 Sacred Dawn • Muhurtham 3:53 AM",
         hudHaldi: "🌻 Auspicious Golden Haldi Atmosphere",
         hudMehandi: "🍃 Festive Twilight Mehandi",
         hudSangeet: "🎵 Glamorous Musical Sangeet Gala Night",
         hudVratham: "🥥 Sri Satyanarayana Swamy Divine Puja",
+        hudVenue: "🏛️ Wedding Venues & Residency",
         skyViewBtn: "Sky View",
 
         landingMantra: "|| Sri Rastu • Shubhamastu • Avighnamastu ||",
@@ -281,15 +301,18 @@ const translations = {
         earphoneSimpleNote: "🎧 Use earphones for better audio experience",
         earphonePlugTitle: "🎧 Please plug in earphones for best audio experience",
         earphonePlugSub: "Immerse in the sacred celestial music of Sri Chakra",
-        earphoneOkBtn: "OK",
+        earphoneOkBtn: "Continue",
         sriChakraTapHint: "Tap Sri Chakra to Enter",
         hudChakraText: "Sri Chakra",
         hudChakraTitle: "View Sri Chakra",
+        langTeluguTitle: "Switch to Telugu (తెలుగు)",
+        langEnglishTitle: "English (Current Language)",
+        langHindiTitle: "Switch to Hindi (हिन्दी)",
         familyVedicBadge: "✨ AS LONG AS SUN & MOON ENDURE • ETERNAL BLESSINGS ✨",
 
         invocSub: "With the Divine Grace of Lord Venkateswara",
         invocTitle: "Wedding Invitation",
-        quotePrimary: "Written in Heaven — Two Souls, One Eternal Destiny",
+        quotePrimary: "Written in Heaven<br><span class=\"destiny-highlight\">Two Souls, One Eternal Destiny</span>",
         quoteSub: "Where two souls unite into one sacred destiny, embarking on a timeless journey of endless love and devotion.",
         archCaption: "Two Souls • One Destiny",
 
@@ -299,7 +322,7 @@ const translations = {
         groomCeremonialName: "Varun",
         groomRole: "GROOM",
         groomName: "Varun",
-        groomParents: "(Elder son of Peddireddi V A R Ch. Murthy (Late) & Smt. Aruna)",
+        groomParents: "(Elder son of Smt. Aruna & Sri PVARC Murthy (Late))",
         knotText: "FOREVER",
         brideCeremonialName: "Alekhya",
         brideRole: "BRIDE",
@@ -307,9 +330,9 @@ const translations = {
         brideParents: "(Daughter of Sri Allada Sudarshan & Smt. Ratna Kumari)",
         coupleDesc: "Warmly inviting you and your family to celebrate our love and new beginnings.",
 
-        muhurthamBadge: "✨ BRAHMA MUHURTHAM ✨",
+        muhurthamBadge: "",
         muhurthamCaption: "Bound for Eternity",
-        muhurthamTitle: "The Sacred Muhurtham",
+        muhurthamTitle: "Muhurtham",
         muhurthamDateOnly: "Sunday, 20th December",
         muhurthamTimeOnly: "Early Dawn 3:53 AM",
         muhurthamDate: "Sunday, 20th December — Early Dawn 3:53 AM",
@@ -328,29 +351,29 @@ const translations = {
         // 1. Pellikoduku
         pelliKodukuCaption: "Groom • Varun",
         pelliDate: "16th December · Morning 9:00 AM",
-        pelliTitleTe: "Pellikoduku",
-        pelliTitleEn: "Groom Nalugu Ceremony",
-        pelliVenue: "🏠 Home",
-        pelliSub: "Sacred Sandalwood Pastes & Holy Bath",
+        pelliTitleTe: "Varun",
+        pelliTitleEn: "Pellikoduku",
+        pelliVenue: "Our residency",
+        pelliSub: "Mangalam Bhagavan Vishnuh Mangalam Garudadhwajah<br>Mangalam Pundarikaksho Mangalaya Tano Harih",
         pelliDesc: "Auspicious Nalugu bath & warm family blessings",
         pelliFocusTitle: "Highlights",
-        pelliFocusDesc: "Nalugu Snanam & Elders' Blessings",
+        pelliFocusDesc: "✦ Sacred Vedic Blessings ✦",
         pelliAttireTitle: "Venue",
-        pelliAttireDesc: "Home • 9:00 AM",
+        pelliAttireDesc: "Our residency • 9:00 AM",
         pelliCalBtn: "📅 Add to Calendar",
 
         // 2. Pellikuturu
         pellikuturuCaption: "Bride • Alekhya",
         pellikuturuDate: "17th December · Morning 11:15 AM",
-        pellikuturuTitleTe: "Pellikuturu",
-        pellikuturuTitleEn: "Bride Making Ceremony",
-        pellikuturuVenue: "🏛️ Raaga Convention",
-        pellikuturuSub: "Mangala Gowri Pooja & Bridal Adornment",
+        pellikuturuTitleTe: "Alekhya",
+        pellikuturuTitleEn: "Pellikuturu",
+        pellikuturuVenue: "Our residency",
+        pellikuturuSub: "Sarva Mangala Mangalye Shive Sarvartha Sadhike<br>Sharanye Tryambake Gauri Narayani Namostute",
         pellikuturuDesc: "Adorning the bride with love, turmeric & Gauri Pooja",
         pellikuturuFocusTitle: "Highlights",
-        pellikuturuFocusDesc: "Gauri Pooja & Bridal Adornment",
+        pellikuturuFocusDesc: "✦ Sacred Gowri Pooja & Blessings ✦",
         pellikuturuAttireTitle: "Venue",
-        pellikuturuAttireDesc: "Raaga Convention • 11:15 AM",
+        pellikuturuAttireDesc: "Our residency • 11:15 AM",
         pellikuturuCalBtn: "📅 Add to Calendar",
 
         // 3. Mehandi
@@ -402,13 +425,13 @@ const translations = {
         kalaDate: "19th December · Morning 7:00 AM",
         kalaTitleTe: "Kalagorulu",
         kalaTitleEn: "Kalagorulu Ceremony",
-        kalaVenue: "🏠 Home",
+        kalaVenue: "Our residency",
         kalaSub: "Traditional Sunrise Cleansing Ritual",
         kalaDesc: "Sacred sunrise purifying customs with close family",
         kalaFocusTitle: "Highlights",
         kalaFocusDesc: "Auspicious Sunrise Family Rituals",
         kalaAttireTitle: "Venue",
-        kalaAttireDesc: "Home • 7:00 AM",
+        kalaAttireDesc: "Our residency • 7:00 AM",
         kalaCalBtn: "📅 Add to Calendar",
 
         // 7. Reception
@@ -417,7 +440,7 @@ const translations = {
         recDate: "19th December · Evening 7:00 PM",
         recTitleTe: "Grand Reception",
         recTitleEn: "Wedding Reception Gala",
-        recVenue: "🏛️ Raaga Convention",
+        recVenue: "Raaga Convention",
         recSub: "Welcoming the Couple & Royal Feast",
         recDesc: "A grand evening of warm welcomes, dining & togetherness",
         recFocusTitle: "Highlights",
@@ -428,28 +451,30 @@ const translations = {
         recFeatureWelcome: "Grand Welcome & Warm Blessings",
 
         // 8. Pelli
-        pelliCrownBadge: "✨ Sacred Brahma Muhurtham ✨",
+        pelliCrownBadge: "✨ Sacred Muhurtham ✨",
         pelliCrownTitleTe: "Subha Muhurtham",
+        pelliCrownSub: "Divine Kalyana Mahotsavam & Sacred Jeelakarra Bellam",
         pelliDayLabel: "Day & Date",
-        pelliDayVal: "Sunday, 20th December",
+        pelliDayVal: "Sunday, 20th December · Early Dawn 3:53 AM",
         pelliTimeLabel: "Auspicious Time",
         pelliTimeVal: "Early Dawn 3:53 AM",
         pelliVenueLabel: "Wedding Venue",
         pelliVenueVal: "Raaga Convention",
-        pelliCaption: "Amrutha Muhurtham • Brahma Muhurtham 3:53 AM",
+        pelliFocusDesc: "✦ Sumuhurtham • Kalyana Mahotsavam ✦",
+        pelliCaption: "Muhurtham • 3:53 AM",
 
         // 9. Varatham
         vrathamSacredBadge: "✨ Divine Sacred Vratham ✨",
         varDate: "20th December · Morning 10:00 AM",
         varTitleTe: "Satyanarayana Vratham",
         varTitleEn: "Sri Satyanarayana Swamy Pooja",
-        varVenue: "Home",
-        varSub: "Auspicious Thanksgiving Puja",
+        varVenue: "Our residency",
+        varSub: "",
         varDesc: "Divine thanksgiving prayer for lifelong joy & prosperity",
         varFocusTitle: "Highlights",
         varFocusDesc: "Katha Sravanam & Mahaprasadam",
         varAttireTitle: "Venue",
-        varAttireDesc: "Home • 10:00 AM",
+        varAttireDesc: "Our residency • 10:00 AM",
         varCalBtn: "📅 Add to Calendar",
         varViewBackdrop: "View Mandapam",
 
@@ -462,15 +487,15 @@ const translations = {
 
         // Venue
         venueSub: "Wedding Venues",
-        venueTitle: "Raaga Convention & Home",
-        venueAddress: "🏛️ Main Venue: Raaga Convention, Main Highway Junction<br>🏠 Residence: Home, Private Family Suite",
+        venueTitle: "Raaga Convention & Residency",
+        venueAddress: "<span class=\"venue-address-line\"><span class=\"venue-inline-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" width=\"13\" height=\"13\" fill=\"none\" class=\"venue-custom-svg\"><path d=\"M12 2 L12 4.5\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><path d=\"M4 8.5 L12 4.5 L20 8.5\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><line x1=\"3\" y1=\"9.5\" x2=\"21\" y2=\"9.5\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"6\" y1=\"9.5\" x2=\"6\" y2=\"17.5\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><line x1=\"10\" y1=\"9.5\" x2=\"10\" y2=\"17.5\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><line x1=\"14\" y1=\"9.5\" x2=\"14\" y2=\"17.5\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><line x1=\"18\" y1=\"9.5\" x2=\"18\" y2=\"17.5\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><line x1=\"4.5\" y1=\"17.5\" x2=\"19.5\" y2=\"17.5\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"2.5\" y1=\"20\" x2=\"21.5\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\"/></svg></span> Main Venue: Raaga Convention, <span class=\"no-wrap-text\">Main Highway Junction</span></span><br><span class=\"venue-address-line\"><span class=\"venue-inline-icon venue-home-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" width=\"13\" height=\"13\" fill=\"none\" class=\"venue-custom-svg\"><path d=\"M3 10.5 L12 3 L21 10.5\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M5 9.5 V19 C5 19.8 5.7 20.5 6.5 20.5 H17.5 C18.3 20.5 19 19.8 19 19 V9.5\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><path d=\"M9.5 20.5 V13.5 C9.5 12.7 10.2 12 11 12 H13 C13.8 12 14.5 12.7 14.5 13.5 V20.5\" stroke=\"currentColor\" stroke-width=\"1.6\"/></svg></span> Residence: Our residency, Private Family Suite</span>",
         venueViewBtn: "View Venue",
-        btnOpenMaps: "🗺️ Open in Google Maps (Raaga Convention)",
-        btnOpenMapsRaaga: "🏛️ Raaga Convention Google Maps",
-        btnOpenMapsHome: "🏠 Home Residence Google Maps",
-        venueContactsTitle: "📞 Contact Numbers & Coordination",
-        contactBrideBadge: "👰 Bride Family Side",
-        contactGroomBadge: "🤵 Groom Family Side",
+        btnOpenMaps: "Open in Google Maps (Raaga Convention)",
+        btnOpenMapsRaaga: "Raaga Convention Google Maps",
+        btnOpenMapsHome: "Our residency Google Maps",
+        venueContactsTitle: "Contact Numbers & Coordination",
+        contactBrideBadge: "Bride Family Side",
+        contactGroomBadge: "Groom Family Side",
         familyViewBtn: "View Family Photo",
         btnCopyAddress: "📋 Copy Address",
 
@@ -489,8 +514,21 @@ const translations = {
         familyShloka: "May all beings be happy • May there be eternal auspiciousness",
         familyEnding: "Along with near & dear relatives and friends.",
         btnShowerBlessings: "🌸 Shower Blessings on the Couple 🌸",
-        toastBlessingThanks: "✨ Thank you for showering your heartfelt blessings on Varun & Alekhya! ✨"
-    },
+        toastBlessingThanks: "✨ Thank you for showering your heartfelt blessings on Varun & Alekhya! ✨",
+        sriChakraTriggerTitle: "Tap to Enter Sri Chakra Portal",
+        autoplayToggleTitle: "Toggle Auto-Slide (5s)",
+        soundToggleTitle: "Toggle Wedding Music (Play/Pause)",
+        navPrevTitle: "Previous (Left Arrow)",
+        navNextTitle: "Next (Right Arrow)",
+        vrathamViewTitle: "Toggle Mandapam View",
+        varViewBackdropExpand: "Expand Details",
+        venueViewTitle: "Toggle Raaga Convention View",
+        venueViewBtnExpand: "Expand Details",
+        familyViewTitle: "Toggle Family Portrait View",
+        familyViewBtnExpand: "Expand Details",
+        callBrideTitle: "Call Bride's Family",
+        callGroomTitle: "Call Groom's Family",
+},
 
     hi: {
         doorStart: "शुभ आरंभ",
@@ -508,28 +546,32 @@ const translations = {
         hudAfternoonSun: "🌤️ दोपहर की खिली धूप • 11:15 AM",
         hudSunset: "🌇 शीतकालीन गोधूलि वेला • 5:00 PM",
         hudDarkNight: "🌙 तारों भरी रात एवं चंद्रमा",
-        hudEarlyDawn: "🌌 पावन ब्रह्म मुहूर्त • 3:53 AM",
+        hudEarlyDawn: "🌌 पावन मुहूर्त • 3:53 AM",
         hudHaldi: "🌻 पावन हल्दी उत्सव एवं वर्षा",
         hudMehandi: "🍃 सुरमयी मेहंदी संध्या एवं दीप उत्सव",
         hudSangeet: "🎵 सुरमयी संगीत संध्या एवं नृत्य उत्सव",
         hudVratham: "🥥 श्री सत्यनारायण स्वामी पावन व्रत एवं पूजा",
+        hudVenue: "🏛️ विवाह स्थल एवं निवास • Wedding Venues",
         skyViewBtn: "आकाश दर्शन",
 
         landingMantra: "|| श्रीरस्तु • शुभमस्तु • अविघ्नमस्तु ||",
-        landingTitle: "Varun &amp; Alekhya's Wedding Invitation",
+        landingTitle: "वरुण एवं आलेख्या का शुभ विवाह आमंत्रण",
         landingTapHint: "✦ श्री चक्र को स्पर्श करके शुभारंभ करें ✦",
         earphoneSimpleNote: "🎧 सर्वोत्तम ऑडियो अनुभव के लिए इयरफ़ोन का उपयोग करें",
         earphonePlugTitle: "🎧 सर्वोत्तम ऑडियो अनुभव के लिए इयरफ़ोन लगाएं",
         earphonePlugSub: "श्री चक्र के पावन दिव्य संगीत का आनंद लें",
-        earphoneOkBtn: "OK",
+        earphoneOkBtn: "आगे बढ़ें",
         sriChakraTapHint: "स्पर्श करें • Tap to Enter",
         hudChakraText: "श्री चक्र",
         hudChakraTitle: "श्री चक्र दर्शन",
+        langTeluguTitle: "तेलुगु में बदलें (తెలుగు)",
+        langEnglishTitle: "अंग्रेजी में बदलें (English)",
+        langHindiTitle: "हिन्दी (वर्तमान भाषा)",
         familyVedicBadge: "✨ यावत् चन्द्र दिवाकरौ • शाश्वत मंगल कामनाएं ✨",
 
         invocSub: "श्री लक्ष्मी वेंकटेश्वर भगवान की असीम अनुकंपा से",
         invocTitle: "शुभ विवाह आमंत्रण",
-        quotePrimary: "स्वर्ग में रचा गया पावन बंधन — दो देह, एक प्राण...",
+        quotePrimary: "स्वर्ग में रचा गया पावन बंधन<br><span class=\"destiny-highlight\">दो आत्माएं, एक अमर नियति</span>",
         quoteSub: "जहाँ दो आत्माएँ एक पावन बंधन में बंधकर, प्रेम और समर्पण की एक अमर यात्रा आरंभ करती हैं।",
         archCaption: "दो देह • एक प्राण",
 
@@ -539,7 +581,7 @@ const translations = {
         groomCeremonialName: "वरुण",
         groomRole: "वर",
         groomName: "वरुण",
-        groomParents: "(सुपुत्र: श्रीमती अरुणा एवं स्वर्गीय पेद्दिरेड्डी वी. ए. आर. सी. एच. मूर्ति)",
+        groomParents: "(श्रीमती अरुणा एवं श्री पी.वी.ए.आर.सी. मूर्ति (स्वर्गवासी) के ज्येष्ठ सुपुत्र)",
         knotText: "सदा संग",
         brideCeremonialName: "आलेख्या",
         brideRole: "वधू",
@@ -547,9 +589,9 @@ const translations = {
         brideParents: "(सुपुत्री: श्रीमती रत्न कुमारी एवं श्री अल्लाडा सुदर्शन)",
         coupleDesc: "हमारे विवाह के इस पावन उत्सव में आप सपरिवार सादर आमंत्रित हैं।",
 
-        muhurthamBadge: "✨ ब्रह्म मुहूर्त ✨",
+        muhurthamBadge: "",
         muhurthamCaption: "शाश्वत बंधन",
-        muhurthamTitle: "शुभ मुहूर्त",
+        muhurthamTitle: "मुहूर्त",
         muhurthamDateOnly: "रविवार, 20 दिसंबर",
         muhurthamTimeOnly: "प्रातःकाल 3:53 AM",
         muhurthamDate: "20 दिसंबर (रविवार) — प्रातःकाल 3:53 AM",
@@ -568,29 +610,29 @@ const translations = {
         // 1. Pellikoduku
         pelliKodukuCaption: "वर • वरुण",
         pelliDate: "16 दिसंबर · प्रातः 9:00 AM",
-        pelliTitleTe: "पेल्लिकोडुकु",
-        pelliTitleEn: "वर नलगु संस्कार",
-        pelliVenue: "🏠 गृह",
-        pelliSub: "हल्दी लेपन एवं मंगल स्नान",
+        pelliTitleTe: "वरुण",
+        pelliTitleEn: "पेल्लिकोडुकु",
+        pelliVenue: "हमारे निवास पर",
+        pelliSub: "मंगलम् भगवान विष्णुः मंगलम् गरुड़ध्वजः<br>मंगलम् पुण्डरीकाक्षो मंगलाय तनो हरिः",
         pelliDesc: "शुभ हल्दी स्नान एवं बुजुर्गों का मंगल आशीर्वाद",
         pelliFocusTitle: "विशेष",
-        pelliFocusDesc: "नलगु स्नान एवं बुजुर्गों का आशीष",
+        pelliFocusDesc: "✦ पावन मंगल आशीष ✦",
         pelliAttireTitle: "स्थान",
-        pelliAttireDesc: "Home • 9:00 AM",
+        pelliAttireDesc: "हमारे निवास पर • 9:00 AM",
         pelliCalBtn: "📅 कैलेंडर में जोड़ें",
 
         // 2. Pellikuturu
         pellikuturuCaption: "वधू • आलेख्य",
         pellikuturuDate: "17 दिसंबर · पूर्वाह्न 11:15 AM",
-        pellikuturuTitleTe: "पेल्लिकूतुरु",
-        pellikuturuTitleEn: "वधू शृंगार संस्कार",
-        pellikuturuVenue: "🏛️ Raaga Convention",
-        pellikuturuSub: "मंगल गौरी पूजा एवं वधू संस्कार",
+        pellikuturuTitleTe: "आलेख्य",
+        pellikuturuTitleEn: "पेल्लिकूतुरु",
+        pellikuturuVenue: "हमारे निवास पर",
+        pellikuturuSub: "सर्वमंगल मांगल्ये शिवे सर्वार्थ साधिके<br>शरण्ये त्र्यम्बके गौरि नारायणि नमोऽस्तु ते",
         pellikuturuDesc: "वधू का मंगल शृंगार एवं श्री गौरी पूजन",
         pellikuturuFocusTitle: "विशेष",
-        pellikuturuFocusDesc: "कन्या संस्कार एवं गौरी पूजन",
+        pellikuturuFocusDesc: "✦ पावन गौरी पूजन एवं मंगल आशीष ✦",
         pellikuturuAttireTitle: "स्थान",
-        pellikuturuAttireDesc: "Raaga Convention • 11:15 AM",
+        pellikuturuAttireDesc: "हमारे निवास पर • 11:15 AM",
         pellikuturuCalBtn: "📅 कैलेंडर में जोड़ें",
 
         // 3. Mehandi
@@ -642,13 +684,13 @@ const translations = {
         kalaDate: "19 दिसंबर · प्रातः 7:00 AM",
         kalaTitleTe: "कालगोरुलु",
         kalaTitleEn: "कालगोरुलु संस्कार",
-        kalaVenue: "🏠 गृह",
+        kalaVenue: "हमारे निवास पर",
         kalaSub: "सूर्योदय वेला में मांगलिक परंपरा",
         kalaDesc: "सूर्योदय वेला में पावन पारिवारिक परंपरा",
         kalaFocusTitle: "विशेष",
         kalaFocusDesc: "मंगल शुद्धि एवं पावन रीति-रिवाज",
         kalaAttireTitle: "स्थान",
-        kalaAttireDesc: "Home • 7:00 AM",
+        kalaAttireDesc: "हमारे निवास पर • 7:00 AM",
         kalaCalBtn: "📅 कैलेंडर में जोड़ें",
 
         // 7. Reception
@@ -657,7 +699,7 @@ const translations = {
         recDate: "19 दिसंबर · सायंकाल 7:00 PM",
         recTitleTe: "भव्य स्वागत",
         recTitleEn: "भव्य रिसेप्शन एवं प्रीतिभोज",
-        recVenue: "🏛️ Raaga Convention",
+        recVenue: "Raaga Convention",
         recSub: "नवदंपति स्वागत एवं स्नेह भोज",
         recDesc: "नवदंपति का आदर-सत्कार एवं शाही प्रीतिभोज",
         recFocusTitle: "विशेष",
@@ -668,28 +710,30 @@ const translations = {
         recFeatureWelcome: "भव्य स्वागत एवं मंगल आशीष",
 
         // 8. Pelli
-        pelliCrownBadge: "✨ शुभ अमृत मुहूर्त • ब्रह्म मुहूर्त ✨",
+        pelliCrownBadge: "✨ शुभ मुहूर्त ✨",
         pelliCrownTitleTe: "विवाह सुमुहूर्त",
+        pelliCrownSub: "कल्याण महोत्सव एवं पावन जीलकर्रा-बेलम",
         pelliDayLabel: "दिन एवं दिनांक",
-        pelliDayVal: "रविवार, 20 दिसंबर",
+        pelliDayVal: "रविवार, 20 दिसंबर · प्रातः 3:53 AM",
         pelliTimeLabel: "शुभ मुहूर्त",
         pelliTimeVal: "प्रातः 3:53 AM",
         pelliVenueLabel: "विवाह स्थल",
         pelliVenueVal: "Raaga Convention",
-        pelliCaption: "अमृत मुहूर्त • ब्रह्म मुहूर्त 3:53 AM",
+        pelliFocusDesc: "✦ सुमुहूर्त • पावन विवाह संस्कार ✦",
+        pelliCaption: "शुभ मुहूर्त • 3:53 AM",
 
         // 9. Varatham
         vrathamSacredBadge: "✨ दिव्य पूजा महोत्सव ✨",
         varDate: "20 दिसंबर · प्रातः 10:00 AM",
         varTitleTe: "सत्यनारायण व्रत",
         varTitleEn: "श्री सत्यनारायण स्वामी व्रत",
-        varVenue: "गृह (Home)",
-        varSub: "कृतज्ञता पूर्ण सत्यनारायण कथा",
+        varVenue: "हमारे निवास पर",
+        varSub: "",
         varDesc: "सुख-समृद्धि एवं अखंड सौभाग्य हेतु सत्यनारायण कथा",
         varFocusTitle: "विशेष",
         varFocusDesc: "कथा श्रवण एवं महाप्रसाद",
         varAttireTitle: "स्थान",
-        varAttireDesc: "Home • 10:00 AM",
+        varAttireDesc: "हमारे निवास पर • 10:00 AM",
         varCalBtn: "📅 कैलेंडर में जोड़ें",
         varViewBackdrop: "दर्शन (View)",
 
@@ -702,15 +746,15 @@ const translations = {
 
         // Venue
         venueSub: "विवाह स्थल",
-        venueTitle: "Raaga Convention & Home",
-        venueAddress: "🏛️ मुख्य स्थल: Raaga Convention, Main Highway Junction<br>🏠 गृह: Home Residence, Private Family Suite",
+        venueTitle: "Raaga Convention & निवास",
+        venueAddress: "<span class=\"venue-address-line\"><span class=\"venue-inline-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" width=\"13\" height=\"13\" fill=\"none\" class=\"venue-custom-svg\"><path d=\"M12 2 L12 4.5\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><path d=\"M4 8.5 L12 4.5 L20 8.5\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><line x1=\"3\" y1=\"9.5\" x2=\"21\" y2=\"9.5\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"6\" y1=\"9.5\" x2=\"6\" y2=\"17.5\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><line x1=\"10\" y1=\"9.5\" x2=\"10\" y2=\"17.5\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><line x1=\"14\" y1=\"9.5\" x2=\"14\" y2=\"17.5\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><line x1=\"18\" y1=\"9.5\" x2=\"18\" y2=\"17.5\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><line x1=\"4.5\" y1=\"17.5\" x2=\"19.5\" y2=\"17.5\" stroke=\"currentColor\" stroke-width=\"1.5\"/><line x1=\"2.5\" y1=\"20\" x2=\"21.5\" y2=\"20\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\"/></svg></span> मुख्य स्थल: Raaga Convention, <span class=\"no-wrap-text\">Main Highway Junction</span></span><br><span class=\"venue-address-line\"><span class=\"venue-inline-icon venue-home-icon\" aria-hidden=\"true\"><svg viewBox=\"0 0 24 24\" width=\"13\" height=\"13\" fill=\"none\" class=\"venue-custom-svg\"><path d=\"M3 10.5 L12 3 L21 10.5\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/><path d=\"M5 9.5 V19 C5 19.8 5.7 20.5 6.5 20.5 H17.5 C18.3 20.5 19 19.8 19 19 V9.5\" stroke=\"currentColor\" stroke-width=\"1.6\" stroke-linecap=\"round\"/><path d=\"M9.5 20.5 V13.5 C9.5 12.7 10.2 12 11 12 H13 C13.8 12 14.5 12.7 14.5 13.5 V20.5\" stroke=\"currentColor\" stroke-width=\"1.6\"/></svg></span> निवास: हमारे निवास पर, Private Family Suite</span>",
         venueViewBtn: "स्थल दर्शन",
-        btnOpenMaps: "🗺️ गूगल मैप्स में देखें (Raaga Convention)",
-        btnOpenMapsRaaga: "🏛️ रागा कन्वेंशन गूगल मैप्स",
-        btnOpenMapsHome: "🏠 गृह निवास गूगल मैप्स",
-        venueContactsTitle: "📞 संपर्क सूत्र • Contact Details",
-        contactBrideBadge: "👰 वधू पक्ष • Bride Side",
-        contactGroomBadge: "🤵 वर पक्ष • Groom Side",
+        btnOpenMaps: "गूगल मैप्स में देखें (Raaga Convention)",
+        btnOpenMapsRaaga: "रागा कन्वेंशन गूगल मैप्स",
+        btnOpenMapsHome: "हमारे निवास का गूगल मैप्स",
+        venueContactsTitle: "संपर्क सूत्र • Contact Details",
+        contactBrideBadge: "वधू पक्ष • Bride Side",
+        contactGroomBadge: "वर पक्ष • Groom Side",
         familyViewBtn: "परिवार दर्शन",
         btnCopyAddress: "📋 पता कॉपी करें",
 
@@ -729,7 +773,20 @@ const translations = {
         familyShloka: "सर्वे भवन्तु सुखिनः • कल्याणमस्तु • शुभं भवतु",
         familyEnding: "एवं समस्त सगे-संबंधी व मित्रगण।",
         btnShowerBlessings: "🌸 नवदंपति को आशीष दें 🌸",
-        toastBlessingThanks: "✨ वर-वधू को आपके पावन आशीष के लिए सहृदय धन्यवाद! ✨"
+        toastBlessingThanks: "✨ वर-वधू को आपके पावन आशीष के लिए सहृदय धन्यवाद! ✨",
+        sriChakraTriggerTitle: "प्रवेश के लिए श्री चक्र को स्पर्श करें",
+        autoplayToggleTitle: "ऑटो-स्लाइड चालू / बंद करें",
+        soundToggleTitle: "विवाह संगीत चालू / बंद करें",
+        navPrevTitle: "पिछला दृश्य (बायां तीर)",
+        navNextTitle: "अगला दृश्य (दायां तीर)",
+        vrathamViewTitle: "मंडप दर्शन",
+        varViewBackdropExpand: "विवरण देखें",
+        venueViewTitle: "रागा कन्वेंशन भवन दर्शन",
+        venueViewBtnExpand: "विवरण देखें",
+        familyViewTitle: "पारिवारिक चित्र दर्शन",
+        familyViewBtnExpand: "विवरण देखें",
+        callBrideTitle: "वधू परिवार को कॉल करें",
+        callGroomTitle: "वर परिवार को कॉल करें"
     }
 };
 
@@ -740,11 +797,19 @@ class WeddingI18n {
     }
 
     init() {
-        // Default to English, or read from saved user preference
-        const saved = localStorage.getItem('wedding_lang_pref_v2');
+        // Default strictly to English ('en') unless explicitly changed in this version
+        let saved = null;
+        try {
+            if (typeof window !== 'undefined' && window.localStorage) {
+                saved = window.localStorage.getItem('wedding_lang_pref_v4');
+            }
+        } catch (e) {
+            // Silently fall back to in-memory preference if localStorage throws in file:/// or private mode
+        }
+
         if (saved && (saved === 'te' || saved === 'en' || saved === 'hi')) {
             this.currentLang = saved;
-        } else {
+        } else if (!this.currentLang) {
             this.currentLang = 'en';
         }
         this.applyLanguage(this.currentLang);
@@ -753,8 +818,14 @@ class WeddingI18n {
     setLanguage(lang) {
         if (!translations[lang]) return;
         this.currentLang = lang;
-        localStorage.setItem('wedding_lang_pref_v2', lang);
-        localStorage.setItem('wedding_lang_pref', lang);
+        try {
+            if (typeof window !== 'undefined' && window.localStorage) {
+                window.localStorage.setItem('wedding_lang_pref_v4', lang);
+                window.localStorage.setItem('wedding_lang_pref_v3', lang);
+                window.localStorage.setItem('wedding_lang_pref_v2', lang);
+                window.localStorage.setItem('wedding_lang_pref', lang);
+            }
+        } catch (e) {}
         this.applyLanguage(lang);
     }
 
@@ -767,6 +838,8 @@ class WeddingI18n {
 
     applyLanguage(lang) {
         const dict = translations[lang] || translations['en'] || translations['te'];
+        if (!dict) return;
+        this.currentLang = lang;
         document.documentElement.lang = lang;
 
         // Update all elements with data-i18n
@@ -785,18 +858,69 @@ class WeddingI18n {
             }
         });
 
-        // Update active class on language toggle buttons
+        // Update active class on all language toggle buttons
         document.querySelectorAll('.lang-btn').forEach(btn => {
             const btnLang = btn.getAttribute('data-lang');
             btn.classList.toggle('lang-active', btnLang === lang);
+            btn.setAttribute('aria-pressed', btnLang === lang ? 'true' : 'false');
+        });
+
+        // Update Bottom Timeline Dock item tooltips in selected language
+        const dockNames = {
+            te: ["వధూవరులు", "ముహూర్తం", "పెళ్ళికొడుకు", "పెళ్ళికూతురు", "మెహందీ", "హల్దీ", "సంగీత్", "రిసెప్షన్", "సుముహూర్తం", "వ్రతం", "వేదిక", "కుటుంబం"],
+            en: ["Couple", "Muhurtham", "Varun (Groom)", "Alekhya (Bride)", "Mehandi", "Haldi", "Sangeet", "Reception", "Muhurtham", "Vratham", "Venue", "Family"],
+            hi: ["वर-वधू", "मुहूर्त", "वर (पेल्लिकोडुकु)", "वधू (पेल्लिकूतुरु)", "मेहंदी", "हल्दी", "संगीत", "रिसेप्शन", "शुभ मुहूर्त", "सत्यनारायण व्रत", "विवाह स्थल", "परिवार"]
+        };
+        const currentDockList = dockNames[lang] || dockNames['en'];
+        document.querySelectorAll('.dock-item').forEach((item, idx) => {
+            if (currentDockList[idx]) {
+                item.setAttribute('data-tooltip', currentDockList[idx]);
+                item.setAttribute('title', currentDockList[idx]);
+                item.setAttribute('aria-label', currentDockList[idx]);
+            }
         });
 
         // Notify sound engine to update music track title in new language
-        if (window.royalSound) {
+        if (window.royalSound && typeof window.royalSound.updateUI === 'function') {
             window.royalSound.updateUI();
         }
     }
 }
 
+// Global Helper Function for universal button invocation
+window.setWeddingLanguage = function(lang) {
+    if (window.weddingI18n) {
+        window.weddingI18n.setLanguage(lang);
+    }
+    if (window.royalSound && typeof window.royalSound.updateUI === 'function') {
+        window.royalSound.updateUI();
+    }
+};
+
 // Global instance
 window.weddingI18n = new WeddingI18n();
+
+// Re-apply immediately when DOM is fully loaded to guarantee all tags are in the active language
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', function() {
+        if (window.weddingI18n) {
+            window.weddingI18n.applyLanguage(window.weddingI18n.currentLang);
+        }
+    });
+} else {
+    if (window.weddingI18n) {
+        window.weddingI18n.applyLanguage(window.weddingI18n.currentLang);
+    }
+}
+
+// Universal Event Delegation for Language Buttons Across All Screens
+document.addEventListener('click', function(e) {
+    var btn = e.target && e.target.closest && e.target.closest('.lang-btn');
+    if (btn) {
+        e.stopPropagation();
+        var lang = btn.getAttribute('data-lang');
+        if (lang) {
+            window.setWeddingLanguage(lang);
+        }
+    }
+});
