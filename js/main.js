@@ -12,7 +12,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // 1. Initialize Multilingual Engine
     if (window.weddingI18n) {
-        window.weddingI18n.init();
+        window.weddingI18n.applyLanguage(window.weddingI18n.currentLang);
     }
 
     // 2. Initialize 2026 Atmosphere & Living Sky Canvas
@@ -28,34 +28,9 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 5. Sound & Music Engine
     const sound = window.modernSoundEngine;
-// 6. Graceful Ambient Sound Start on First User Interaction
-    let hasUserInteracted = false;
-    function handleFirstInteraction() {
-        if (hasUserInteracted) return;
-        hasUserInteracted = true;
-        
-        const portal = document.getElementById('devotional-landing-portal');
-        const isPortalActive = portal && !portal.classList.contains('portal-dismissed');
-
-        if (isPortalActive) {
-            if (sound && !sound.isChakraPlaying) {
-                sound.playChakraAudio();
-            }
-        } else {
-            if (sound && !sound.isPlaying) {
-                sound.startMusic(24);
-            }
-        }
-        window.removeEventListener('click', handleFirstInteraction);
-        window.removeEventListener('touchstart', handleFirstInteraction);
-        window.removeEventListener('keydown', handleFirstInteraction);
-    }
-    window.addEventListener('click', handleFirstInteraction, { passive: true });
-    window.addEventListener('touchstart', handleFirstInteraction, { passive: true });
-    window.addEventListener('keydown', handleFirstInteraction, { passive: true });
 
     // ==========================================================================
-    // 7. SINGLE-SCREEN APPLICATION CONTROLLER (5s AUTO-ADVANCE & SMOOTH 3D TRANSITIONS)
+    // 6. SINGLE-SCREEN APPLICATION CONTROLLER (5s AUTO-ADVANCE & SMOOTH 3D TRANSITIONS)
     // ==========================================================================
     class SingleScreenApp {
         constructor(atmosphere, sound, particles) {
@@ -197,29 +172,66 @@ document.addEventListener('DOMContentLoaded', () => {
                 });
             }
 
-            // Vratham Mandapam Darshanam Toggle
+            // Vratham Mandapam Minimize / Expand Toggle
             const vrathamBgBtn = document.getElementById('vratham-view-bg-btn');
             const vrathamScene = document.getElementById('scene-varatham');
+            const vrathamCardEl = document.querySelector('.card-vratham');
             if (vrathamBgBtn) {
                 vrathamBgBtn.addEventListener('click', (e) => {
                     e.stopPropagation();
                     const card = document.querySelector('.card-vratham');
                     if (card) {
-                        const isDimmed = card.classList.toggle('vratham-card-dimmed');
-                        vrathamBgBtn.setAttribute('aria-pressed', isDimmed ? 'true' : 'false');
+                        const isMin = card.classList.toggle('vratham-card-minimized');
+                        card.classList.remove('vratham-card-dimmed');
+                        vrathamBgBtn.setAttribute('aria-pressed', isMin ? 'true' : 'false');
+                        const btnText = vrathamBgBtn.querySelector('.btn-text');
+                        if (btnText) {
+                            const key = isMin ? 'varViewBackdropExpand' : 'varViewBackdrop';
+                            btnText.setAttribute('data-i18n', key);
+                            btnText.innerHTML = (window.weddingI18n && window.weddingI18n.get(key)) || (isMin ? 'Expand Details' : 'View Mandapam');
+                        }
+                        const btnIcon = vrathamBgBtn.querySelector('.btn-icon');
+                        if (btnIcon) btnIcon.textContent = isMin ? '🔍' : '👁️';
                     }
                 });
             }
             if (vrathamScene) {
                 vrathamScene.addEventListener('click', (e) => {
                     const card = document.querySelector('.card-vratham');
-                    if (card && card.classList.contains('vratham-card-dimmed')) {
-                        card.classList.remove('vratham-card-dimmed');
-                        if (vrathamBgBtn) vrathamBgBtn.setAttribute('aria-pressed', 'false');
+                    if (card && (card.classList.contains('vratham-card-minimized') || card.classList.contains('vratham-card-dimmed'))) {
+                        card.classList.remove('vratham-card-minimized', 'vratham-card-dimmed');
+                        if (vrathamBgBtn) {
+                            vrathamBgBtn.setAttribute('aria-pressed', 'false');
+                            const btnText = vrathamBgBtn.querySelector('.btn-text');
+                            if (btnText) {
+                                btnText.setAttribute('data-i18n', 'varViewBackdrop');
+                                btnText.innerHTML = (window.weddingI18n && window.weddingI18n.get('varViewBackdrop')) || 'View Mandapam';
+                            }
+                            const btnIcon = vrathamBgBtn.querySelector('.btn-icon');
+                            if (btnIcon) btnIcon.textContent = '👁️';
+                        }
                     }
                 });
             }
-            // Raaga Convention Venue Darshanam Toggle
+            if (vrathamCardEl) {
+                vrathamCardEl.addEventListener('click', (e) => {
+                    if (vrathamCardEl.classList.contains('vratham-card-minimized')) {
+                        e.stopPropagation();
+                        vrathamCardEl.classList.remove('vratham-card-minimized', 'vratham-card-dimmed');
+                        if (vrathamBgBtn) {
+                            vrathamBgBtn.setAttribute('aria-pressed', 'false');
+                            const btnText = vrathamBgBtn.querySelector('.btn-text');
+                            if (btnText) {
+                                btnText.setAttribute('data-i18n', 'varViewBackdrop');
+                                btnText.innerHTML = (window.weddingI18n && window.weddingI18n.get('varViewBackdrop')) || 'View Mandapam';
+                            }
+                            const btnIcon = vrathamBgBtn.querySelector('.btn-icon');
+                            if (btnIcon) btnIcon.textContent = '👁️';
+                        }
+                    }
+                });
+            }
+            // Raaga Convention Venue Minimize / Expand Toggle
             const venueBgBtn = document.getElementById('venue-view-bg-btn');
             const venueScene = document.getElementById('scene-venue');
             if (venueBgBtn) {
@@ -227,22 +239,40 @@ document.addEventListener('DOMContentLoaded', () => {
                     e.stopPropagation();
                     const card = document.querySelector('.card-venue');
                     if (card) {
-                        const isDimmed = card.classList.toggle('venue-card-dimmed');
-                        venueBgBtn.setAttribute('aria-pressed', isDimmed ? 'true' : 'false');
+                        const isMin = card.classList.toggle('venue-card-minimized');
+                        card.classList.toggle('venue-card-dimmed', isMin);
+                        venueBgBtn.setAttribute('aria-pressed', isMin ? 'true' : 'false');
+                        const btnText = venueBgBtn.querySelector('.btn-text');
+                        if (btnText) {
+                            const key = isMin ? 'venueViewBtnExpand' : 'venueViewBtn';
+                            btnText.setAttribute('data-i18n', key);
+                            btnText.innerHTML = (window.weddingI18n && window.weddingI18n.get(key)) || (isMin ? 'Expand Details' : 'View Venue');
+                        }
+                        const btnIcon = venueBgBtn.querySelector('.btn-icon');
+                        if (btnIcon) btnIcon.textContent = isMin ? '🔍' : '🏛️';
                     }
                 });
             }
             if (venueScene) {
                 venueScene.addEventListener('click', (e) => {
                     const card = document.querySelector('.card-venue');
-                    if (card && card.classList.contains('venue-card-dimmed')) {
-                        card.classList.remove('venue-card-dimmed');
-                        if (venueBgBtn) venueBgBtn.setAttribute('aria-pressed', 'false');
+                    if (card && (card.classList.contains('venue-card-minimized') || card.classList.contains('venue-card-dimmed'))) {
+                        card.classList.remove('venue-card-minimized', 'venue-card-dimmed');
+                        if (venueBgBtn) {
+                            venueBgBtn.setAttribute('aria-pressed', 'false');
+                            const btnText = venueBgBtn.querySelector('.btn-text');
+                            if (btnText) {
+                                btnText.setAttribute('data-i18n', 'venueViewBtn');
+                                btnText.innerHTML = (window.weddingI18n && window.weddingI18n.get('venueViewBtn')) || 'View Venue';
+                            }
+                            const btnIcon = venueBgBtn.querySelector('.btn-icon');
+                            if (btnIcon) btnIcon.textContent = '🏛️';
+                        }
                     }
                 });
             }
 
-            // Family Compliments Screen Darshanam Toggle
+            // Family Compliments Screen Minimize / Expand Toggle
             const familyBgBtn = document.getElementById('family-view-bg-btn');
             const familyScene = document.getElementById('scene-family');
             if (familyBgBtn) {
@@ -250,46 +280,52 @@ document.addEventListener('DOMContentLoaded', () => {
                     e.stopPropagation();
                     const card = document.querySelector('.family-luxury-card');
                     if (card) {
-                        const isDimmed = card.classList.toggle('family-card-dimmed');
-                        familyBgBtn.setAttribute('aria-pressed', isDimmed ? 'true' : 'false');
+                        const isMin = card.classList.toggle('family-card-minimized');
+                        card.classList.toggle('family-card-dimmed', isMin);
+                        document.body.classList.toggle('family-view-expanded', isMin);
+                        familyBgBtn.setAttribute('aria-pressed', isMin ? 'true' : 'false');
+                        const btnText = familyBgBtn.querySelector('.btn-text') || familyBgBtn;
+                        const key = isMin ? 'familyViewBtnExpand' : 'familyViewBtn';
+                        btnText.setAttribute('data-i18n', key);
+                        btnText.innerHTML = (window.weddingI18n && window.weddingI18n.get(key)) || (isMin ? 'Expand Details' : 'View Family Photo');
                     }
                 });
             }
             if (familyScene) {
                 familyScene.addEventListener('click', (e) => {
                     const card = document.querySelector('.family-luxury-card');
-                    if (card && card.classList.contains('family-card-dimmed')) {
-                        card.classList.remove('family-card-dimmed');
-                        if (familyBgBtn) familyBgBtn.setAttribute('aria-pressed', 'false');
+                    if (card && (card.classList.contains('family-card-minimized') || card.classList.contains('family-card-dimmed'))) {
+                        card.classList.remove('family-card-minimized', 'family-card-dimmed');
+                        document.body.classList.remove('family-view-expanded');
+                        if (familyBgBtn) {
+                            familyBgBtn.setAttribute('aria-pressed', 'false');
+                            const btnText = familyBgBtn.querySelector('.btn-text') || familyBgBtn;
+                            btnText.setAttribute('data-i18n', 'familyViewBtn');
+                            btnText.innerHTML = (window.weddingI18n && window.weddingI18n.get('familyViewBtn')) || 'View Family Photo';
+                        }
                     }
                 });
             }
 
 
-            // Mouse hover & movement pause on app stage & active card
+            // Mouse hover pause on active ceremony reading cards (resumes on mouseleave)
             if (this.stage) {
-                const handlePointerIn = () => {
-                    if (this.isAutoPlaying && !this.isPaused) {
-                        this.pauseTimer();
+                const handlePointerIn = (e) => {
+                    if (e && e.target && e.target.closest && e.target.closest('.luxury-glass-card')) {
+                        if (this.isAutoPlaying && !this.isPaused) {
+                            this.pauseTimer();
+                        }
                     }
                 };
 
                 const handlePointerOut = (e) => {
                     if (this.isAutoPlaying && this.isPaused) {
-                        // Avoid resuming if cursor just moved between child elements
-                        if (e && e.relatedTarget && this.stage.contains(e.relatedTarget)) {
-                            return;
-                        }
                         this.resumeTimer();
                     }
                 };
 
-                this.stage.addEventListener('mouseenter', handlePointerIn);
-                this.stage.addEventListener('mousemove', handlePointerIn);
+                this.stage.addEventListener('mouseover', handlePointerIn);
                 this.stage.addEventListener('mouseleave', handlePointerOut);
-
-                // Touch support for mobile devices
-                this.stage.addEventListener('touchstart', handlePointerIn, { passive: true });
             }
 
             // Mobile Touch Swipe Navigation
@@ -385,6 +421,51 @@ document.addEventListener('DOMContentLoaded', () => {
             }
 
             this.currentIndex = nextIdx;
+            // Reset vratham minimize state when navigating away
+            if (nextIdx !== 9) {
+                const vrathamCard = document.querySelector('.card-vratham');
+                if (vrathamCard) vrathamCard.classList.remove('vratham-card-minimized', 'vratham-card-dimmed');
+                const vrBtn = document.getElementById('vratham-view-bg-btn');
+                if (vrBtn) {
+                    vrBtn.setAttribute('aria-pressed', 'false');
+                    const btnText = vrBtn.querySelector('.btn-text');
+                    if (btnText) {
+                        btnText.setAttribute('data-i18n', 'varViewBackdrop');
+                        btnText.innerHTML = (window.weddingI18n && window.weddingI18n.get('varViewBackdrop')) || 'View Mandapam';
+                    }
+                    const btnIcon = vrBtn.querySelector('.btn-icon');
+                    if (btnIcon) btnIcon.textContent = '👁️';
+                }
+            }
+            // Reset venue minimize state when navigating away
+            if (nextIdx !== 10) {
+                const venueCard = document.querySelector('.card-venue');
+                if (venueCard) venueCard.classList.remove('venue-card-minimized', 'venue-card-dimmed');
+                const vBtn = document.getElementById('venue-view-bg-btn');
+                if (vBtn) {
+                    vBtn.setAttribute('aria-pressed', 'false');
+                    const btnText = vBtn.querySelector('.btn-text');
+                    if (btnText) {
+                        btnText.setAttribute('data-i18n', 'venueViewBtn');
+                        btnText.innerHTML = (window.weddingI18n && window.weddingI18n.get('venueViewBtn')) || 'View Venue';
+                    }
+                    const btnIcon = vBtn.querySelector('.btn-icon');
+                    if (btnIcon) btnIcon.textContent = '🏛️';
+                }
+            }
+            // Reset family minimize state when navigating away
+            if (nextIdx !== 11) {
+                document.body.classList.remove('family-view-expanded');
+                const familyCard = document.querySelector('.family-luxury-card');
+                if (familyCard) familyCard.classList.remove('family-card-minimized', 'family-card-dimmed');
+                const fBtn = document.getElementById('family-view-bg-btn');
+                if (fBtn) {
+                    fBtn.setAttribute('aria-pressed', 'false');
+                    const btnText = fBtn.querySelector('.btn-text') || fBtn;
+                    btnText.setAttribute('data-i18n', 'familyViewBtn');
+                    btnText.innerHTML = (window.weddingI18n && window.weddingI18n.get('familyViewBtn')) || 'View Family Photo';
+                }
+            }
             this.scheduleShowerHandHint(1000);
             // Expand stage width for all 9 Diptych Ceremony Showcase Scenes (Scenes 0 through 8: Hero, Muhurtham, Pellikoduku, Pellikuturu, Mehandi, Haldi, Sangeet, Reception, Pelli)
             if (this.stage) {
@@ -567,17 +648,26 @@ document.addEventListener('DOMContentLoaded', () => {
         }, delayMs);
     }
 
-    // Dismiss Earphone Modal & Start Sri Chakra Gayatri Mantra Audio
+    // Dismiss Earphone Modal & Start Sri Chakra Gayatri Mantra Audio (Strictly on Continue Click)
     function dismissEarphoneModalAndStartAudio() {
         if (earphoneModalOverlay) {
             earphoneModalOverlay.classList.add('notice-dismissed');
         }
         if (sound) {
             sound.init();
+            if (sound.chakraAudio) {
+                sound.chakraAudio.loop = false;
+                sound.chakraAudio.muted = sound.isMuted;
+                sound.chakraAudio.volume = sound.isMuted ? 0 : sound.volume;
+                sound.chakraAudio.addEventListener('ended', () => {
+                    const portal = document.getElementById('devotional-landing-portal');
+                    if (portal && !portal.classList.contains('portal-dismissed') && !hasEnteredPortal) {
+                        enterDevotionalPortal();
+                    }
+                }, { once: true });
+            }
             sound.playChakraAudio();
         }
-        // Start 10-second countdown to guide user to click Sri Chakra
-        scheduleSriChakraHandTapHint(10000);
     }
 
     if (earphoneOkBtn) {
@@ -587,35 +677,12 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    if (earphoneModalOverlay) {
-        earphoneModalOverlay.addEventListener('click', (e) => {
-            if (e.target === earphoneModalOverlay) {
-                e.stopPropagation();
-                dismissEarphoneModalAndStartAudio();
-            }
-        });
-        earphoneModalOverlay.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                e.stopPropagation();
-                dismissEarphoneModalAndStartAudio();
-            }
-        });
-    }
-
     // Pause auto-play while on landing portal so Scene 0 starts fresh on entrance
     if (landingPortal && singleScreenApp) {
         singleScreenApp.isAutoPlaying = false;
         if (singleScreenApp.timer) {
             clearInterval(singleScreenApp.timer);
             singleScreenApp.timer = null;
-        }
-    }
-
-    // Play sacred Sri Chakra Gayatri Mantra on landing screen
-    if (landingPortal && !landingPortal.classList.contains('portal-dismissed')) {
-        if (sound) {
-            sound.playChakraAudio();
         }
     }
 
@@ -695,33 +762,6 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
-    const invTextTrigger = document.querySelector('.devotional-invitation-text');
-    if (invTextTrigger) {
-        invTextTrigger.addEventListener('click', (e) => {
-            e.stopPropagation();
-            enterDevotionalPortal();
-        });
-        invTextTrigger.addEventListener('keydown', (e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-                e.preventDefault();
-                e.stopPropagation();
-                enterDevotionalPortal();
-            }
-        });
-    }
-
-    // Portal background click: start chakra audio if not playing, or enter if already playing
-    if (landingPortal) {
-        landingPortal.addEventListener('click', (e) => {
-            if (landingPortal.classList.contains('portal-fast-zooming') || landingPortal.classList.contains('portal-dismissed')) return;
-            if (sound && !sound.isChakraPlaying) {
-                sound.playChakraAudio();
-            } else {
-                enterDevotionalPortal();
-            }
-        });
-    }
-
     // Replay Sri Chakra Portal on demand from top HUD
     if (hudChakraBtn && landingPortal) {
         hudChakraBtn.addEventListener('click', (e) => {
@@ -731,27 +771,37 @@ document.addEventListener('DOMContentLoaded', () => {
             if (earphoneModalOverlay) {
                 earphoneModalOverlay.classList.add('notice-dismissed');
             }
-            scheduleSriChakraHandTapHint(10000);
             if (singleScreenApp) {
                 singleScreenApp.pauseTimer();
             }
             if (sound) {
                 sound.stopMusic();
+                if (sound.chakraAudio) {
+                    sound.chakraAudio.loop = false;
+                    sound.chakraAudio.addEventListener('ended', () => {
+                        const portal = document.getElementById('devotional-landing-portal');
+                        if (portal && !portal.classList.contains('portal-dismissed') && !hasEnteredPortal) {
+                            enterDevotionalPortal();
+                        }
+                    }, { once: true });
+                }
                 sound.playChakraAudio();
             }
         });
     }
 
-
-    // Segmented Language Switcher
+    // Universal Top-Right Segmented Language Switcher (Works on All Screens)
     document.querySelectorAll('.lang-btn').forEach(btn => {
         btn.addEventListener('click', (e) => {
-            const lang = e.currentTarget.getAttribute('data-lang');
-            if (window.weddingI18n) {
+            e.stopPropagation();
+            const lang = btn.getAttribute('data-lang');
+            if (lang && window.setWeddingLanguage) {
+                window.setWeddingLanguage(lang);
+            } else if (window.weddingI18n && lang) {
                 window.weddingI18n.setLanguage(lang);
             }
-            if (window.modernSoundEngine) {
-                window.modernSoundEngine.updateUI();
+            if (sound && typeof sound.updateUI === 'function') {
+                sound.updateUI();
             }
         });
     });
