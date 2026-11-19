@@ -129,7 +129,7 @@ class RoyalWeddingSoundEngine {
             if (!this.chakraAudio) {
                 this.chakraAudio = new Audio('assets/audio/gayatri_mantra_chakra.mp3');
                 this.chakraAudio.id = 'chakra-landing-audio';
-                this.chakraAudio.loop = true;
+                this.chakraAudio.loop = false;
                 this.chakraAudio.preload = 'auto';
                 document.body.appendChild(this.chakraAudio);
             }
@@ -137,7 +137,7 @@ class RoyalWeddingSoundEngine {
                 this.chakraAudio.src = 'assets/audio/gayatri_mantra_chakra.mp3';
             }
             this.chakraAudio.volume = this.isMuted ? 0 : this.volume;
-            this.chakraAudio.loop = true;
+            this.chakraAudio.loop = false;
 
             this.chakraAudio.addEventListener('play', () => {
                 this.isChakraPlaying = true;
@@ -160,6 +160,7 @@ class RoyalWeddingSoundEngine {
         }
 
         // Try unmuted playback first
+        this.chakraAudio.loop = false;
         this.chakraAudio.muted = this.isMuted;
         this.chakraAudio.volume = this.isMuted ? 0 : this.volume;
 
@@ -170,20 +171,8 @@ class RoyalWeddingSoundEngine {
                 this.hideAutoplayPrompt();
                 this.updateUI();
             }).catch(err => {
-                console.log('Chakra audio autoplay deferred by browser policy:', err);
+                console.log('Chakra audio playback awaiting user Continue click:', err);
                 this.isChakraPlaying = false;
-                
-                // Fallback: Start muted so audio buffer/stream is actively running
-                this.chakraAudio.muted = true;
-                this.chakraAudio.play().then(() => {
-                    // Audio active in muted mode
-                }).catch(() => {});
-
-                // Show prompt if browser policy prevents unmuted autoplay
-                this.showAutoplayPrompt();
-
-                // Arm listener for any user motion to unmute and restore volume
-                this.armAutoplayUnmute();
             });
         }
     }
@@ -203,38 +192,8 @@ class RoyalWeddingSoundEngine {
     }
 
     armAutoplayUnmute() {
-        if (this._unmuteArmed) return;
-        this._unmuteArmed = true;
-
-        const events = ['click', 'pointerdown', 'mousedown', 'touchstart', 'touchend', 'keydown', 'wheel', 'scroll', 'pointermove', 'focus', 'mouseenter'];
-        const triggerUnmute = () => {
-            const portal = document.getElementById('devotional-landing-portal');
-            const onLanding = portal && !portal.classList.contains('portal-dismissed');
-            
-            if (onLanding && this.chakraAudio) {
-                this.chakraAudio.muted = false;
-                this.chakraAudio.volume = this.isMuted ? 0 : this.volume;
-                const p = this.chakraAudio.play();
-                if (p !== undefined) {
-                    p.then(() => {
-                        this.isChakraPlaying = true;
-                        this.hideAutoplayPrompt();
-                        this.updateUI();
-                    }).catch(() => {});
-                }
-            }
-
-            events.forEach(evt => {
-                window.removeEventListener(evt, triggerUnmute, { capture: true });
-                document.removeEventListener(evt, triggerUnmute, { capture: true });
-            });
-            this._unmuteArmed = false;
-        };
-
-        events.forEach(evt => {
-            window.addEventListener(evt, triggerUnmute, { capture: true, passive: true });
-            document.addEventListener(evt, triggerUnmute, { capture: true, passive: true });
-        });
+        // Disarmed: audio is strictly initiated upon user clicking Continue button
+        return;
     }
 
     pauseChakraAudio(fadeMs = 800) {
